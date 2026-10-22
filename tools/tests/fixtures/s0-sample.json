@@ -1,0 +1,46 @@
+{
+  "id": "s0-sample",
+  "title": "Sample topic (test fixture, not shipped)",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Asha has 3 rupee coins and finds 4 more.",
+    "sections": [
+      { "heading": "Putting together", "body": "Adding means putting groups together: $3 + 4 = 7$." }
+    ],
+    "examples": [
+      {
+        "problem": "What is $3 + 4$?",
+        "steps": ["Start at 3.", "Count on 4: 4, 5, 6, 7."],
+        "answer": "7",
+        "verify": { "kind": "sympy", "expr": "3 + 4" }
+      }
+    ]
+  },
+  "visuals": [],
+  "practice": [
+    { "id": "s0-sample/p-1", "type": "numeric", "prompt": "$5 + 2 = ?$", "answer": "7", "hints": ["Count on from 5."], "explanation": "5, then 6, 7.", "verify": { "kind": "sympy", "expr": "5 + 2" } },
+    { "id": "s0-sample/p-2", "type": "numeric", "prompt": "Half of ₹1,00,000?", "answer": "₹50,000", "hints": ["Split into 2 equal parts."], "explanation": "1,00,000 ÷ 2 = 50,000.", "verify": { "kind": "sympy", "expr": "100000/2" } },
+    { "id": "s0-sample/p-3", "type": "true_false", "prompt": "Is $\\frac{3}{4}$ bigger than $\\frac{2}{3}$?", "answer": "true", "hints": ["Use 12ths."], "explanation": "9/12 > 8/12.", "verify": { "kind": "relation", "expr": "Gt(3/4, 2/3)" } },
+    { "id": "s0-sample/p-4", "type": "text", "prompt": "Write 25 in words.", "answer": "twenty-five", "accept": ["twenty five"], "hints": ["Twenty and five."], "explanation": "25 = 20 + 5.", "verify": { "kind": "manual", "reason": "number words" } }
+  ],
+  "quiz": [
+    {
+      "id": "s0-sample/q-1", "type": "mcq", "prompt": "$\\frac{1}{2} + \\frac{1}{4} = ?$",
+      "options": [
+        { "text": "$\\frac{3}{4}$", "value": "3/4", "correct": true },
+        { "text": "$\\frac{2}{6}$", "value": "2/6", "correct": false, "why_wrong": "Added tops and bottoms separately." },
+        { "text": "$\\frac{1}{8}$", "value": "1/8", "correct": false, "why_wrong": "Multiplied instead of adding." }
+      ],
+      "answer": "$\\frac{3}{4}$", "hints": ["Make the bottoms the same."], "explanation": "2/4 + 1/4 = 3/4.",
+      "verify": { "kind": "sympy", "expr": "1/2 + 1/4" }
+    },
+    { "id": "s0-sample/q-2", "type": "numeric", "prompt": "$12 \\times 3 = ?$", "answer": "36", "hints": ["Three 12s."], "explanation": "12+12+12.", "verify": { "kind": "sympy", "expr": "12*3" } },
+    { "id": "s0-sample/q-3", "type": "numeric", "prompt": "LCM of 4 and 6?", "answer": "12", "hints": ["List multiples."], "explanation": "4, 8, 12 and 6, 12.", "verify": { "kind": "sympy", "expr": "lcm(4, 6)" } },
+    { "id": "s0-sample/q-4", "type": "numeric", "prompt": "25% of 80?", "answer": "20", "hints": ["Quarter."], "explanation": "80 ÷ 4.", "verify": { "kind": "sympy", "expr": "25% * 80" } }
+  ],
+  "doubts": [
+    { "q": "Why is 3 + 4 the same as 4 + 3?", "a": "Putting groups together in any order gives the same total." },
+    { "q": "Can I count on my fingers?", "a": "Yes. Fingers are a fine tool while you are learning." }
+  ]
+}
