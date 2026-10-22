@@ -12,7 +12,8 @@ function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
     if (e.isDirectory()) walk(p);
-    else if (/\.(html|css|js)$/.test(e.name)) fix(p);
+    // 404.html is served at any missing path, so it keeps root-absolute URLs.
+    else if (/\.(html|css|js)$/.test(e.name) && e.name !== '404.html') fix(p);
   }
 }
 

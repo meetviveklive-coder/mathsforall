@@ -1,7 +1,7 @@
 {
   "id": "s0-fractions-meaning",
   "title": "Fractions as equal parts",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Papa makes one big roti for Riya and her brother Kabir. Suppose he tears it so that Kabir gets a huge piece and Riya gets a tiny one. Riya will shout, \"That's not fair!\"\n\nRiya already knows the most important idea about fractions: **the parts must be equal.**",
@@ -534,6 +534,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "Re-check of applied suggestions. verify_content.py passed. All 13 changes are correct. The new number-line p-3 option 1/5 is distinct and wrong, and it matches its why_wrong. The answers, match rules, options and visual checks are otherwise unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved for learners after reviewing the private preview."
     }
   ]
 }

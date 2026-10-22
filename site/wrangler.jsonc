@@ -1,0 +1,7 @@
+// Used only if this site is deployed as a Cloudflare Worker with static assets.
+// Cloudflare Pages ignores this file (it has no pages_build_output_dir).
+{
+  "name": "mathsforall",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" }
+}

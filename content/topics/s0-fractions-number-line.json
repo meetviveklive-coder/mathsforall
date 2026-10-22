@@ -1,7 +1,7 @@
 {
   "id": "s0-fractions-number-line",
   "title": "Fractions on a number line",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Priya's school is 1 km from her house. Along the road, 3 lamp posts split the way into 4 equal stretches.\n\nWhen Priya reaches the first lamp post after her house, how far has she walked? Not 1 km, and not 0 km. She has walked $\\frac{1}{4}$ of a kilometre. Fractions are not only slices of roti. They are also **distances**, and that makes them numbers.",
@@ -555,6 +555,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "Re-check of applied suggestions. verify_content.py passed. All 13 changes are correct. The new number-line p-3 option 1/5 is distinct and wrong, and it matches its why_wrong. The answers, match rules, options and visual checks are otherwise unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved for learners after reviewing the private preview."
     }
   ]
 }

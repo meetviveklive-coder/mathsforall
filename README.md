@@ -42,7 +42,10 @@ npm run build          # production build: approved topics only
 npm run build:preview  # build including draft/verified topics, with a preview banner
 npm test               # unit tests
 ```
-Astro 7 needs Node.js 22.23.4 or newer.
+Astro 7 needs Node.js 22.23.4 or newer (`.node-version` pins 24 for Cloudflare builds).
+
+## Deploy (Cloudflare)
+Every push to `main` builds and deploys. Settings: root directory `site`, build command `npm run build`, output directory `dist`, environment variable `NODE_VERSION=24`. Only `approved` topics are published.
 
 ## Commands
 ```bash
@@ -54,7 +57,8 @@ python3 tools/verify_content.py      # verify all topic files
 ## Status
 - [x] Phase 0: docs, agents, schema, verifier
 - [x] Phase 1: Stage 0–1 topic map (58 topics) — approved
-- [ ] Phase 2: pilot — 3 fraction topics written and verified, minimal site built; awaiting your approval and a week with the first learner
+- [x] Phase 2: pilot — 3 fraction topics approved; site deploys to Cloudflare from `main`
+- [ ] Pilot week with the first learner; log confusion points per topic
 - [ ] Phase 3: rest of Stage 0–1
 - [ ] Phase 4: placement, knowledge map, spaced review, export/import
 - [ ] Phase 5: launch

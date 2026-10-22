@@ -1,7 +1,7 @@
 {
   "id": "s0-equivalent-fractions",
   "title": "Equivalent fractions",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Kavya cuts her paratha into 2 equal halves and eats 1. Her cousin Dev cuts the same size of paratha into 4 equal pieces and eats 2.\n\nDev says, \"I ate more, because 2 is more than 1!\" Is he right? Picture the two parathas side by side and you will see they ate exactly the same amount.",
@@ -478,6 +478,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "Re-check of applied suggestions. verify_content.py passed. All 13 changes are correct. The new number-line p-3 option 1/5 is distinct and wrong, and it matches its why_wrong. The answers, match rules, options and visual checks are otherwise unchanged."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved for learners after reviewing the private preview."
     }
   ]
 }
