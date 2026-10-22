@@ -1,0 +1,655 @@
+{
+  "id": "s0-add-sub-decimals",
+  "title": "Adding and subtracting decimals",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Farhan goes to the stationery shop with a ₹500 note. A notebook costs ₹48.50. A geometry box costs ₹125.75.\n\nHow much does he pay? How much change does he get back? You already add and subtract whole numbers in columns. Decimals use the same columns, with one new rule. Let's find it.",
+    "sections": [
+      {
+        "heading": "Line up the decimal points",
+        "body": "With whole numbers, you add ones to ones and tens to tens. Decimals work the same way. Tenths add to tenths, and hundredths add to hundredths.\n\nSo write the numbers one under the other with the **decimal points in one column**. Then every digit sits under its own place.\n\nHere is $12.5 + 3.75$. The Hundredths place of 12.5 is empty. An empty place counts as 0. Start from the right:\n\n- Hundredths: $0 + 5 = 5$.\n- Tenths: $5 + 7 = 12$ tenths. Write 2 and carry 1 to the Ones column, because 10 tenths make 1 one.\n- Ones: $2 + 3 + 1 = 6$.\n- Tens: 1.\n\nCarrying works just as with whole numbers. When a column adds up to 10 or more, write the ones digit. Carry 1 to the next column on the left. Put the point in the answer straight below the other points: $12.5 + 3.75 = 16.25$.",
+        "visual": "ad-add-columns"
+      },
+      {
+        "heading": "Don't line up the last digits",
+        "body": "With whole numbers, you line up the right-hand ends. With decimals, that is a trap.\n\nLook at 12.5 and 3.75 with their last digits lined up. The point of 12.5 is over the 7. The 5 tenths of 12.5 are over the 5 hundredths of 3.75. Tenths and hundredths are different sizes, so they cannot be added together.\n\nAlways line up the **points**, not the ends.\n\nCheck your answer with a rough guess. $12.5 + 3.75$ is about $12 + 4 = 16$. So 16.25 makes sense.",
+        "visual": "ad-wrong-line-up"
+      },
+      {
+        "heading": "Fill empty places with zeros",
+        "body": "$7.4$ and $7.40$ are the same number. 4 tenths is the same as 40 hundredths, because $\\frac{4}{10} = \\frac{40}{100}$. A zero at the **end**, after the point, does not change the value.\n\nThis helps when you subtract. Take $7.4 - 2.65$. Write 7.4 as 7.40, so every place has a digit.\n\nBorrowing works just as with whole numbers. If the top digit is too small, take 1 from the column on the left. It becomes 10 in this column.\n\n- Hundredths: 0 is less than 5. Borrow 1 tenth, which is 10 hundredths. $10 - 5 = 5$. Now 3 tenths are left.\n- Tenths: 3 is less than 6. Borrow 1 one, which is 10 tenths. $13 - 6 = 7$. Now 6 ones are left.\n- Ones: $6 - 2 = 4$.\n\nSo $7.4 - 2.65 = 4.75$.\n\nA whole number has a point after its last digit, even if we don't write it. So $9 = 9.00$.",
+        "visual": "ad-sub-zero"
+      },
+      {
+        "heading": "Rupees and paise",
+        "body": "100 paise make ₹1. So ₹236.75 means 236 rupees and 75 paise. The rupees are to the left of the point. The paise are the two digits to the right.\n\nTo find the change from ₹500 for a bill of ₹236.75, write ₹500 as ₹500.00. Then subtract in columns: $500.00 - 236.75 = 263.25$.\n\nBorrowing across all those zeros is a long chain. Here is a shortcut. ₹500.00 is the same as ₹499 and 100 paise. Now no column needs borrowing:\n\n- Paise: $100 - 75 = 25$.\n- Rupees: $499 - 236 = 263$.\n\nSo the change is ₹263.25. Check by adding back: $236.75 + 263.25 = 500.00$.",
+        "visual": "ad-money-change"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Work out $4.6 + 2.75$.",
+        "steps": [
+          "Line up the points. Write 4.6 as 4.60, so both numbers have hundredths.",
+          "Hundredths: $0 + 5 = 5$.",
+          "Tenths: $6 + 7 = 13$. Write 3 and carry 1 to the ones.",
+          "Ones: $4 + 2 + 1 = 7$.",
+          "Put the point below the other points: $4.6 + 2.75 = 7.35$. Rough check: about $5 + 3 = 8$, so 7.35 makes sense."
+        ],
+        "answer": "7.35",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(46, 10) + Rational(275, 100)"
+        }
+      },
+      {
+        "problem": "Work out $9 - 3.48$.",
+        "steps": [
+          "Write 9 as 9.00 and line up the points with 3.48.",
+          "9.00 is the same as 8 ones, 9 tenths and 10 hundredths. Now no column needs more borrowing.",
+          "Hundredths: $10 - 8 = 2$. Tenths: $9 - 4 = 5$. Ones: $8 - 3 = 5$.",
+          "So $9 - 3.48 = 5.52$. Check by adding back: $5.52 + 3.48 = 9.00$."
+        ],
+        "answer": "5.52",
+        "verify": {
+          "kind": "sympy",
+          "expr": "9 - Rational(348, 100)"
+        }
+      },
+      {
+        "problem": "Farhan buys a notebook for ₹48.50 and a geometry box for ₹125.75. He pays with a ₹500 note. How much change does he get?",
+        "steps": [
+          "First add the bill. Line up the points: $48.50 + 125.75$.",
+          "Paise: $50 + 75 = 125$ paise, which is ₹1 and 25 paise. Write 25 and carry ₹1.",
+          "Rupees: $48 + 125 + 1 = 174$. The bill is ₹174.25.",
+          "Now subtract from ₹500.00. Think of it as ₹499 and 100 paise.",
+          "Paise: $100 - 25 = 75$. Rupees: $499 - 174 = 325$.",
+          "The change is ₹325.75. Check: $174.25 + 325.75 = 500.00$."
+        ],
+        "answer": "325.75",
+        "verify": {
+          "kind": "sympy",
+          "expr": "500 - (Rational(4850, 100) + Rational(12575, 100))"
+        }
+      }
+    ],
+    "summary": [
+      "Line up the decimal points, so every digit sits under its own place.",
+      "Do not line up the last digits.",
+      "Fill empty places with zeros: 7.4 = 7.40 and 9 = 9.00.",
+      "Carry and borrow just as with whole numbers. Keep the point in the answer under the other points.",
+      "For money, 100 paise make ₹1. ₹500 is ₹500.00, or ₹499 and 100 paise.",
+      "Check with a rough guess, or add back after subtracting."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "ad-add-columns",
+      "purpose": "12.5 + 3.75 in place-value columns, points lined up",
+      "spec": "Columns Tens, Ones, Tenths, Hundredths, with a narrow point column. 12.5 above +3.75, line, answer 16.25. Carried 1 above Ones. Hundredths of 12.5 left empty.",
+      "alt": "Place-value columns headed Tens, Ones, Tenths and Hundredths. 12.5 is written above 3.75, with a plus sign. The decimal points are in one column. The Hundredths place of 12.5 is empty. A small carried 1 sits above the Ones column. Below the line, the answer is 16.25, with its point in the same column.",
+      "file": "content/visuals/s0-add-sub-decimals/ad-add-columns.svg",
+      "checks": {
+        "op": "+",
+        "top": "12.5",
+        "bottom": "3.75",
+        "result": "16.25",
+        "points_aligned": true,
+        "digits_in_columns": true,
+        "answer_correct": true,
+        "headers": [
+          "Tens",
+          "Ones",
+          "Tenths",
+          "Hundredths"
+        ],
+        "filled_zeros": 0,
+        "carries": [
+          {
+            "place": "Ones",
+            "digit": "1"
+          }
+        ],
+        "columns": [
+          [
+            "1",
+            "",
+            "1"
+          ],
+          [
+            "2",
+            "3",
+            "6"
+          ],
+          [
+            ".",
+            ".",
+            "."
+          ],
+          [
+            "5",
+            "7",
+            "2"
+          ],
+          [
+            "",
+            "5",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ad-wrong-line-up",
+      "purpose": "The mistake: last digits lined up, points not lined up",
+      "spec": "12.5 above +3.75, right-aligned character by character in equal slots. No headers. Caption: Points not lined up.",
+      "alt": "12.5 written above 3.75 with their last digits lined up on the right, and a plus sign. Column by column, 1 is over 3 and 2 is over the point of 3.75. The point of 12.5 is over 7, and 5 is over 5. The caption says: Points not lined up.",
+      "file": "content/visuals/s0-add-sub-decimals/ad-wrong-line-up.svg",
+      "checks": {
+        "op": "+",
+        "top": "12.5",
+        "bottom": "3.75",
+        "result": null,
+        "points_aligned": false,
+        "columns": [
+          [
+            "1",
+            "3"
+          ],
+          [
+            "2",
+            "."
+          ],
+          [
+            ".",
+            "7"
+          ],
+          [
+            "5",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ad-sub-zero",
+      "purpose": "7.4 - 2.65 with 7.4 written as 7.40",
+      "spec": "Columns Ones, Tenths, Hundredths. 7.40 above -2.65; the 0 is a filled-in zero in a dashed box. Answer 4.75.",
+      "alt": "Place-value columns headed Ones, Tenths and Hundredths. 7.4 is written as 7.40. The filled-in 0 is in a dashed box in the Hundredths column. Below it is 2.65, with a minus sign. The decimal points are in one column. Below the line, the answer is 4.75.",
+      "file": "content/visuals/s0-add-sub-decimals/ad-sub-zero.svg",
+      "checks": {
+        "op": "-",
+        "top": "7.40",
+        "bottom": "2.65",
+        "result": "4.75",
+        "points_aligned": true,
+        "digits_in_columns": true,
+        "answer_correct": true,
+        "headers": [
+          "Ones",
+          "Tenths",
+          "Hundredths"
+        ],
+        "filled_zeros": 1,
+        "columns": [
+          [
+            "7",
+            "2",
+            "4"
+          ],
+          [
+            ".",
+            ".",
+            "."
+          ],
+          [
+            "4",
+            "6",
+            "7"
+          ],
+          [
+            "0",
+            "5",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ad-money-change",
+      "purpose": "Change from 500 rupees: 500.00 - 236.75",
+      "spec": "Columns grouped as Rupees (3 columns) and Paise (2 columns). 500.00 above -236.75; the two paise zeros are filled-in zeros in dashed boxes. Answer 263.25.",
+      "alt": "Columns grouped under two headings, Rupees (three columns) and Paise (two columns). 500 is written as 500.00. The two filled-in zeros under Paise are in dashed boxes. Below it is 236.75, with a minus sign. All the decimal points are in one column. Below the line, the answer is 263.25.",
+      "file": "content/visuals/s0-add-sub-decimals/ad-money-change.svg",
+      "checks": {
+        "op": "-",
+        "top": "500.00",
+        "bottom": "236.75",
+        "result": "263.25",
+        "points_aligned": true,
+        "digits_in_columns": true,
+        "answer_correct": true,
+        "headers": [
+          "Rupees",
+          "Paise"
+        ],
+        "filled_zeros": 2,
+        "columns": [
+          [
+            "5",
+            "2",
+            "2"
+          ],
+          [
+            "0",
+            "3",
+            "6"
+          ],
+          [
+            "0",
+            "6",
+            "3"
+          ],
+          [
+            ".",
+            ".",
+            "."
+          ],
+          [
+            "0",
+            "7",
+            "2"
+          ],
+          [
+            "0",
+            "5",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ad-p1",
+      "purpose": "Practice: 3.6 + 1.25 set out in columns, answer row empty",
+      "spec": "Columns Ones, Tenths, Hundredths. 3.6 above +1.25, points lined up, Hundredths of 3.6 empty. Line drawn, no answer.",
+      "alt": "Place-value columns headed Ones, Tenths and Hundredths. 3.6 is written above 1.25, with a plus sign. The decimal points are in one column. The Hundredths place of 3.6 is empty. The answer row below the line is empty.",
+      "file": "content/visuals/s0-add-sub-decimals/ad-p1.svg",
+      "checks": {
+        "op": "+",
+        "top": "3.6",
+        "bottom": "1.25",
+        "result": null,
+        "points_aligned": true,
+        "digits_in_columns": true,
+        "headers": [
+          "Ones",
+          "Tenths",
+          "Hundredths"
+        ],
+        "filled_zeros": 0,
+        "columns": [
+          [
+            "3",
+            "1"
+          ],
+          [
+            ".",
+            "."
+          ],
+          [
+            "6",
+            "2"
+          ],
+          [
+            "",
+            "5"
+          ]
+        ]
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-add-sub-decimals/p-1",
+      "type": "numeric",
+      "visual": "ad-p1",
+      "objective": 0,
+      "prompt": "The diagram sets out $3.6 + 1.25$ with the points lined up. What is the answer? Type a decimal, like 0.4.",
+      "answer": "4.85",
+      "hints": [
+        "The empty Hundredths place counts as 0.",
+        "Add from the right: hundredths, then tenths, then ones."
+      ],
+      "explanation": "Hundredths: $0 + 5 = 5$. Tenths: $6 + 2 = 8$. Ones: $3 + 1 = 4$. So $3.6 + 1.25 = 4.85$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(36, 10) + Rational(125, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/p-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Work out $5.3 + 2.4$. Type a decimal, like 0.4.",
+      "answer": "7.7",
+      "hints": [
+        "Line up the points. Add tenths to tenths and ones to ones."
+      ],
+      "explanation": "Tenths: $3 + 4 = 7$. Ones: $5 + 2 = 7$. So $5.3 + 2.4 = 7.7$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(53, 10) + Rational(24, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/p-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Work out $8.75 - 3.2$. Type a decimal, like 0.4.",
+      "answer": "5.55",
+      "hints": [
+        "Line up the points. 3.2 has nothing in the Hundredths place.",
+        "Write 3.2 as 3.20."
+      ],
+      "explanation": "Write 3.2 as 3.20. Hundredths: $5 - 0 = 5$. Tenths: $7 - 2 = 5$. Ones: $8 - 3 = 5$. So the answer is 5.55.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(875, 100) - Rational(32, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/p-4",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Which number is equal to $4.7$?",
+      "options": [
+        {
+          "text": "$4.70$",
+          "value": "4.70",
+          "correct": true
+        },
+        {
+          "text": "$4.07$",
+          "value": "4.07",
+          "correct": false,
+          "why_wrong": "Here the 0 is in the Tenths place and pushes the 7 into the Hundredths place. 4.07 has only 7 hundredths."
+        },
+        {
+          "text": "$0.47$",
+          "value": "0.47",
+          "correct": false,
+          "why_wrong": "This moves every digit one place to the right. 0.47 is less than 1, but 4.7 is more than 4."
+        },
+        {
+          "text": "$47$",
+          "value": "47",
+          "correct": false,
+          "why_wrong": "Dropping the point makes the number 10 times bigger. 4.7 is between 4 and 5."
+        }
+      ],
+      "answer": "$4.70$",
+      "hints": [
+        "Which zero sits at the end, after all the other digits?"
+      ],
+      "explanation": "A zero at the end, after the point, does not change the value. 7 tenths is 70 hundredths, so $4.7 = 4.70$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(47, 10)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $6 - 2.35$. Type a decimal, like 0.4.",
+      "answer": "3.65",
+      "hints": [
+        "Write 6 as 6.00 and line up the points.",
+        "6.00 is 5 ones, 9 tenths and 10 hundredths."
+      ],
+      "explanation": "Write 6 as 6.00, which is 5 ones, 9 tenths and 10 hundredths. Hundredths: $10 - 5 = 5$. Tenths: $9 - 3 = 6$. Ones: $5 - 2 = 3$. So the answer is 3.65.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 - Rational(235, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/p-6",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "Asha lines up the last digits of 2.5 and 1.25. So the two 5s sit in one column. Do those two 5s have the same value?",
+      "answer": "false",
+      "hints": [
+        "Which place is the 5 in, in each number?"
+      ],
+      "explanation": "No. In 2.5 the 5 means 5 tenths. In 1.25 the 5 means 5 hundredths. They are different sizes, so line up the points instead.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(5, 10), Rational(5, 100))"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/p-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Thenmozhi buys a pen for ₹12.50 and a notebook for ₹35.75. How much does she pay in all, in rupees?",
+      "answer": "48.25",
+      "hints": [
+        "Line up the points: 12.50 above 35.75.",
+        "Paise: $50 + 75 = 125$ paise, which is ₹1 and 25 paise."
+      ],
+      "explanation": "Paise: $50 + 75 = 125$ paise. Write 25 and carry ₹1. Rupees: $12 + 35 + 1 = 48$. She pays ₹48.25.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1250, 100) + Rational(3575, 100)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Bhavesh's Mausi buys groceries for ₹287.40. She pays with a ₹500 note. How much change does she get, in rupees?",
+      "answer": "212.60",
+      "hints": [
+        "Write ₹500 as ₹500.00.",
+        "₹500.00 is the same as ₹499 and 100 paise."
+      ],
+      "explanation": "Think of ₹500.00 as ₹499 and 100 paise. Paise: $100 - 40 = 60$. Rupees: $499 - 287 = 212$. The change is ₹212.60.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "500 - Rational(28740, 100)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/p-9",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Lakshmi's train goes 46.8 km to the city. Then it goes 13.25 km more. How many kilometres is that in all? Type a decimal, like 0.4.",
+      "answer": "60.05",
+      "hints": [
+        "Write 46.8 as 46.80 and line up the points.",
+        "Watch the carries: the Tenths and the Ones columns both reach 10."
+      ],
+      "explanation": "$46.80 + 13.25$. Hundredths: $0 + 5 = 5$. Tenths: $8 + 2 = 10$, write 0 and carry 1. Ones: $6 + 3 + 1 = 10$, write 0 and carry 1. Tens: $4 + 1 + 1 = 6$. So it is 60.05 km.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(468, 10) + Rational(1325, 100)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-add-sub-decimals/q-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Work out $14.25 + 3.6$. Type a decimal, like 0.4.",
+      "answer": "17.85",
+      "hints": [
+        "Line up the points. Write 3.6 as 3.60."
+      ],
+      "explanation": "$14.25 + 3.60$. Hundredths: $5 + 0 = 5$. Tenths: $2 + 6 = 8$. Ones: $4 + 3 = 7$. Tens: 1. So the answer is 17.85.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1425, 100) + Rational(36, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/q-2",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Megha works out $6.4 + 2.15$. Which answer is correct?",
+      "options": [
+        {
+          "text": "$2.79$",
+          "value": "2.79",
+          "correct": false,
+          "why_wrong": "This lines up the last digits, so 4 tenths were added to 5 hundredths. Line up the points instead. The answer should be about $6 + 2 = 8$."
+        },
+        {
+          "text": "$8.55$",
+          "value": "8.55",
+          "correct": true
+        },
+        {
+          "text": "$85.5$",
+          "value": "85.5",
+          "correct": false,
+          "why_wrong": "The digits are right, but the point is in the wrong place. Put the point in the answer straight below the other points."
+        }
+      ],
+      "answer": "$8.55$",
+      "hints": [
+        "Line up the points. Then make a rough guess: about $6 + 2$."
+      ],
+      "explanation": "Line up the points and write 6.4 as 6.40. Then $6.40 + 2.15 = 8.55$. The rough guess $6 + 2 = 8$ agrees.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(64, 10) + Rational(215, 100)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/q-3",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Pooja says that writing 3.5 as 3.50 changes its value. Is she right?",
+      "answer": "false",
+      "hints": [
+        "How many hundredths are the same as 5 tenths?"
+      ],
+      "explanation": "No. 5 tenths is the same as 50 hundredths, so $3.5 = 3.50$. A zero at the end, after the point, does not change the value.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Ne(Rational(35, 10), Rational(350, 100))"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $10 - 4.65$. Type a decimal, like 0.4.",
+      "answer": "5.35",
+      "hints": [
+        "Write 10 as 10.00.",
+        "10.00 is 9 ones, 9 tenths and 10 hundredths."
+      ],
+      "explanation": "Write 10 as 10.00, which is 9 ones, 9 tenths and 10 hundredths. Hundredths: $10 - 5 = 5$. Tenths: $9 - 6 = 3$. Ones: $9 - 4 = 5$. So the answer is 5.35.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "10 - Rational(465, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-add-sub-decimals/q-5",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Joseph's Appa buys a school bag for ₹318.45. He pays with a ₹500 note. How much change does he get, in rupees?",
+      "answer": "181.55",
+      "hints": [
+        "Think of ₹500.00 as ₹499 and 100 paise."
+      ],
+      "explanation": "Paise: $100 - 45 = 55$. Rupees: $499 - 318 = 181$. The change is ₹181.55. Check: $318.45 + 181.55 = 500.00$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "500 - Rational(31845, 100)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/q-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "For Pongal, Kavya's Ammamma buys flowers for ₹24.50, jaggery for ₹62.75 and turmeric for ₹8.25. What is the total bill, in rupees?",
+      "answer": "95.50",
+      "hints": [
+        "Line up all three points.",
+        "Add the paise first: $50 + 75 + 25$."
+      ],
+      "explanation": "Paise: $50 + 75 + 25 = 150$ paise, which is ₹1 and 50 paise. Write 50 and carry ₹1. Rupees: $24 + 62 + 8 + 1 = 95$. The bill is ₹95.50.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2450, 100) + Rational(6275, 100) + Rational(825, 100)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/q-7",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Fill in the box: $4.8 + \\square = 7.25$ Type the number that goes in the box.",
+      "answer": "2.45",
+      "hints": [
+        "The box is the difference: $7.25 - 4.8$.",
+        "Write 4.8 as 4.80 and line up the points."
+      ],
+      "explanation": "The missing number is $7.25 - 4.80$. Hundredths: $5 - 0 = 5$. Tenths: 2 is less than 8, so borrow 1 one: $12 - 8 = 4$. Ones: $6 - 4 = 2$. So the box is 2.45. Check: $4.80 + 2.45 = 7.25$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(725, 100) - Rational(48, 10)"
+      }
+    },
+    {
+      "id": "s0-add-sub-decimals/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Gurpreet has ₹200. A storybook costs ₹235.50. How much more money does he need, in rupees?",
+      "answer": "35.50",
+      "hints": [
+        "Subtract the money he has from the price.",
+        "Write ₹200 as ₹200.00."
+      ],
+      "explanation": "$235.50 - 200.00 = 35.50$. He needs ₹35.50 more.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(23550, 100) - 200"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "With whole numbers I line up the right-hand ends. Why not here?",
+      "a": "With whole numbers, the right-hand ends are the ones digits. So lining up the ends lines up the ones. With decimals, the ones digit sits just left of the point. Lining up the points keeps every place in its own column."
+    },
+    {
+      "q": "Does a zero always leave a decimal unchanged?",
+      "a": "Only a zero at the end, after the point. $3.5 = 3.50$. But a zero just after the point moves the other digits. $3.05$ is 3 and 5 hundredths, which is less than $3.5$."
+    },
+    {
+      "q": "Where is the point in a whole number like 500?",
+      "a": "Just after the last digit. We usually leave it out. So 500 is the same as 500.0 and 500.00."
+    },
+    {
+      "q": "Where does the point go in my answer?",
+      "a": "Straight below the points in the numbers above it. Then make a rough guess to check. For $12.5 + 3.75$, the answer should be about 16."
+    },
+    {
+      "q": "Can I add the rupees and the paise separately?",
+      "a": "Yes. For ₹48.50 + ₹125.75, the rupees make 173 and the paise make 125. 125 paise is ₹1 and 25 paise. So the total is ₹174.25."
+    }
+  ]
+}

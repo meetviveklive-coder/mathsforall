@@ -1,0 +1,33 @@
+{
+ "op": "+",
+ "top": "3.6",
+ "bottom": "1.25",
+ "result": null,
+ "points_aligned": true,
+ "headers": [
+  "Ones",
+  "Tenths",
+  "Hundredths"
+ ],
+ "filled_zeros": 0,
+ "carries": [],
+ "columns": [
+  [
+   "3",
+   "1"
+  ],
+  [
+   ".",
+   "."
+  ],
+  [
+   "6",
+   "2"
+  ],
+  [
+   "",
+   "5"
+  ]
+ ],
+ "digits_in_columns": true
+}

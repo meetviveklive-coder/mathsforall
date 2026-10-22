@@ -1,0 +1,49 @@
+{
+ "op": "+",
+ "top": "12.5",
+ "bottom": "3.75",
+ "result": "16.25",
+ "points_aligned": true,
+ "headers": [
+  "Tens",
+  "Ones",
+  "Tenths",
+  "Hundredths"
+ ],
+ "filled_zeros": 0,
+ "carries": [
+  {
+   "place": "Ones",
+   "digit": "1"
+  }
+ ],
+ "columns": [
+  [
+   "1",
+   "",
+   "1"
+  ],
+  [
+   "2",
+   "3",
+   "6"
+  ],
+  [
+   ".",
+   ".",
+   "."
+  ],
+  [
+   "5",
+   "7",
+   "2"
+  ],
+  [
+   "",
+   "5",
+   "5"
+  ]
+ ],
+ "answer_correct": true,
+ "digits_in_columns": true
+}

@@ -1,0 +1,47 @@
+{
+ "op": "-",
+ "top": "500.00",
+ "bottom": "236.75",
+ "result": "263.25",
+ "points_aligned": true,
+ "headers": [
+  "Rupees",
+  "Paise"
+ ],
+ "filled_zeros": 2,
+ "carries": [],
+ "columns": [
+  [
+   "5",
+   "2",
+   "2"
+  ],
+  [
+   "0",
+   "3",
+   "6"
+  ],
+  [
+   "0",
+   "6",
+   "3"
+  ],
+  [
+   ".",
+   ".",
+   "."
+  ],
+  [
+   "0",
+   "7",
+   "2"
+  ],
+  [
+   "0",
+   "5",
+   "5"
+  ]
+ ],
+ "answer_correct": true,
+ "digits_in_columns": true
+}

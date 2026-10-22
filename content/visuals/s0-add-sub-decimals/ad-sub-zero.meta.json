@@ -1,0 +1,38 @@
+{
+ "op": "-",
+ "top": "7.40",
+ "bottom": "2.65",
+ "result": "4.75",
+ "points_aligned": true,
+ "headers": [
+  "Ones",
+  "Tenths",
+  "Hundredths"
+ ],
+ "filled_zeros": 1,
+ "carries": [],
+ "columns": [
+  [
+   "7",
+   "2",
+   "4"
+  ],
+  [
+   ".",
+   ".",
+   "."
+  ],
+  [
+   "4",
+   "6",
+   "7"
+  ],
+  [
+   "0",
+   "5",
+   "5"
+  ]
+ ],
+ "answer_correct": true,
+ "digits_in_columns": true
+}
