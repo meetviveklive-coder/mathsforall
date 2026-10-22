@@ -1,0 +1,65 @@
+---
+/**
+ * One question. Everything a learner might see (hints, explanation, why an option is wrong)
+ * is rendered here at build time and only shown or hidden by src/scripts/learn.ts.
+ */
+import type { Question } from '../lib/content';
+import { renderBlock, renderInline } from '../lib/render';
+
+interface Props {
+  q: Question;
+  n: number;
+  mode: 'practice' | 'quiz';
+  visual: { svg: string; alt: string } | null;
+  data: string;
+}
+const { q, n, mode, visual, data } = Astro.props;
+const name = q.id.replace(/[^a-z0-9]/gi, '_');
+const options =
+  q.type === 'mcq'
+    ? q.options!.map((o) => ({ html: renderInline(o.text), why: o.why_wrong ? renderInline(o.why_wrong) : '' }))
+    : q.type === 'true_false'
+      ? [{ html: 'True', why: '' }, { html: 'False', why: '' }]
+      : [];
+---
+<div class="card q" data-mode={mode} data-q={data}>
+  <p class="q-num">{mode === 'quiz' ? 'Question' : 'Practice'} {n}</p>
+  <div class="q-prompt" set:html={renderBlock(q.prompt)} />
+  {visual && <figure class="visual" role="img" aria-label={visual.alt}><Fragment set:html={visual.svg} /></figure>}
+
+  {options.length > 0 ? (
+    <fieldset class="options" style="border:0;padding:0;margin:0 0 12px">
+      <legend class="sr-only">Choose one answer</legend>
+      {options.map((o, i) => (
+        <label class="option">
+          <input type="radio" name={name} value={String(i)} />
+          <span set:html={o.html} />
+        </label>
+      ))}
+    </fieldset>
+  ) : (
+    <div class="answer-row">
+      <label class="sr-only" for={`in-${name}`}>Your answer</label>
+      <input id={`in-${name}`} type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+        placeholder={q.type === 'numeric' ? 'e.g. 3/4' : ''} />
+    </div>
+  )}
+
+  {mode === 'practice' && (
+    <div class="q-actions">
+      <button type="button" class="btn" data-check>Check</button>
+      <button type="button" class="btn secondary" data-hint-btn>Hint</button>
+      <button type="button" class="btn quiet" data-reveal hidden>Show answer</button>
+    </div>
+  )}
+
+  {mode === 'practice' && q.hints.map((h, i) => <div class="hint" data-hint={i} hidden set:html={`<strong>Hint ${i + 1}:</strong> ${renderInline(h)}`} />)}
+
+  <div class="feedback" data-feedback aria-live="polite"></div>
+  <template data-explain><div class="explain" set:html={renderBlock(q.explanation)} /></template>
+  {options.map((o, i) => o.why && <template data-why={i}><span set:html={o.why} /></template>)}
+</div>
+
+<style is:global>
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+</style>

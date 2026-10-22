@@ -102,3 +102,50 @@ def test_missing_required_field_fails(tmp_path, field):
     doc = copy.deepcopy(GOOD)
     doc["quiz"][1].pop(field)
     assert run(doc, tmp_path).fails
+
+
+# ---- drawings, SVG safety and answer-matching rules
+
+def test_checks_match_by_value():
+    assert vc.compare_checks({"lines": [{"point": "2/4"}]}, {"lines": [{"point": "1/2"}]}) == []
+
+
+def test_checks_detect_wrong_drawing():
+    problems = vc.compare_checks({"bars": [{"parts": 4, "shaded": 3}]}, {"bars": [{"parts": 4, "shaded": 2}]})
+    assert problems and "shaded" in problems[0]
+
+
+def test_checks_detect_missing_bar():
+    assert vc.compare_checks({"bars": [{"parts": 2}, {"parts": 4}]}, {"bars": [{"parts": 2}]})
+
+
+@pytest.mark.parametrize("svg", [
+    '<svg viewBox="0 0 1 1"><script>alert(1)</script></svg>',
+    '<svg viewBox="0 0 1 1"><rect onclick="x()"/></svg>',
+    '<svg viewBox="0 0 1 1"><image href="https://x.test/a.png"/></svg>',
+    '<svg viewBox="0 0 1 1"><rect style="fill:url(https://x.test/a)"/></svg>',
+    '<svg><rect/></svg>',
+])
+def test_unsafe_svg_fails(svg):
+    rep = vc.Report("t")
+    vc.check_svg_safety(rep, "v", svg)
+    assert rep.fails
+
+
+def test_safe_svg_passes():
+    rep = vc.Report("t")
+    vc.check_svg_safety(rep, "v", '<svg viewBox="0 0 1 1"><rect style="fill:var(--viz-fill,#C2703D)"/></svg>')
+    assert not rep.fails
+
+
+@pytest.mark.parametrize("answer,ok", [("3/4", True), ("6/8", False), ("2", True), ("0.75", False)])
+def test_simplest_rule(answer, ok):
+    rep = vc.Report("t")
+    vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "simplest"})
+    assert (not rep.fails) == ok
+
+
+def test_exact_rule_needs_fraction():
+    rep = vc.Report("t")
+    vc.check_match_rule(rep, "q", {"type": "numeric", "answer": "2", "match": "exact"})
+    assert rep.fails

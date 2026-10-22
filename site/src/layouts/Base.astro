@@ -1,0 +1,54 @@
+---
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+import { IS_PREVIEW } from '../lib/content';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Relative path from this page to the site root, e.g. "" or "../". */
+  root: string;
+}
+const { title, description = 'Free maths, one idea at a time. No grades, no ranks.', root } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="referrer" content="no-referrer" />
+    <title>{title}</title>
+    <link rel="icon" href={`${root}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    {IS_PREVIEW && (
+      <div class="preview-banner">Preview: content here is waiting for review and may change.</div>
+    )}
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="wordmark" href={`${root}index.html`}>Ganit</a>
+        <nav><a href={`${root}index.html#map`}>Map</a></nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer class="wrap site-footer small muted">
+      <p>Free to use. Your progress stays on this device. No accounts, no tracking.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .preview-banner {
+    background: var(--soft-warning); color: var(--text);
+    border-bottom: 1px solid var(--border);
+    font-size: .875rem; text-align: center; padding: 6px 16px;
+  }
+  .site-header { border-bottom: 1px solid var(--border); background: var(--surface); margin-bottom: 24px; }
+  .bar { display: flex; align-items: center; justify-content: space-between; min-height: 56px; }
+  .wordmark { font-weight: 800; font-size: 1.25rem; letter-spacing: .02em; color: var(--text); text-decoration: none; }
+  nav a { font-weight: 600; text-decoration: none; padding: 12px 8px; }
+  .site-footer { margin-top: 48px; padding-bottom: 32px; }
+</style>

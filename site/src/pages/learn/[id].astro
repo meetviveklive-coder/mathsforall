@@ -1,0 +1,177 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadTopicMap, loadPublishedTopics, visualSvg, IS_PREVIEW, type Question, type Topic } from '../../lib/content';
+import { renderBlock, renderInline } from '../../lib/render';
+import QuestionCard from '../../components/QuestionCard.astro';
+
+export function getStaticPaths() {
+  const order = loadTopicMap().topics.map((t) => t.id);
+  const topics = loadPublishedTopics().sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+  return topics.map((topic, i) => ({
+    params: { id: topic.id },
+    props: { topic, prev: topics[i - 1] ?? null, next: topics[i + 1] ?? null },
+  }));
+}
+
+interface Props { topic: Topic; prev: Topic | null; next: Topic | null }
+const { topic, prev, next } = Astro.props;
+const map = loadTopicMap();
+const entry = map.topics.find((t) => t.id === topic.id)!;
+const stage = map.stages.find((s) => s.stage === entry.stage)!;
+const published = new Set(loadPublishedTopics().map((t) => t.id));
+const titleOf = Object.fromEntries(map.topics.map((t) => [t.id, t.title]));
+
+/** Data the browser needs to check answers. Answers are visible in the page source; this is self-study, not an exam. */
+const clientQuestion = (q: Question) => ({
+  id: q.id, type: q.type, answer: q.answer, match: q.match ?? 'value',
+  accept: q.accept ?? [], correct: q.options?.findIndex((o) => o.correct) ?? -1,
+});
+const qJson = (q: Question) => JSON.stringify(clientQuestion(q));
+const visual = (id?: string) => visualSvg(topic, id);
+const clientData = {
+  topic: { id: topic.id, prerequisites: entry.prerequisites },
+  published: [...published],
+  titles: titleOf,
+  next: next ? { id: next.id, title: next.title } : null,
+};
+---
+<Base title={`${topic.title} · Ganit`} root="../">
+  <article class="topic-page" data-topic={topic.id}>
+    <p class="small muted crumbs"><a href="../index.html#map">Map</a> · Stage {stage.stage}: {stage.name}{entry.unit && ` · ${entry.unit}`}</p>
+    <h1>{topic.title}</h1>
+    {IS_PREVIEW && topic.status !== 'approved' && (
+      <p class="status-note small">Status: <strong>{topic.status}</strong>. Not yet approved for learners.</p>
+    )}
+    <p class="small muted">About {entry.est_minutes} minutes</p>
+
+    <div class="card gate" id="gate" hidden>
+      <p><strong>Learn this first:</strong> <span id="gate-list"></span></p>
+      <p class="small muted">You can still read this topic. It will make more sense after the one above.</p>
+    </div>
+
+    <div class="card goals">
+      <h2 class="h3">By the end you will be able to</h2>
+      <ul>{entry.objectives.map((o) => <li set:html={renderInline(o)} />)}</ul>
+    </div>
+
+    <section class="lesson" aria-label="Lesson">
+      <div class="hook" set:html={renderBlock(topic.lesson.hook)} />
+      {topic.lesson.sections.map((s) => {
+        const v = visual(s.visual);
+        return (
+          <section class="lesson-section">
+            <h2>{s.heading}</h2>
+            <div set:html={renderBlock(s.body)} />
+            {v && <figure class="visual" role="img" aria-label={v.alt}><Fragment set:html={v.svg} /></figure>}
+          </section>
+        );
+      })}
+    </section>
+
+    <section aria-labelledby="ex-title">
+      <h2 id="ex-title">Worked examples</h2>
+      <p class="small muted">Try each one yourself first, then open the steps.</p>
+      {topic.lesson.examples.map((ex, i) => (
+        <details class="card example">
+          <summary><span class="ex-num">Example {i + 1}</span> <span set:html={renderInline(ex.problem)} /></summary>
+          <ol class="steps">{ex.steps.map((s) => <li set:html={renderInline(s)} />)}</ol>
+        </details>
+      ))}
+    </section>
+
+    {topic.lesson.summary && (
+      <section class="card remember" aria-labelledby="rem-title">
+        <h2 id="rem-title" class="h3">Remember</h2>
+        <ul>{topic.lesson.summary.map((s) => <li set:html={renderInline(s)} />)}</ul>
+      </section>
+    )}
+
+    <section id="practice" aria-labelledby="pr-title">
+      <h2 id="pr-title">Practise</h2>
+      <p class="small muted">Take your time. Use a hint whenever you are stuck. Nothing here is scored.</p>
+      {topic.practice.map((q, i) => <QuestionCard q={q} n={i + 1} mode="practice" visual={visual(q.visual)} data={qJson(q)} />)}
+    </section>
+
+    <section id="quiz" aria-labelledby="qz-title">
+      <h2 id="qz-title">Check yourself</h2>
+      <div class="card quiz-intro" id="quiz-intro">
+        <p>{topic.quiz.length} questions. No hints and no timer. Get at least 80% right and this topic is mastered. You can try as many times as you like.</p>
+        <button class="btn" type="button" id="quiz-start">Start the check</button>
+      </div>
+      <form id="quiz-form" hidden novalidate>
+        {topic.quiz.map((q, i) => <QuestionCard q={q} n={i + 1} mode="quiz" visual={visual(q.visual)} data={qJson(q)} />)}
+        <button class="btn" type="submit" id="quiz-submit">Check my answers</button>
+      </form>
+      <div class="card result" id="quiz-result" hidden aria-live="polite"></div>
+    </section>
+
+    <section aria-labelledby="dq-title">
+      <h2 id="dq-title">Questions learners ask</h2>
+      {topic.doubts.map((d) => (
+        <details class="doubt">
+          <summary set:html={renderInline(d.q)} />
+          <div set:html={renderBlock(d.a)} />
+        </details>
+      ))}
+    </section>
+
+    <nav class="pager" aria-label="Topics">
+      {prev ? <a class="btn secondary" href={`${prev.id}.html`}>← {prev.title}</a> : <span />}
+      {next && <a class="btn secondary" href={`${next.id}.html`}>{next.title} →</a>}
+    </nav>
+  </article>
+
+  <script type="application/json" id="page-data" set:html={JSON.stringify(clientData).replace(/</g, '\\u003c')} />
+  <script>
+    import '../../scripts/learn';
+  </script>
+</Base>
+
+<style is:global>
+  .h3 { font-size: 1.125rem; }
+  .crumbs a { text-decoration: none; }
+  .status-note { background: var(--soft-warning); border-radius: var(--radius-s); padding: 6px 10px; display: inline-block; }
+  .gate { border-color: var(--warning); background: var(--soft-warning); }
+  .goals ul { margin-bottom: 0; }
+  .hook { font-size: 1.125rem; margin: 24px 0; padding-left: 16px; border-left: 4px solid var(--secondary); }
+  .lesson-section { margin: 32px 0; }
+  .example summary { cursor: pointer; min-height: 48px; display: block; }
+  .ex-num { display: block; font-weight: 700; color: var(--primary); font-size: .875rem; margin-bottom: 4px; }
+  .steps { margin: 12px 0 0; padding-left: 22px; }
+  .steps li { margin-bottom: 8px; }
+  .remember { background: var(--soft-primary); border-color: var(--primary); }
+  .remember ul { margin-bottom: 0; }
+  section#practice, section#quiz { margin-top: 40px; }
+  .q-num { font-weight: 700; font-size: .875rem; color: var(--muted); margin-bottom: 4px; }
+  .q-prompt { margin-bottom: 12px; }
+  .q-prompt p:last-child { margin-bottom: 0; }
+  .answer-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .answer-row input[type='text'] {
+    font: inherit; font-size: 1.125rem; min-height: 48px; width: 9rem; padding: 0 12px;
+    border: 1.5px solid var(--border); border-radius: var(--radius-s); background: var(--surface); color: var(--text);
+  }
+  .answer-row input[type='text']:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 2px var(--soft-primary); }
+  .options { display: grid; gap: 8px; margin-bottom: 12px; }
+  .option { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 8px 12px;
+    border: 1.5px solid var(--border); border-radius: var(--radius-m); cursor: pointer; background: var(--surface); }
+  .option input { width: 20px; height: 20px; accent-color: var(--primary); margin: 0; flex: none; }
+  .option:has(input:checked) { border-color: var(--primary); background: var(--soft-primary); }
+  .option.is-right { border-color: var(--success); }
+  .option.is-wrong { border-color: var(--error); }
+  .q-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .hint { background: var(--soft-warning); border-radius: var(--radius-s); padding: 10px 12px; margin-top: 12px; }
+  .feedback { margin-top: 12px; border-radius: var(--radius-s); padding: 10px 12px; }
+  .feedback:empty { display: none; }
+  .feedback.ok { background: var(--soft-success); }
+  .feedback.no { background: var(--soft-error); }
+  .feedback .explain { margin-top: 6px; }
+  .feedback p:last-child { margin-bottom: 0; }
+  .result { border-width: 2px; }
+  .result.mastered { border-color: var(--success); background: var(--soft-success); }
+  .result.keep-going { border-color: var(--warning); }
+  .result .score { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+  .doubt { border-bottom: 1px solid var(--border); padding: 4px 0; }
+  .doubt summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+  .pager { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+  .pager .btn { max-width: 100%; text-align: center; line-height: 1.3; padding: 10px 16px; height: auto; }
+</style>

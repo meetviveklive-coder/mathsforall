@@ -26,7 +26,7 @@ Founder reads every topic before approval; first learner's confusion points are 
 ## 3. Testing Tools
 Content: Python 3 + SymPy + jsonschema
 Unit: Vitest
-E2E: Playwright (mobile viewport 360×740)
+E2E: Playwright for Python (mobile viewport 360×740), `site/tests/e2e/pilot_flow.py`
 Accessibility: axe-core via Playwright
 
 ## 4. Test File Structure
@@ -49,6 +49,8 @@ Target: 100% of content verified; unit tests for all mastery/scheduling/normalis
 
 ## 7. Commands
 Verify content: `python3 tools/verify_content.py`
+Redraw diagrams: `python3 content/visuals/<topic-id>/make.py`
+End-to-end (after a build): `python3 site/tests/e2e/pilot_flow.py site/dist <screenshot-dir>`
 Check topic map: `python3 tools/check_topic_map.py`
 Test: `npm --prefix site test`
 Lint: `npm --prefix site run lint`

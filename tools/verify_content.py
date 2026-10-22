@@ -129,6 +129,77 @@ def check_mcq(rep: Report, where: str, q: dict):
             rep.ok()
 
 
+SVG_FORBIDDEN = re.compile(r"<\s*(script|image|foreignObject|iframe)|\son[a-z]+\s*=|(?:xlink:)?href\s*=|url\(\s*['\"]?(?:https?:|//)",
+                           re.IGNORECASE)
+
+
+def check_svg_safety(rep: Report, where: str, svg: str):
+    m = SVG_FORBIDDEN.search(svg)
+    if m:
+        rep.fail(where, f"unsafe SVG content near {m.group(0)!r}")
+    elif not svg.lstrip().startswith("<svg") or "viewBox" not in svg:
+        rep.fail(where, "SVG must start with <svg and have a viewBox")
+    else:
+        rep.ok()
+
+
+def _same(a, b) -> bool:
+    if isinstance(a, str) and isinstance(b, str):
+        try:
+            return mathcheck.equal(mathcheck.parse(a), mathcheck.parse(b))
+        except Exception:  # noqa: BLE001 - not numbers, compare as text
+            return a == b
+    return a == b
+
+
+def compare_checks(checks, meta, path="") -> list[str]:
+    """Every key in checks must match meta (numbers compared by value)."""
+    problems = []
+    if isinstance(checks, dict):
+        if not isinstance(meta, dict):
+            return [f"{path or 'root'}: expected an object"]
+        for k, v in checks.items():
+            if k not in meta:
+                problems.append(f"{path}{k}: missing from drawing")
+            else:
+                problems += compare_checks(v, meta[k], f"{path}{k}.")
+    elif isinstance(checks, list):
+        if not isinstance(meta, list) or len(meta) != len(checks):
+            return [f"{path.rstrip('.')}: expected {len(checks)} items, drawing has {len(meta) if isinstance(meta, list) else 'none'}"]
+        for i, (c, m) in enumerate(zip(checks, meta)):
+            problems += compare_checks(c, m, f"{path}{i}.")
+    elif not _same(checks, meta):
+        problems.append(f"{path.rstrip('.')}: expected {checks!r}, drawing has {meta!r}")
+    return problems
+
+
+FRACTION_TEXT = re.compile(r"^\s*(\d+)\s*/\s*(\d+)\s*$")
+
+
+def check_match_rule(rep: Report, where: str, q: dict):
+    rule = q.get("match", "value")
+    if rule == "value" or q["type"] != "numeric":
+        if rule != "value":
+            rep.fail(where, "match is only for numeric questions")
+        return
+    m = FRACTION_TEXT.match(q["answer"])
+    if rule == "exact":
+        if not m:
+            rep.fail(where, "match 'exact' needs an answer written as a/b")
+        else:
+            rep.ok()
+    elif rule == "simplest":
+        if m:
+            import math
+            if math.gcd(int(m.group(1)), int(m.group(2))) != 1:
+                rep.fail(where, f"match 'simplest' but answer {q['answer']} is not in lowest terms")
+                return
+        elif not re.fullmatch(r"\s*-?\d+\s*", q["answer"]):
+            rep.fail(where, "match 'simplest' needs an answer written as a/b or a whole number")
+            return
+        rep.ok()
+
+
 def load_topic_map():
     if not TOPIC_MAP_PATH.exists():
         return {}
@@ -164,11 +235,30 @@ def verify_file(path: Path, topic_map: dict) -> Report:
         check_value(rep, f"lesson.examples[{i}]", ex["verify"], ex["answer"])
 
     visual_ids = {v["id"] for v in doc.get("visuals", [])}
+    soft = rep.warn if doc["status"] == "draft" else rep.fail
     for v in doc.get("visuals", []):
-        if "file" in v and not (path.parent / v["file"]).exists() and not (ROOT / v["file"]).exists():
-            (rep.warn if doc["status"] == "draft" else rep.fail)(f"visuals.{v['id']}", f"file {v['file']} not found")
+        where = f"visuals.{v['id']}"
         if "file" not in v:
-            (rep.warn if doc["status"] == "draft" else rep.fail)(f"visuals.{v['id']}", "not drawn yet")
+            soft(where, "not drawn yet")
+            continue
+        svg_path = ROOT / v["file"]
+        if not svg_path.exists():
+            soft(where, f"file {v['file']} not found")
+            continue
+        check_svg_safety(rep, where, svg_path.read_text(encoding="utf-8"))
+        meta_path = svg_path.with_suffix(".meta.json")
+        if "checks" in v:
+            if not meta_path.exists():
+                rep.fail(where, "has checks but no .meta.json from the drawing script")
+            else:
+                meta = json.loads(meta_path.read_text(encoding="utf-8"))
+                problems = compare_checks(v["checks"], meta)
+                for problem in problems:
+                    rep.fail(where, f"drawing does not match checks: {problem}")
+                if not problems:
+                    rep.ok()
+        else:
+            rep.warn(where, "no checks: drawing is not machine-verified")
     for i, s in enumerate(doc["lesson"]["sections"]):
         if s.get("visual") and s["visual"] not in visual_ids:
             rep.fail(f"lesson.sections[{i}]", f"unknown visual {s['visual']!r}")
@@ -185,7 +275,8 @@ def verify_file(path: Path, topic_map: dict) -> Report:
             if q["id"] in seen_ids:
                 rep.fail(where, "duplicate question id")
             seen_ids.add(q["id"])
-            norm = re.sub(r"\s+", " ", q["prompt"].strip().lower())
+            # Same wording is fine when the picture differs ("What fraction does the dot show?").
+            norm = re.sub(r"\s+", " ", q["prompt"].strip().lower()) + "|" + q.get("visual", "")
             if norm in prompts:
                 rep.fail(where, f"same prompt as {prompts[norm]}")
             prompts[norm] = q["id"]
@@ -197,6 +288,7 @@ def verify_file(path: Path, topic_map: dict) -> Report:
                 elif group == "quiz":
                     covered.add(q["objective"])
 
+            check_match_rule(rep, where, q)
             if q["type"] == "mcq":
                 check_mcq(rep, where, q)
             elif q["type"] == "true_false":

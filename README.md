@@ -33,6 +33,17 @@ python3 -m pytest -q tools/tests    # tool self-tests
 
 Example prompt in Claude Code: *"Use the content-writer agent to write s0-fractions-meaning, then the visuals agent, then the math-verifier agent. Stop before approval."*
 
+## Run the site locally
+```bash
+cd site
+npm install
+npm run dev            # http://localhost:4321 (shows draft/verified topics)
+npm run build          # production build: approved topics only
+npm run build:preview  # build including draft/verified topics, with a preview banner
+npm test               # unit tests
+```
+Astro 7 needs Node.js 22.23.4 or newer.
+
 ## Commands
 ```bash
 python3 tools/check_topic_map.py     # topic map: schema, DAG, stage order
@@ -42,8 +53,8 @@ python3 tools/verify_content.py      # verify all topic files
 
 ## Status
 - [x] Phase 0: docs, agents, schema, verifier
-- [x] Phase 1: Stage 0–1 topic map (58 topics) — awaiting approval
-- [ ] Phase 2: pilot — 3 topics end to end + minimal site
+- [x] Phase 1: Stage 0–1 topic map (58 topics) — approved
+- [ ] Phase 2: pilot — 3 fraction topics written and verified, minimal site built; awaiting your approval and a week with the first learner
 - [ ] Phase 3: rest of Stage 0–1
 - [ ] Phase 4: placement, knowledge map, spaced review, export/import
 - [ ] Phase 5: launch

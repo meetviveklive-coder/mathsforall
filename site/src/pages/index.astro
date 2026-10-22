@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import { loadTopicMap, loadPublishedTopics } from '../lib/content';
+
+const map = loadTopicMap();
+const published = loadPublishedTopics();
+const publishedIds = new Set(published.map((t) => t.id));
+const statusOf = Object.fromEntries(published.map((t) => [t.id, t.status]));
+const number = Object.fromEntries(map.topics.map((t, i) => [t.id, i + 1]));
+const titleOf = Object.fromEntries(map.topics.map((t) => [t.id, t.title]));
+
+// Group by stage, then unit, keeping file order.
+const stages = map.stages
+  .map((s) => {
+    const topics = map.topics.filter((t) => t.stage === s.stage);
+    const units: { name: string; topics: typeof topics }[] = [];
+    for (const t of topics) {
+      const name = t.unit ?? 'Topics';
+      let u = units.find((x) => x.name === name);
+      if (!u) units.push((u = { name, topics: [] }));
+      u.topics.push(t);
+    }
+    return { ...s, units, count: topics.length };
+  })
+  .filter((s) => s.count > 0);
+const laterStages = map.stages.filter((s) => !map.topics.some((t) => t.stage === s.stage));
+
+const clientData = {
+  topics: map.topics.map((t) => ({ id: t.id, prerequisites: t.prerequisites })),
+  published: [...publishedIds],
+  titles: titleOf,
+};
+---
+<Base title="Ganit" root="">
+  <section class="hero">
+    <h1>Maths, one idea at a time</h1>
+    <p class="muted">No classes, no marks, no race. Learn a topic, practise it, and check yourself when you feel ready.</p>
+    <div class="card next" id="next-card" hidden>
+      <p class="small muted label" id="next-label">Next for you</p>
+      <h2 id="next-title"></h2>
+      <a class="btn" id="next-link" href="#">Start</a>
+    </div>
+    <p class="small muted" id="storage-warning" hidden>
+      Your browser is not letting this site save progress (private mode?). You can still learn, but progress will not be kept.
+    </p>
+  </section>
+
+  <section id="map" aria-labelledby="map-title">
+    <h2 id="map-title">Your map</h2>
+    <p class="small muted">Topics light up as you master them. A topic opens when the topics before it are mastered.</p>
+    <ul class="legend small" aria-label="Legend">
+      <li><span class="dot mastered"></span>Mastered</li>
+      <li><span class="dot available"></span>Ready</li>
+      <li><span class="dot locked"></span>Needs an earlier topic</li>
+      <li><span class="dot coming"></span>Coming soon</li>
+    </ul>
+
+    {stages.map((s) => (
+      <div class="stage">
+        <h3 class="stage-title">Stage {s.stage}: {s.name}</h3>
+        {s.units.map((u) => {
+          const live = u.topics.some((t) => publishedIds.has(t.id));
+          return (
+            <details class="unit" open={live}>
+              <summary>
+                <span>{u.name}</span>
+                <span class="small muted">{u.topics.length} topics</span>
+              </summary>
+              <ol class="topics">
+                {u.topics.map((t) => (
+                  <li class="topic" data-topic={t.id} data-state={publishedIds.has(t.id) ? 'available' : 'coming'}>
+                    <span class="num">{number[t.id]}</span>
+                    {publishedIds.has(t.id) ? (
+                      <a href={`learn/${t.id}.html`} class="t-title">{t.title}</a>
+                    ) : (
+                      <span class="t-title">{t.title}</span>
+                    )}
+                    <span class="chip small" data-chip>
+                      {publishedIds.has(t.id) ? 'Ready' : 'Coming soon'}
+                    </span>
+                    {statusOf[t.id] && statusOf[t.id] !== 'approved' && (
+                      <span class="chip small review-chip">{statusOf[t.id]}</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </details>
+          );
+        })}
+      </div>
+    ))}
+    <div class="later small muted">
+      <h3 class="stage-title">Later stages</h3>
+      <p>{laterStages.map((s) => `${s.stage}: ${s.name}`).join(' · ')}</p>
+    </div>
+  </section>
+
+  <script type="application/json" id="map-data" set:html={JSON.stringify(clientData).replace(/</g, '\\u003c')} />
+  <script>
+    import { topicState, missingPrerequisites, type MapTopic } from '../lib/mastery';
+    import { load, storageAvailable } from '../lib/progress';
+
+    const data = JSON.parse(document.getElementById('map-data')!.textContent!) as {
+      topics: MapTopic[]; published: string[]; titles: Record<string, string>;
+    };
+    const published = new Set(data.published);
+    const progress = load().topics;
+    const now = new Date().toISOString();
+    const LABEL: Record<string, string> = {
+      coming: 'Coming soon', locked: 'Needs earlier topic', available: 'Ready',
+      in_progress: 'In progress', mastered: 'Mastered ✓', review: 'Review due',
+    };
+    let next: { id: string; state: string } | null = null;
+    for (const t of data.topics) {
+      const state = topicState(t, progress, published, now);
+      const li = document.querySelector<HTMLElement>(`[data-topic="${t.id}"]`);
+      if (!li) continue;
+      li.dataset.state = state;
+      const chip = li.querySelector<HTMLElement>('[data-chip]')!;
+      chip.textContent = LABEL[state];
+      if (state === 'locked') {
+        const need = missingPrerequisites(t, progress, published).map((id) => data.titles[id]);
+        chip.title = `First master: ${need.join(', ')}`;
+      }
+      if (!next && (state === 'review' || state === 'in_progress' || state === 'available')) next = { id: t.id, state };
+    }
+    if (next) {
+      const card = document.getElementById('next-card')!;
+      document.getElementById('next-title')!.textContent = data.titles[next.id];
+      document.getElementById('next-label')!.textContent =
+        next.state === 'review' ? 'Time for a quick review' : next.state === 'in_progress' ? 'Carry on with' : 'Next for you';
+      const a = document.getElementById('next-link') as HTMLAnchorElement;
+      a.href = `learn/${next.id}.html`;
+      a.textContent = next.state === 'available' ? 'Start' : 'Continue';
+      card.hidden = false;
+    }
+    if (!storageAvailable()) document.getElementById('storage-warning')!.hidden = false;
+  </script>
+</Base>
+
+<style>
+  .hero { margin-bottom: 32px; }
+  .next { border-color: var(--primary); background: var(--soft-primary); margin-top: 16px; }
+  .next h2 { margin-bottom: 16px; }
+  .label { margin-bottom: 4px; }
+  .legend { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 20px; }
+  .legend li { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 999px; display: inline-block; border: 2px solid var(--border); }
+  .dot.mastered { background: var(--success); border-color: var(--success); }
+  .dot.available { background: var(--surface); border-color: var(--primary); }
+  .dot.locked { background: var(--border); }
+  .dot.coming { background: transparent; border-style: dashed; }
+  .stage { margin-bottom: 24px; }
+  .stage-title { margin: 24px 0 8px; }
+  .unit { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-m); margin-bottom: 8px; }
+  .unit summary { display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    min-height: 48px; padding: 8px 16px; cursor: pointer; font-weight: 600; }
+  .topics { list-style: none; margin: 0; padding: 0 8px 8px; }
+  .topic { display: grid; grid-template-columns: 2rem 1fr auto; align-items: center; gap: 4px 8px;
+    padding: 10px 8px; border-top: 1px solid var(--border); }
+  .num { color: var(--muted); font-size: .875rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .t-title { line-height: 1.35; }
+  a.t-title { font-weight: 600; text-decoration: none; }
+  a.t-title:hover { text-decoration: underline; }
+  .chip { border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; white-space: nowrap; color: var(--muted); }
+  .review-chip { grid-column: 2 / 4; justify-self: start; border-style: dashed; text-transform: capitalize; }
+  .topic[data-state='mastered'] .chip[data-chip] { background: var(--soft-success); border-color: var(--success); color: var(--success); }
+  .topic[data-state='available'] .chip[data-chip], .topic[data-state='in_progress'] .chip[data-chip] { border-color: var(--primary); color: var(--primary); }
+  .topic[data-state='review'] .chip[data-chip] { border-color: var(--warning); color: var(--warning); }
+  .topic[data-state='coming'] .t-title { color: var(--muted); }
+  .topic[data-state='locked'] a.t-title { color: var(--muted); }
+  .later { margin-top: 24px; }
+</style>

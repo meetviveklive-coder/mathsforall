@@ -7,6 +7,7 @@ The blueprint's DATABASE.md template is adapted accordingly.
 ## 1. Engines
 Content: JSON files validated by JSON Schema (`schema/*.schema.json`).
 Progress: IndexedDB (database `ganit`, version 1), localStorage fallback.
+Pilot (Phase 2) stores the same shape as one localStorage value `ganit:progress:v1` (`site/src/lib/progress.ts`); Phase 4 moves it to IndexedDB.
 
 ## 2. Naming Conventions
 Topic IDs: `s<stage>-<kebab-name>`, e.g. `s0-place-value`. Never renamed once approved (progress references them).
