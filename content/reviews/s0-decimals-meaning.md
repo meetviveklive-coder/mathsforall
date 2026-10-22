@@ -35,3 +35,14 @@ Prerequisites: place value (s0-place-value-thousands) and fractions on a number 
    Fix: change one of them (for example, use 0.3 or a 1-to-2 line in s0-comparing-decimals), and use one tick style for tenths lines.
 
 Context: "Joseph's Nani" (coriander) is natural. Nani also buys cloth in s0-comparing-decimals p-7. See the context note in s0-add-sub-decimals finding 4.
+
+## Fixes applied (content-writer)
+
+1. sections[3]: now opens "Look back at the place-value chart above. Find 0.5 and 0.05."
+2. examples[1]: no mixed-number notation. Problem is "Write 3.25 as wholes and hundredths." Answer is `3 + 25/100`, and the last step adds "In words, it is 3 and 25 hundredths."
+3. sections[0]: "each mark between 0 and 1 has a fraction name above it".
+4. Place-value names are already lower case in prose here, and the money sentence stays "100 paise make 1 rupee". The dm-chart alt text now says "between the ones and tenths columns". s0-add-sub-decimals now uses the same style.
+5. p-1 is kept. s0-comparing-decimals p-2 now asks for 1.7 on a 1-to-2 line, drawn with draw.number_line, so all tenths lines use one tick style.
+
+Context (cross-topic roles): the hook is now "Joseph's Nana" buying coriander. Example 3 is now "Meena buys a piece of cloth". No diagram changed, so make.py was not re-run.
+`verify_content`: PASS, 54 checks passed, 0 failed, 0 warnings. Status set to draft.

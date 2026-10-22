@@ -37,3 +37,14 @@ Visuals: I rendered all seven SVGs. cd-jump and cd-longer have 10 hundredth-step
    Fix: change this one, for example to a dot at 1.7 on a 1-to-2 line. Keep one tick style for tenths lines across topics.
 
 Cross-topic: "Type a decimal, like 0.4." and "a zero at the end does not change the value" match the sibling topics. "1 decimal place" is defined here ("the nearest tenth") and is not used in the sibling topics, so nothing conflicts. Nani buys cloth (p-7); see s0-add-sub-decimals finding 4 on who does the shopping.
+
+## Fixes applied (content-writer)
+
+1. p-6: added "Is this true?"
+2. p-1 now ends "Type the bigger number, like 0.4." p-7 ends "Type a whole number." p-9 and q-6 are money prompts. Under the shared convention they end "Type the amount in rupees, like 45.50." and use `match: decimal`. A whole answer (87, 65) is still accepted.
+3. q-5 option 0.7: why_wrong now says "That adds 3 tenths and 4 tenths to get 7 tenths. That is not even between 0.3 and 0.4." It keeps the zoom-in sentence.
+4. No content change, as the review advises. The "places" check is left to site-builder.
+5. p-2 now asks for a dot at 1.7 on a 1-to-2 line, with new hints, explanation and verify (`1 + 7 * Rational(1, 10)`). I changed make.py so cd-p2 is drawn with `draw.number_line`. That is the same tick style as dm-p1 and dm-q8, with no longer halfway tick. I re-ran make.py, and the cd-p2 purpose, spec, alt and checks match the new meta (start 1, end 2, 10 spaces, labels 1 and 2, point 17/10).
+
+Context (roles): p-7 is now "Ravi's Dadaji buys 7.3 m of cloth". p-9 is "Shreya's Papa buys a hammer". q-6 is "Gurpreet buys a skipping rope". The prices are unchanged.
+`verify_content`: PASS, 51 checks passed, 0 failed, 0 warnings. Status set to draft.

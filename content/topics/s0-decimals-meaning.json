@@ -1,14 +1,14 @@
 {
   "id": "s0-decimals-meaning",
   "title": "Decimals: tenths and hundredths",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
-    "hook": "Joseph's Nani buys a bunch of coriander at the market. The price tag says ₹12.50.\n\nThat small dot matters a lot. Without it, the tag would say 1250 rupees! The dot shows where the whole rupees end. So ₹12.50 is 12 rupees and 50 paise. In this topic you will find out what the digits after the dot mean.",
+    "hook": "Joseph's Nana buys a bunch of coriander at the market. The price tag says ₹12.50.\n\nThat small dot matters a lot. Without it, the tag would say 1250 rupees! The dot shows where the whole rupees end. So ₹12.50 is 12 rupees and 50 paise. In this topic you will find out what the digits after the dot mean.",
     "sections": [
       {
         "heading": "Tenths: one whole cut into 10",
-        "body": "You already know that each place is worth 10 times the place on its right. 1 hundred is 10 tens, and 1 ten is 10 ones.\n\nSo what comes to the right of the ones? Cut one whole into 10 equal parts. Each part is one **tenth**, $\\frac{1}{10}$. We write it as **0.1** and read it as \"zero point one\".\n\nThe dot is called the **decimal point**. Whole numbers go on its left. Parts of a whole go on its right.\n\nOn this number line, each mark has a fraction name above it and a decimal name below it. So $\\frac{3}{10} = 0.3$ and $\\frac{7}{10} = 0.7$. Ten tenths make 1.",
+        "body": "You already know that each place is worth 10 times the place on its right. 1 hundred is 10 tens, and 1 ten is 10 ones.\n\nSo what comes to the right of the ones? Cut one whole into 10 equal parts. Each part is one **tenth**, $\\frac{1}{10}$. We write it as **0.1** and read it as \"zero point one\".\n\nThe dot is called the **decimal point**. Whole numbers go on its left. Parts of a whole go on its right.\n\nOn this number line, each mark between 0 and 1 has a fraction name above it and a decimal name below it. So $\\frac{3}{10} = 0.3$ and $\\frac{7}{10} = 0.7$. Ten tenths make 1.",
         "visual": "dm-tenths-nl"
       },
       {
@@ -23,7 +23,7 @@
       },
       {
         "heading": "Zeros that matter",
-        "body": "Look again at 0.5 and 0.05 in the chart. In 0.5, the 5 is in the tenths place, so it means 5 tenths. In 0.05, the 0 keeps the tenths place empty. The 5 is pushed into the hundredths place, so it means only 5 hundredths.\n\nSo read 0.05 as \"zero point zero five\", never \"zero point five\".\n\nA zero at the **end** is different. 0.3 is 3 tenths, and that is 30 hundredths. So $0.3 = 0.30$. In these grids, 0.3 has 30 squares shaded, but 0.25 has only 25. So 0.3 is bigger than 0.25, even though 25 is bigger than 3.",
+        "body": "Look back at the place-value chart above. Find 0.5 and 0.05. In 0.5, the 5 is in the tenths place, so it means 5 tenths. In 0.05, the 0 keeps the tenths place empty. The 5 is pushed into the hundredths place, so it means only 5 hundredths.\n\nSo read 0.05 as \"zero point zero five\", never \"zero point five\".\n\nA zero at the **end** is different. 0.3 is 3 tenths, and that is 30 hundredths. So $0.3 = 0.30$. In these grids, 0.3 has 30 squares shaded, but 0.25 has only 25. So 0.3 is bigger than 0.25, even though 25 is bigger than 3.",
         "visual": "dm-grid-compare"
       },
       {
@@ -46,20 +46,20 @@
         }
       },
       {
-        "problem": "Write 3.25 as a mixed number.",
+        "problem": "Write 3.25 as wholes and hundredths.",
         "steps": [
           "The 3 before the point means 3 wholes.",
           "After the point there are 2 tenths and 5 hundredths. 2 tenths is 20 hundredths, so together they make 25 hundredths.",
-          "So $3.25 = 3\\frac{25}{100}$."
+          "So $3.25 = 3 + \\frac{25}{100}$. In words, it is 3 and 25 hundredths."
         ],
-        "answer": "3 25/100",
+        "answer": "3 + 25/100",
         "verify": {
           "kind": "sympy",
           "expr": "3 + Rational(2, 10) + Rational(5, 100)"
         }
       },
       {
-        "problem": "A piece of cloth is 3 m 6 cm long. Write this length in metres.",
+        "problem": "Meena buys a piece of cloth 3 m 6 cm long. Write this length in metres.",
         "steps": [
           "100 cm make 1 m, so 1 cm is $\\frac{1}{100}$ m, which is 0.01 m.",
           "6 cm is 6 hundredths of a metre. There are no tenths, so the tenths place gets a 0.",
@@ -167,7 +167,7 @@
       "id": "dm-chart",
       "purpose": "Place-value chart with tenths, hundredths and thousandths",
       "spec": "Columns Ones, Tenths, Hundredths, Thousandths, worth 1, 1/10, 1/100, 1/1000. Decimal point between Ones and Tenths. Rows: 0.5, then 0.05, then 1.375.",
-      "alt": "A place-value chart with columns Ones, Tenths, Hundredths and Thousandths. Under the headings they are worth 1, 1/10, 1/100 and 1/1000. A decimal point sits between Ones and Tenths. Row 1 shows 0.5: 0 ones and 5 tenths. Row 2 shows 0.05: 0 ones, 0 tenths and 5 hundredths. Row 3 shows 1.375: 1 one, 3 tenths, 7 hundredths and 5 thousandths.",
+      "alt": "A place-value chart with columns Ones, Tenths, Hundredths and Thousandths. Under the headings they are worth 1, 1/10, 1/100 and 1/1000. A decimal point sits between the ones and tenths columns. Row 1 shows 0.5: 0 ones and 5 tenths. Row 2 shows 0.05: 0 ones, 0 tenths and 5 hundredths. Row 3 shows 1.375: 1 one, 3 tenths, 7 hundredths and 5 thousandths.",
       "file": "content/visuals/s0-decimals-meaning/dm-chart.svg",
       "checks": {
         "headings": [

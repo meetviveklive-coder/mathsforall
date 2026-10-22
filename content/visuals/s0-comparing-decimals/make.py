@@ -87,7 +87,8 @@ draw.save(OUT, "cd-zoom", *decimal_line("2.3", "2.4", 100, L("2.3", "2.4"), L("2
                                         "2.37 between 2.3 and 2.4", point_labels=True))
 draw.save(OUT, "cd-round", *decimal_line("3.6", "3.7", 100, L("3.6", "3.65", "3.7"), L("3.67"),
                                          "3.67 is closer to 3.7", point_labels=True))
-draw.save(OUT, "cd-p2", *decimal_line("0", "1", 10, L("0", "1"), L("0.6"), "A dot between 0 and 1"))
+# Tenths lines use draw.number_line, so they share one tick style with s0-decimals-meaning.
+draw.save(OUT, "cd-p2", *draw.number_line(F(1), F(2), 10, "A dot between 1 and 2", point=F(17, 10)))
 draw.save(OUT, "cd-p5", *decimal_line("4.2", "4.3", 100, L("4.2", "4.3"), L("4.28"), "A dot between 4.2 and 4.3"))
 draw.save(OUT, "cd-q4", *decimal_line("6.5", "6.6", 100, L("6.5", "6.6"), L("6.53"), "A dot between 6.5 and 6.6"))
 print("drew", len(list(OUT.glob("*.svg"))), "visuals for s0-comparing-decimals")

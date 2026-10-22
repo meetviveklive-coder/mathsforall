@@ -33,3 +33,12 @@ Visuals: I rendered all five SVGs. ad-add-columns has the carried 1 over Ones, a
 5. **Cross-topic: place-value names and the money sentence.** SUGGESTION.
    Problem: this topic capitalises place names in prose ("The Hundredths place of 12.5 is empty", "the Ones column", p-4's "Tenths place"), but s0-decimals-meaning and s0-comparing-decimals write "tenths place" in lower case. This topic says "100 paise make ₹1", and s0-decimals-meaning says "100 paise make 1 rupee".
    Fix: use lower case in prose (capitals only as headings in the diagrams) and one shared money sentence across the three topics.
+
+## Fixes applied (content-writer)
+
+1. sections[3]: "Now the rupees need no borrowing, and $100 - 75 = 25$ is easy to do in your head."
+2. sections[1]: now "12.5 + 3.75 is more than 12 + 3 = 15. It is less than 13 + 4 = 17. So 16.25 makes sense." doubts[3] now says between 15 and 17. These bounds do not use rounding, so they cannot clash with "5 or more rounds up". Example 1 (5 + 3) and q-2 (6 + 2) already follow that rule.
+3. p-7, p-8, q-5, q-6 and q-8 now end "Type the amount in rupees, like 45.50." and use `match: decimal`. 45.50 is not any answer.
+4. Roles rebalanced. p-7: Thenmozhi buys tomatoes and beans. p-8: Bhavesh's Mausi buys a cricket bat. q-5: Joseph's Amma buys a set of tools. q-6: Kavya's Thatha buys the Pongal flowers, jaggery and turmeric. q-8: Simran saves for a storybook. The amounts are unchanged. Together with the sibling topics, women now buy vegetables, sports gear, tools, books and cloth, and men buy vegetables, cloth, tools, sports gear and stationery.
+5. Place names are lower case in prose: sections[0], the p-1, p-3 and p-9 hints, the p-4 why_wrong, and the alt and spec texts of ad-add-columns, ad-sub-zero and ad-p1. The capitals stay only as diagram headings and as step labels at the start of a sentence. The money sentence is "100 paise make 1 rupee" in sections[3] and the summary. No drawing changed, so make.py was not re-run. The checks are unchanged.
+`verify_content`: PASS, 47 checks passed, 0 failed, 0 warnings. Status set to draft.
