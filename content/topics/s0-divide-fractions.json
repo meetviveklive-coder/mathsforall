@@ -1,7 +1,7 @@
 {
   "id": "s0-divide-fractions",
   "title": "Dividing fractions",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Nani has 3 litres of lassi for the family. Each glass holds $\\frac{1}{2}$ litre. How many glasses can she fill?\n\nTwo glasses use up 1 litre. So 3 litres fill 6 glasses. We started with 3 and got 6. Dividing gave a **bigger** number! In this topic you will see why.",
@@ -575,6 +575,14 @@
     {
       "q": "Does 0 have a reciprocal?",
       "a": "No. You cannot divide by 0, because no number of empty hops ever reaches anywhere. So 0 has no reciprocal."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content.py: 44 pass, 0 fail. Every example, section claim, practice and quiz answer re-solved with independent SymPy; all agree. MCQ distractors (p-6, q-2, q-8) checked as wrong and matching their misconceptions. Match rules correct (q-3 mixed; p-5, p-7, q-6 simplest). All 6 diagrams checked against make.py, meta and renders in light and dark mode. 0 blocking, 7 suggestions in content/reviews/s0-divide-fractions.md."
     }
   ]
 }
