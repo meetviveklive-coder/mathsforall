@@ -1,7 +1,7 @@
 {
   "id": "s0-add-sub-unlike-fractions",
   "title": "Adding and subtracting fractions with different denominators",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Nani is making kheer. She pours $\\frac{1}{2}$ litre of milk into the pot. Then her grandson Aditya adds $\\frac{1}{3}$ litre more.\n\nHow much milk is in the pot now? Halves and thirds are pieces of different sizes, so we cannot count them together yet. In this topic you will learn the trick: give both fractions the **same denominator** first.",
@@ -499,6 +499,14 @@
     {
       "q": "What if the fraction part of my answer is more than 1?",
       "a": "Turn the extra into a whole. For example, $4\\frac{5}{4}$ has $\\frac{5}{4} = 1\\frac{1}{4}$ in it. So $4\\frac{5}{4} = 5\\frac{1}{4}$."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 38/0/0. All answers re-solved with independent SymPy; visuals checked against make.py, meta and render; match rules, distractors, prerequisites and wording reviewed. 0 blocking, 4 suggestions in content/reviews/s0-add-sub-unlike-fractions.md."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "s0-multiply-fractions",
   "title": "Multiplying fractions",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "After Diwali, half a tray of barfi is left. Ishaan eats one third of what is left.\n\nDid Ishaan eat one third of the whole tray? No, much less. By the end of this topic you will know exactly how much he ate.",
@@ -547,6 +547,14 @@
     {
       "q": "Why can't I multiply the whole numbers and the fractions separately?",
       "a": "Because you miss some pieces. In $1\\frac{1}{2} \\times 2\\frac{1}{2}$, the 1 also multiplies the $\\frac{1}{2}$, and the $\\frac{1}{2}$ also multiplies the 2. Improper fractions catch every piece."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 42/0/0. All answers re-solved with independent SymPy; area models and dot groups checked against make.py, meta and render; match rules, distractors, prerequisites and wording reviewed. 0 blocking, 5 suggestions in content/reviews/s0-multiply-fractions.md."
     }
   ]
 }
