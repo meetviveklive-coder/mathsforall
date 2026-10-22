@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import mathcheck  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-SCHEMA = json.loads((ROOT / "schema" / "topic.schema.json").read_text())
+SCHEMA = json.loads((ROOT / "schema" / "topic.schema.json").read_text(encoding="utf-8"))
 TOPIC_MAP_PATH = ROOT / "curriculum" / "topic-map.json"
 RAW_HTML = re.compile(r"<\s*/?\s*[a-zA-Z][^>]*>")
 
@@ -132,13 +132,13 @@ def check_mcq(rep: Report, where: str, q: dict):
 def load_topic_map():
     if not TOPIC_MAP_PATH.exists():
         return {}
-    return {t["id"]: t for t in json.loads(TOPIC_MAP_PATH.read_text())["topics"]}
+    return {t["id"]: t for t in json.loads(TOPIC_MAP_PATH.read_text(encoding="utf-8"))["topics"]}
 
 
 def verify_file(path: Path, topic_map: dict) -> Report:
     rep = Report(path.name)
     try:
-        doc = json.loads(path.read_text())
+        doc = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         rep.fail("$", f"invalid JSON: {e}")
         return rep

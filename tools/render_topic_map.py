@@ -54,7 +54,7 @@ def main() -> int:
         print("Topic map has errors; run tools/check_topic_map.py")
         return 1
     path = ROOT / "curriculum" / "TOPIC_MAP.md"
-    path.write_text(render(doc))
+    path.write_text(render(doc), encoding="utf-8", newline="\n")
     print(f"Wrote {path.relative_to(ROOT)}")
     return 0
 

@@ -11,12 +11,12 @@ sys.path.insert(0, str(TOOLS))
 import verify_content as vc  # noqa: E402
 
 FIXTURE = TOOLS / "tests" / "fixtures" / "s0-sample.json"
-GOOD = json.loads(FIXTURE.read_text())
+GOOD = json.loads(FIXTURE.read_text(encoding="utf-8"))
 
 
 def run(doc, tmp_path, topic_map=None):
     p = tmp_path / f"{doc['id']}.json"
-    p.write_text(json.dumps(doc))
+    p.write_text(json.dumps(doc), encoding="utf-8")
     return vc.verify_file(p, topic_map or {})
 
 

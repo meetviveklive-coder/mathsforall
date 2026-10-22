@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def load(path: Path | None = None):
     path = path or ROOT / "curriculum" / "topic-map.json"
-    return json.loads(path.read_text())
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def topo_order(topics: list[dict]) -> list[str] | None:
@@ -57,7 +57,7 @@ def ancestors(tid: str, by_id: dict) -> set[str]:
 
 def check(doc: dict) -> tuple[list[str], list[str]]:
     fails, warns = [], []
-    schema = json.loads((ROOT / "schema" / "topic-map.schema.json").read_text())
+    schema = json.loads((ROOT / "schema" / "topic-map.schema.json").read_text(encoding="utf-8"))
     for e in Draft202012Validator(schema).iter_errors(doc):
         fails.append(f"schema {'/'.join(map(str, e.path))}: {e.message[:160]}")
     if fails:
