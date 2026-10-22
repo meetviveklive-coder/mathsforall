@@ -1,7 +1,7 @@
 {
   "id": "s0-comparing-fractions",
   "title": "Comparing fractions",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Tanvi and her friend Joseph run on the same school track. Tanvi runs $\\frac{3}{4}$ of a lap. Joseph runs $\\frac{2}{3}$ of a lap.\n\nJoseph says, \"We ran the same, because we both stopped one part short!\" Is he right? In this topic you will learn to tell which fraction is bigger, even when the parts are different sizes.",
@@ -639,6 +639,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content.py 44 pass, 0 fail. Every answer, renaming and ordering re-solved with independent SymPy; ordering tuples checked against sorted(). MCQ distractors, match rules and all 6 visuals (rendered, meta compared) checked. 0 blocking, 4 suggestions in content/reviews/s0-comparing-fractions.md."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes. verify_content.py 46 pass, 0 fail. Changed renamings, hints and doubts re-solved with SymPy (lcm and renamed numerators); new 'same distance' options in p-6/q-5 confirmed false (3/5 != 4/7, 5/8 != 2/3). Common-denominator definition matches s0-add-sub-unlike-fractions. 0 blocking."
     }
   ]
 }

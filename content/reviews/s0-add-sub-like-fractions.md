@@ -64,3 +64,14 @@ Status set to `draft`. `verify_content.py`: PASS, 41 checks, 0 fail, 1 warning (
 4. Mixed-number wording: applied. p-7, p-9 and q-7 end with "Type a mixed number, like 2 1/3." (answers 1 3/8, 2 1/5, 1 1/2). q-7 now asks "How many kilometres does she run in all?" instead of "in km".
 5. Hook "her Mama": changed to "her Maa".
 Pronouns: Nani (hook) and Thatha (p-8) use no pronoun.
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 0 new findings). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. `verify_content.py`: 41 pass, 0 fail, 1 manual warning. I re-confirmed q-3 (concept MCQ): only one option is defensible.
+- Finding 1: `curriculum/topic-map.json` lists s0-mixed-numbers and s0-equivalent-fractions as the prerequisites, so simplest form is covered.
+- New q-4, checked with SymPy: 3/7 = 6/14 and 5/14 < 6/14, so the answer is true. 2/7 + 3/7 = 5/7, which matches the explanation. The question asks only about the comparison, so there is one reading.
+- p-1, al-p1 and al-nl-jumps: the text now names each dot by its position and its colour. The rendered SVGs still show the green start dot and the orange landing dot (1/6 to 5/6, and 3/4 to 5/4).
+- `mixed` is used on p-7 (11/8 = 1 3/8), p-9 (11/5 = 2 1/5) and q-7 (3/2 = 1 1/2). All three use the shared "Type a mixed number, like 2 1/3." None of them equals 2 1/3. The topic has no improper prompts.
+- Hook: "Maa" is fine.

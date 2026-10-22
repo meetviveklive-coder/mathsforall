@@ -67,8 +67,8 @@ function judge(card: HTMLElement): Verdict {
     case 'unreadable': return { ok: false, empty: true, message: 'Type a number like 3/4, 1 1/2 or 0.75.' };
     case 'not-simplest': return { ok: false, message: 'That is the right amount, but it can be simplified further.' };
     case 'wrong-form': return { ok: false, message: 'That is the right amount, but write it the way the question asks.' };
-    case 'not-improper': return { ok: false, message: 'That is the right amount. Now write it as one fraction, like 7/5.' };
-    case 'not-mixed': return { ok: false, message: 'That is the right amount. Now write it as a mixed number, like 2 1/3.' };
+    case 'not-improper': return { ok: false, message: 'That is the right amount. Now write it as one fraction: top number, then /, then bottom number.' };
+    case 'not-mixed': return { ok: false, message: 'That is the right amount. Now write it as a mixed number: a whole number, a space, then a fraction.' };
     default: return { ok: false, message: 'Not quite.' };
   }
 }

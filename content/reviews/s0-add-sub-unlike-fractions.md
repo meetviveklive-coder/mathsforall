@@ -39,3 +39,13 @@ Status set to `draft`. `verify_content.py`: PASS, 38 checks, 0 fail, 0 warnings.
 3. Mixed-number wording: applied. p-8, p-9, q-6 and q-7 end with "Type a mixed number, like 2 1/3." None of their answers is 2 1/3.
 4. Common denominator: applied, using the house definition. sections[1] keeps "a number that both denominators divide into exactly". It now says the smallest one is usually the easiest to use, and that you find it by listing multiples of the bigger denominator. The halves-and-thirds example lists multiples of 3 only. The same method is now used in examples[0] and [1], summary[1], p-2 (hints and explanation), the q-1 explanation and doubts[0] and [1]. The q-1 hint already used this method. "Type a whole number." stays on p-2, because a child might type 1/12 there.
 Pronouns: Nani (hook) is "she".
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 0 new findings). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. All 4 findings are fixed. `verify_content.py`: 38 pass, 0 fail.
+- I re-solved with SymPy: the new multiples method gives lcm(2,3) = 6, lcm(3,4) = 12, lcm(4,6) = 12 (p-2) and lcm(6,8) = 24 (q-1). In each case the first multiple of the bigger denominator that the smaller one divides is the LCM, so "smallest" is true. In sections[4], 13/4 - 3/2 = 13/4 - 6/4 = 7/4 = 1 3/4. In q-7, 21/4 - 8/3 = 31/12 = 2 7/12. The new wording ("the trek is 5 1/4 km long") has one reading. In p-8, 3/2 + 9/4 = 15/4 = 3 3/4. In p-9, 13/3 - 3/2 = 17/6 = 2 5/6. In q-6, 8/3 + 3/2 = 25/6 = 4 1/6.
+- `mixed` is on all four mixed-number prompts, with the shared wording. No answer equals 2 1/3.
+- Cross-topic: the definition and method now match s0-comparing-fractions. The divide and multiply topics no longer use the term before it is taught.
+- p-5 and q-5 ("Type your answer as a fraction.", `value`) were not changed. The answers 1/2 and 11/12 are proper fractions, so `improper` does not apply.

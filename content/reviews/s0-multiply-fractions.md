@@ -53,3 +53,13 @@ Status set to `draft`. `verify_content.py`: PASS, 42 checks, 0 fail, 0 warnings.
 4. "Type a whole number.": dropped from p-8 and q-5, as suggested. I also dropped it from q-1 (a distance, 25 km), where it gave a hint the question did not need. It stays on p-1 (count of diyas) and p-2 (rupees), where a child might otherwise type a fraction.
 5. Wording: applied. p-9 now ends with "Type a mixed number, like 4 1/5." I used 4 1/5 rather than 2 1/3 because 2 1/3 appears in the question itself. Every simplest-form instruction (examples[1], p-5, q-2, q-3, q-7) now reads "Give your answer in simplest form."
 House convention 4: doubts[1] no longer says "common denominator". It now asks "Do the denominators need to match before I multiply?" (raised in the divide review). No diagram changed, so make.py was not re-run.
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 0 new findings). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. All 5 findings are fixed. `verify_content.py`: 42 pass, 0 fail.
+- Example 3: 2 × 4/3 = 8/3 = 2 2/3 < 3 = 9/4 × 4/3. The new estimate is true, and it now catches the 2 1/12 mistake. The hook is right: 1/3 of 1/2 = 1/6, which is half of 1/3.
+- p-8 (4/3 × 3 = 4), q-5 (5/4 × 12/5 = 3) and q-1 (5/8 of 40 = 25) still use `value`. Dropping "Type a whole number." does not change grading.
+- p-9: 7/3 × 3/2 = 7/2 = 3 1/2, with `mixed`. The example 4 1/5 is not the answer and is not in the question. It differs from the house example 2 1/3 for a good reason: 2 1/3 is a factor in the question. The sentence itself is the shared wording.
+- All the "simplest form" prompts (p-5, q-2, q-3, q-7) read "Give your answer in simplest form." and use `simplest`. doubts[1] no longer uses "common denominator".

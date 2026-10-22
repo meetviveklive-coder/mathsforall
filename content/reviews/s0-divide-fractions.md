@@ -65,3 +65,13 @@ Status set to `draft`. `verify_content.py`: PASS, 44 checks, 0 fail, 0 warnings.
 6. sections[2]: applied. Added "3 x 3/2 = 9/2, which is also 9 ÷ 2."
 7. visuals[1] and [2] specs: applied. Each is split into shorter sentences.
 House conventions: q-3 ends with "Type a mixed number, like 2 1/3." (answer 3 1/2). "Type a whole number." stays on the count questions p-1, p-8, q-1 and q-7. Nani (hook) is "she".
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 0 new findings). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. All 7 findings are fixed. `verify_content.py`: 44 pass, 0 fail.
+- dv-share-half: I rendered the SVG and read it. The top shaded half covers x = 72 to 186. In the bottom bar, the dark sixth is at 72 to 110 and the two light sixths (opacity 0.32) are at 110 to 186. The other 3 sixths are white. The 3 coloured sixths sit exactly under the shaded half. The meta (shaded 1/tinted 0 and shaded 1/tinted 2) matches the drawing, the checks, the spec and the alt. The `tinted_bars` helper reads the meta back from the final SVG, not from its inputs. sections[3] text matches the drawing.
+- I re-solved with SymPy: 3 × 3/2 = 9/2 = 9 ÷ 2. Also 1/2 ÷ 3 = 1/6, 6/8 ÷ 3/8 = 2 and q-3: 7/8 ÷ 1/4 = 7/2 = 3 1/2 (`mixed`).
+- p-2: the examples (2 1/3 and 7/3) no longer equal the answer, 3/2. It uses `value`, which is right because the prompt allows either form. The scan flagged the words "mixed number" here, but the prompt does not ask for one, so `mixed` would be wrong.
+- doubts[3] now says "same denominator", so there is no term from outside the prerequisites. doubts[4] is clear. summary[2] has no algebra.

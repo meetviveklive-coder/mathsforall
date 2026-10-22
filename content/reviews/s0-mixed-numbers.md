@@ -42,3 +42,15 @@ Status set to `draft`. `verify_content.py`: PASS, 41 checks, 0 fail, 0 warnings.
 3. p-8 and q-7: applied. The prompts now say "That is 11 half-litres. How many litres is that?" and "That is 15 quarter-hours. How many hours is that?". p-8 hint 1 now says "11 half-litres".
 4. Mixed-number wording: applied. All six `mixed` prompts (p-2, p-6, p-8, q-1, q-5, q-7) end with "Type a mixed number, like 2 1/3." None of their answers is 2 1/3. doubts[4] now uses 2 1/3 as its example.
 Pronouns: p-8 (Dadaji) uses no pronoun. No diagram changed, so make.py was not re-run.
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 1 suggestion). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. `verify_content.py`: 41 pass, 0 fail.
+- Finding 1 (BLOCKING) is fixed. p-4 and q-3 use `"match": "improper"`. In `site/src/lib/answers.ts` the rule requires the trimmed input to match `^-?\d+\s*/\s*\d+$` after the value check. So "1 2/5" and "4 2/3" are now rejected (not-improper). "7/5", "14/3" and the equal "14/10" are accepted. A non-improper equal form such as "14/10" is a minor leniency and not blocking. With SymPy: 1 + 2/5 = 7/5 and 4 + 2/3 = 14/3. The typing examples (9/4 for p-4, 7/5 for q-3) do not equal their answers. 9/4 is the answer to p-2, which is a different question and in mixed form there, so that is harmless.
+- `mixed` is used on all six "Type a mixed number, like 2 1/3." prompts: p-2 (2 1/4), p-6 (1 3/4), p-8 (5 1/2), q-1 (3 2/3), q-5 (2 3/4) and q-7 (3 3/4). None of the answers is 2 1/3. I re-solved each with divmod.
+- p-9 ("Is 8/5 the same number as 1 3/5?", true) and q-2 ("Is Gurpreet right?", false; 3 1/2 = 7/2 ≠ 2) now have one clear reading. p-8 and q-7 now name the counting units (half-litres and quarter-hours), so no multiplying is needed.
+- New doubts[5] matches the rule: one fraction, no space, no whole number.
+
+Suggestion R1 (site-builder, not content). After a wrong form, the site says "Now write it as one fraction, like 7/5." That example is the answer to p-4, so a child who types "1 2/5" there is then shown the answer. The fix is to use a neutral example in `learn.ts`, for example "like 9/4", or to drop the example. This is not blocking, because the child has already shown the right value.

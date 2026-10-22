@@ -40,3 +40,14 @@ Status set to `draft`. `verify_content.py`: PASS, 46 checks, 0 fail, 0 warnings.
 2. p-6 and q-5: applied. Each has a third wrong option ("They walk the same distance" / "Both trains have gone the same distance"), with value `Eq(a, b)` (false, so it does not equal the correct value). The why_wrong explains that the parts are different sizes and gives the renamed fractions.
 3. doubts[2]: applied. Added "because 4 + 4 = 8, which is more than 7". No mixed number used.
 4. examples[1].problem: applied as suggested ("of a mango bar of the same size").
+
+## Re-check
+
+math-verifier, 2026-10-22. Result: **verified** (0 blocking, 0 new findings). Status set to `verified`.
+
+- I read `git diff 2dc6cef HEAD`. All 4 findings are fixed as described. `verify_content.py`: 46 pass, 0 fail.
+- I re-solved every changed step with my own SymPy code. I checked the multiples-of-the-bigger-denominator method each time: 4, 8, 12 for (3, 4); 9, 18 for (6, 9); 8, 16, 24 for (3, 8); 7 to 35 for (5, 7); 6 to 30 for (6, 5). Each stops at the LCM. The eighths in example 3 are right, since lcm(2, 4, 8) = 8.
+- New options in p-6 and q-5: `Eq(...)` evaluates to False, which is unequal to the correct value, so the verifier sees no second correct answer. The site grades MCQs by option index, so the value is never shown. Both statements are false (21/35 ≠ 20/35 and 15/24 ≠ 16/24), and each why_wrong is accurate. Each MCQ now has 3 options.
+- doubts[2]: "4 + 4 = 8, which is more than 7" is right (4/7 > 1/2), and it uses no mixed numbers.
+- Cross-topic: the definition "a number that both denominators divide into exactly", "smallest ... usually the easiest to use" and the multiples method now match s0-add-sub-unlike-fractions word for word. No "times table" wording is left.
+- There are no mixed-number or improper prompts in this topic. The "like 3/4" examples never equal the answers. No changed sentence is over 20 words. No visual changed.
