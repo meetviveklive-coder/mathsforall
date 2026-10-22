@@ -10,6 +10,10 @@ const out = path.resolve(outDir);
 fs.rmSync(out, { recursive: true, force: true });
 fs.cpSync(dist, out, { recursive: true });
 fs.rmSync(path.join(out, '_headers'), { force: true });
+// Browsers that run this preview all support woff2; drop the fallback font formats.
+for (const f of fs.readdirSync(path.join(out, 'assets'))) {
+  if (/\.(woff|ttf)$/.test(f)) fs.rmSync(path.join(out, 'assets', f));
+}
 
 const index = path.join(out, 'index.html');
 let html = fs.readFileSync(index, 'utf-8');
@@ -27,8 +31,11 @@ html = html.replace(/<title>/i, '<meta name="claude:viewport-fit-sides" content=
 fs.renameSync(index, path.join(out, 'home.html'));
 fs.writeFileSync(path.join(out, 'home.html'), html.trimStart());
 
-// Pages link back to index.html; keep a full-document copy under that name too.
-fs.copyFileSync(path.join(dist, 'index.html'), index);
+// The artifact's entry page is served at its root, so point "index.html" links there.
+for (const f of fs.readdirSync(path.join(out, 'learn'))) {
+  const p = path.join(out, 'learn', f);
+  fs.writeFileSync(p, fs.readFileSync(p, 'utf-8').replaceAll('href="../index.html', 'href="../'));
+}
 
 const files = [];
 (function walk(d) {

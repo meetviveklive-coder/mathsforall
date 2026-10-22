@@ -1,4 +1,4 @@
-// Rewrite root-absolute asset URLs ("/_astro/...") to relative ones after `astro build`,
+// Rewrite root-absolute asset URLs ("/assets/...") to relative ones after `astro build`,
 // so the static site works at any base path. Also fails the build if any page would
 // load something from another origin (docs/SECURITY.md: no third-party requests).
 import fs from 'node:fs';
@@ -20,7 +20,7 @@ function fix(file) {
   const depth = path.relative(dist, path.dirname(file)).split(path.sep).filter(Boolean).length;
   const prefix = depth ? '../'.repeat(depth) : './';
   const src = fs.readFileSync(file, 'utf-8');
-  const out = src.replace(/(["'(=]\s*)\/_astro\//g, `$1${prefix}_astro/`);
+  const out = src.replace(/(["'(=]\s*)\/assets\//g, `$1${prefix}assets/`);
   if (out !== src) {
     fs.writeFileSync(file, out);
     changed++;

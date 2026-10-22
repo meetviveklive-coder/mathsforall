@@ -30,3 +30,15 @@ Manual items confirmed:
 5. **hook and p-2 (context).** SUGGESTION.
    Problem: both roti scenes show Amma cooking. This is not wrong, but it repeats the same gender role.
    Fix: give one of them to Papa or Dadaji.
+
+## Re-check (2026-10-22)
+
+I re-ran `verify_content.py` (35 pass, 0 fail, the same 3 manual warnings). All 5 suggestions are applied correctly:
+- The hook uses Papa, and its long sentence is split.
+- The section 0 sentence is split.
+- The v-unequal-3 and v-unequal-4 alts and the p-3 explanation now say "not all the same size".
+- The v-equal-unequal spec labels now match make.py.
+- The p-8 options name the pieces, and the answer matches the correct option.
+- The q-4 why_wrong is split.
+
+Answers, match rules and visual checks are unchanged. No new findings. Result: **verified**.

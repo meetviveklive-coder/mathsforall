@@ -21,3 +21,13 @@ Checks run: `tools/verify_content.py` (47 pass, 0 fail). I worked out every exam
 4. **p-3, option $\frac{1}{8}$.** SUGGESTION.
    Problem: the misconception "more spaces than marks" is unlikely, so this distractor is weak.
    Fix: you could replace it with $\frac{1}{5}$ ("not counting the marks at 0 and 1"), which matches a more common mistake.
+
+## Re-check (2026-10-22)
+
+I re-ran `verify_content.py` (47 pass, 0 fail). All 4 suggestions are applied correctly:
+- The hook now has 3 posts making 4 stretches, and the first post after the house is at 1/4.
+- The section 1 sentence and doubts[1] are split.
+- The p-6 and q-6 prompts end "Type a whole number." Their answers are 4 and 9.
+- p-3 has the new option 1/5 (checked with SymPy). It is distinct from the other options and wrong: leaving out the end marks gives 5 marks, so 1/5. Its why_wrong is accurate. 1/6 is the only correct option.
+
+No new findings. Result: **verified**.

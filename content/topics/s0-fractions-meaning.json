@@ -1,7 +1,7 @@
 {
   "id": "s0-fractions-meaning",
   "title": "Fractions as equal parts",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Papa makes one big roti for Riya and her brother Kabir. Suppose he tears it so that Kabir gets a huge piece and Riya gets a tiny one. Riya will shout, \"That's not fair!\"\n\nRiya already knows the most important idea about fractions: **the parts must be equal.**",
@@ -528,6 +528,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content.py passed (35/0, 3 manual warnings). I worked out all 26 values again with my own SymPy code, confirmed the manual items against the drawn widths (p-3 shades 5/8, q-3 shades 1/6), and checked every visual against make.py and the meta files. 0 blocking issues, 5 suggestions; see content/reviews/s0-fractions-meaning.md."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "Re-check of applied suggestions. verify_content.py passed. All 13 changes are correct. The new number-line p-3 option 1/5 is distinct and wrong, and it matches its why_wrong. The answers, match rules, options and visual checks are otherwise unchanged."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "s0-equivalent-fractions",
   "title": "Equivalent fractions",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Kavya cuts her paratha into 2 equal halves and eats 1. Her cousin Dev cuts the same size of paratha into 4 equal pieces and eats 2.\n\nDev says, \"I ate more, because 2 is more than 1!\" Is he right? Picture the two parathas side by side and you will see they ate exactly the same amount.",
@@ -472,6 +472,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content.py passed (33/0, 1 manual warning). I worked out all values, GCDs and simplest forms again with my own SymPy code, and confirmed that q-3 has exactly one value not equal to 1/2. The match rules and visuals are correct. 0 blocking issues, 4 suggestions; see content/reviews/s0-equivalent-fractions.md."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "Re-check of applied suggestions. verify_content.py passed. All 13 changes are correct. The new number-line p-3 option 1/5 is distinct and wrong, and it matches its why_wrong. The answers, match rules, options and visual checks are otherwise unchanged."
     }
   ]
 }

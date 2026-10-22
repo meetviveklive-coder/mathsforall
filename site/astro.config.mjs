@@ -6,7 +6,7 @@ export default defineConfig({
   // and scripts/relativize.mjs makes every asset URL relative, so the same build
   // works at a domain root (Cloudflare Pages) or under any sub-path (previews).
   output: 'static',
-  build: { format: 'file', inlineStylesheets: 'always' },
+  build: { format: 'file', inlineStylesheets: 'always', assets: 'assets' },
   devToolbar: { enabled: false },
   vite: { server: { fs: { allow: ['..'] } } },
 });

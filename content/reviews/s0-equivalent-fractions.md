@@ -29,3 +29,13 @@ Visuals: the eq-nl and eq-q4 metadata place both dots at the same value (1/2 and
 4. **visuals[0].spec.** SUGGESTION.
    Problem: this sentence is 22 words long. It is not shown to learners.
    Fix: optional; you could split it into two sentences.
+
+## Re-check (2026-10-22)
+
+I re-ran `verify_content.py` (33 pass, 0 fail, the same 1 manual warning). All 4 suggestions are applied correctly:
+- The eq-q4 alt now says "after 0" and mentions the dashed line. The SVG does draw the dashed line, and the meta places both points at 2/3.
+- The eq-half-bars spec is split.
+- The p-1, p-2, p-3, q-1 and q-7 prompts end "Type the number that goes in the box." Their answers (2, 4, 12, 15, 30) are unchanged.
+- doubts[2] now reads "So many that they never run out!"
+
+No new findings. Result: **verified**.
