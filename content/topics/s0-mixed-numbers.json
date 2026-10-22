@@ -1,7 +1,7 @@
 {
   "id": "s0-mixed-numbers",
   "title": "Improper fractions and mixed numbers",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Tara's Chachu cuts every roti into 4 equal pieces. Tara is very hungry, and she eats 7 pieces.\n\nThat is $\\frac{7}{4}$ of a roti. But how many rotis is that, really? Is it more than one roti? Less than two? Let's find a second way to write $\\frac{7}{4}$ that answers this at a glance.",
@@ -509,6 +509,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content.py 41 pass, 0 fail. Blocking finding fixed: p-4 and q-3 use 'improper' (answers 7/5, 14/3; typing examples 9/4 and 7/5 differ from answers). All six mixed-number prompts use 'mixed' and the shared wording; p-9/q-2 framing fixed. 0 blocking, 1 suggestion (site feedback text)."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

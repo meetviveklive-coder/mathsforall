@@ -1,7 +1,7 @@
 {
   "id": "s0-divide-fractions",
   "title": "Dividing fractions",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Nani has 3 litres of lassi for the family. Each glass holds $\\frac{1}{2}$ litre. How many glasses can she fill?\n\nTwo glasses use up 1 litre. So 3 litres fill 6 glasses. We started with 3 and got 6. Dividing gave a **bigger** number! In this topic you will see why.",
@@ -591,6 +591,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content.py 44 pass, 0 fail. dv-share-half redrawn: SVG has 1 dark + 2 light sixths at x 72-186, exactly under the shaded half; meta, checks and alt agree. p-2 examples no longer equal the answer 3/2; added 3 x 3/2 = 9/2 checked. 0 blocking."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }
