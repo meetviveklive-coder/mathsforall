@@ -1,0 +1,19 @@
+{
+ "columns": 5,
+ "rows": 2,
+ "equal": true,
+ "shaded_columns": 3,
+ "shaded_rows": 1,
+ "cells": 10,
+ "dark": 3,
+ "light": 5,
+ "dark_block": [
+  3,
+  1
+ ],
+ "dark_fraction": "3/10",
+ "labels": {
+  "top": "3/5",
+  "left": "1/2"
+ }
+}
