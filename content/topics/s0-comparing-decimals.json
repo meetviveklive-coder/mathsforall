@@ -1,0 +1,598 @@
+{
+  "id": "s0-comparing-decimals",
+  "title": "Comparing and rounding decimals",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "It is sports day. In the long jump, Lalitha jumps 2.4 m. Her friend Farhan jumps 2.35 m.\n\nFarhan says, \"I jumped further! 35 is bigger than 4.\" Is he right? In this topic you will learn to compare decimals, place them on a number line, and round them.",
+    "sections": [
+      {
+        "heading": "Compare place by place",
+        "body": "To compare two decimals, line up their decimal points. Then compare the digits from left to right, one place at a time.\n\n- First compare the whole-number parts. 2.4 and 2.35 both have 2 ones.\n- Next compare the tenths. 2.4 has 4 tenths. 2.35 has only 3 tenths.\n\n4 tenths is more than 3 tenths, so $2.4 > 2.35$. You can stop here. The 5 hundredths in 2.35 cannot make up a whole tenth.\n\nSo Lalitha jumped further. The number line shows it too: 2.4 sits to the right of 2.35. Remember, $>$ means \"is bigger than\" and $<$ means \"is smaller than\".",
+        "visual": "cd-jump"
+      },
+      {
+        "heading": "Longer is not always bigger",
+        "body": "Farhan read the digits after the point as a whole number, 35. But in 2.35 the 3 means 3 tenths. The 5 means only 5 hundredths.\n\nHere is a helpful trick. Give both decimals the same number of places by writing zeros at the end. A zero at the end of the decimal part does not change its value:\n\n$0.3 = \\frac{3}{10} = \\frac{30}{100} = 0.30$\n\nNow compare 0.3 and 0.25. Write them as 0.30 and 0.25. 30 hundredths is more than 25 hundredths, so $0.3 > 0.25$. The shorter decimal is the bigger one here.",
+        "visual": "cd-longer"
+      },
+      {
+        "heading": "Decimals on a number line",
+        "body": "Split the gap from 0 to 1 into 10 equal spaces. Each step is one tenth, or 0.1. The marks are 0.1, 0.2, 0.3, and so on, up to 1.\n\nTo place a number with hundredths, zoom in. Take the gap from 2.3 to 2.4 and split it into 10 equal spaces. Each step is one hundredth, or 0.01.\n\nTo find 2.37, start at 2.3 and take 7 hundredth-steps. On any number line, a number further to the right is bigger.",
+        "visual": "cd-zoom"
+      },
+      {
+        "heading": "Putting decimals in order",
+        "body": "To order 0.6, 0.45, 0.5 and 0.405, give them all 3 places:\n\n- 0.6 becomes 0.600\n- 0.45 becomes 0.450\n- 0.5 becomes 0.500\n- 0.405 stays 0.405\n\nNow they are all thousandths: 600, 450, 500 and 405. Order those numbers: 405, 450, 500, 600.\n\nSo from smallest to largest the order is 0.405, 0.45, 0.5, 0.6. The longest decimal, 0.405, is the smallest."
+      },
+      {
+        "heading": "Rounding decimals",
+        "body": "Rounding gives a simpler number that is close to the real one. You may know the rule from whole numbers. Look at the digit just after the place you are rounding to. If it is 5 or more, round up. If it is less than 5, keep the digit as it is.\n\nDecimals follow the same rule. Round 3.67 to 1 decimal place, which means to the nearest tenth:\n\n- 3.67 is between 3.6 and 3.7.\n- The digit after the tenths is 7. That is 5 or more, so round up.\n- So 3.67 rounds to 3.7.\n\nThe number line agrees. The halfway mark is 3.65, and 3.67 is past it, closer to 3.7.\n\nTo round to the nearest whole number, look at the tenths digit. ₹48.60 rounds to ₹49. To round to 2 decimal places, look at the thousandths digit. 5.384 rounds to 5.38.",
+        "visual": "cd-round"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Which is bigger: 0.7 or 0.65?",
+        "steps": [
+          "Both have 0 ones. Compare the tenths: 0.7 has 7 tenths, 0.65 has 6 tenths.",
+          "7 tenths is more than 6 tenths, so 0.7 is bigger.",
+          "Check with zeros: 0.70 and 0.65. 70 hundredths is more than 65 hundredths. So $0.7 > 0.65$."
+        ],
+        "answer": "0.7",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Max(Rational(7, 10), Rational(65, 100))"
+        }
+      },
+      {
+        "problem": "Bhavna has three parcels. They weigh 1.5 kg, 1.25 kg and 1.05 kg. Which parcel is the heaviest?",
+        "steps": [
+          "All three have 1 whole kilogram, so compare the tenths.",
+          "1.5 has 5 tenths, 1.25 has 2 tenths and 1.05 has 0 tenths.",
+          "So the order from lightest to heaviest is 1.05 kg, 1.25 kg, 1.5 kg.",
+          "The heaviest parcel weighs 1.5 kg, even though it has the fewest digits."
+        ],
+        "answer": "1.5",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Max(Rational(15, 10), Rational(125, 100), Rational(105, 100))"
+        }
+      },
+      {
+        "problem": "A train journey is 12.46 km long. Round this to 1 decimal place.",
+        "steps": [
+          "1 decimal place means the nearest tenth. 12.46 is between 12.4 and 12.5.",
+          "Look at the digit after the tenths. It is 6.",
+          "6 is 5 or more, so round up. The answer is 12.5 km."
+        ],
+        "answer": "12.5",
+        "verify": {
+          "kind": "sympy",
+          "expr": "floor(Rational(1246, 100) * 10 + Rational(1, 2)) / 10"
+        }
+      }
+    ],
+    "summary": [
+      "Compare decimals place by place from the left: whole numbers, then tenths, then hundredths.",
+      "Writing zeros at the end of the decimal part does not change its value: 0.3 = 0.30.",
+      "A longer decimal is not always bigger: 0.3 > 0.25.",
+      "On a number line, bigger numbers are further to the right.",
+      "To round, look at the next digit. 5 or more rounds up. Less than 5 keeps the digit."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "cd-jump",
+      "purpose": "Hook and section 1: 2.35 is to the left of 2.4",
+      "spec": "Number line from 2.3 to 2.5 in hundredths (20 equal spaces). Marks labelled 2.3, 2.4 and 2.5. Dots at 2.35 and 2.4, each with its value written above.",
+      "alt": "A number line from 2.3 to 2.5, split into hundredths. The marks 2.3, 2.4 and 2.5 are labelled. A dot labelled 2.35 is halfway between 2.3 and 2.4. A dot labelled 2.4 is on the 2.4 mark, to the right of 2.35.",
+      "file": "content/visuals/s0-comparing-decimals/cd-jump.svg",
+      "checks": {
+        "start": "2.3",
+        "end": "2.5",
+        "spaces_per_unit": 100,
+        "labels": [
+          "2.3",
+          "2.4",
+          "2.5"
+        ],
+        "points": [
+          "2.35",
+          "2.4"
+        ]
+      }
+    },
+    {
+      "id": "cd-longer",
+      "purpose": "Section 2: 0.25 is less than 0.3",
+      "spec": "Number line from 0.2 to 0.4 in hundredths (20 equal spaces). Marks labelled 0.2, 0.3 and 0.4. Dots at 0.25 and 0.3, each with its value written above.",
+      "alt": "A number line from 0.2 to 0.4, split into hundredths. The marks 0.2, 0.3 and 0.4 are labelled. A dot labelled 0.25 is halfway between 0.2 and 0.3. A dot labelled 0.3 is on the 0.3 mark, to the right of 0.25.",
+      "file": "content/visuals/s0-comparing-decimals/cd-longer.svg",
+      "checks": {
+        "start": "0.2",
+        "end": "0.4",
+        "spaces_per_unit": 100,
+        "labels": [
+          "0.2",
+          "0.3",
+          "0.4"
+        ],
+        "points": [
+          "0.25",
+          "0.3"
+        ]
+      }
+    },
+    {
+      "id": "cd-zoom",
+      "purpose": "Section 3: placing 2.37 by zooming in to hundredths",
+      "spec": "Number line from 2.3 to 2.4 split into 10 equal spaces (hundredths). Only 2.3 and 2.4 labelled. Dot at 2.37 with its value written above.",
+      "alt": "A number line from 2.3 to 2.4 split into 10 equal spaces. Only 2.3 and 2.4 are labelled. A dot labelled 2.37 is on the seventh mark after 2.3.",
+      "file": "content/visuals/s0-comparing-decimals/cd-zoom.svg",
+      "checks": {
+        "start": "2.3",
+        "end": "2.4",
+        "spaces_per_unit": 100,
+        "labels": [
+          "2.3",
+          "2.4"
+        ],
+        "points": [
+          "2.37"
+        ]
+      }
+    },
+    {
+      "id": "cd-round",
+      "purpose": "Section 5: 3.67 is closer to 3.7 than to 3.6",
+      "spec": "Number line from 3.6 to 3.7 split into 10 equal spaces (hundredths). Marks labelled 3.6, 3.65 and 3.7. Dot at 3.67 with its value written above.",
+      "alt": "A number line from 3.6 to 3.7 split into 10 equal spaces. The marks 3.6, 3.65 (halfway) and 3.7 are labelled. A dot labelled 3.67 is on the seventh mark after 3.6, past the halfway mark and closer to 3.7.",
+      "file": "content/visuals/s0-comparing-decimals/cd-round.svg",
+      "checks": {
+        "start": "3.6",
+        "end": "3.7",
+        "spaces_per_unit": 100,
+        "labels": [
+          "3.6",
+          "3.65",
+          "3.7"
+        ],
+        "points": [
+          "3.67"
+        ]
+      }
+    },
+    {
+      "id": "cd-p2",
+      "purpose": "Practice: a tenth on the 0 to 1 line",
+      "spec": "Number line from 0 to 1 split into 10 equal spaces. Only 0 and 1 labelled. Dot at 0.6, no value shown.",
+      "alt": "A number line from 0 to 1 split into 10 equal spaces. Only 0 and 1 are labelled. A dot is on the sixth mark after 0, one mark past the longer halfway mark.",
+      "file": "content/visuals/s0-comparing-decimals/cd-p2.svg",
+      "checks": {
+        "start": "0",
+        "end": "1",
+        "spaces_per_unit": 10,
+        "labels": [
+          "0",
+          "1"
+        ],
+        "points": [
+          "0.6"
+        ]
+      }
+    },
+    {
+      "id": "cd-p5",
+      "purpose": "Practice: a hundredth between 4.2 and 4.3",
+      "spec": "Number line from 4.2 to 4.3 split into 10 equal spaces. Only 4.2 and 4.3 labelled. Dot at 4.28, no value shown.",
+      "alt": "A number line from 4.2 to 4.3 split into 10 equal spaces. Only 4.2 and 4.3 are labelled. A dot is on the eighth mark after 4.2.",
+      "file": "content/visuals/s0-comparing-decimals/cd-p5.svg",
+      "checks": {
+        "start": "4.2",
+        "end": "4.3",
+        "spaces_per_unit": 100,
+        "labels": [
+          "4.2",
+          "4.3"
+        ],
+        "points": [
+          "4.28"
+        ]
+      }
+    },
+    {
+      "id": "cd-q4",
+      "purpose": "Quiz: a hundredth between 6.5 and 6.6",
+      "spec": "Number line from 6.5 to 6.6 split into 10 equal spaces. Only 6.5 and 6.6 labelled. Dot at 6.53, no value shown.",
+      "alt": "A number line from 6.5 to 6.6 split into 10 equal spaces. Only 6.5 and 6.6 are labelled. A dot is on the third mark after 6.5.",
+      "file": "content/visuals/s0-comparing-decimals/cd-q4.svg",
+      "checks": {
+        "start": "6.5",
+        "end": "6.6",
+        "spaces_per_unit": 100,
+        "labels": [
+          "6.5",
+          "6.6"
+        ],
+        "points": [
+          "6.53"
+        ]
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-comparing-decimals/p-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Which is bigger: 0.8 or 0.75? Type the bigger number.",
+      "answer": "0.8",
+      "hints": [
+        "Compare the tenths first.",
+        "Write 0.8 as 0.80. Now compare hundredths."
+      ],
+      "explanation": "0.8 has 8 tenths and 0.75 has 7 tenths. So $0.8 > 0.75$. As hundredths, that is 80 against 75.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(8, 10), Rational(75, 100))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/p-2",
+      "type": "numeric",
+      "objective": 1,
+      "visual": "cd-p2",
+      "prompt": "What decimal does the dot show? Type a decimal, like 0.4.",
+      "answer": "0.6",
+      "hints": [
+        "There are 10 equal spaces between 0 and 1. Each step is 0.1.",
+        "Count the steps from 0 to the dot."
+      ],
+      "explanation": "Each step is one tenth. The dot is 6 steps from 0, so it shows 0.6.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 * Rational(1, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-comparing-decimals/p-3",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "Kavya says 0.125 is bigger than 0.5, because 0.125 has more digits. Is Kavya right?",
+      "answer": "false",
+      "hints": [
+        "Compare the tenths digits.",
+        "Write 0.5 as 0.500."
+      ],
+      "explanation": "No. 0.5 has 5 tenths, but 0.125 has only 1 tenth. As thousandths, 500 is more than 125. So $0.5 > 0.125$. More digits does not mean bigger.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(125, 1000), Rational(5, 10))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/p-4",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which list is in order from smallest to largest?",
+      "options": [
+        {
+          "text": "0.7, 0.09, 0.62",
+          "value": "And(Lt(Rational(7, 10), Rational(9, 100)), Lt(Rational(9, 100), Rational(62, 100)))",
+          "correct": false,
+          "why_wrong": "This reads the digits after the point as whole numbers: 7, 9, 62. But 0.7 is 7 tenths, which is the biggest of the three."
+        },
+        {
+          "text": "0.62, 0.7, 0.09",
+          "value": "And(Lt(Rational(62, 100), Rational(7, 10)), Lt(Rational(7, 10), Rational(9, 100)))",
+          "correct": false,
+          "why_wrong": "This treats 0.09 as if it were 0.9. The 0 after the point means 0 tenths, so 0.09 is only 9 hundredths. It is the smallest."
+        },
+        {
+          "text": "0.09, 0.62, 0.7",
+          "value": "And(Lt(Rational(9, 100), Rational(62, 100)), Lt(Rational(62, 100), Rational(7, 10)))",
+          "correct": true
+        }
+      ],
+      "answer": "0.09, 0.62, 0.7",
+      "hints": [
+        "Write every number with 2 decimal places.",
+        "0.70, 0.09 and 0.62 are 70, 9 and 62 hundredths."
+      ],
+      "explanation": "As hundredths the numbers are 70, 9 and 62. In order: 9, 62, 70. So the list is 0.09, 0.62, 0.7.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "true"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "visual": "cd-p5",
+      "prompt": "What decimal does the dot show? Type a decimal, like 0.4.",
+      "answer": "4.28",
+      "hints": [
+        "The gap from 4.2 to 4.3 has 10 equal spaces. Each step is 0.01.",
+        "Count the steps from 4.2 to the dot."
+      ],
+      "explanation": "Each step is one hundredth. The dot is 8 steps past 4.2, so it shows 4.28.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(42, 10) + 8 * Rational(1, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-comparing-decimals/p-6",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "On a number line, 3.09 is to the right of 3.1.",
+      "answer": "false",
+      "hints": [
+        "Numbers to the right are bigger. Which is bigger, 3.09 or 3.1?",
+        "Write 3.1 as 3.10."
+      ],
+      "explanation": "False. 3.09 has 0 tenths and 3.1 has 1 tenth. So 3.09 is smaller and sits to the left of 3.1.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(309, 100), Rational(31, 10))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/p-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Nani buys 7.3 m of cloth. Round this to the nearest whole metre.",
+      "answer": "7",
+      "hints": [
+        "7.3 is between 7 and 8.",
+        "Look at the tenths digit. Is it 5 or more?"
+      ],
+      "explanation": "The tenths digit is 3, which is less than 5. So keep the ones digit: 7.3 rounds to 7 m.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "floor(Rational(73, 10) + Rational(1, 2))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Round 2.648 to 1 decimal place. Type a decimal, like 0.4.",
+      "answer": "2.6",
+      "hints": [
+        "1 decimal place means the nearest tenth. 2.648 is between 2.6 and 2.7.",
+        "Look only at the hundredths digit, the one right after the tenths."
+      ],
+      "explanation": "The hundredths digit is 4, which is less than 5. So keep the tenths digit: 2.648 rounds to 2.6. The 8 does not matter here.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "floor(Rational(2648, 1000) * 10 + Rational(1, 2)) / 10"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-comparing-decimals/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A packet of rice costs ₹86.75. Round the price to the nearest rupee.",
+      "answer": "87",
+      "hints": [
+        "₹86.75 is between ₹86 and ₹87.",
+        "Look at the tenths digit."
+      ],
+      "explanation": "The tenths digit is 7, which is 5 or more. So round up: ₹86.75 rounds to ₹87.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "floor(Rational(8675, 100) + Rational(1, 2))"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-comparing-decimals/q-1",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which number is the biggest?",
+      "options": [
+        {
+          "text": "0.596",
+          "value": "0.596",
+          "correct": false,
+          "why_wrong": "It has the most digits, but that does not make it bigger. It has 5 tenths, and 0.6 has 6 tenths."
+        },
+        {
+          "text": "0.58",
+          "value": "0.58",
+          "correct": false,
+          "why_wrong": "58 is bigger than 6, but these are not whole numbers. 0.58 has 5 tenths, and 0.6 has 6 tenths."
+        },
+        {
+          "text": "0.6",
+          "value": "0.6",
+          "correct": true
+        },
+        {
+          "text": "0.06",
+          "value": "0.06",
+          "correct": false,
+          "why_wrong": "The 0 after the point matters. 0.06 is 6 hundredths, not 6 tenths."
+        }
+      ],
+      "answer": "0.6",
+      "hints": [
+        "Compare the tenths digits first."
+      ],
+      "explanation": "Write them all with 3 places: 0.596, 0.580, 0.600 and 0.060. The biggest is 0.600, which is 0.6.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(596, 1000), Rational(58, 100), Rational(6, 10), Rational(6, 100))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/q-2",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "Anjali says 4.50 is bigger than 4.5. Is Anjali right?",
+      "answer": "false",
+      "hints": [
+        "What does the 0 at the end of 4.50 stand for?"
+      ],
+      "explanation": "No. 4.50 is 4 and 50 hundredths, and 4.5 is 4 and 5 tenths. 5 tenths is the same as 50 hundredths. So they are equal.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(450, 100), Rational(45, 10))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/q-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Three bags of dal weigh 1.2 kg, 1.15 kg and 1.205 kg. Put the weights in order from lightest to heaviest. Which weight comes second? Type a decimal, like 0.4.",
+      "answer": "1.2",
+      "hints": [
+        "Write all three with 3 decimal places.",
+        "1.200, 1.150 and 1.205. Compare the thousandths."
+      ],
+      "explanation": "As thousandths after the 1, the weights are 200, 150 and 205. In order: 1.15, 1.2, 1.205. The second weight is 1.2 kg.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Min(Max(Rational(12, 10), Rational(115, 100)), Max(Rational(115, 100), Rational(1205, 1000)), Max(Rational(12, 10), Rational(1205, 1000)))"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-comparing-decimals/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "visual": "cd-q4",
+      "prompt": "What decimal does the dot show? Type a decimal, like 0.4.",
+      "answer": "6.53",
+      "hints": [
+        "How big is each step between 6.5 and 6.6?"
+      ],
+      "explanation": "There are 10 equal spaces, so each step is 0.01. The dot is 3 steps past 6.5, so it shows 6.53.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(65, 10) + 3 * Rational(1, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-comparing-decimals/q-5",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Which decimal is exactly halfway between 0.3 and 0.4 on a number line?",
+      "options": [
+        {
+          "text": "0.35",
+          "value": "0.35",
+          "correct": true
+        },
+        {
+          "text": "0.305",
+          "value": "0.305",
+          "correct": false,
+          "why_wrong": "The 5 here is in the thousandths place, so 0.305 is very close to 0.3. Halfway needs 5 hundredths: 0.35."
+        },
+        {
+          "text": "0.7",
+          "value": "0.7",
+          "correct": false,
+          "why_wrong": "That adds 0.3 and 0.4. It is not even between them. Zoom in: 0.30 to 0.40 has 10 hundredth-steps, and halfway is 5 steps."
+        },
+        {
+          "text": "0.34",
+          "value": "0.34",
+          "correct": false,
+          "why_wrong": "0.34 is 4 hundredth-steps past 0.3 and 6 steps before 0.4. Halfway is 5 steps from each."
+        }
+      ],
+      "answer": "0.35",
+      "hints": [
+        "Write 0.3 and 0.4 as 0.30 and 0.40. What is halfway between 30 and 40?"
+      ],
+      "explanation": "0.30 to 0.40 has 10 hundredth-steps. Halfway is 5 steps past 0.30, which is 0.35.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(Rational(3, 10) + Rational(4, 10)) / 2"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/q-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A kilogram of grapes costs ₹64.50. Round the price to the nearest rupee.",
+      "answer": "65",
+      "hints": [
+        "Look at the tenths digit. Is it 5 or more?"
+      ],
+      "explanation": "The tenths digit is 5. The rule is 5 or more rounds up, so ₹64.50 rounds to ₹65.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "floor(Rational(6450, 100) + Rational(1, 2))"
+      }
+    },
+    {
+      "id": "s0-comparing-decimals/q-7",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Round 3.749 to 1 decimal place.",
+      "options": [
+        {
+          "text": "3.8",
+          "value": "3.8",
+          "correct": false,
+          "why_wrong": "This rounds in steps: 3.749 to 3.75, then to 3.8. Round in one step. Look only at the hundredths digit, 4."
+        },
+        {
+          "text": "3.75",
+          "value": "3.75",
+          "correct": false,
+          "why_wrong": "That is 2 decimal places. 1 decimal place means only a tenths digit."
+        },
+        {
+          "text": "3.7",
+          "value": "3.7",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "value": "4",
+          "correct": false,
+          "why_wrong": "That rounds to the nearest whole number. 1 decimal place keeps the tenths digit."
+        }
+      ],
+      "answer": "3.7",
+      "hints": [
+        "Which digit comes right after the tenths digit?"
+      ],
+      "explanation": "3.749 is between 3.7 and 3.8. The hundredths digit is 4, which is less than 5. So it rounds to 3.7.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "floor(Rational(3749, 1000) * 10 + Rational(1, 2)) / 10"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Does writing a zero at the end change a decimal?",
+      "a": "No. $0.5 = \\frac{5}{10} = \\frac{50}{100} = 0.50$, so 0.5 and 0.50 are the same number. But be careful where the zero goes. A zero right after the point does change it: 0.05 is only 5 hundredths. And a zero at the end of a whole number changes it too: 5 and 50 are different."
+    },
+    {
+      "q": "Which digit do I look at when I round?",
+      "a": "Only the digit just after the place you are rounding to. To round 3.749 to 1 decimal place, look at the 4 and nothing else. It rounds to 3.7. Do not round in steps from the end."
+    },
+    {
+      "q": "What if rounding up turns a 9 into 10?",
+      "a": "Carry, just as you do with whole numbers. Round 9.96 to 1 decimal place. It is between 9.9 and 10.0, and the 6 says round up. So it rounds to 10.0. Writing 10.0 shows that you rounded to 1 decimal place."
+    },
+    {
+      "q": "Why does a 5 round up when it is exactly halfway?",
+      "a": "A number like 3.65 is just as close to 3.6 as to 3.7. We need one rule so everyone gets the same answer. The rule everyone uses is that 5 rounds up, so 3.65 rounds to 3.7."
+    }
+  ]
+}
