@@ -1,0 +1,14 @@
+{
+ "bars": [
+  {
+   "parts": 5,
+   "equal": true,
+   "shaded": 2
+  },
+  {
+   "parts": 5,
+   "equal": true,
+   "shaded": 4
+  }
+ ]
+}

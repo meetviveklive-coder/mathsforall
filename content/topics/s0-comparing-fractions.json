@@ -1,0 +1,624 @@
+{
+  "id": "s0-comparing-fractions",
+  "title": "Comparing fractions",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Tanvi and her friend Joseph run on the same school track. Tanvi runs $\\frac{3}{4}$ of a lap. Joseph runs $\\frac{2}{3}$ of a lap.\n\nJoseph says, \"We ran the same, because we both stopped one part short!\" Is he right? In this topic you will learn to tell which fraction is bigger, even when the parts are different sizes.",
+    "sections": [
+      {
+        "heading": "Same denominator: count the parts",
+        "body": "Both bars are cut into 8 equal parts, so every part is the same size. The top bar has 3 parts shaded. The bottom bar has 5 parts shaded.\n\nWhen the denominators are the same, the fraction with the **bigger numerator** is bigger. So $\\frac{5}{8} > \\frac{3}{8}$.\n\nThe sign $>$ means \"is bigger than\" and $<$ means \"is smaller than\". The open side always faces the bigger number.",
+        "visual": "cf-same-den"
+      },
+      {
+        "heading": "Same numerator: look at the size of the parts",
+        "body": "Here both bars have 1 part shaded. The top bar is cut into 4 equal parts. The bottom bar is cut into 8 equal parts.\n\nCutting into **more** parts makes each part **smaller**. So $\\frac{1}{8} < \\frac{1}{4}$, even though 8 is bigger than 4.\n\nThe same idea works for any numerator. $\\frac{3}{5}$ and $\\frac{3}{7}$ both have 3 parts. Fifths are bigger than sevenths, so $\\frac{3}{5} > \\frac{3}{7}$.",
+        "visual": "cf-unit"
+      },
+      {
+        "heading": "Different denominators: make them the same",
+        "body": "What about Tanvi's $\\frac{3}{4}$ and Joseph's $\\frac{2}{3}$? Quarters and thirds are different sizes, so we cannot count parts yet.\n\nRename both fractions with the **same denominator**. 12 is in the 3 times table and the 4 times table, so use twelfths:\n\n- $\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$\n- $\\frac{3}{4} = \\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}$\n\nNow the parts are the same size. 9 twelfths is more than 8 twelfths, so $\\frac{3}{4} > \\frac{2}{3}$. Tanvi ran a little more.\n\nA shared denominator like 12 is called a **common denominator**. Be careful: do not compare only the numerators when the denominators differ.",
+        "visual": "cf-twelfths"
+      },
+      {
+        "heading": "Putting fractions in order",
+        "body": "To order $\\frac{5}{8}$, $\\frac{1}{4}$ and $\\frac{1}{2}$, give them all the same denominator. Eighths work for all three:\n\n- $\\frac{5}{8}$ stays $\\frac{5}{8}$\n- $\\frac{1}{4} = \\frac{2}{8}$\n- $\\frac{1}{2} = \\frac{4}{8}$\n\nNow order the numerators: 2, 4, 5. So from smallest to largest the order is $\\frac{1}{4}$, $\\frac{1}{2}$, $\\frac{5}{8}$.\n\nThe number line shows the same thing. Smaller numbers sit further to the left.",
+        "visual": "cf-order-nl"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Which is bigger: $\\frac{5}{6}$ or $\\frac{7}{9}$?",
+        "steps": [
+          "The denominators are different, so find a common denominator. 18 is in both the 6 times table and the 9 times table.",
+          "$\\frac{5}{6} = \\frac{5 \\times 3}{6 \\times 3} = \\frac{15}{18}$.",
+          "$\\frac{7}{9} = \\frac{7 \\times 2}{9 \\times 2} = \\frac{14}{18}$.",
+          "15 eighteenths is more than 14 eighteenths. So $\\frac{5}{6}$ is bigger."
+        ],
+        "answer": "5/6",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Max(Rational(5, 6), Rational(7, 9))"
+        }
+      },
+      {
+        "problem": "Harpreet eats $\\frac{4}{7}$ of a mango bar. Lalitha eats $\\frac{4}{9}$ of the same size of bar. Who eats more?",
+        "steps": [
+          "The numerators are the same: both ate 4 parts.",
+          "Sevenths are bigger than ninths, because a bar cut into 7 parts has bigger parts than one cut into 9.",
+          "4 big parts is more than 4 small parts. So $\\frac{4}{7} > \\frac{4}{9}$, and Harpreet eats more."
+        ],
+        "answer": "4/7",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Max(Rational(4, 7), Rational(4, 9))"
+        }
+      },
+      {
+        "problem": "Put these in order from smallest to largest: $\\frac{3}{4}$, $\\frac{5}{8}$, $\\frac{1}{2}$.",
+        "steps": [
+          "8 is in the 2, 4 and 8 times tables, so use eighths.",
+          "$\\frac{3}{4} = \\frac{6}{8}$, $\\frac{5}{8}$ stays the same, and $\\frac{1}{2} = \\frac{4}{8}$.",
+          "Order the numerators: 4, 5, 6.",
+          "So the order is $\\frac{1}{2}$, $\\frac{5}{8}$, $\\frac{3}{4}$."
+        ],
+        "answer": "1/2, 5/8, 3/4",
+        "verify": {
+          "kind": "sympy",
+          "expr": "(Min(Rational(3, 4), Rational(5, 8), Rational(1, 2)), Rational(3, 4) + Rational(5, 8) + Rational(1, 2) - Min(Rational(3, 4), Rational(5, 8), Rational(1, 2)) - Max(Rational(3, 4), Rational(5, 8), Rational(1, 2)), Max(Rational(3, 4), Rational(5, 8), Rational(1, 2)))"
+        }
+      }
+    ],
+    "summary": [
+      "Same denominator: the bigger numerator gives the bigger fraction.",
+      "Same numerator: the smaller denominator gives the bigger fraction, because its parts are bigger.",
+      "Different denominators: rename both with a common denominator, then compare the numerators.",
+      "To order fractions, give them all one common denominator, then order the numerators."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "cf-same-den",
+      "purpose": "3/8 and 5/8 as bars",
+      "spec": "Two bars of equal length, each cut into 8 equal parts. The top has 3 shaded and the bottom has 5 shaded. Labels: 3/8, 5/8.",
+      "alt": "Two bars of the same length, each cut into 8 equal parts. The top bar, labelled 3/8, has 3 parts shaded. The bottom bar, labelled 5/8, has 5 parts shaded.",
+      "file": "content/visuals/s0-comparing-fractions/cf-same-den.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 8,
+            "equal": true,
+            "shaded": 3
+          },
+          {
+            "parts": 8,
+            "equal": true,
+            "shaded": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "cf-unit",
+      "purpose": "1/4 is bigger than 1/8",
+      "spec": "Two bars of equal length. The top has 4 equal parts with 1 shaded. The bottom has 8 equal parts with 1 shaded. Labels: 1/4, 1/8.",
+      "alt": "Two bars of the same length. The top bar, labelled 1/4, is cut into 4 equal parts with 1 shaded. The bottom bar, labelled 1/8, is cut into 8 equal parts with 1 shaded. The shaded part of the top bar is twice as long.",
+      "file": "content/visuals/s0-comparing-fractions/cf-unit.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 8,
+            "equal": true,
+            "shaded": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "cf-twelfths",
+      "purpose": "2/3 = 8/12 and 3/4 = 9/12",
+      "spec": "Four bars of equal length. Parts and shaded: 3 with 2, 12 with 8, 4 with 3, 12 with 9. Labels: 2/3, 8/12, 3/4, 9/12.",
+      "alt": "Four bars of the same length. Bar 1, labelled 2/3, has 3 equal parts with 2 shaded. Bar 2, labelled 8/12, has 12 equal parts with 8 shaded. Bar 3, labelled 3/4, has 4 equal parts with 3 shaded. Bar 4, labelled 9/12, has 12 equal parts with 9 shaded. The shading in bars 3 and 4 is a little longer than in bars 1 and 2.",
+      "file": "content/visuals/s0-comparing-fractions/cf-twelfths.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 3,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 12,
+            "equal": true,
+            "shaded": 8
+          },
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 3
+          },
+          {
+            "parts": 12,
+            "equal": true,
+            "shaded": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "cf-order-nl",
+      "purpose": "1/4, 1/2, 5/8 on a number line",
+      "spec": "Number line 0 to 1 with 8 equal spaces. Only 0 and 1 labelled below. Dots at 1/4, 1/2 and 5/8, each labelled above.",
+      "alt": "A number line from 0 to 1 split into 8 equal spaces. Three dots are labelled above the line. From left to right: one quarter on the 2nd mark after 0. Then one half on the 4th mark after 0. Then five eighths on the 5th mark after 0.",
+      "file": "content/visuals/s0-comparing-fractions/cf-order-nl.svg",
+      "checks": {
+        "start": "0",
+        "end": "1",
+        "spaces_per_unit": 8,
+        "labels": [
+          "0",
+          "1"
+        ],
+        "points_left_to_right": [
+          "1/4",
+          "1/2",
+          "5/8"
+        ],
+        "point_labels_left_to_right": [
+          "1/4",
+          "1/2",
+          "5/8"
+        ]
+      }
+    },
+    {
+      "id": "cf-p1",
+      "purpose": "Practice: 2/5 and 4/5",
+      "spec": "Two bars of equal length, each 5 equal parts. The top has 2 shaded and the bottom has 4 shaded. No labels.",
+      "alt": "Two bars of the same length, each cut into 5 equal parts. The top bar has 2 parts shaded. The bottom bar has 4 parts shaded.",
+      "file": "content/visuals/s0-comparing-fractions/cf-p1.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 5,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 5,
+            "equal": true,
+            "shaded": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "cf-q2",
+      "purpose": "Quiz: 2/3 and 2/5",
+      "spec": "Two bars of equal length. The top has 3 equal parts with 2 shaded. The bottom has 5 equal parts with 2 shaded. No labels.",
+      "alt": "Two bars of the same length. The top bar is cut into 3 equal parts with 2 shaded. The bottom bar is cut into 5 equal parts with 2 shaded. The shaded part of the top bar is longer.",
+      "file": "content/visuals/s0-comparing-fractions/cf-q2.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 3,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 5,
+            "equal": true,
+            "shaded": 2
+          }
+        ]
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-comparing-fractions/p-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "The top bar shows $\\frac{2}{5}$. The bottom bar shows $\\frac{4}{5}$. Which fraction is bigger? Type the bigger fraction, like 3/4.",
+      "answer": "4/5",
+      "hints": [
+        "Both bars have parts of the same size. Which bar has more parts shaded?"
+      ],
+      "explanation": "Both are fifths, so the parts are the same size. 4 fifths is more than 2 fifths, so $\\frac{4}{5} > \\frac{2}{5}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(2, 5), Rational(4, 5))"
+      },
+      "visual": "cf-p1"
+    },
+    {
+      "id": "s0-comparing-fractions/p-2",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "Arjun says $\\frac{1}{6}$ of a roti is more than $\\frac{1}{3}$ of the same roti, because 6 is more than 3. Is he right?",
+      "answer": "false",
+      "hints": [
+        "Picture a roti cut into 3 pieces and one cut into 6 pieces. Which pieces are bigger?"
+      ],
+      "explanation": "No. Cutting into 6 parts makes smaller pieces than cutting into 3 parts. So $\\frac{1}{6} < \\frac{1}{3}$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(1, 6), Rational(1, 3))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-3",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which fraction is the largest?",
+      "options": [
+        {
+          "text": "$\\frac{3}{10}$",
+          "value": "3/10",
+          "correct": false,
+          "why_wrong": "10 is the biggest denominator, but tenths are the smallest parts. 3 tenths is the smallest here."
+        },
+        {
+          "text": "$\\frac{3}{7}$",
+          "value": "3/7",
+          "correct": false,
+          "why_wrong": "Sevenths are smaller than quarters. 3 sevenths is less than 3 quarters."
+        },
+        {
+          "text": "$\\frac{3}{4}$",
+          "value": "3/4",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{3}{5}$",
+          "value": "3/5",
+          "correct": false,
+          "why_wrong": "Fifths are smaller than quarters. 3 fifths is less than 3 quarters."
+        }
+      ],
+      "answer": "$\\frac{3}{4}$",
+      "hints": [
+        "All the numerators are 3. Which denominator gives the biggest parts?"
+      ],
+      "explanation": "All four have 3 parts. The fewer parts the whole is cut into, the bigger each part. Quarters are the biggest parts here, so $\\frac{3}{4}$ is the largest.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(3, 10), Rational(3, 7), Rational(3, 4), Rational(3, 5))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "To compare $\\frac{3}{4}$ and $\\frac{5}{6}$, Ishaan renames both as twelfths. Fill in the box: $\\frac{3}{4} = \\frac{\\square}{12}$ Type the number that goes in the box.",
+      "answer": "9",
+      "hints": [
+        "4 times what is 12?",
+        "Multiply the top by the same number."
+      ],
+      "explanation": "$4 \\times 3 = 12$, so multiply the top by 3 too: $3 \\times 3 = 9$. $\\frac{3}{4} = \\frac{9}{12}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 4) * 12"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Which is bigger: $\\frac{2}{3}$ or $\\frac{5}{8}$? Type the bigger fraction, like 3/4.",
+      "answer": "2/3",
+      "hints": [
+        "24 is in both the 3 times table and the 8 times table.",
+        "Rename both fractions as twenty-fourths."
+      ],
+      "explanation": "$\\frac{2}{3} = \\frac{16}{24}$ and $\\frac{5}{8} = \\frac{15}{24}$. 16 is more than 15, so $\\frac{2}{3}$ is bigger.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(2, 3), Rational(5, 8))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-6",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Neha and Siddharth walk along the same road to the market. Neha walks $\\frac{3}{5}$ of a kilometre. Siddharth walks $\\frac{4}{7}$ of a kilometre. Who walks further?",
+      "options": [
+        {
+          "text": "Neha ($\\frac{3}{5}$ km)",
+          "value": "3/5",
+          "correct": true
+        },
+        {
+          "text": "Siddharth ($\\frac{4}{7}$ km)",
+          "value": "4/7",
+          "correct": false,
+          "why_wrong": "4 is more than 3, but sevenths are smaller than fifths. Compare with a common denominator: $\\frac{21}{35}$ is more than $\\frac{20}{35}$."
+        }
+      ],
+      "answer": "Neha ($\\frac{3}{5}$ km)",
+      "hints": [
+        "35 is in both the 5 times table and the 7 times table.",
+        "Rename both fractions as thirty-fifths."
+      ],
+      "explanation": "$\\frac{3}{5} = \\frac{21}{35}$ and $\\frac{4}{7} = \\frac{20}{35}$. 21 is more than 20, so Neha walks a little further.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(3, 5), Rational(4, 7))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-7",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Kiran says $\\frac{7}{10}$ is bigger than $\\frac{3}{4}$, because 7 and 10 are bigger numbers. Is he right?",
+      "answer": "false",
+      "hints": [
+        "Rename both fractions as twentieths."
+      ],
+      "explanation": "No. $\\frac{7}{10} = \\frac{14}{20}$ and $\\frac{3}{4} = \\frac{15}{20}$. 14 is less than 15, so $\\frac{7}{10} < \\frac{3}{4}$. Bigger numbers do not always mean a bigger fraction.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(7, 10), Rational(3, 4))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Which is the smallest: $\\frac{1}{2}$, $\\frac{2}{5}$ or $\\frac{3}{10}$? Type the smallest fraction, like 3/4.",
+      "answer": "3/10",
+      "hints": [
+        "Rename all three as tenths."
+      ],
+      "explanation": "$\\frac{1}{2} = \\frac{5}{10}$ and $\\frac{2}{5} = \\frac{4}{10}$. The numerators are 5, 4 and 3, so $\\frac{3}{10}$ is the smallest.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Min(Rational(1, 2), Rational(2, 5), Rational(3, 10))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/p-9",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Which list goes from smallest to largest?",
+      "options": [
+        {
+          "text": "$\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{3}{4}$",
+          "value": "(5/12, 2/3, 3/4)",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{2}{3}$, $\\frac{3}{4}$, $\\frac{5}{12}$",
+          "value": "(2/3, 3/4, 5/12)",
+          "correct": false,
+          "why_wrong": "This orders by the numerators 2, 3, 5 only. Rename as twelfths first: $\\frac{8}{12}$, $\\frac{9}{12}$, $\\frac{5}{12}$."
+        },
+        {
+          "text": "$\\frac{3}{4}$, $\\frac{2}{3}$, $\\frac{5}{12}$",
+          "value": "(3/4, 2/3, 5/12)",
+          "correct": false,
+          "why_wrong": "This goes from largest to smallest. The question asks for smallest first."
+        }
+      ],
+      "answer": "$\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{3}{4}$",
+      "hints": [
+        "Rename all three fractions as twelfths.",
+        "Then order the numerators from smallest to largest."
+      ],
+      "explanation": "$\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$. The numerators are 5, 8 and 9. So the order is $\\frac{5}{12}$, $\\frac{2}{3}$, $\\frac{3}{4}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(Min(Rational(2, 3), Rational(3, 4), Rational(5, 12)), Rational(2, 3) + Rational(3, 4) + Rational(5, 12) - Min(Rational(2, 3), Rational(3, 4), Rational(5, 12)) - Max(Rational(2, 3), Rational(3, 4), Rational(5, 12)), Max(Rational(2, 3), Rational(3, 4), Rational(5, 12)))"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-comparing-fractions/q-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Which is bigger: $\\frac{5}{9}$ or $\\frac{7}{9}$? Type the bigger fraction, like 3/4.",
+      "answer": "7/9",
+      "hints": [
+        "The denominators are the same. Compare the numerators."
+      ],
+      "explanation": "Both are ninths, so the parts are the same size. 7 ninths is more than 5 ninths.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(5, 9), Rational(7, 9))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-2",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "The top bar shows $\\frac{2}{3}$. The bottom bar shows $\\frac{2}{5}$. Is $\\frac{2}{5}$ bigger than $\\frac{2}{3}$?",
+      "answer": "false",
+      "hints": [
+        "Look at how long the shaded part is in each bar."
+      ],
+      "explanation": "No. Both have 2 parts shaded, but thirds are bigger than fifths. So $\\frac{2}{5} < \\frac{2}{3}$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(2, 5), Rational(2, 3))"
+      },
+      "visual": "cf-q2"
+    },
+    {
+      "id": "s0-comparing-fractions/q-3",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which fraction is the smallest?",
+      "options": [
+        {
+          "text": "$\\frac{1}{3}$",
+          "value": "1/3",
+          "correct": false,
+          "why_wrong": "Thirds are the biggest parts here, so this is the largest, not the smallest."
+        },
+        {
+          "text": "$\\frac{1}{8}$",
+          "value": "1/8",
+          "correct": false,
+          "why_wrong": "Eighths are smaller than fifths and thirds, but tenths are smaller still."
+        },
+        {
+          "text": "$\\frac{1}{5}$",
+          "value": "1/5",
+          "correct": false,
+          "why_wrong": "Fifths are bigger than eighths and tenths."
+        },
+        {
+          "text": "$\\frac{1}{10}$",
+          "value": "1/10",
+          "correct": true
+        }
+      ],
+      "answer": "$\\frac{1}{10}$",
+      "hints": [
+        "All the numerators are 1. Which whole is cut into the most parts?"
+      ],
+      "explanation": "Each fraction is 1 part. The whole cut into 10 parts has the smallest parts, so $\\frac{1}{10}$ is the smallest.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Min(Rational(1, 3), Rational(1, 8), Rational(1, 5), Rational(1, 10))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Which is bigger: $\\frac{5}{6}$ or $\\frac{4}{5}$? Type the bigger fraction, like 3/4.",
+      "answer": "5/6",
+      "hints": [
+        "30 is in both the 6 times table and the 5 times table."
+      ],
+      "explanation": "$\\frac{5}{6} = \\frac{25}{30}$ and $\\frac{4}{5} = \\frac{24}{30}$. 25 is more than 24, so $\\frac{5}{6}$ is bigger.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(5, 6), Rational(4, 5))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-5",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Two trains run on the same route from Pune to Nagpur. The first train has gone $\\frac{5}{8}$ of the way. The second train has gone $\\frac{2}{3}$ of the way. Which train has gone further?",
+      "options": [
+        {
+          "text": "The first train ($\\frac{5}{8}$)",
+          "value": "5/8",
+          "correct": false,
+          "why_wrong": "5 is more than 2, but eighths are smaller than thirds. With a common denominator: $\\frac{15}{24}$ is less than $\\frac{16}{24}$."
+        },
+        {
+          "text": "The second train ($\\frac{2}{3}$)",
+          "value": "2/3",
+          "correct": true
+        }
+      ],
+      "answer": "The second train ($\\frac{2}{3}$)",
+      "hints": [
+        "Rename both fractions as twenty-fourths."
+      ],
+      "explanation": "$\\frac{5}{8} = \\frac{15}{24}$ and $\\frac{2}{3} = \\frac{16}{24}$. 16 is more than 15, so the second train has gone further.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(5, 8), Rational(2, 3))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "To compare $\\frac{2}{3}$ and $\\frac{7}{10}$, Ananya renames both as thirtieths. Fill in the box: $\\frac{7}{10} = \\frac{\\square}{30}$ Type the number that goes in the box.",
+      "answer": "21",
+      "hints": [
+        "10 times what is 30?"
+      ],
+      "explanation": "$10 \\times 3 = 30$, so $7 \\times 3 = 21$. $\\frac{7}{10} = \\frac{21}{30}$. Since $\\frac{2}{3} = \\frac{20}{30}$, $\\frac{7}{10}$ is a little bigger.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 10) * 30"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Which is the largest: $\\frac{3}{8}$, $\\frac{1}{4}$ or $\\frac{1}{2}$? Type the largest fraction, like 3/4.",
+      "answer": "1/2",
+      "hints": [
+        "Rename all three as eighths."
+      ],
+      "explanation": "$\\frac{1}{4} = \\frac{2}{8}$ and $\\frac{1}{2} = \\frac{4}{8}$. The numerators are 3, 2 and 4, so $\\frac{1}{2}$ is the largest.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(3, 8), Rational(1, 4), Rational(1, 2))"
+      }
+    },
+    {
+      "id": "s0-comparing-fractions/q-8",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Meera wants to put three fractions in order, smallest first. Which list is right?",
+      "options": [
+        {
+          "text": "$\\frac{2}{3}$, $\\frac{5}{6}$, $\\frac{7}{12}$",
+          "value": "(2/3, 5/6, 7/12)",
+          "correct": false,
+          "why_wrong": "This orders by the numerators 2, 5, 7 only. Rename as twelfths first: $\\frac{8}{12}$, $\\frac{10}{12}$, $\\frac{7}{12}$."
+        },
+        {
+          "text": "$\\frac{7}{12}$, $\\frac{2}{3}$, $\\frac{5}{6}$",
+          "value": "(7/12, 2/3, 5/6)",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{5}{6}$, $\\frac{2}{3}$, $\\frac{7}{12}$",
+          "value": "(5/6, 2/3, 7/12)",
+          "correct": false,
+          "why_wrong": "This goes from largest to smallest. The question asks for smallest first."
+        }
+      ],
+      "answer": "$\\frac{7}{12}$, $\\frac{2}{3}$, $\\frac{5}{6}$",
+      "hints": [
+        "Rename all three fractions as twelfths."
+      ],
+      "explanation": "$\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{5}{6} = \\frac{10}{12}$. The numerators are 7, 8 and 10. So the order is $\\frac{7}{12}$, $\\frac{2}{3}$, $\\frac{5}{6}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(Min(Rational(5, 6), Rational(2, 3), Rational(7, 12)), Rational(5, 6) + Rational(2, 3) + Rational(7, 12) - Min(Rational(5, 6), Rational(2, 3), Rational(7, 12)) - Max(Rational(5, 6), Rational(2, 3), Rational(7, 12)), Max(Rational(5, 6), Rational(2, 3), Rational(7, 12)))"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Which common denominator should I choose?",
+      "a": "Any number in both times tables works. Multiplying the two denominators always works. A smaller one, like 12 for quarters and thirds, keeps the numbers easy."
+    },
+    {
+      "q": "What if the two fractions come out the same?",
+      "a": "Then they are equivalent. For example, $\\frac{2}{4} = \\frac{6}{12}$ and $\\frac{3}{6} = \\frac{6}{12}$, so $\\frac{2}{4} = \\frac{3}{6}$. We use the sign $=$."
+    },
+    {
+      "q": "Is there a quick check without a common denominator?",
+      "a": "Sometimes. Compare each fraction with one half. $\\frac{3}{8}$ is less than half, because 3 is less than half of 8. $\\frac{4}{7}$ is more than half. So $\\frac{3}{8} < \\frac{4}{7}$."
+    },
+    {
+      "q": "Is $\\frac{1}{2}$ of a big watermelon the same as $\\frac{1}{2}$ of a small one?",
+      "a": "No. Comparing fractions only makes sense when the wholes are the same size. In this topic, the wholes are always the same."
+    },
+    {
+      "q": "How do I remember which way $<$ and $>$ point?",
+      "a": "The open side faces the bigger number. In $\\frac{1}{8} < \\frac{1}{4}$, the open side faces $\\frac{1}{4}$."
+    }
+  ]
+}

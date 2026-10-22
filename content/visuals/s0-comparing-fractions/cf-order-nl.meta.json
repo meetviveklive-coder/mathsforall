@@ -1,0 +1,19 @@
+{
+ "start": "0",
+ "end": "1",
+ "spaces_per_unit": 8,
+ "labels": [
+  "0",
+  "1"
+ ],
+ "points_left_to_right": [
+  "1/4",
+  "1/2",
+  "5/8"
+ ],
+ "point_labels_left_to_right": [
+  "1/4",
+  "1/2",
+  "5/8"
+ ]
+}
