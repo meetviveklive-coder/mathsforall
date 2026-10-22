@@ -176,14 +176,14 @@
 - Place mixed numbers on a number line
 - *Watch for:* Writing 2 1/3 as 3/3; Thinking an improper fraction is 'wrong'
 
-**24. Adding and subtracting fractions with the same denominator** · [23] · 20 min
+**24. Adding and subtracting fractions with the same denominator** · [23, 21] · 20 min
 
 - Add and subtract fractions with the same denominator
 - Explain why the denominator stays the same
 - Give answers greater than 1 as mixed numbers
 - *Watch for:* Adding denominators too (1/5 + 2/5 = 3/10)
 
-**25. Adding and subtracting fractions with different denominators** · [24, 21] · 30 min
+**25. Adding and subtracting fractions with different denominators** · [24] · 30 min
 
 - Find a common denominator
 - Add and subtract fractions with different denominators

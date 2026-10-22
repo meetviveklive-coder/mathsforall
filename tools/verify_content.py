@@ -188,6 +188,11 @@ def check_match_rule(rep: Report, where: str, q: dict):
             rep.fail(where, "match 'exact' needs an answer written as a/b")
         else:
             rep.ok()
+    elif rule == "improper":
+        if m:
+            rep.ok()
+        else:
+            rep.fail(where, "match 'improper' needs an answer written as a/b")
     elif rule == "mixed":
         mm = re.fullmatch(r"\s*(\d+)\s+(\d+)\s*/\s*(\d+)\s*", q["answer"])
         if mm and int(mm.group(2)) < int(mm.group(3)):

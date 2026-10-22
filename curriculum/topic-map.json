@@ -1,430 +1,1186 @@
 {
   "version": 1,
   "stages": [
-    { "stage": 0, "name": "Foundations", "summary": "Numbers, the four operations, fractions, decimals, percent and ratio." },
-    { "stage": 1, "name": "Pre-algebra", "summary": "Number theory, integers, exponents, order of operations, first equations." },
-    { "stage": 2, "name": "Geometry and measurement" },
-    { "stage": 3, "name": "Algebra" },
-    { "stage": 4, "name": "Trigonometry and advanced algebra" },
-    { "stage": 5, "name": "Pre-calculus and discrete mathematics" },
-    { "stage": 6, "name": "Calculus" },
-    { "stage": 7, "name": "Engineering Mathematics I" },
-    { "stage": 8, "name": "Engineering Mathematics II" }
+    {
+      "stage": 0,
+      "name": "Foundations",
+      "summary": "Numbers, the four operations, fractions, decimals, percent and ratio."
+    },
+    {
+      "stage": 1,
+      "name": "Pre-algebra",
+      "summary": "Number theory, integers, exponents, order of operations, first equations."
+    },
+    {
+      "stage": 2,
+      "name": "Geometry and measurement"
+    },
+    {
+      "stage": 3,
+      "name": "Algebra"
+    },
+    {
+      "stage": 4,
+      "name": "Trigonometry and advanced algebra"
+    },
+    {
+      "stage": 5,
+      "name": "Pre-calculus and discrete mathematics"
+    },
+    {
+      "stage": 6,
+      "name": "Calculus"
+    },
+    {
+      "stage": 7,
+      "name": "Engineering Mathematics I"
+    },
+    {
+      "stage": 8,
+      "name": "Engineering Mathematics II"
+    }
   ],
   "topics": [
     {
-      "id": "s0-counting-to-20", "title": "Counting and numbers to 20", "stage": 0, "unit": "Numbers",
+      "id": "s0-counting-to-20",
+      "title": "Counting and numbers to 20",
+      "stage": 0,
+      "unit": "Numbers",
       "prerequisites": [],
-      "objectives": ["Count objects up to 20 and say how many", "Read and write numerals 0 to 20", "Explain that zero means none"],
-      "misconceptions": ["Counting an object twice or skipping one", "Thinking the last number said is just a label, not the total"],
+      "objectives": [
+        "Count objects up to 20 and say how many",
+        "Read and write numerals 0 to 20",
+        "Explain that zero means none"
+      ],
+      "misconceptions": [
+        "Counting an object twice or skipping one",
+        "Thinking the last number said is just a label, not the total"
+      ],
       "est_minutes": 15
     },
     {
-      "id": "s0-numbers-to-100", "title": "Numbers to 100: tens and ones", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-counting-to-20"],
-      "objectives": ["Group objects into tens and ones", "Read and write two-digit numbers", "Say the value of each digit in a two-digit number"],
-      "misconceptions": ["Writing 'forty-six' as 406", "Thinking the 4 in 46 means four, not forty"],
+      "id": "s0-numbers-to-100",
+      "title": "Numbers to 100: tens and ones",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-counting-to-20"
+      ],
+      "objectives": [
+        "Group objects into tens and ones",
+        "Read and write two-digit numbers",
+        "Say the value of each digit in a two-digit number"
+      ],
+      "misconceptions": [
+        "Writing 'forty-six' as 406",
+        "Thinking the 4 in 46 means four, not forty"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-comparing-ordering", "title": "Comparing and ordering numbers", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-numbers-to-100"],
-      "objectives": ["Use <, > and = correctly", "Place numbers on a number line", "Arrange a set of numbers in ascending and descending order"],
-      "misconceptions": ["Comparing by the last digit instead of the first", "Reading the < sign backwards"],
+      "id": "s0-comparing-ordering",
+      "title": "Comparing and ordering numbers",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-numbers-to-100"
+      ],
+      "objectives": [
+        "Use <, > and = correctly",
+        "Place numbers on a number line",
+        "Arrange a set of numbers in ascending and descending order"
+      ],
+      "misconceptions": [
+        "Comparing by the last digit instead of the first",
+        "Reading the < sign backwards"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-place-value-thousands", "title": "Place value to thousands", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-numbers-to-100"],
-      "objectives": ["Read and write numbers up to 9,999", "Write a number in expanded form (3,405 = 3000 + 400 + 5)", "Explain why zero is needed as a placeholder"],
-      "misconceptions": ["Dropping the zero in 3,405 and writing 345", "Thinking a digit has the same value in every position"],
+      "id": "s0-place-value-thousands",
+      "title": "Place value to thousands",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-numbers-to-100"
+      ],
+      "objectives": [
+        "Read and write numbers up to 9,999",
+        "Write a number in expanded form (3,405 = 3000 + 400 + 5)",
+        "Explain why zero is needed as a placeholder"
+      ],
+      "misconceptions": [
+        "Dropping the zero in 3,405 and writing 345",
+        "Thinking a digit has the same value in every position"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-indian-place-value", "title": "Large numbers: lakh and crore", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-place-value-thousands"],
-      "objectives": ["Read and write numbers up to 99,99,99,999 using the Indian system", "Place commas correctly in the Indian system", "Write a large number in words"],
-      "misconceptions": ["Using groups of three digits throughout (1,000,000 instead of 10,00,000)", "Thinking one lakh is 1,000,000"],
+      "id": "s0-indian-place-value",
+      "title": "Large numbers: lakh and crore",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-place-value-thousands"
+      ],
+      "objectives": [
+        "Read and write numbers up to 99,99,99,999 using the Indian system",
+        "Place commas correctly in the Indian system",
+        "Write a large number in words"
+      ],
+      "misconceptions": [
+        "Using groups of three digits throughout (1,000,000 instead of 10,00,000)",
+        "Thinking one lakh is 1,000,000"
+      ],
       "est_minutes": 25,
       "indian_context": "Population of cities, prices of houses, cricket stadium capacities."
     },
     {
-      "id": "s0-international-place-value", "title": "Million and billion: two ways to write big numbers", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-indian-place-value"],
-      "objectives": ["Read and write numbers using million and billion", "Convert between lakh/crore and million/billion", "Place commas correctly in the international system"],
-      "misconceptions": ["Thinking 1 crore equals 1 million", "Mixing the two comma systems in one number"],
+      "id": "s0-international-place-value",
+      "title": "Million and billion: two ways to write big numbers",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-indian-place-value"
+      ],
+      "objectives": [
+        "Read and write numbers using million and billion",
+        "Convert between lakh/crore and million/billion",
+        "Place commas correctly in the international system"
+      ],
+      "misconceptions": [
+        "Thinking 1 crore equals 1 million",
+        "Mixing the two comma systems in one number"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-rounding-estimation", "title": "Rounding and estimation", "stage": 0, "unit": "Numbers",
-      "prerequisites": ["s0-place-value-thousands", "s0-comparing-ordering"],
-      "objectives": ["Round numbers to the nearest 10, 100 and 1,000", "Estimate a sum or difference by rounding first", "Judge whether an answer is reasonable"],
-      "misconceptions": ["Rounding 45 down to 40", "Changing every digit after the rounding place to 9 instead of 0"],
+      "id": "s0-rounding-estimation",
+      "title": "Rounding and estimation",
+      "stage": 0,
+      "unit": "Numbers",
+      "prerequisites": [
+        "s0-place-value-thousands",
+        "s0-comparing-ordering"
+      ],
+      "objectives": [
+        "Round numbers to the nearest 10, 100 and 1,000",
+        "Estimate a sum or difference by rounding first",
+        "Judge whether an answer is reasonable"
+      ],
+      "misconceptions": [
+        "Rounding 45 down to 40",
+        "Changing every digit after the rounding place to 9 instead of 0"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-addition-meaning", "title": "What addition means", "stage": 0, "unit": "Addition and subtraction",
-      "prerequisites": ["s0-counting-to-20"],
-      "objectives": ["Model addition as putting groups together", "Recall addition facts up to 20", "Explain that order does not change a sum"],
-      "misconceptions": ["Counting the starting number again when counting on", "Thinking 3 + 5 and 5 + 3 give different answers"],
+      "id": "s0-addition-meaning",
+      "title": "What addition means",
+      "stage": 0,
+      "unit": "Addition and subtraction",
+      "prerequisites": [
+        "s0-counting-to-20"
+      ],
+      "objectives": [
+        "Model addition as putting groups together",
+        "Recall addition facts up to 20",
+        "Explain that order does not change a sum"
+      ],
+      "misconceptions": [
+        "Counting the starting number again when counting on",
+        "Thinking 3 + 5 and 5 + 3 give different answers"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-subtraction-meaning", "title": "What subtraction means", "stage": 0, "unit": "Addition and subtraction",
-      "prerequisites": ["s0-addition-meaning"],
-      "objectives": ["Model subtraction as taking away and as finding a difference", "Use addition facts to check subtraction", "Explain why order matters in subtraction"],
-      "misconceptions": ["Thinking 3 − 5 is the same as 5 − 3", "Believing subtraction always means 'take away' only"],
+      "id": "s0-subtraction-meaning",
+      "title": "What subtraction means",
+      "stage": 0,
+      "unit": "Addition and subtraction",
+      "prerequisites": [
+        "s0-addition-meaning"
+      ],
+      "objectives": [
+        "Model subtraction as taking away and as finding a difference",
+        "Use addition facts to check subtraction",
+        "Explain why order matters in subtraction"
+      ],
+      "misconceptions": [
+        "Thinking 3 − 5 is the same as 5 − 3",
+        "Believing subtraction always means 'take away' only"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-add-sub-two-digit", "title": "Adding and subtracting with regrouping", "stage": 0, "unit": "Addition and subtraction",
-      "prerequisites": ["s0-numbers-to-100", "s0-subtraction-meaning"],
-      "objectives": ["Add two-digit numbers with carrying", "Subtract two-digit numbers with borrowing", "Explain carrying as trading 10 ones for 1 ten"],
-      "misconceptions": ["Subtracting the smaller digit from the larger in each column (52 − 27 = 35)", "Forgetting to add the carried ten"],
+      "id": "s0-add-sub-two-digit",
+      "title": "Adding and subtracting with regrouping",
+      "stage": 0,
+      "unit": "Addition and subtraction",
+      "prerequisites": [
+        "s0-numbers-to-100",
+        "s0-subtraction-meaning"
+      ],
+      "objectives": [
+        "Add two-digit numbers with carrying",
+        "Subtract two-digit numbers with borrowing",
+        "Explain carrying as trading 10 ones for 1 ten"
+      ],
+      "misconceptions": [
+        "Subtracting the smaller digit from the larger in each column (52 − 27 = 35)",
+        "Forgetting to add the carried ten"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-add-sub-large", "title": "Adding and subtracting large numbers", "stage": 0, "unit": "Addition and subtraction",
-      "prerequisites": ["s0-add-sub-two-digit", "s0-place-value-thousands"],
-      "objectives": ["Add and subtract numbers up to 6 digits in columns", "Borrow across zeros (5,000 − 1,248)", "Check a subtraction by adding"],
-      "misconceptions": ["Misaligning digits when numbers have different lengths", "Borrowing across zeros incorrectly"],
+      "id": "s0-add-sub-large",
+      "title": "Adding and subtracting large numbers",
+      "stage": 0,
+      "unit": "Addition and subtraction",
+      "prerequisites": [
+        "s0-add-sub-two-digit",
+        "s0-place-value-thousands"
+      ],
+      "objectives": [
+        "Add and subtract numbers up to 6 digits in columns",
+        "Borrow across zeros (5,000 − 1,248)",
+        "Check a subtraction by adding"
+      ],
+      "misconceptions": [
+        "Misaligning digits when numbers have different lengths",
+        "Borrowing across zeros incorrectly"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-multiplication-meaning", "title": "Multiplication as equal groups", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-addition-meaning", "s0-numbers-to-100"],
-      "objectives": ["Model multiplication as equal groups and as arrays", "Write repeated addition as multiplication", "Explain why 3 × 4 = 4 × 3 using an array"],
-      "misconceptions": ["Thinking multiplication always makes a number bigger", "Adding instead of multiplying (3 × 4 = 7)"],
+      "id": "s0-multiplication-meaning",
+      "title": "Multiplication as equal groups",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-addition-meaning",
+        "s0-numbers-to-100"
+      ],
+      "objectives": [
+        "Model multiplication as equal groups and as arrays",
+        "Write repeated addition as multiplication",
+        "Explain why 3 × 4 = 4 × 3 using an array"
+      ],
+      "misconceptions": [
+        "Thinking multiplication always makes a number bigger",
+        "Adding instead of multiplying (3 × 4 = 7)"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-times-tables", "title": "Times tables to 10 × 10", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-multiplication-meaning"],
-      "objectives": ["Recall multiplication facts up to 10 × 10", "Use known facts to work out unknown ones (7 × 8 from 7 × 4)", "Multiply by 0 and 1 correctly"],
-      "misconceptions": ["Thinking any number times 0 is that number", "Memorising tables without seeing patterns"],
+      "id": "s0-times-tables",
+      "title": "Times tables to 10 × 10",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-multiplication-meaning"
+      ],
+      "objectives": [
+        "Recall multiplication facts up to 10 × 10",
+        "Use known facts to work out unknown ones (7 × 8 from 7 × 4)",
+        "Multiply by 0 and 1 correctly"
+      ],
+      "misconceptions": [
+        "Thinking any number times 0 is that number",
+        "Memorising tables without seeing patterns"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-division-meaning", "title": "Division as sharing and grouping", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-times-tables"],
-      "objectives": ["Model division as fair sharing and as grouping", "Use multiplication facts to divide", "Find and interpret a remainder"],
-      "misconceptions": ["Thinking 6 ÷ 2 equals 2 ÷ 6", "Leaving a remainder larger than the divisor"],
+      "id": "s0-division-meaning",
+      "title": "Division as sharing and grouping",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-times-tables"
+      ],
+      "objectives": [
+        "Model division as fair sharing and as grouping",
+        "Use multiplication facts to divide",
+        "Find and interpret a remainder"
+      ],
+      "misconceptions": [
+        "Thinking 6 ÷ 2 equals 2 ÷ 6",
+        "Leaving a remainder larger than the divisor"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-multiply-multi-digit", "title": "Multiplying larger numbers", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-times-tables", "s0-add-sub-large"],
-      "objectives": ["Multiply by 10, 100 and 1,000", "Multiply a multi-digit number by a one-digit number", "Multiply two two-digit numbers using the column method"],
-      "misconceptions": ["Forgetting the placeholder zero in the second row", "Thinking 'add a zero' works for decimals too"],
+      "id": "s0-multiply-multi-digit",
+      "title": "Multiplying larger numbers",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-times-tables",
+        "s0-add-sub-large"
+      ],
+      "objectives": [
+        "Multiply by 10, 100 and 1,000",
+        "Multiply a multi-digit number by a one-digit number",
+        "Multiply two two-digit numbers using the column method"
+      ],
+      "misconceptions": [
+        "Forgetting the placeholder zero in the second row",
+        "Thinking 'add a zero' works for decimals too"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s0-long-division", "title": "Long division", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-division-meaning", "s0-multiply-multi-digit"],
-      "objectives": ["Divide a multi-digit number by a one-digit number", "Divide by a two-digit number", "Check division using multiplication and the remainder"],
-      "misconceptions": ["Skipping a zero in the quotient (1,224 ÷ 12 = 12)", "Bringing down two digits at once"],
+      "id": "s0-long-division",
+      "title": "Long division",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-division-meaning",
+        "s0-multiply-multi-digit"
+      ],
+      "objectives": [
+        "Divide a multi-digit number by a one-digit number",
+        "Divide by a two-digit number",
+        "Check division using multiplication and the remainder"
+      ],
+      "misconceptions": [
+        "Skipping a zero in the quotient (1,224 ÷ 12 = 12)",
+        "Bringing down two digits at once"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s0-four-operations-problems", "title": "Choosing the operation: word problems", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-long-division"],
-      "objectives": ["Decide which operation a word problem needs", "Solve two-step word problems", "Check that an answer makes sense in the story"],
-      "misconceptions": ["Choosing an operation from keywords alone ('more' always means add)", "Ignoring what the remainder means in the story"],
+      "id": "s0-four-operations-problems",
+      "title": "Choosing the operation: word problems",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-long-division"
+      ],
+      "objectives": [
+        "Decide which operation a word problem needs",
+        "Solve two-step word problems",
+        "Check that an answer makes sense in the story"
+      ],
+      "misconceptions": [
+        "Choosing an operation from keywords alone ('more' always means add)",
+        "Ignoring what the remainder means in the story"
+      ],
       "est_minutes": 30,
       "indian_context": "Train tickets, sharing laddoos, market shopping, school trip budgets."
     },
     {
-      "id": "s0-factors-multiples", "title": "Factors and multiples", "stage": 0, "unit": "Multiplication and division",
-      "prerequisites": ["s0-division-meaning"],
-      "objectives": ["List all factors of a number up to 100", "List the first multiples of a number", "Find common factors and common multiples by listing"],
-      "misconceptions": ["Confusing factors with multiples", "Forgetting 1 and the number itself as factors"],
+      "id": "s0-factors-multiples",
+      "title": "Factors and multiples",
+      "stage": 0,
+      "unit": "Multiplication and division",
+      "prerequisites": [
+        "s0-division-meaning"
+      ],
+      "objectives": [
+        "List all factors of a number up to 100",
+        "List the first multiples of a number",
+        "Find common factors and common multiples by listing"
+      ],
+      "misconceptions": [
+        "Confusing factors with multiples",
+        "Forgetting 1 and the number itself as factors"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-fractions-meaning", "title": "Fractions as equal parts", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-division-meaning"],
-      "objectives": ["Name a fraction from a shape divided into equal parts", "Explain what the numerator and denominator mean", "Find a fraction of a small quantity (1/3 of 12)"],
-      "misconceptions": ["Accepting unequal parts as 'quarters'", "Thinking a bigger denominator means a bigger fraction"],
+      "id": "s0-fractions-meaning",
+      "title": "Fractions as equal parts",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-division-meaning"
+      ],
+      "objectives": [
+        "Name a fraction from a shape divided into equal parts",
+        "Explain what the numerator and denominator mean",
+        "Find a fraction of a small quantity (1/3 of 12)"
+      ],
+      "misconceptions": [
+        "Accepting unequal parts as 'quarters'",
+        "Thinking a bigger denominator means a bigger fraction"
+      ],
       "est_minutes": 20,
       "indian_context": "Sharing a roti or a pizza, slices of a watermelon."
     },
     {
-      "id": "s0-fractions-number-line", "title": "Fractions on a number line", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-fractions-meaning", "s0-comparing-ordering"],
-      "objectives": ["Place fractions between 0 and 1 on a number line", "Place fractions greater than 1 on a number line", "Explain that a fraction is a number, not just a shape"],
-      "misconceptions": ["Counting tick marks instead of spaces", "Thinking fractions can only be less than 1"],
+      "id": "s0-fractions-number-line",
+      "title": "Fractions on a number line",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-fractions-meaning",
+        "s0-comparing-ordering"
+      ],
+      "objectives": [
+        "Place fractions between 0 and 1 on a number line",
+        "Place fractions greater than 1 on a number line",
+        "Explain that a fraction is a number, not just a shape"
+      ],
+      "misconceptions": [
+        "Counting tick marks instead of spaces",
+        "Thinking fractions can only be less than 1"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-equivalent-fractions", "title": "Equivalent fractions", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-fractions-number-line", "s0-factors-multiples"],
-      "objectives": ["Show two fractions are equal using diagrams and the number line", "Make equivalent fractions by multiplying or dividing top and bottom", "Write a fraction in its simplest form"],
-      "misconceptions": ["Adding the same number to top and bottom (1/2 = 2/3)", "Thinking 2/4 is bigger than 1/2 because the numbers are bigger"],
+      "id": "s0-equivalent-fractions",
+      "title": "Equivalent fractions",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-fractions-number-line",
+        "s0-factors-multiples"
+      ],
+      "objectives": [
+        "Show two fractions are equal using diagrams and the number line",
+        "Make equivalent fractions by multiplying or dividing top and bottom",
+        "Write a fraction in its simplest form"
+      ],
+      "misconceptions": [
+        "Adding the same number to top and bottom (1/2 = 2/3)",
+        "Thinking 2/4 is bigger than 1/2 because the numbers are bigger"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-comparing-fractions", "title": "Comparing fractions", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-equivalent-fractions"],
-      "objectives": ["Compare fractions with the same denominator or the same numerator", "Compare any two fractions using a common denominator", "Order a set of fractions"],
-      "misconceptions": ["Thinking 1/8 > 1/4 because 8 > 4", "Comparing only numerators when denominators differ"],
+      "id": "s0-comparing-fractions",
+      "title": "Comparing fractions",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-equivalent-fractions"
+      ],
+      "objectives": [
+        "Compare fractions with the same denominator or the same numerator",
+        "Compare any two fractions using a common denominator",
+        "Order a set of fractions"
+      ],
+      "misconceptions": [
+        "Thinking 1/8 > 1/4 because 8 > 4",
+        "Comparing only numerators when denominators differ"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-mixed-numbers", "title": "Improper fractions and mixed numbers", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-fractions-number-line"],
-      "objectives": ["Convert an improper fraction to a mixed number", "Convert a mixed number to an improper fraction", "Place mixed numbers on a number line"],
-      "misconceptions": ["Writing 2 1/3 as 3/3", "Thinking an improper fraction is 'wrong'"],
+      "id": "s0-mixed-numbers",
+      "title": "Improper fractions and mixed numbers",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-fractions-number-line"
+      ],
+      "objectives": [
+        "Convert an improper fraction to a mixed number",
+        "Convert a mixed number to an improper fraction",
+        "Place mixed numbers on a number line"
+      ],
+      "misconceptions": [
+        "Writing 2 1/3 as 3/3",
+        "Thinking an improper fraction is 'wrong'"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-add-sub-like-fractions", "title": "Adding and subtracting fractions with the same denominator", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-mixed-numbers"],
-      "objectives": ["Add and subtract fractions with the same denominator", "Explain why the denominator stays the same", "Give answers greater than 1 as mixed numbers"],
-      "misconceptions": ["Adding denominators too (1/5 + 2/5 = 3/10)"],
+      "id": "s0-add-sub-like-fractions",
+      "title": "Adding and subtracting fractions with the same denominator",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-mixed-numbers",
+        "s0-equivalent-fractions"
+      ],
+      "objectives": [
+        "Add and subtract fractions with the same denominator",
+        "Explain why the denominator stays the same",
+        "Give answers greater than 1 as mixed numbers"
+      ],
+      "misconceptions": [
+        "Adding denominators too (1/5 + 2/5 = 3/10)"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-add-sub-unlike-fractions", "title": "Adding and subtracting fractions with different denominators", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-add-sub-like-fractions", "s0-equivalent-fractions"],
-      "objectives": ["Find a common denominator", "Add and subtract fractions with different denominators", "Add and subtract mixed numbers"],
-      "misconceptions": ["Adding tops and bottoms separately (1/2 + 1/3 = 2/5)", "Changing the denominator without changing the numerator"],
+      "id": "s0-add-sub-unlike-fractions",
+      "title": "Adding and subtracting fractions with different denominators",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-add-sub-like-fractions"
+      ],
+      "objectives": [
+        "Find a common denominator",
+        "Add and subtract fractions with different denominators",
+        "Add and subtract mixed numbers"
+      ],
+      "misconceptions": [
+        "Adding tops and bottoms separately (1/2 + 1/3 = 2/5)",
+        "Changing the denominator without changing the numerator"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-multiply-fractions", "title": "Multiplying fractions", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-equivalent-fractions", "s0-mixed-numbers"],
-      "objectives": ["Find a fraction of a whole number", "Multiply two fractions and explain it with an area model", "Multiply mixed numbers"],
-      "misconceptions": ["Thinking multiplying always makes a number bigger", "Multiplying the whole parts and fraction parts of mixed numbers separately"],
+      "id": "s0-multiply-fractions",
+      "title": "Multiplying fractions",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-equivalent-fractions",
+        "s0-mixed-numbers"
+      ],
+      "objectives": [
+        "Find a fraction of a whole number",
+        "Multiply two fractions and explain it with an area model",
+        "Multiply mixed numbers"
+      ],
+      "misconceptions": [
+        "Thinking multiplying always makes a number bigger",
+        "Multiplying the whole parts and fraction parts of mixed numbers separately"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-divide-fractions", "title": "Dividing fractions", "stage": 0, "unit": "Fractions",
-      "prerequisites": ["s0-multiply-fractions"],
-      "objectives": ["Explain division by a fraction as 'how many fit into'", "Divide using the reciprocal", "Solve sharing problems involving fractions"],
-      "misconceptions": ["Flipping the first fraction instead of the second", "Thinking dividing always makes a number smaller"],
+      "id": "s0-divide-fractions",
+      "title": "Dividing fractions",
+      "stage": 0,
+      "unit": "Fractions",
+      "prerequisites": [
+        "s0-multiply-fractions"
+      ],
+      "objectives": [
+        "Explain division by a fraction as 'how many fit into'",
+        "Divide using the reciprocal",
+        "Solve sharing problems involving fractions"
+      ],
+      "misconceptions": [
+        "Flipping the first fraction instead of the second",
+        "Thinking dividing always makes a number smaller"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s0-decimals-meaning", "title": "Decimals: tenths and hundredths", "stage": 0, "unit": "Decimals",
-      "prerequisites": ["s0-fractions-number-line", "s0-place-value-thousands"],
-      "objectives": ["Read and write tenths, hundredths and thousandths", "Connect decimals to fractions with denominators 10, 100, 1000", "Use decimals for rupees and paise, metres and centimetres"],
-      "misconceptions": ["Thinking 0.25 is bigger than 0.3 because 25 > 3", "Reading 0.05 as 'zero point five'"],
+      "id": "s0-decimals-meaning",
+      "title": "Decimals: tenths and hundredths",
+      "stage": 0,
+      "unit": "Decimals",
+      "prerequisites": [
+        "s0-fractions-number-line",
+        "s0-place-value-thousands"
+      ],
+      "objectives": [
+        "Read and write tenths, hundredths and thousandths",
+        "Connect decimals to fractions with denominators 10, 100, 1000",
+        "Use decimals for rupees and paise, metres and centimetres"
+      ],
+      "misconceptions": [
+        "Thinking 0.25 is bigger than 0.3 because 25 > 3",
+        "Reading 0.05 as 'zero point five'"
+      ],
       "est_minutes": 25,
       "indian_context": "₹12.50 is 12 rupees and 50 paise."
     },
     {
-      "id": "s0-comparing-decimals", "title": "Comparing and rounding decimals", "stage": 0, "unit": "Decimals",
-      "prerequisites": ["s0-decimals-meaning", "s0-rounding-estimation"],
-      "objectives": ["Compare and order decimals", "Place decimals on a number line", "Round decimals to a given number of places"],
-      "misconceptions": ["Thinking longer decimals are always bigger", "Ignoring the place value of the digits after the point"],
+      "id": "s0-comparing-decimals",
+      "title": "Comparing and rounding decimals",
+      "stage": 0,
+      "unit": "Decimals",
+      "prerequisites": [
+        "s0-decimals-meaning",
+        "s0-rounding-estimation"
+      ],
+      "objectives": [
+        "Compare and order decimals",
+        "Place decimals on a number line",
+        "Round decimals to a given number of places"
+      ],
+      "misconceptions": [
+        "Thinking longer decimals are always bigger",
+        "Ignoring the place value of the digits after the point"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-add-sub-decimals", "title": "Adding and subtracting decimals", "stage": 0, "unit": "Decimals",
-      "prerequisites": ["s0-decimals-meaning", "s0-add-sub-large"],
-      "objectives": ["Line up decimal points to add and subtract", "Use zeros to fill empty places", "Solve money problems with rupees and paise"],
-      "misconceptions": ["Lining up the last digits instead of the decimal points"],
+      "id": "s0-add-sub-decimals",
+      "title": "Adding and subtracting decimals",
+      "stage": 0,
+      "unit": "Decimals",
+      "prerequisites": [
+        "s0-decimals-meaning",
+        "s0-add-sub-large"
+      ],
+      "objectives": [
+        "Line up decimal points to add and subtract",
+        "Use zeros to fill empty places",
+        "Solve money problems with rupees and paise"
+      ],
+      "misconceptions": [
+        "Lining up the last digits instead of the decimal points"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-multiply-divide-decimals", "title": "Multiplying and dividing decimals", "stage": 0, "unit": "Decimals",
-      "prerequisites": ["s0-add-sub-decimals", "s0-long-division"],
-      "objectives": ["Multiply and divide decimals by 10, 100 and 1,000", "Multiply a decimal by a decimal", "Divide a decimal by a whole number and by a decimal"],
-      "misconceptions": ["Keeping the decimal point in the same place after multiplying by 10", "Placing the decimal point by counting from the left"],
+      "id": "s0-multiply-divide-decimals",
+      "title": "Multiplying and dividing decimals",
+      "stage": 0,
+      "unit": "Decimals",
+      "prerequisites": [
+        "s0-add-sub-decimals",
+        "s0-long-division"
+      ],
+      "objectives": [
+        "Multiply and divide decimals by 10, 100 and 1,000",
+        "Multiply a decimal by a decimal",
+        "Divide a decimal by a whole number and by a decimal"
+      ],
+      "misconceptions": [
+        "Keeping the decimal point in the same place after multiplying by 10",
+        "Placing the decimal point by counting from the left"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s0-fractions-decimals-conversion", "title": "Converting between fractions and decimals", "stage": 0, "unit": "Decimals",
-      "prerequisites": ["s0-equivalent-fractions", "s0-decimals-meaning", "s0-long-division"],
-      "objectives": ["Convert a decimal to a fraction in simplest form", "Convert a fraction to a decimal by division", "Recognise recurring decimals such as 1/3 = 0.333…"],
-      "misconceptions": ["Writing 1/4 as 1.4", "Thinking 0.333… is exactly equal to 0.33"],
+      "id": "s0-fractions-decimals-conversion",
+      "title": "Converting between fractions and decimals",
+      "stage": 0,
+      "unit": "Decimals",
+      "prerequisites": [
+        "s0-equivalent-fractions",
+        "s0-decimals-meaning",
+        "s0-long-division"
+      ],
+      "objectives": [
+        "Convert a decimal to a fraction in simplest form",
+        "Convert a fraction to a decimal by division",
+        "Recognise recurring decimals such as 1/3 = 0.333…"
+      ],
+      "misconceptions": [
+        "Writing 1/4 as 1.4",
+        "Thinking 0.333… is exactly equal to 0.33"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-percent-meaning", "title": "Percent means 'out of 100'", "stage": 0, "unit": "Percent and ratio",
-      "prerequisites": ["s0-fractions-decimals-conversion"],
-      "objectives": ["Explain percent as a fraction out of 100", "Convert between percents, fractions and decimals", "Recognise common benchmarks (50%, 25%, 10%, 1%)"],
-      "misconceptions": ["Thinking a percent cannot be more than 100", "Writing 5% as 0.5"],
+      "id": "s0-percent-meaning",
+      "title": "Percent means 'out of 100'",
+      "stage": 0,
+      "unit": "Percent and ratio",
+      "prerequisites": [
+        "s0-fractions-decimals-conversion"
+      ],
+      "objectives": [
+        "Explain percent as a fraction out of 100",
+        "Convert between percents, fractions and decimals",
+        "Recognise common benchmarks (50%, 25%, 10%, 1%)"
+      ],
+      "misconceptions": [
+        "Thinking a percent cannot be more than 100",
+        "Writing 5% as 0.5"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s0-percent-of-quantity", "title": "Finding a percentage of an amount", "stage": 0, "unit": "Percent and ratio",
-      "prerequisites": ["s0-percent-meaning", "s0-multiply-fractions"],
-      "objectives": ["Find a percentage of an amount using 10% and 1% steps", "Find a percentage of an amount by multiplication", "Express one quantity as a percentage of another"],
-      "misconceptions": ["Finding 20% by dividing by 20", "Using the wrong whole when expressing as a percentage"],
+      "id": "s0-percent-of-quantity",
+      "title": "Finding a percentage of an amount",
+      "stage": 0,
+      "unit": "Percent and ratio",
+      "prerequisites": [
+        "s0-percent-meaning",
+        "s0-multiply-fractions"
+      ],
+      "objectives": [
+        "Find a percentage of an amount using 10% and 1% steps",
+        "Find a percentage of an amount by multiplication",
+        "Express one quantity as a percentage of another"
+      ],
+      "misconceptions": [
+        "Finding 20% by dividing by 20",
+        "Using the wrong whole when expressing as a percentage"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s0-percent-change", "title": "Discounts, GST and percentage change", "stage": 0, "unit": "Percent and ratio",
-      "prerequisites": ["s0-percent-of-quantity", "s0-multiply-divide-decimals"],
-      "objectives": ["Calculate a price after a discount", "Calculate a price after adding GST", "Find the percentage increase or decrease between two values"],
-      "misconceptions": ["Thinking a 20% rise then a 20% fall returns to the start", "Dividing by the new value instead of the original"],
+      "id": "s0-percent-change",
+      "title": "Discounts, GST and percentage change",
+      "stage": 0,
+      "unit": "Percent and ratio",
+      "prerequisites": [
+        "s0-percent-of-quantity",
+        "s0-multiply-divide-decimals"
+      ],
+      "objectives": [
+        "Calculate a price after a discount",
+        "Calculate a price after adding GST",
+        "Find the percentage increase or decrease between two values"
+      ],
+      "misconceptions": [
+        "Thinking a 20% rise then a 20% fall returns to the start",
+        "Dividing by the new value instead of the original"
+      ],
       "est_minutes": 30,
       "indian_context": "Festival-sale discounts, GST on a bill, rise in petrol prices."
     },
     {
-      "id": "s0-ratio", "title": "Ratio", "stage": 0, "unit": "Percent and ratio",
-      "prerequisites": ["s0-equivalent-fractions"],
-      "objectives": ["Write a ratio to compare two quantities", "Simplify a ratio", "Share an amount in a given ratio"],
-      "misconceptions": ["Treating 2:3 as 2/3 of the whole instead of 2 parts out of 5", "Writing a ratio in the wrong order"],
+      "id": "s0-ratio",
+      "title": "Ratio",
+      "stage": 0,
+      "unit": "Percent and ratio",
+      "prerequisites": [
+        "s0-equivalent-fractions"
+      ],
+      "objectives": [
+        "Write a ratio to compare two quantities",
+        "Simplify a ratio",
+        "Share an amount in a given ratio"
+      ],
+      "misconceptions": [
+        "Treating 2:3 as 2/3 of the whole instead of 2 parts out of 5",
+        "Writing a ratio in the wrong order"
+      ],
       "est_minutes": 25,
       "indian_context": "Mixing rice and dal, sharing prize money, recipe ingredients."
     },
     {
-      "id": "s0-proportion-unitary", "title": "Proportion and the unitary method", "stage": 0, "unit": "Percent and ratio",
-      "prerequisites": ["s0-ratio", "s0-multiply-divide-decimals"],
-      "objectives": ["Use the unitary method to find the cost of many from the cost of one", "Decide whether two quantities are in proportion", "Solve rate problems (speed, price per kg)"],
-      "misconceptions": ["Using addition instead of multiplication to scale up", "Assuming every relationship is proportional"],
+      "id": "s0-proportion-unitary",
+      "title": "Proportion and the unitary method",
+      "stage": 0,
+      "unit": "Percent and ratio",
+      "prerequisites": [
+        "s0-ratio",
+        "s0-multiply-divide-decimals"
+      ],
+      "objectives": [
+        "Use the unitary method to find the cost of many from the cost of one",
+        "Decide whether two quantities are in proportion",
+        "Solve rate problems (speed, price per kg)"
+      ],
+      "misconceptions": [
+        "Using addition instead of multiplication to scale up",
+        "Assuming every relationship is proportional"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s1-divisibility-rules", "title": "Divisibility rules", "stage": 1, "unit": "Number theory",
-      "prerequisites": ["s0-factors-multiples", "s0-long-division"],
-      "objectives": ["Test divisibility by 2, 3, 4, 5, 6, 9 and 10", "Explain why the rule for 3 works", "Use divisibility rules to find factors quickly"],
-      "misconceptions": ["Using the digit-sum rule for 4", "Thinking a number divisible by 2 and 4 must be divisible by 8"],
+      "id": "s1-divisibility-rules",
+      "title": "Divisibility rules",
+      "stage": 1,
+      "unit": "Number theory",
+      "prerequisites": [
+        "s0-factors-multiples",
+        "s0-long-division"
+      ],
+      "objectives": [
+        "Test divisibility by 2, 3, 4, 5, 6, 9 and 10",
+        "Explain why the rule for 3 works",
+        "Use divisibility rules to find factors quickly"
+      ],
+      "misconceptions": [
+        "Using the digit-sum rule for 4",
+        "Thinking a number divisible by 2 and 4 must be divisible by 8"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-primes-composites", "title": "Prime and composite numbers", "stage": 1, "unit": "Number theory",
-      "prerequisites": ["s1-divisibility-rules"],
-      "objectives": ["Define prime and composite numbers", "Find primes up to 100 with the Sieve of Eratosthenes", "Explain why 1 is neither prime nor composite"],
-      "misconceptions": ["Thinking all odd numbers are prime", "Thinking 1 is prime"],
+      "id": "s1-primes-composites",
+      "title": "Prime and composite numbers",
+      "stage": 1,
+      "unit": "Number theory",
+      "prerequisites": [
+        "s1-divisibility-rules"
+      ],
+      "objectives": [
+        "Define prime and composite numbers",
+        "Find primes up to 100 with the Sieve of Eratosthenes",
+        "Explain why 1 is neither prime nor composite"
+      ],
+      "misconceptions": [
+        "Thinking all odd numbers are prime",
+        "Thinking 1 is prime"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-prime-factorisation", "title": "Prime factorisation", "stage": 1, "unit": "Number theory",
-      "prerequisites": ["s1-primes-composites"],
-      "objectives": ["Write a number as a product of primes using a factor tree", "Use repeated division to factorise", "Explain why every number has exactly one prime factorisation"],
-      "misconceptions": ["Stopping at a composite factor", "Thinking different factor trees give different answers"],
+      "id": "s1-prime-factorisation",
+      "title": "Prime factorisation",
+      "stage": 1,
+      "unit": "Number theory",
+      "prerequisites": [
+        "s1-primes-composites"
+      ],
+      "objectives": [
+        "Write a number as a product of primes using a factor tree",
+        "Use repeated division to factorise",
+        "Explain why every number has exactly one prime factorisation"
+      ],
+      "misconceptions": [
+        "Stopping at a composite factor",
+        "Thinking different factor trees give different answers"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-hcf-lcm", "title": "HCF and LCM", "stage": 1, "unit": "Number theory",
-      "prerequisites": ["s1-prime-factorisation"],
-      "objectives": ["Find the HCF of two or three numbers", "Find the LCM of two or three numbers", "Choose HCF or LCM to solve a word problem", "Use HCF × LCM = product of two numbers"],
-      "misconceptions": ["Confusing HCF and LCM", "Thinking the LCM is always the product of the numbers"],
+      "id": "s1-hcf-lcm",
+      "title": "HCF and LCM",
+      "stage": 1,
+      "unit": "Number theory",
+      "prerequisites": [
+        "s1-prime-factorisation"
+      ],
+      "objectives": [
+        "Find the HCF of two or three numbers",
+        "Find the LCM of two or three numbers",
+        "Choose HCF or LCM to solve a word problem",
+        "Use HCF × LCM = product of two numbers"
+      ],
+      "misconceptions": [
+        "Confusing HCF and LCM",
+        "Thinking the LCM is always the product of the numbers"
+      ],
       "est_minutes": 35,
       "indian_context": "Bells ringing together at a temple, cutting cloth into equal pieces."
     },
     {
-      "id": "s1-integers-meaning", "title": "Negative numbers and integers", "stage": 1, "unit": "Integers",
-      "prerequisites": ["s0-comparing-ordering", "s0-subtraction-meaning"],
-      "objectives": ["Place negative numbers on a number line", "Compare and order integers", "Use integers for temperature, height above sea level, and money owed"],
-      "misconceptions": ["Thinking −8 is greater than −3", "Thinking negative numbers are not real numbers"],
+      "id": "s1-integers-meaning",
+      "title": "Negative numbers and integers",
+      "stage": 1,
+      "unit": "Integers",
+      "prerequisites": [
+        "s0-comparing-ordering",
+        "s0-subtraction-meaning"
+      ],
+      "objectives": [
+        "Place negative numbers on a number line",
+        "Compare and order integers",
+        "Use integers for temperature, height above sea level, and money owed"
+      ],
+      "misconceptions": [
+        "Thinking −8 is greater than −3",
+        "Thinking negative numbers are not real numbers"
+      ],
       "est_minutes": 20,
       "indian_context": "Winter temperatures in Leh, depth below sea level, a shopkeeper's credit."
     },
     {
-      "id": "s1-add-sub-integers", "title": "Adding and subtracting integers", "stage": 1, "unit": "Integers",
-      "prerequisites": ["s1-integers-meaning", "s0-add-sub-large"],
-      "objectives": ["Add integers using a number line", "Subtract an integer by adding its opposite", "Solve problems involving changes in temperature or money"],
-      "misconceptions": ["Thinking subtracting a negative makes the number smaller", "Applying 'two negatives make a positive' to addition"],
+      "id": "s1-add-sub-integers",
+      "title": "Adding and subtracting integers",
+      "stage": 1,
+      "unit": "Integers",
+      "prerequisites": [
+        "s1-integers-meaning",
+        "s0-add-sub-large"
+      ],
+      "objectives": [
+        "Add integers using a number line",
+        "Subtract an integer by adding its opposite",
+        "Solve problems involving changes in temperature or money"
+      ],
+      "misconceptions": [
+        "Thinking subtracting a negative makes the number smaller",
+        "Applying 'two negatives make a positive' to addition"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s1-multiply-divide-integers", "title": "Multiplying and dividing integers", "stage": 1, "unit": "Integers",
-      "prerequisites": ["s1-add-sub-integers", "s0-long-division"],
-      "objectives": ["Multiply and divide integers with the correct sign", "Explain why a negative times a negative is positive using patterns", "Evaluate products with several negative factors"],
-      "misconceptions": ["Thinking (−3) × (−4) = −12", "Getting the sign right but forgetting it in the final answer"],
+      "id": "s1-multiply-divide-integers",
+      "title": "Multiplying and dividing integers",
+      "stage": 1,
+      "unit": "Integers",
+      "prerequisites": [
+        "s1-add-sub-integers",
+        "s0-long-division"
+      ],
+      "objectives": [
+        "Multiply and divide integers with the correct sign",
+        "Explain why a negative times a negative is positive using patterns",
+        "Evaluate products with several negative factors"
+      ],
+      "misconceptions": [
+        "Thinking (−3) × (−4) = −12",
+        "Getting the sign right but forgetting it in the final answer"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-exponents", "title": "Powers and exponents", "stage": 1, "unit": "Exponents and order",
-      "prerequisites": ["s0-multiply-multi-digit"],
-      "objectives": ["Write repeated multiplication using exponents", "Evaluate powers with whole-number exponents", "Explain why any non-zero number to the power 0 is 1"],
-      "misconceptions": ["Thinking 3² = 6", "Thinking 5⁰ = 0"],
+      "id": "s1-exponents",
+      "title": "Powers and exponents",
+      "stage": 1,
+      "unit": "Exponents and order",
+      "prerequisites": [
+        "s0-multiply-multi-digit"
+      ],
+      "objectives": [
+        "Write repeated multiplication using exponents",
+        "Evaluate powers with whole-number exponents",
+        "Explain why any non-zero number to the power 0 is 1"
+      ],
+      "misconceptions": [
+        "Thinking 3² = 6",
+        "Thinking 5⁰ = 0"
+      ],
       "est_minutes": 20
     },
     {
-      "id": "s1-square-roots", "title": "Squares and square roots", "stage": 1, "unit": "Exponents and order",
-      "prerequisites": ["s1-exponents", "s1-prime-factorisation"],
-      "objectives": ["Recognise perfect squares up to 400", "Find square roots of perfect squares using prime factorisation", "Estimate the square root of a non-square number between two whole numbers"],
-      "misconceptions": ["Thinking the square root of 16 is 8", "Thinking square roots of non-squares do not exist"],
+      "id": "s1-square-roots",
+      "title": "Squares and square roots",
+      "stage": 1,
+      "unit": "Exponents and order",
+      "prerequisites": [
+        "s1-exponents",
+        "s1-prime-factorisation"
+      ],
+      "objectives": [
+        "Recognise perfect squares up to 400",
+        "Find square roots of perfect squares using prime factorisation",
+        "Estimate the square root of a non-square number between two whole numbers"
+      ],
+      "misconceptions": [
+        "Thinking the square root of 16 is 8",
+        "Thinking square roots of non-squares do not exist"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-order-of-operations", "title": "Order of operations (BODMAS)", "stage": 1, "unit": "Exponents and order",
-      "prerequisites": ["s1-exponents", "s1-multiply-divide-integers"],
-      "objectives": ["Evaluate expressions using the correct order of operations", "Explain that division and multiplication (and addition and subtraction) go left to right", "Use brackets to change the order"],
-      "misconceptions": ["Always doing division before multiplication because D comes before M", "Working strictly left to right for everything"],
+      "id": "s1-order-of-operations",
+      "title": "Order of operations (BODMAS)",
+      "stage": 1,
+      "unit": "Exponents and order",
+      "prerequisites": [
+        "s1-exponents",
+        "s1-multiply-divide-integers"
+      ],
+      "objectives": [
+        "Evaluate expressions using the correct order of operations",
+        "Explain that division and multiplication (and addition and subtraction) go left to right",
+        "Use brackets to change the order"
+      ],
+      "misconceptions": [
+        "Always doing division before multiplication because D comes before M",
+        "Working strictly left to right for everything"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-exponent-laws", "title": "Laws of exponents", "stage": 1, "unit": "Exponents and order",
-      "prerequisites": ["s1-order-of-operations", "s0-multiply-fractions"],
-      "objectives": ["Multiply and divide powers with the same base", "Raise a power to a power", "Evaluate negative exponents as reciprocals"],
-      "misconceptions": ["Multiplying exponents when multiplying powers (2³ × 2⁴ = 2¹²)", "Thinking 2⁻³ is negative"],
+      "id": "s1-exponent-laws",
+      "title": "Laws of exponents",
+      "stage": 1,
+      "unit": "Exponents and order",
+      "prerequisites": [
+        "s1-order-of-operations",
+        "s0-multiply-fractions"
+      ],
+      "objectives": [
+        "Multiply and divide powers with the same base",
+        "Raise a power to a power",
+        "Evaluate negative exponents as reciprocals"
+      ],
+      "misconceptions": [
+        "Multiplying exponents when multiplying powers (2³ × 2⁴ = 2¹²)",
+        "Thinking 2⁻³ is negative"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s1-scientific-notation", "title": "Very large and very small numbers", "stage": 1, "unit": "Exponents and order",
-      "prerequisites": ["s1-exponent-laws", "s0-international-place-value", "s0-multiply-divide-decimals"],
-      "objectives": ["Write numbers in standard form (scientific notation)", "Convert from standard form to ordinary numbers", "Compare numbers written in standard form"],
-      "misconceptions": ["Writing 45 × 10³ as standard form", "Moving the decimal point the wrong way for small numbers"],
+      "id": "s1-scientific-notation",
+      "title": "Very large and very small numbers",
+      "stage": 1,
+      "unit": "Exponents and order",
+      "prerequisites": [
+        "s1-exponent-laws",
+        "s0-international-place-value",
+        "s0-multiply-divide-decimals"
+      ],
+      "objectives": [
+        "Write numbers in standard form (scientific notation)",
+        "Convert from standard form to ordinary numbers",
+        "Compare numbers written in standard form"
+      ],
+      "misconceptions": [
+        "Writing 45 × 10³ as standard form",
+        "Moving the decimal point the wrong way for small numbers"
+      ],
       "est_minutes": 25,
       "indian_context": "Distance to the Moon for Chandrayaan, India's population, size of a bacterium."
     },
     {
-      "id": "s1-rational-numbers", "title": "Rational numbers", "stage": 1, "unit": "Rational numbers",
-      "prerequisites": ["s1-multiply-divide-integers", "s0-divide-fractions", "s0-comparing-fractions", "s0-add-sub-unlike-fractions"],
-      "objectives": ["Define a rational number as p/q with q ≠ 0", "Place negative fractions on a number line", "Add, subtract, multiply and divide rational numbers"],
-      "misconceptions": ["Thinking −1/2 and 1/−2 are different numbers", "Thinking integers are not rational numbers"],
+      "id": "s1-rational-numbers",
+      "title": "Rational numbers",
+      "stage": 1,
+      "unit": "Rational numbers",
+      "prerequisites": [
+        "s1-multiply-divide-integers",
+        "s0-divide-fractions",
+        "s0-comparing-fractions",
+        "s0-add-sub-unlike-fractions"
+      ],
+      "objectives": [
+        "Define a rational number as p/q with q ≠ 0",
+        "Place negative fractions on a number line",
+        "Add, subtract, multiply and divide rational numbers"
+      ],
+      "misconceptions": [
+        "Thinking −1/2 and 1/−2 are different numbers",
+        "Thinking integers are not rational numbers"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s1-variables-expressions", "title": "Letters for numbers: variables and expressions", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-order-of-operations"],
-      "objectives": ["Use a letter to stand for an unknown or varying number", "Write an expression from a word description", "Understand 3n as 3 × n"],
-      "misconceptions": ["Thinking a letter stands for an object ('a' means apples)", "Thinking 3n means thirty-something"],
+      "id": "s1-variables-expressions",
+      "title": "Letters for numbers: variables and expressions",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-order-of-operations"
+      ],
+      "objectives": [
+        "Use a letter to stand for an unknown or varying number",
+        "Write an expression from a word description",
+        "Understand 3n as 3 × n"
+      ],
+      "misconceptions": [
+        "Thinking a letter stands for an object ('a' means apples)",
+        "Thinking 3n means thirty-something"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-evaluating-expressions", "title": "Evaluating expressions", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-variables-expressions", "s1-rational-numbers"],
-      "objectives": ["Substitute values into an expression", "Evaluate expressions with negative and fractional values", "Use a formula (perimeter, cost) by substitution"],
-      "misconceptions": ["Substituting −3 into x² as −9", "Writing 2x with x = 5 as 25"],
+      "id": "s1-evaluating-expressions",
+      "title": "Evaluating expressions",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-variables-expressions",
+        "s1-rational-numbers"
+      ],
+      "objectives": [
+        "Substitute values into an expression",
+        "Evaluate expressions with negative and fractional values",
+        "Use a formula (perimeter, cost) by substitution"
+      ],
+      "misconceptions": [
+        "Substituting −3 into x² as −9",
+        "Writing 2x with x = 5 as 25"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-like-terms", "title": "Simplifying expressions: like terms and brackets", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-variables-expressions"],
-      "objectives": ["Collect like terms", "Expand brackets using the distributive property", "Simplify expressions that need both"],
-      "misconceptions": ["Combining unlike terms (2x + 3y = 5xy)", "Multiplying only the first term inside the bracket"],
+      "id": "s1-like-terms",
+      "title": "Simplifying expressions: like terms and brackets",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-variables-expressions"
+      ],
+      "objectives": [
+        "Collect like terms",
+        "Expand brackets using the distributive property",
+        "Simplify expressions that need both"
+      ],
+      "misconceptions": [
+        "Combining unlike terms (2x + 3y = 5xy)",
+        "Multiplying only the first term inside the bracket"
+      ],
       "est_minutes": 30
     },
     {
-      "id": "s1-one-step-equations", "title": "Solving one-step equations", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-evaluating-expressions"],
-      "objectives": ["Explain an equation as a balance", "Solve equations of the form x + a = b and ax = b", "Check a solution by substituting it back"],
-      "misconceptions": ["Doing an operation to one side only", "Thinking x always has to be a whole number"],
+      "id": "s1-one-step-equations",
+      "title": "Solving one-step equations",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-evaluating-expressions"
+      ],
+      "objectives": [
+        "Explain an equation as a balance",
+        "Solve equations of the form x + a = b and ax = b",
+        "Check a solution by substituting it back"
+      ],
+      "misconceptions": [
+        "Doing an operation to one side only",
+        "Thinking x always has to be a whole number"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-two-step-equations", "title": "Solving two-step equations", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-one-step-equations", "s1-like-terms"],
-      "objectives": ["Solve equations of the form ax + b = c", "Solve equations with the variable on both sides", "Solve equations that need brackets expanded first"],
-      "misconceptions": ["Undoing operations in the wrong order", "Changing the sign of a term without moving it across"],
+      "id": "s1-two-step-equations",
+      "title": "Solving two-step equations",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-one-step-equations",
+        "s1-like-terms"
+      ],
+      "objectives": [
+        "Solve equations of the form ax + b = c",
+        "Solve equations with the variable on both sides",
+        "Solve equations that need brackets expanded first"
+      ],
+      "misconceptions": [
+        "Undoing operations in the wrong order",
+        "Changing the sign of a term without moving it across"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s1-equation-word-problems", "title": "Writing and solving equations from stories", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-two-step-equations", "s0-proportion-unitary"],
-      "objectives": ["Define a variable for the unknown in a story", "Write an equation from a word problem", "Solve it and interpret the answer in the story"],
-      "misconceptions": ["Writing the equation in the order the words appear", "Forgetting to answer the question that was asked"],
+      "id": "s1-equation-word-problems",
+      "title": "Writing and solving equations from stories",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-two-step-equations",
+        "s0-proportion-unitary"
+      ],
+      "objectives": [
+        "Define a variable for the unknown in a story",
+        "Write an equation from a word problem",
+        "Solve it and interpret the answer in the story"
+      ],
+      "misconceptions": [
+        "Writing the equation in the order the words appear",
+        "Forgetting to answer the question that was asked"
+      ],
       "est_minutes": 35
     },
     {
-      "id": "s1-patterns-sequences", "title": "Number patterns and rules", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s1-variables-expressions"],
-      "objectives": ["Continue a number or shape pattern", "Find the rule for the nth term of a linear pattern", "Use the rule to find any term"],
-      "misconceptions": ["Only finding the term-to-term rule (add 3) and not the position rule (3n + 1)"],
+      "id": "s1-patterns-sequences",
+      "title": "Number patterns and rules",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s1-variables-expressions"
+      ],
+      "objectives": [
+        "Continue a number or shape pattern",
+        "Find the rule for the nth term of a linear pattern",
+        "Use the rule to find any term"
+      ],
+      "misconceptions": [
+        "Only finding the term-to-term rule (add 3) and not the position rule (3n + 1)"
+      ],
       "est_minutes": 25
     },
     {
-      "id": "s1-simple-interest", "title": "Simple interest", "stage": 1, "unit": "Towards algebra",
-      "prerequisites": ["s0-percent-of-quantity", "s1-evaluating-expressions"],
-      "objectives": ["Explain principal, rate, time and interest", "Calculate simple interest using I = PRT/100", "Find the total amount repaid or received"],
-      "misconceptions": ["Forgetting to convert months into years", "Adding interest to the rate instead of the amount"],
+      "id": "s1-simple-interest",
+      "title": "Simple interest",
+      "stage": 1,
+      "unit": "Towards algebra",
+      "prerequisites": [
+        "s0-percent-of-quantity",
+        "s1-evaluating-expressions"
+      ],
+      "objectives": [
+        "Explain principal, rate, time and interest",
+        "Calculate simple interest using I = PRT/100",
+        "Find the total amount repaid or received"
+      ],
+      "misconceptions": [
+        "Forgetting to convert months into years",
+        "Adding interest to the rate instead of the amount"
+      ],
       "est_minutes": 25,
       "indian_context": "A fixed deposit at a bank or post office, a loan for a bicycle."
     }

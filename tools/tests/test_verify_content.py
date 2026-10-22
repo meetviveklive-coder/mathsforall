@@ -156,3 +156,10 @@ def test_mixed_rule(answer, ok):
     rep = vc.Report("t")
     vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "mixed"})
     assert (not rep.fails) == ok
+
+
+@pytest.mark.parametrize("answer,ok", [("7/5", True), ("1 2/5", False), ("2", False)])
+def test_improper_rule(answer, ok):
+    rep = vc.Report("t")
+    vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "improper"})
+    assert (not rep.fails) == ok

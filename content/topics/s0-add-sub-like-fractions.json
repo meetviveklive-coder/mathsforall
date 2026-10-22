@@ -1,7 +1,7 @@
 {
   "id": "s0-add-sub-like-fractions",
   "title": "Adding and subtracting fractions with the same denominator",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Nani cuts a sheet of chikki into 5 equal pieces. Meher eats 1 piece and her Mama eats 2 pieces.\n\nMeher's friend says, \"You ate $\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{10}$ of the chikki.\" But wait. There were only 5 pieces, and 3 of them are gone. So they ate $\\frac{3}{5}$, not $\\frac{3}{10}$. Let's see why.",
@@ -554,6 +554,14 @@
     {
       "q": "Can I work out $\\frac{2}{5} - \\frac{4}{5}$?",
       "a": "Not yet. You cannot take 4 parts away when you only have 2. The answer would be less than 0. You will meet numbers less than 0 later."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content.py 41 pass, 0 fail, 1 manual warning (q-3 concept MCQ confirmed: one defensible option). Every answer re-solved with independent SymPy; match rules (simplest, mixed) checked; all 6 visuals rendered and compared with meta. 0 blocking, 5 suggestions in content/reviews/s0-add-sub-like-fractions.md (main: s0-equivalent-fractions should be a prerequisite)."
     }
   ]
 }

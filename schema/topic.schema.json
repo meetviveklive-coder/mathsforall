@@ -188,9 +188,10 @@
             "value",
             "simplest",
             "exact",
-            "mixed"
+            "mixed",
+            "improper"
           ],
-          "description": "How a typed numeric answer is accepted. value (default): any equal value. simplest: equal value AND in lowest terms. exact: same numerator and denominator as written in answer. mixed: equal value AND typed as a mixed number with a proper fraction part (e.g. 2 1/3), or as a whole number when the value is whole."
+          "description": "How a typed numeric answer is accepted. value (default): any equal value. simplest: equal value AND in lowest terms. exact: same numerator and denominator as written in answer. mixed: equal value AND typed as a mixed number with a proper fraction part (e.g. 2 1/3), or as a whole number when the value is whole. improper: equal value AND typed as a single fraction a/b (not a mixed number)."
         }
       },
       "allOf": [

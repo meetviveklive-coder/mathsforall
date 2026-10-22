@@ -55,3 +55,13 @@ describe('mixed-number rule', () => {
     expect(checkNumeric('6/2', '3', 'mixed').status).toBe('correct');
   });
 });
+
+describe('improper-fraction rule', () => {
+  it('needs a single fraction, not the mixed number typed back', () => {
+    expect(checkNumeric('7/5', '7/5', 'improper').status).toBe('correct');
+    expect(checkNumeric('14/10', '7/5', 'improper').status).toBe('correct');
+    expect(checkNumeric('1 2/5', '7/5', 'improper').status).toBe('not-improper');
+    expect(checkNumeric('1.4', '7/5', 'improper').status).toBe('not-improper');
+    expect(checkNumeric('8/5', '7/5', 'improper').status).toBe('wrong');
+  });
+});
