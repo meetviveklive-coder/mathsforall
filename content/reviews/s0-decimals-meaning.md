@@ -46,3 +46,13 @@ Context: "Joseph's Nani" (coriander) is natural. Nani also buys cloth in s0-comp
 
 Context (cross-topic roles): the hook is now "Joseph's Nana" buying coriander. Example 3 is now "Meena buys a piece of cloth". No diagram changed, so make.py was not re-run.
 `verify_content`: PASS, 54 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Re-checked by math-verifier, 2026-10-22, against `git diff afafa55 HEAD`. Result: **verified** (0 blocking, 0 new findings).
+
+- Findings 1, 3 and 4 are fixed as described: section 3 now points to "the place-value chart above", section 0 says "each mark between 0 and 1", and the dm-chart alt says "between the ones and tenths columns".
+- Finding 2: example 2 now says "wholes and hundredths" and gives $3 + \frac{25}{100}$. My own check: `3 + Rational(25,100) == Rational('3.25')` is True. No mixed-number notation is left.
+- Finding 5: p-1 is unchanged; the duplicate was removed on the s0-comparing-decimals side (p-2 is now 1.7 on a 1-to-2 line). dm-p1, dm-q8 and cd-p2 now all use `draw.number_line`, so the tick style is the same.
+- Context: "Joseph's Nana" and "Meena buys a piece of cloth" read naturally. No stale names remain.
+- Match rules unchanged: every "Type a decimal, like 0.4." prompt uses `decimal`, and no answer is 0.4. `verify_content`: 54 pass, 0 fail.

@@ -1,7 +1,7 @@
 {
   "id": "s0-comparing-decimals",
   "title": "Comparing and rounding decimals",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "It is sports day. In the long jump, Lalitha jumps 2.4 m. Her friend Farhan jumps 2.35 m.\n\nFarhan says, \"I jumped further! 35 is bigger than 4.\" Is he right? In this topic you will learn to compare decimals, place them on a number line, and round them.",
@@ -599,6 +599,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content 49 pass. All answers re-solved; rounding checked exactly with floor(x*10^k+1/2)/10^k on Rational. p-4 And(Lt,Lt) ordering proof judged sound. Visuals rendered and match. 0 blocking, 5 suggestions. See content/reviews/s0-comparing-decimals.md."
+    },
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes"
     }
   ]
 }

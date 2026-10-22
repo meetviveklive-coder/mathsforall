@@ -48,3 +48,15 @@ Cross-topic: "Type a decimal, like 0.4." and "a zero at the end does not change 
 
 Context (roles): p-7 is now "Ravi's Dadaji buys 7.3 m of cloth". p-9 is "Shreya's Papa buys a hammer". q-6 is "Gurpreet buys a skipping rope". The prices are unchanged.
 `verify_content`: PASS, 51 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Re-checked by math-verifier, 2026-10-22, against `git diff afafa55 HEAD`, including the orchestrator's later change to p-9 and q-6. Result: **verified** (0 blocking, 0 new findings).
+
+- Finding 1: p-6 ends "Is this true?". Fixed.
+- Finding 2: p-1 ends "Type the bigger number, like 0.4." (answer 0.8, `value`). p-7 ends "Type a whole number." (answer 7, `value`). p-9 and q-6 now end "Type a whole number of rupees." and use the default `value` rule. That is right for a whole-rupee answer: "87" and "₹87" are accepted, and 86.75 is marked wrong. My own exact rounding: `floor(Rational('7.3') + 1/2) = 7`, `floor(Rational('86.75') + 1/2) = 87`, `floor(Rational('64.50') + 1/2) = 65`. The explanations ("tenths digit is 7", "tenths digit is 5 ... rounds up") still match.
+- Finding 3: q-5's 0.7 why_wrong now uses "3 tenths and 4 tenths to get 7 tenths". `Rational(3,10) + Rational(4,10) = 7/10`. No addition of decimals is assumed. Fixed.
+- Finding 4: no change, as advised.
+- Finding 5: p-2 is now a dot at 1.7 on a 1-to-2 line. `1 + 7*Rational(1,10) == Rational('1.7')`. The answer 1.7 is not the example 0.4, and the rule is `decimal`. In the new cd-p2.svg, 1 is at x=30 and 2 at x=290, with 9 equal inner ticks 26 apart (all the same length, as in dm-p1), and the dot at x=212 = 30 + 7×26. The meta (start 1, end 2, 10 spaces, labels 1 and 2, point 17/10), the checks, the spec and the alt ("on the seventh mark after 1") all agree. The prompt now states the 10 equal spaces, so the line is unambiguous.
+- Context: Ravi's Dadaji (cloth), Shreya's Papa (hammer) and Gurpreet (skipping rope) are natural. No stale names remain.
+- Cross-topic: whole-rupee rounding uses "Type a whole number of rupees.", and money amounts with paise in s0-add-sub-decimals use "Type the amount in rupees, like 45.50.". The two cases ask for different things, so this is consistent. `verify_content`: 49 pass, 0 fail.

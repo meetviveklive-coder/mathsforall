@@ -42,3 +42,14 @@ Visuals: I rendered all five SVGs. ad-add-columns has the carried 1 over Ones, a
 4. Roles rebalanced. p-7: Thenmozhi buys tomatoes and beans. p-8: Bhavesh's Mausi buys a cricket bat. q-5: Joseph's Amma buys a set of tools. q-6: Kavya's Thatha buys the Pongal flowers, jaggery and turmeric. q-8: Simran saves for a storybook. The amounts are unchanged. Together with the sibling topics, women now buy vegetables, sports gear, tools, books and cloth, and men buy vegetables, cloth, tools, sports gear and stationery.
 5. Place names are lower case in prose: sections[0], the p-1, p-3 and p-9 hints, the p-4 why_wrong, and the alt and spec texts of ad-add-columns, ad-sub-zero and ad-p1. The capitals stay only as diagram headings and as step labels at the start of a sentence. The money sentence is "100 paise make 1 rupee" in sections[3] and the summary. No drawing changed, so make.py was not re-run. The checks are unchanged.
 `verify_content`: PASS, 47 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Re-checked by math-verifier, 2026-10-22, against `git diff afafa55 HEAD`. Result: **verified** (0 blocking, 0 new findings).
+
+- Finding 1: section 3 now says "the rupees need no borrowing, and $100 - 75 = 25$ is easy to do in your head". Checked: 100 − 75 = 25 and 499 − 236 = 263. Fixed.
+- Finding 2: section 1 and doubts[3] now bound 16.25 between 12 + 3 = 15 and 13 + 4 = 17. Checked: `15 < Rational('16.25') < 17` is True. This uses no rounding. Fixed.
+- Finding 3: p-7, p-8, q-5, q-6 and q-8 end "Type the amount in rupees, like 45.50." and use `decimal`. Re-solved with my own Rational code: 12.50 + 35.75 = 48.25; 500 − 287.40 = 212.60; 500 − 318.45 = 181.55; 24.50 + 62.75 + 8.25 = 95.50; 235.50 − 200 = 35.50. None equals 45.50. The `decimal` rule only rejects fraction input, so "212.6", "212.60" and "₹212.60" are still accepted.
+- Finding 4: the new contexts (Thenmozhi: tomatoes and beans; Bhavesh's Mausi: cricket bat; Joseph's Amma: tools; Kavya's Thatha: Pongal items; Simran: storybook) are natural. The pronouns in q-5 and q-8 (prompt, hints and explanation) now match. No stale item names remain in the explanations.
+- Finding 5: place names are lower case in prose. Capitals remain only as diagram column headings and as step labels at the start of a list item ("Hundredths: 0 + 5 = 5"). That is acceptable. The money sentence is "100 paise make 1 rupee", the same as in s0-decimals-meaning. Only text changed in the alt and spec fields, and they still describe the unchanged SVGs.
+- `verify_content`: 47 pass, 0 fail.
