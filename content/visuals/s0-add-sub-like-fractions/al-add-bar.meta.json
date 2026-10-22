@@ -1,0 +1,11 @@
+{
+ "parts": 5,
+ "equal": true,
+ "first": 1,
+ "second": 2,
+ "coloured": 3,
+ "group_labels": [
+  "1/5",
+  "2/5"
+ ]
+}
