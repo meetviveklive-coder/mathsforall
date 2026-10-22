@@ -1,0 +1,10 @@
+{
+ "columns": 10,
+ "rows": 10,
+ "cells": 100,
+ "equal": true,
+ "shaded": 35,
+ "full_columns": 3,
+ "shaded_fraction": "35/100",
+ "decimal": "0.35"
+}

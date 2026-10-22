@@ -1,0 +1,665 @@
+{
+  "id": "s0-decimals-meaning",
+  "title": "Decimals: tenths and hundredths",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Joseph's Nani buys a bunch of coriander at the market. The price tag says ₹12.50.\n\nThat small dot matters a lot. Without it, the tag would say 1250 rupees! The dot shows where the whole rupees end. So ₹12.50 is 12 rupees and 50 paise. In this topic you will find out what the digits after the dot mean.",
+    "sections": [
+      {
+        "heading": "Tenths: one whole cut into 10",
+        "body": "You already know that each place is worth 10 times the place on its right. 1 hundred is 10 tens, and 1 ten is 10 ones.\n\nSo what comes to the right of the ones? Cut one whole into 10 equal parts. Each part is one **tenth**, $\\frac{1}{10}$. We write it as **0.1** and read it as \"zero point one\".\n\nThe dot is called the **decimal point**. Whole numbers go on its left. Parts of a whole go on its right.\n\nOn this number line, each mark has a fraction name above it and a decimal name below it. So $\\frac{3}{10} = 0.3$ and $\\frac{7}{10} = 0.7$. Ten tenths make 1.",
+        "visual": "dm-tenths-nl"
+      },
+      {
+        "heading": "Hundredths: the 10 by 10 grid",
+        "body": "Now cut one whole square into 100 equal small squares. Each small square is one **hundredth**, $\\frac{1}{100}$. We write it as **0.01**.\n\nIn this grid, 35 small squares are shaded. That is $\\frac{35}{100}$, which we write as **0.35**.\n\nLook at the columns. Each full column is 10 hundredths, and that is 1 tenth. Here 3 columns are full, and 5 more squares are shaded. So 0.35 is 3 tenths and 5 hundredths. The 3 is in the tenths place. The 5 is in the hundredths place.",
+        "visual": "dm-grid-35"
+      },
+      {
+        "heading": "The place-value chart",
+        "body": "A place-value chart shows what each digit is worth. Each place is worth $\\frac{1}{10}$ of the place on its left.\n\nCut one hundredth into 10 tiny equal parts. Each part is one **thousandth**: $\\frac{1}{1000} = 0.001$.\n\nLook at the last row. 1.375 has 1 one, 3 tenths, 7 hundredths and 5 thousandths:\n\n$1.375 = 1 + \\frac{3}{10} + \\frac{7}{100} + \\frac{5}{1000}$\n\nRead it as \"one point three seven five\". After the decimal point, say each digit on its own.",
+        "visual": "dm-chart"
+      },
+      {
+        "heading": "Zeros that matter",
+        "body": "Look again at 0.5 and 0.05 in the chart. In 0.5, the 5 is in the tenths place, so it means 5 tenths. In 0.05, the 0 keeps the tenths place empty. The 5 is pushed into the hundredths place, so it means only 5 hundredths.\n\nSo read 0.05 as \"zero point zero five\", never \"zero point five\".\n\nA zero at the **end** is different. 0.3 is 3 tenths, and that is 30 hundredths. So $0.3 = 0.30$. In these grids, 0.3 has 30 squares shaded, but 0.25 has only 25. So 0.3 is bigger than 0.25, even though 25 is bigger than 3.",
+        "visual": "dm-grid-compare"
+      },
+      {
+        "heading": "Rupees and paise, metres and centimetres",
+        "body": "100 paise make 1 rupee. So 1 paisa is $\\frac{1}{100}$ of a rupee, which is ₹0.01. The two digits after the point are the paise.\n\n- ₹12.50 is 12 rupees and 50 paise.\n- ₹0.75 is 75 paise.\n\nLengths work the same way. 100 centimetres make 1 metre, so 1 cm is 0.01 m.\n\n- 1.45 m is 1 metre and 45 cm.\n- 0.5 m is 50 cm, which is half a metre.\n\nPrices are usually written with two digits after the point, like ₹7.50. ₹7.5 is the same amount."
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Write $\\frac{7}{100}$ as a decimal.",
+        "steps": [
+          "$\\frac{7}{100}$ is 7 hundredths. There are no ones and no tenths.",
+          "Put 0 in the ones place and 0 in the tenths place. The 7 goes in the hundredths place.",
+          "So $\\frac{7}{100} = 0.07$. Read it as \"zero point zero seven\"."
+        ],
+        "answer": "0.07",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(7, 100)"
+        }
+      },
+      {
+        "problem": "Write 3.25 as a mixed number.",
+        "steps": [
+          "The 3 before the point means 3 wholes.",
+          "After the point there are 2 tenths and 5 hundredths. 2 tenths is 20 hundredths, so together they make 25 hundredths.",
+          "So $3.25 = 3\\frac{25}{100}$."
+        ],
+        "answer": "3 25/100",
+        "verify": {
+          "kind": "sympy",
+          "expr": "3 + Rational(2, 10) + Rational(5, 100)"
+        }
+      },
+      {
+        "problem": "A piece of cloth is 3 m 6 cm long. Write this length in metres.",
+        "steps": [
+          "100 cm make 1 m, so 1 cm is $\\frac{1}{100}$ m, which is 0.01 m.",
+          "6 cm is 6 hundredths of a metre. There are no tenths, so the tenths place gets a 0.",
+          "So 3 m 6 cm is 3.06 m. It is not 3.6 m, because 3.6 m is 3 m 60 cm."
+        ],
+        "answer": "3.06",
+        "verify": {
+          "kind": "sympy",
+          "expr": "3 + Rational(6, 100)"
+        }
+      }
+    ],
+    "summary": [
+      "The decimal point separates wholes (on the left) from parts of a whole (on the right).",
+      "The places after the point are tenths (1/10), hundredths (1/100) and thousandths (1/1000).",
+      "0.05 is 5 hundredths and is read \"zero point zero five\". It is not 0.5.",
+      "A zero at the end does not change the value: 0.3 = 0.30.",
+      "100 paise make 1 rupee, and 100 cm make 1 metre. So paise and centimetres are hundredths."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "dm-tenths-nl",
+      "purpose": "Tenths as fractions and as decimals",
+      "spec": "Number line 0 to 1 in 10 equal spaces. Fractions 1/10 to 9/10 above the marks. Decimals 0, 0.1 to 0.9, and 1 below the marks.",
+      "alt": "A number line from 0 to 1 split into 10 equal spaces. Above the marks are the fractions 1/10, 2/10 and so on up to 9/10. Below each mark is its decimal: 0, 0.1, 0.2 and so on up to 0.9, then 1.",
+      "file": "content/visuals/s0-decimals-meaning/dm-tenths-nl.svg",
+      "checks": {
+        "start": "0",
+        "end": "1",
+        "spaces_per_unit": 10,
+        "top_labels": [
+          "1/10",
+          "2/10",
+          "3/10",
+          "4/10",
+          "5/10",
+          "6/10",
+          "7/10",
+          "8/10",
+          "9/10"
+        ],
+        "bottom_labels": [
+          "0",
+          "0.1",
+          "0.2",
+          "0.3",
+          "0.4",
+          "0.5",
+          "0.6",
+          "0.7",
+          "0.8",
+          "0.9",
+          "1"
+        ],
+        "labels_match": true
+      }
+    },
+    {
+      "id": "dm-grid-35",
+      "purpose": "0.35 as 35 hundredths on a 10 by 10 grid",
+      "spec": "10 by 10 grid of equal squares. Shade down the columns: 3 full columns and the top 5 squares of column 4.",
+      "alt": "A square cut into 10 columns and 10 rows, making 100 equal small squares. The first 3 columns are fully shaded. The top 5 squares of the fourth column are also shaded. In all, 35 squares are shaded.",
+      "file": "content/visuals/s0-decimals-meaning/dm-grid-35.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 35,
+        "full_columns": 3,
+        "decimal": "0.35"
+      }
+    },
+    {
+      "id": "dm-grid-compare",
+      "purpose": "0.3 is 30 hundredths, more than 0.25",
+      "spec": "Two 10 by 10 grids side by side. Left: 30 squares shaded (3 full columns), labelled 0.3. Right: 25 squares shaded (2 full columns and 5 more), labelled 0.25.",
+      "alt": "Two squares, each cut into 100 equal small squares. The left square is labelled 0.3. Its first 3 columns are shaded, which is 30 squares. The right square is labelled 0.25. It has 2 full columns and 5 more squares shaded, which is 25 squares.",
+      "file": "content/visuals/s0-decimals-meaning/dm-grid-compare.svg",
+      "checks": {
+        "grids": [
+          {
+            "columns": 10,
+            "rows": 10,
+            "cells": 100,
+            "equal": true,
+            "shaded": 30,
+            "full_columns": 3,
+            "label": "0.3"
+          },
+          {
+            "columns": 10,
+            "rows": 10,
+            "cells": 100,
+            "equal": true,
+            "shaded": 25,
+            "full_columns": 2,
+            "label": "0.25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dm-chart",
+      "purpose": "Place-value chart with tenths, hundredths and thousandths",
+      "spec": "Columns Ones, Tenths, Hundredths, Thousandths, worth 1, 1/10, 1/100, 1/1000. Decimal point between Ones and Tenths. Rows: 0.5, then 0.05, then 1.375.",
+      "alt": "A place-value chart with columns Ones, Tenths, Hundredths and Thousandths. Under the headings they are worth 1, 1/10, 1/100 and 1/1000. A decimal point sits between Ones and Tenths. Row 1 shows 0.5: 0 ones and 5 tenths. Row 2 shows 0.05: 0 ones, 0 tenths and 5 hundredths. Row 3 shows 1.375: 1 one, 3 tenths, 7 hundredths and 5 thousandths.",
+      "file": "content/visuals/s0-decimals-meaning/dm-chart.svg",
+      "checks": {
+        "headings": [
+          "Ones",
+          "Tenths",
+          "Hundredths",
+          "Thousandths"
+        ],
+        "worth": [
+          "1",
+          "1/10",
+          "1/100",
+          "1/1000"
+        ],
+        "rows": [
+          {
+            "digits": [
+              "0",
+              "5"
+            ],
+            "value": "0.5"
+          },
+          {
+            "digits": [
+              "0",
+              "0",
+              "5"
+            ],
+            "value": "0.05"
+          },
+          {
+            "digits": [
+              "1",
+              "3",
+              "7",
+              "5"
+            ],
+            "value": "1.375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dm-p1",
+      "purpose": "Practice: a tenth on the number line",
+      "spec": "0 to 1, 10 spaces, only 0 and 1 labelled, dot on the 6th mark.",
+      "alt": "A number line from 0 to 1 split into 10 equal spaces. Only 0 and 1 are labelled. A dot is on the sixth mark after 0.",
+      "file": "content/visuals/s0-decimals-meaning/dm-p1.svg",
+      "checks": {
+        "start": "0",
+        "end": "1",
+        "spaces_per_unit": 10,
+        "labels": [
+          "0",
+          "1"
+        ],
+        "point": "6/10"
+      }
+    },
+    {
+      "id": "dm-p2",
+      "purpose": "Practice: 47 hundredths on a grid",
+      "spec": "10 by 10 grid. Shade down the columns: 4 full columns and the top 7 squares of column 5.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The first 4 columns are fully shaded. The top 7 squares of the fifth column are also shaded.",
+      "file": "content/visuals/s0-decimals-meaning/dm-p2.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 47,
+        "full_columns": 4
+      }
+    },
+    {
+      "id": "dm-q1",
+      "purpose": "Quiz: 8 hundredths on a grid",
+      "spec": "10 by 10 grid. The top 8 squares of column 1 are shaded.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The top 8 squares of the first column are shaded. No column is fully shaded.",
+      "file": "content/visuals/s0-decimals-meaning/dm-q1.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 8,
+        "full_columns": 0
+      }
+    },
+    {
+      "id": "dm-q8",
+      "purpose": "Quiz: tenths past 1",
+      "spec": "0 to 2, tenths, only 0, 1, 2 labelled, dot at 1.3.",
+      "alt": "A number line from 0 to 2. Each whole is split into 10 equal spaces. Only 0, 1 and 2 are labelled. A dot is on the third mark after 1.",
+      "file": "content/visuals/s0-decimals-meaning/dm-q8.svg",
+      "checks": {
+        "start": "0",
+        "end": "2",
+        "spaces_per_unit": 10,
+        "labels": [
+          "0",
+          "1",
+          "2"
+        ],
+        "point": "13/10"
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-decimals-meaning/p-1",
+      "type": "numeric",
+      "visual": "dm-p1",
+      "objective": 0,
+      "prompt": "The gap from 0 to 1 is split into 10 equal spaces. What decimal does the dot show? Type a decimal, like 0.4.",
+      "answer": "0.6",
+      "hints": [
+        "Each space is one tenth, which is 0.1.",
+        "Count the steps from 0 to the dot."
+      ],
+      "explanation": "Each space is one tenth. The dot is 6 steps from 0, so it shows 6 tenths: 0.6.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 * Rational(1, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/p-2",
+      "type": "numeric",
+      "visual": "dm-p2",
+      "objective": 0,
+      "prompt": "The whole grid is 1. What decimal does the shaded part show? Type a decimal, like 0.4.",
+      "answer": "0.47",
+      "hints": [
+        "Each full column is 10 hundredths. How many full columns are shaded?",
+        "Add the shaded squares in the part-filled column."
+      ],
+      "explanation": "4 full columns are 40 hundredths. 7 more squares make 47 hundredths, so the shaded part is 0.47.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "4 * 10 * Rational(1, 100) + 7 * Rational(1, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/p-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write $\\frac{9}{100}$ as a decimal. Type a decimal, like 0.4.",
+      "answer": "0.09",
+      "hints": [
+        "9 hundredths has no tenths. What goes in the tenths place?"
+      ],
+      "explanation": "$\\frac{9}{100}$ is 9 hundredths. The tenths place is empty, so it gets a 0: 0.09.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(9, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/p-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "How many hundredths are there in 0.6? Type a whole number.",
+      "answer": "60",
+      "hints": [
+        "1 tenth is 10 hundredths.",
+        "0.6 is 6 tenths."
+      ],
+      "explanation": "0.6 is 6 tenths. Each tenth is 10 hundredths, so 0.6 is $6 \\times 10 = 60$ hundredths. So $0.6 = 0.60$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(6, 10) / Rational(1, 100)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/p-5",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which decimal means 5 hundredths?",
+      "options": [
+        {
+          "text": "0.5",
+          "value": "5/10",
+          "correct": false,
+          "why_wrong": "Here the 5 is in the first place after the point. That is 5 tenths, not 5 hundredths."
+        },
+        {
+          "text": "0.05",
+          "value": "5/100",
+          "correct": true
+        },
+        {
+          "text": "0.005",
+          "value": "5/1000",
+          "correct": false,
+          "why_wrong": "Here the 5 is in the third place after the point. That is 5 thousandths."
+        },
+        {
+          "text": "5.00",
+          "value": "5",
+          "correct": false,
+          "why_wrong": "Here the 5 is before the point. That is 5 wholes."
+        }
+      ],
+      "answer": "0.05",
+      "hints": [
+        "Hundredths is the second place after the decimal point."
+      ],
+      "explanation": "In 0.05, the 0 fills the tenths place, so the 5 is in the hundredths place. Read it as \"zero point zero five\".",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 100)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/p-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A notebook costs ₹38.50. How many paise is that in all? Type a whole number.",
+      "answer": "3850",
+      "hints": [
+        "1 rupee is 100 paise. How many paise is 38 rupees?",
+        "Then add the 50 paise."
+      ],
+      "explanation": "38 rupees is $38 \\times 100 = 3800$ paise. Add 50 paise: $3800 + 50 = 3850$ paise.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "38 * 100 + 50"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/p-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A ribbon is 1 m 35 cm long. Write its length in metres. Type a decimal, like 0.4.",
+      "answer": "1.35",
+      "hints": [
+        "100 cm make 1 m. So 35 cm is how many hundredths of a metre?"
+      ],
+      "explanation": "35 cm is 35 hundredths of a metre, which is 0.35 m. So 1 m 35 cm is 1.35 m.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "1 + Rational(35, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/p-8",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Arjun says 0.25 is bigger than 0.3, because 25 is bigger than 3. Is he right?",
+      "answer": "false",
+      "hints": [
+        "Write 0.3 as hundredths."
+      ],
+      "explanation": "No. 0.3 is 3 tenths, which is 30 hundredths. 0.25 is only 25 hundredths. So 0.3 is bigger.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(25, 100), Rational(3, 10))"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/p-9",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "In the number 6.248, which digit is in the hundredths place?",
+      "answer": "4",
+      "hints": [
+        "The first place after the point is tenths. The next place is hundredths."
+      ],
+      "explanation": "In 6.248, the 2 is in the tenths place. The 4 is in the hundredths place, and the 8 is in the thousandths place.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Mod(floor(Rational(6248, 1000) * 100), 10)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/p-10",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write 4 and 35 thousandths as a decimal. Type a decimal, like 0.4.",
+      "answer": "4.035",
+      "hints": [
+        "35 thousandths is 0 tenths, 3 hundredths and 5 thousandths.",
+        "Thousandths need three places after the point."
+      ],
+      "explanation": "35 thousandths is $\\frac{35}{1000}$, which is 0.035. The tenths place is 0. So 4 and 35 thousandths is 4.035.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "4 + Rational(35, 1000)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-decimals-meaning/q-1",
+      "type": "numeric",
+      "visual": "dm-q1",
+      "objective": 0,
+      "prompt": "Each small square is one hundredth of the grid. What decimal is shaded? Type a decimal, like 0.4.",
+      "answer": "0.08",
+      "hints": [
+        "Is any full column shaded? If not, there are no tenths."
+      ],
+      "explanation": "8 small squares are shaded, which is 8 hundredths. There are no tenths, so the answer is 0.08, not 0.8.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "8 * Rational(1, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/q-2",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Fill in the box: $0.43 = \\frac{\\square}{100}$ Type the number that goes in the box.",
+      "answer": "43",
+      "hints": [
+        "0.43 is 4 tenths and 3 hundredths. How many hundredths is 4 tenths?"
+      ],
+      "explanation": "4 tenths is 40 hundredths. Add 3 hundredths to get 43 hundredths. So $0.43 = \\frac{43}{100}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(43, 100) * 100"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write $\\frac{23}{1000}$ as a decimal. Type a decimal, like 0.4.",
+      "answer": "0.023",
+      "hints": [
+        "Thousandths need three places after the point.",
+        "23 thousandths is 0 tenths, 2 hundredths and 3 thousandths."
+      ],
+      "explanation": "23 thousandths fills the last two of the three places. The tenths place gets a 0: 0.023.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(23, 1000)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/q-4",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which decimal has 2 ones, 0 tenths and 6 hundredths?",
+      "options": [
+        {
+          "text": "2.6",
+          "value": "26/10",
+          "correct": false,
+          "why_wrong": "The 0 was left out, so the 6 moved into the tenths place. 2.6 is 2 ones and 6 tenths."
+        },
+        {
+          "text": "2.06",
+          "value": "206/100",
+          "correct": true
+        },
+        {
+          "text": "2.006",
+          "value": "2006/1000",
+          "correct": false,
+          "why_wrong": "Here the 6 is in the thousandths place. Hundredths is the second place after the point."
+        },
+        {
+          "text": "0.206",
+          "value": "206/1000",
+          "correct": false,
+          "why_wrong": "The 2 is ones, so it must go before the decimal point."
+        }
+      ],
+      "answer": "2.06",
+      "hints": [
+        "Write the digits in order: ones, then the point, then tenths, then hundredths."
+      ],
+      "explanation": "2 ones, then the decimal point, then 0 tenths and 6 hundredths: 2.06.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "2 + 0 * Rational(1, 10) + 6 * Rational(1, 100)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/q-5",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Neha jumps 2 m 8 cm in the long jump. Write this length in metres. Type a decimal, like 0.4.",
+      "answer": "2.08",
+      "hints": [
+        "8 cm is 8 hundredths of a metre.",
+        "Are there any tenths?"
+      ],
+      "explanation": "8 cm is 8 hundredths of a metre. There are no tenths, so the tenths place gets a 0. The jump is 2.08 m, not 2.8 m.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "2 + Rational(8, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-decimals-meaning/q-6",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "One litre of petrol costs ₹102.09. What does ₹102.09 mean?",
+      "options": [
+        {
+          "text": "102 rupees and 9 paise",
+          "value": "102 + 9/100",
+          "correct": true
+        },
+        {
+          "text": "102 rupees and 90 paise",
+          "value": "102 + 90/100",
+          "correct": false,
+          "why_wrong": "That would be ₹102.90. In ₹102.09, the 0 is in the tenths place, so it is only 9 paise."
+        },
+        {
+          "text": "10,209 rupees",
+          "value": "10209",
+          "correct": false,
+          "why_wrong": "The decimal point cannot be ignored. Only 102 is whole rupees. The 09 after the point is paise."
+        }
+      ],
+      "answer": "102 rupees and 9 paise",
+      "hints": [
+        "The two digits after the point are the paise."
+      ],
+      "explanation": "The point separates rupees from paise. After the point, 09 means 0 tenths and 9 hundredths of a rupee. That is 9 paise.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "102 + Rational(9, 100)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/q-7",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "How many thousandths make one hundredth? Type a whole number.",
+      "answer": "10",
+      "hints": [
+        "Each place is worth $\\frac{1}{10}$ of the place on its left."
+      ],
+      "explanation": "A thousandth is one hundredth cut into 10 equal parts. So 10 thousandths make 1 hundredth: $0.010 = 0.01$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 100) / Rational(1, 1000)"
+      }
+    },
+    {
+      "id": "s0-decimals-meaning/q-8",
+      "type": "numeric",
+      "visual": "dm-q8",
+      "objective": 0,
+      "prompt": "Each whole is split into tenths. What decimal does the dot show? Type a decimal, like 0.4.",
+      "answer": "1.3",
+      "hints": [
+        "Which two whole numbers is the dot between?",
+        "Count the tenth-steps from 1 to the dot."
+      ],
+      "explanation": "The dot is between 1 and 2. It is 3 tenth-steps past 1, so it shows 1 and 3 tenths: 1.3.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "1 + 3 * Rational(1, 10)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Is 0.50 different from 0.5?",
+      "a": "No. 50 hundredths is the same amount as 5 tenths. A zero at the end does not change the value. Shops write ₹7.50 because paise use two places."
+    },
+    {
+      "q": "Why do people write 0.7 and not just .7?",
+      "a": "Both mean 7 tenths. The 0 in the ones place makes the decimal point easy to see, so nobody misses it."
+    },
+    {
+      "q": "How do I read 3.25 out loud?",
+      "a": "Say \"three point two five\". After the point, read each digit on its own. You can also say \"3 and 25 hundredths\"."
+    },
+    {
+      "q": "Why are they called decimals?",
+      "a": "*Decimal* comes from an old word for ten. Each place is worth 10 times the place on its right. This is true on both sides of the decimal point."
+    },
+    {
+      "q": "Do the places stop at thousandths?",
+      "a": "No. Cut a thousandth into 10 equal parts and you get a ten-thousandth. The places can go on and on."
+    }
+  ]
+}
