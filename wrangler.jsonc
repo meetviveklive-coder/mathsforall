@@ -1,0 +1,7 @@
+// Cloudflare Worker with static assets, deployed from the repository root.
+// Build command: npm run build   ·   Deploy command: npx wrangler deploy
+{
+  "name": "mathsforall",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./site/dist", "not_found_handling": "404-page" }
+}

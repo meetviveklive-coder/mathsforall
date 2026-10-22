@@ -1,0 +1,9 @@
+{
+  "name": "mathsforall",
+  "private": true,
+  "description": "Repo-root build entry for Cloudflare: builds the static site in site/ into site/dist.",
+  "scripts": {
+    "build": "cd site && npm ci && npm run build"
+  },
+  "engines": { "node": ">=22.23.4" }
+}
