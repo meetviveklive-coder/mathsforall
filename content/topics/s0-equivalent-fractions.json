@@ -34,7 +34,10 @@
           "So $\\frac{3}{5} = \\frac{12}{20}$."
         ],
         "answer": "12",
-        "verify": { "kind": "sympy", "expr": "Rational(3, 5) * 20" }
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(3, 5) * 20"
+        }
       },
       {
         "problem": "Write $\\frac{12}{18}$ in simplest form.",
@@ -44,7 +47,10 @@
           "2 and 3 have no common factor except 1, so $\\frac{2}{3}$ is the simplest form."
         ],
         "answer": "2/3",
-        "verify": { "kind": "sympy", "expr": "Rational(12, 18)" }
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(12, 18)"
+        }
       },
       {
         "problem": "Are $\\frac{4}{6}$ and $\\frac{6}{9}$ equivalent?",
@@ -54,7 +60,10 @@
           "Both are $\\frac{2}{3}$, so yes, they are equivalent."
         ],
         "answer": "true",
-        "verify": { "kind": "relation", "expr": "Eq(Rational(4, 6), Rational(6, 9))" }
+        "verify": {
+          "kind": "relation",
+          "expr": "Eq(Rational(4, 6), Rational(6, 9))"
+        }
       }
     ],
     "summary": [
@@ -65,156 +74,404 @@
     ]
   },
   "visuals": [
-    { "id": "eq-half-bars", "purpose": "1/2 = 2/4 = 4/8 as bars", "spec": "Three bars of equal length stacked: 2 parts 1 shaded, 4 parts 2 shaded, 8 parts 4 shaded; labels 1/2, 2/4, 4/8.", "alt": "Three bars of the same length. The first is cut into 2 equal parts with 1 shaded. The second is cut into 4 equal parts with 2 shaded. The third is cut into 8 equal parts with 4 shaded. The shaded part is the same length in all three.", "file": "content/visuals/s0-equivalent-fractions/eq-half-bars.svg", "checks": { "bars": [ { "parts": 2, "equal": true, "shaded": 1 }, { "parts": 4, "equal": true, "shaded": 2 }, { "parts": 8, "equal": true, "shaded": 4 } ] } },
-    { "id": "eq-nl", "purpose": "1/2 and 2/4 at the same place", "spec": "Two aligned number lines 0 to 1: halves (point at 1/2) above quarters (point at 2/4).", "alt": "Two number lines from 0 to 1, one above the other. The top one is split into halves with a dot at one half. The bottom one is split into quarters with a dot at two quarters. The two dots line up exactly.", "file": "content/visuals/s0-equivalent-fractions/eq-nl.svg", "checks": { "lines": [ { "spaces_per_unit": 2, "point": "1/2" }, { "spaces_per_unit": 4, "point": "2/4" } ] } },
-    { "id": "eq-p1", "purpose": "Practice: 1/3 = ?/6", "spec": "Two bars of equal length: 3 parts 1 shaded; 6 parts 2 shaded.", "alt": "Two bars of the same length. The top bar is cut into 3 equal parts with 1 shaded. The bottom bar is cut into 6 equal parts with 2 shaded. The shaded parts are the same length.", "file": "content/visuals/s0-equivalent-fractions/eq-p1.svg", "checks": { "bars": [ { "parts": 3, "equal": true, "shaded": 1 }, { "parts": 6, "equal": true, "shaded": 2 } ] } },
-    { "id": "eq-q4", "purpose": "Quiz: 2/3 and 4/6 on number lines", "spec": "Two aligned number lines 0 to 1: thirds (point at 2/3) above sixths (point at 4/6). Only 0 and 1 labelled.", "alt": "Two number lines from 0 to 1, one above the other. The top one is split into 3 equal spaces with a dot on the second mark. The bottom one is split into 6 equal spaces with a dot on the fourth mark. The dots line up.", "file": "content/visuals/s0-equivalent-fractions/eq-q4.svg", "checks": { "lines": [ { "spaces_per_unit": 3, "point": "2/3" }, { "spaces_per_unit": 6, "point": "4/6" } ] } }
+    {
+      "id": "eq-half-bars",
+      "purpose": "1/2 = 2/4 = 4/8 as bars",
+      "spec": "Three bars of equal length stacked. They have 2 parts with 1 shaded, 4 parts with 2 shaded, and 8 parts with 4 shaded. Labels: 1/2, 2/4, 4/8.",
+      "alt": "Three bars of the same length. The first is cut into 2 equal parts with 1 shaded. The second is cut into 4 equal parts with 2 shaded. The third is cut into 8 equal parts with 4 shaded. The shaded part is the same length in all three.",
+      "file": "content/visuals/s0-equivalent-fractions/eq-half-bars.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 2,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 8,
+            "equal": true,
+            "shaded": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "eq-nl",
+      "purpose": "1/2 and 2/4 at the same place",
+      "spec": "Two aligned number lines 0 to 1: halves (point at 1/2) above quarters (point at 2/4).",
+      "alt": "Two number lines from 0 to 1, one above the other. The top one is split into halves with a dot at one half. The bottom one is split into quarters with a dot at two quarters. The two dots line up exactly.",
+      "file": "content/visuals/s0-equivalent-fractions/eq-nl.svg",
+      "checks": {
+        "lines": [
+          {
+            "spaces_per_unit": 2,
+            "point": "1/2"
+          },
+          {
+            "spaces_per_unit": 4,
+            "point": "2/4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eq-p1",
+      "purpose": "Practice: 1/3 = ?/6",
+      "spec": "Two bars of equal length: 3 parts 1 shaded; 6 parts 2 shaded.",
+      "alt": "Two bars of the same length. The top bar is cut into 3 equal parts with 1 shaded. The bottom bar is cut into 6 equal parts with 2 shaded. The shaded parts are the same length.",
+      "file": "content/visuals/s0-equivalent-fractions/eq-p1.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 3,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 6,
+            "equal": true,
+            "shaded": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "eq-q4",
+      "purpose": "Quiz: 2/3 and 4/6 on number lines",
+      "spec": "Two aligned number lines 0 to 1: thirds (point at 2/3) above sixths (point at 4/6). Only 0 and 1 labelled.",
+      "alt": "Two number lines from 0 to 1, one above the other. The top one is split into 3 equal spaces with a dot on the second mark after 0. The bottom one is split into 6 equal spaces with a dot on the fourth mark after 0. A dashed line joins the two dots, showing they line up.",
+      "file": "content/visuals/s0-equivalent-fractions/eq-q4.svg",
+      "checks": {
+        "lines": [
+          {
+            "spaces_per_unit": 3,
+            "point": "2/3"
+          },
+          {
+            "spaces_per_unit": 6,
+            "point": "4/6"
+          }
+        ]
+      }
+    }
   ],
   "practice": [
     {
-      "id": "s0-equivalent-fractions/p-1", "type": "numeric", "visual": "eq-p1", "objective": 0,
-      "prompt": "The two bars show equal amounts. Fill in the box: $\\frac{1}{3} = \\frac{\\square}{6}$",
+      "id": "s0-equivalent-fractions/p-1",
+      "type": "numeric",
+      "visual": "eq-p1",
+      "objective": 0,
+      "prompt": "The two bars show equal amounts. Fill in the box: $\\frac{1}{3} = \\frac{\\square}{6}$ Type the number that goes in the box.",
       "answer": "2",
-      "hints": ["Count the shaded parts in the bottom bar."],
+      "hints": [
+        "Count the shaded parts in the bottom bar."
+      ],
       "explanation": "The bottom bar has 6 equal parts and 2 are shaded, covering the same amount as $\\frac{1}{3}$. So $\\frac{1}{3} = \\frac{2}{6}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(1, 3) * 6" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 3) * 6"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/p-2", "type": "numeric", "objective": 1,
-      "prompt": "Fill in the box: $\\frac{2}{5} = \\frac{\\square}{10}$",
+      "id": "s0-equivalent-fractions/p-2",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Fill in the box: $\\frac{2}{5} = \\frac{\\square}{10}$ Type the number that goes in the box.",
       "answer": "4",
-      "hints": ["5 times what is 10?", "Multiply the top by the same number."],
+      "hints": [
+        "5 times what is 10?",
+        "Multiply the top by the same number."
+      ],
       "explanation": "$5 \\times 2 = 10$, so multiply the top by 2 as well: $2 \\times 2 = 4$. $\\frac{2}{5} = \\frac{4}{10}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(2, 5) * 10" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2, 5) * 10"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/p-3", "type": "numeric", "objective": 1,
-      "prompt": "Fill in the box: $\\frac{3}{4} = \\frac{9}{\\square}$",
+      "id": "s0-equivalent-fractions/p-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Fill in the box: $\\frac{3}{4} = \\frac{9}{\\square}$ Type the number that goes in the box.",
       "answer": "12",
-      "hints": ["3 times what is 9?", "Multiply the bottom by the same number."],
+      "hints": [
+        "3 times what is 9?",
+        "Multiply the bottom by the same number."
+      ],
       "explanation": "$3 \\times 3 = 9$, so multiply the bottom by 3 too: $4 \\times 3 = 12$. $\\frac{3}{4} = \\frac{9}{12}$.",
-      "verify": { "kind": "sympy", "expr": "9 / Rational(3, 4)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "9 / Rational(3, 4)"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/p-4", "type": "numeric", "objective": 2,
+      "id": "s0-equivalent-fractions/p-4",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "Write $\\frac{6}{8}$ in simplest form.",
       "answer": "3/4",
-      "hints": ["Which number divides both 6 and 8?"],
+      "hints": [
+        "Which number divides both 6 and 8?"
+      ],
       "explanation": "Divide both by 2: $\\frac{6}{8} = \\frac{3}{4}$. 3 and 4 have no common factor except 1.",
-      "verify": { "kind": "sympy", "expr": "Rational(6, 8)" },
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(6, 8)"
+      },
       "match": "simplest"
     },
     {
-      "id": "s0-equivalent-fractions/p-5", "type": "numeric", "objective": 2,
+      "id": "s0-equivalent-fractions/p-5",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "Write $\\frac{15}{25}$ in simplest form.",
       "answer": "3/5",
-      "hints": ["Both 15 and 25 are in the 5 times table."],
+      "hints": [
+        "Both 15 and 25 are in the 5 times table."
+      ],
       "explanation": "Divide both by 5: $\\frac{15}{25} = \\frac{3}{5}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(15, 25)" },
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 25)"
+      },
       "match": "simplest"
     },
     {
-      "id": "s0-equivalent-fractions/p-6", "type": "true_false", "objective": 1,
+      "id": "s0-equivalent-fractions/p-6",
+      "type": "true_false",
+      "objective": 1,
       "prompt": "Meena added 1 to the top and the bottom of $\\frac{1}{2}$ and got $\\frac{2}{3}$. Is $\\frac{1}{2}$ equal to $\\frac{2}{3}$?",
       "answer": "false",
-      "hints": ["Is $\\frac{2}{3}$ more or less than half?"],
+      "hints": [
+        "Is $\\frac{2}{3}$ more or less than half?"
+      ],
       "explanation": "No. Adding the same number to top and bottom changes the amount. $\\frac{2}{3}$ is more than half. To make an equivalent fraction, **multiply** instead.",
-      "verify": { "kind": "relation", "expr": "Eq(Rational(1, 2), Rational(2, 3))" }
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(1, 2), Rational(2, 3))"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/p-7", "type": "mcq", "objective": 1,
+      "id": "s0-equivalent-fractions/p-7",
+      "type": "mcq",
+      "objective": 1,
       "prompt": "Which fraction is equivalent to $\\frac{3}{4}$?",
       "options": [
-        { "text": "$\\frac{6}{8}$", "value": "6/8", "correct": true },
-        { "text": "$\\frac{4}{5}$", "value": "4/5", "correct": false, "why_wrong": "This adds 1 to top and bottom. Adding changes the amount." },
-        { "text": "$\\frac{3}{8}$", "value": "3/8", "correct": false, "why_wrong": "Only the bottom was multiplied by 2. You must do the same to the top." },
-        { "text": "$\\frac{6}{4}$", "value": "6/4", "correct": false, "why_wrong": "Only the top was multiplied by 2. You must do the same to the bottom." }
+        {
+          "text": "$\\frac{6}{8}$",
+          "value": "6/8",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{4}{5}$",
+          "value": "4/5",
+          "correct": false,
+          "why_wrong": "This adds 1 to top and bottom. Adding changes the amount."
+        },
+        {
+          "text": "$\\frac{3}{8}$",
+          "value": "3/8",
+          "correct": false,
+          "why_wrong": "Only the bottom was multiplied by 2. You must do the same to the top."
+        },
+        {
+          "text": "$\\frac{6}{4}$",
+          "value": "6/4",
+          "correct": false,
+          "why_wrong": "Only the top was multiplied by 2. You must do the same to the bottom."
+        }
       ],
       "answer": "$\\frac{6}{8}$",
-      "hints": ["Multiply top and bottom by the same number."],
+      "hints": [
+        "Multiply top and bottom by the same number."
+      ],
       "explanation": "$\\frac{3 \\times 2}{4 \\times 2} = \\frac{6}{8}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(3, 4)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 4)"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/p-8", "type": "numeric", "objective": 2,
+      "id": "s0-equivalent-fractions/p-8",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "Rohan ate $\\frac{4}{12}$ of a cake. Write this fraction in simplest form.",
       "answer": "1/3",
-      "hints": ["What is the biggest number that divides both 4 and 12?"],
+      "hints": [
+        "What is the biggest number that divides both 4 and 12?"
+      ],
       "explanation": "4 divides both 4 and 12: $\\frac{4 \\div 4}{12 \\div 4} = \\frac{1}{3}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(4, 12)" },
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(4, 12)"
+      },
       "match": "simplest"
     }
   ],
   "quiz": [
     {
-      "id": "s0-equivalent-fractions/q-1", "type": "numeric", "objective": 1,
-      "prompt": "Fill in the box: $\\frac{5}{6} = \\frac{\\square}{18}$",
+      "id": "s0-equivalent-fractions/q-1",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Fill in the box: $\\frac{5}{6} = \\frac{\\square}{18}$ Type the number that goes in the box.",
       "answer": "15",
-      "hints": ["6 times what is 18?"],
+      "hints": [
+        "6 times what is 18?"
+      ],
       "explanation": "$6 \\times 3 = 18$, so $5 \\times 3 = 15$. $\\frac{5}{6} = \\frac{15}{18}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(5, 6) * 18" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 6) * 18"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/q-2", "type": "numeric", "objective": 2,
+      "id": "s0-equivalent-fractions/q-2",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "Write $\\frac{8}{12}$ in simplest form.",
       "answer": "2/3",
-      "hints": ["The biggest number that divides both 8 and 12 is 4."],
+      "hints": [
+        "The biggest number that divides both 8 and 12 is 4."
+      ],
       "explanation": "Divide both by 4: $\\frac{8}{12} = \\frac{2}{3}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(8, 12)" },
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(8, 12)"
+      },
       "match": "simplest"
     },
     {
-      "id": "s0-equivalent-fractions/q-3", "type": "mcq", "objective": 0,
+      "id": "s0-equivalent-fractions/q-3",
+      "type": "mcq",
+      "objective": 0,
       "prompt": "Three of these fractions are equal to $\\frac{1}{2}$. Which one is the odd one out?",
       "options": [
-        { "text": "$\\frac{3}{6}$", "value": "3/6", "correct": false, "why_wrong": "3 is half of 6, so this is equal to $\\frac{1}{2}$." },
-        { "text": "$\\frac{5}{10}$", "value": "5/10", "correct": false, "why_wrong": "5 is half of 10, so this is equal to $\\frac{1}{2}$." },
-        { "text": "$\\frac{4}{6}$", "value": "4/6", "correct": true },
-        { "text": "$\\frac{50}{100}$", "value": "50/100", "correct": false, "why_wrong": "50 is half of 100, so this is equal to $\\frac{1}{2}$." }
+        {
+          "text": "$\\frac{3}{6}$",
+          "value": "3/6",
+          "correct": false,
+          "why_wrong": "3 is half of 6, so this is equal to $\\frac{1}{2}$."
+        },
+        {
+          "text": "$\\frac{5}{10}$",
+          "value": "5/10",
+          "correct": false,
+          "why_wrong": "5 is half of 10, so this is equal to $\\frac{1}{2}$."
+        },
+        {
+          "text": "$\\frac{4}{6}$",
+          "value": "4/6",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{50}{100}$",
+          "value": "50/100",
+          "correct": false,
+          "why_wrong": "50 is half of 100, so this is equal to $\\frac{1}{2}$."
+        }
       ],
       "answer": "$\\frac{4}{6}$",
-      "hints": ["For a fraction equal to a half, the top is exactly half of the bottom."],
+      "hints": [
+        "For a fraction equal to a half, the top is exactly half of the bottom."
+      ],
       "explanation": "$\\frac{4}{6} = \\frac{2}{3}$, which is more than a half. The others all have a top that is exactly half of the bottom.",
-      "verify": { "kind": "manual", "reason": "Odd-one-out: correct option is the only value not equal to 1/2; checked by verifier agent." }
+      "verify": {
+        "kind": "manual",
+        "reason": "Odd-one-out: correct option is the only value not equal to 1/2; checked by verifier agent."
+      }
     },
     {
-      "id": "s0-equivalent-fractions/q-4", "type": "true_false", "visual": "eq-q4", "objective": 0,
+      "id": "s0-equivalent-fractions/q-4",
+      "type": "true_false",
+      "visual": "eq-q4",
+      "objective": 0,
       "prompt": "The dots on these two number lines show $\\frac{2}{3}$ and $\\frac{4}{6}$. Are they equivalent fractions?",
       "answer": "true",
-      "hints": ["Do the two dots line up?"],
+      "hints": [
+        "Do the two dots line up?"
+      ],
       "explanation": "Yes. The dots are at exactly the same place, so $\\frac{2}{3} = \\frac{4}{6}$.",
-      "verify": { "kind": "relation", "expr": "Eq(Rational(2, 3), Rational(4, 6))" }
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(2, 3), Rational(4, 6))"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/q-5", "type": "true_false", "objective": 0,
+      "id": "s0-equivalent-fractions/q-5",
+      "type": "true_false",
+      "objective": 0,
       "prompt": "Asha says $\\frac{2}{4}$ is bigger than $\\frac{1}{2}$ because 2 and 4 are bigger numbers than 1 and 2. Is she right?",
       "answer": "false",
-      "hints": ["Picture the two bars, or the number line."],
+      "hints": [
+        "Picture the two bars, or the number line."
+      ],
       "explanation": "No. $\\frac{2}{4}$ and $\\frac{1}{2}$ are the same amount. Bigger numbers on top and bottom do not mean a bigger fraction.",
-      "verify": { "kind": "relation", "expr": "Gt(Rational(2, 4), Rational(1, 2))" }
+      "verify": {
+        "kind": "relation",
+        "expr": "Gt(Rational(2, 4), Rational(1, 2))"
+      }
     },
     {
-      "id": "s0-equivalent-fractions/q-6", "type": "numeric", "objective": 2,
+      "id": "s0-equivalent-fractions/q-6",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "Write $\\frac{18}{24}$ in simplest form.",
       "answer": "3/4",
-      "hints": ["The biggest number that divides both 18 and 24 is 6."],
+      "hints": [
+        "The biggest number that divides both 18 and 24 is 6."
+      ],
       "explanation": "Divide both by 6: $\\frac{18}{24} = \\frac{3}{4}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(18, 24)" },
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(18, 24)"
+      },
       "match": "simplest"
     },
     {
-      "id": "s0-equivalent-fractions/q-7", "type": "numeric", "objective": 1,
-      "prompt": "Fill in the box: $\\frac{7}{10} = \\frac{21}{\\square}$",
+      "id": "s0-equivalent-fractions/q-7",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Fill in the box: $\\frac{7}{10} = \\frac{21}{\\square}$ Type the number that goes in the box.",
       "answer": "30",
-      "hints": ["7 times what is 21?"],
+      "hints": [
+        "7 times what is 21?"
+      ],
       "explanation": "$7 \\times 3 = 21$, so $10 \\times 3 = 30$. $\\frac{7}{10} = \\frac{21}{30}$.",
-      "verify": { "kind": "sympy", "expr": "21 / Rational(7, 10)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "21 / Rational(7, 10)"
+      }
     }
   ],
   "doubts": [
-    { "q": "If $\\frac{1}{2} = \\frac{2}{4}$, why have two names?", "a": "Different names help in different jobs. To add $\\frac{1}{2}$ and $\\frac{1}{4}$ later, you will rename $\\frac{1}{2}$ as $\\frac{2}{4}$ so both are in quarters." },
-    { "q": "Do I have to find the biggest common factor to simplify?", "a": "No. You can divide by any common factor, then keep going until no common factor except 1 is left. The biggest one just gets there faster." },
-    { "q": "How many fractions are equivalent to $\\frac{1}{2}$?", "a": "Infinitely many! $\\frac{2}{4}$, $\\frac{3}{6}$, $\\frac{4}{8}$, $\\frac{100}{200}$... you can always multiply by another number." },
-    { "q": "Can I multiply top and bottom by 0?", "a": "No. $\\frac{0}{0}$ has no meaning, because a whole cannot be cut into 0 parts. Use any number except 0." }
+    {
+      "q": "If $\\frac{1}{2} = \\frac{2}{4}$, why have two names?",
+      "a": "Different names help in different jobs. To add $\\frac{1}{2}$ and $\\frac{1}{4}$ later, you will rename $\\frac{1}{2}$ as $\\frac{2}{4}$ so both are in quarters."
+    },
+    {
+      "q": "Do I have to find the biggest common factor to simplify?",
+      "a": "No. You can divide by any common factor, then keep going until no common factor except 1 is left. The biggest one just gets there faster."
+    },
+    {
+      "q": "How many fractions are equivalent to $\\frac{1}{2}$?",
+      "a": "So many that they never run out! $\\frac{2}{4}$, $\\frac{3}{6}$, $\\frac{4}{8}$, $\\frac{100}{200}$... you can always multiply by another number."
+    },
+    {
+      "q": "Can I multiply top and bottom by 0?",
+      "a": "No. $\\frac{0}{0}$ has no meaning, because a whole cannot be cut into 0 parts. Use any number except 0."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content.py passed (33/0, 1 manual warning). I worked out all values, GCDs and simplest forms again with my own SymPy code, and confirmed that q-3 has exactly one value not equal to 1/2. The match rules and visuals are correct. 0 blocking issues, 4 suggestions; see content/reviews/s0-equivalent-fractions.md."
+    }
   ]
 }

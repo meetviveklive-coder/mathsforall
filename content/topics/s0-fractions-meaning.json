@@ -4,11 +4,11 @@
   "status": "draft",
   "version": 1,
   "lesson": {
-    "hook": "Amma makes one big roti for Riya and her brother Kabir. If she tears it so that Kabir gets a huge piece and Riya gets a tiny one, Riya will shout, \"That's not fair!\"\n\nRiya already knows the most important idea about fractions: **the parts must be equal.**",
+    "hook": "Papa makes one big roti for Riya and her brother Kabir. Suppose he tears it so that Kabir gets a huge piece and Riya gets a tiny one. Riya will shout, \"That's not fair!\"\n\nRiya already knows the most important idea about fractions: **the parts must be equal.**",
     "sections": [
       {
         "heading": "Equal parts",
-        "body": "When we cut one whole thing into parts that are **all the same size**, each part is a *fraction* of the whole.\n\n- 2 equal parts are called **halves**.\n- 3 equal parts are called **thirds**.\n- 4 equal parts are called **quarters** (or fourths).\n\nIf the parts are not the same size, they are just pieces. They are not halves or quarters.",
+        "body": "Cut one whole thing into parts that are **all the same size**. Each part is then a *fraction* of the whole.\n\n- 2 equal parts are called **halves**.\n- 3 equal parts are called **thirds**.\n- 4 equal parts are called **quarters** (or fourths).\n\nIf the parts are not the same size, they are just pieces. They are not halves or quarters.",
         "visual": "v-equal-unequal"
       },
       {
@@ -36,7 +36,10 @@
           "So the shaded fraction is $\\frac{2}{5}$."
         ],
         "answer": "2/5",
-        "verify": { "kind": "sympy", "expr": "Rational(2, 5)" }
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(2, 5)"
+        }
       },
       {
         "problem": "Find $\\frac{1}{4}$ of ₹20.",
@@ -46,7 +49,10 @@
           "So $\\frac{1}{4}$ of ₹20 is ₹5."
         ],
         "answer": "5",
-        "verify": { "kind": "sympy", "expr": "20 / 4" }
+        "verify": {
+          "kind": "sympy",
+          "expr": "20 / 4"
+        }
       },
       {
         "problem": "Find $\\frac{3}{4}$ of ₹20.",
@@ -56,7 +62,10 @@
           "So $\\frac{3}{4}$ of ₹20 is ₹15."
         ],
         "answer": "15",
-        "verify": { "kind": "sympy", "expr": "Rational(3, 4) * 20" }
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(3, 4) * 20"
+        }
       }
     ],
     "summary": [
@@ -67,157 +76,458 @@
     ]
   },
   "visuals": [
-    { "id": "v-equal-unequal", "purpose": "Contrast equal and unequal parts", "spec": "Two bars of equal length. Top: 4 equal parts. Bottom: 4 unequal parts (widths 1, 2, 3, 6). Nothing shaded. Labels 'Equal parts' and 'Not equal'.", "alt": "Two bars of the same length. The top bar is cut into 4 equal parts. The bottom bar is cut into 4 parts of different sizes.", "file": "content/visuals/s0-fractions-meaning/v-equal-unequal.svg", "checks": { "bars": [ { "parts": 4, "equal": true, "shaded": 0 }, { "parts": 4, "equal": false, "shaded": 0 } ] } },
-    { "id": "v-bar-3-4", "purpose": "Show three quarters", "spec": "One bar, 4 equal parts, first 3 shaded.", "alt": "A bar cut into 4 equal parts with 3 parts shaded, showing three quarters.", "file": "content/visuals/s0-fractions-meaning/v-bar-3-4.svg", "checks": { "bars": [ { "parts": 4, "equal": true, "shaded": 3 } ] } },
-    { "id": "v-half-vs-eighth", "purpose": "One half is bigger than one eighth", "spec": "Two bars of equal length: 2 equal parts with 1 shaded; 8 equal parts with 1 shaded.", "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded. The bottom bar is cut into 8 equal parts with 1 shaded. The shaded half is much bigger than the shaded eighth.", "file": "content/visuals/s0-fractions-meaning/v-half-vs-eighth.svg", "checks": { "bars": [ { "parts": 2, "equal": true, "shaded": 1 }, { "parts": 8, "equal": true, "shaded": 1 } ] } },
-    { "id": "v-laddoos-12", "purpose": "One third of 12 as equal groups", "spec": "12 dots in 3 groups of 4; first group highlighted.", "alt": "Twelve laddoos arranged in 3 equal groups of 4. One group is highlighted, showing that one third of 12 is 4.", "file": "content/visuals/s0-fractions-meaning/v-laddoos-12.svg", "checks": { "groups": 3, "per_group": 4, "highlighted_groups": 1 } },
-    { "id": "v-bar-1-3", "purpose": "Practice: name the fraction", "spec": "One bar, 3 equal parts, 1 shaded.", "alt": "A bar cut into 3 equal parts with 1 part shaded.", "file": "content/visuals/s0-fractions-meaning/v-bar-1-3.svg", "checks": { "bars": [ { "parts": 3, "equal": true, "shaded": 1 } ] } },
-    { "id": "v-roti-3-8", "purpose": "Practice: name the fraction of a round roti", "spec": "Circle cut into 8 equal sectors, 3 shaded.", "alt": "A round roti cut into 8 equal slices with 3 slices shaded.", "file": "content/visuals/s0-fractions-meaning/v-roti-3-8.svg", "checks": { "sectors": 8, "shaded": 3 } },
-    { "id": "v-unequal-4", "purpose": "Practice: unequal parts are not quarters", "spec": "One bar, 4 unequal parts (widths 5, 1, 1, 1), first (largest) shaded.", "alt": "A bar cut into 4 parts of different sizes. The largest part, which covers more than half the bar, is shaded.", "file": "content/visuals/s0-fractions-meaning/v-unequal-4.svg", "checks": { "bars": [ { "parts": 4, "equal": false, "shaded": 1 } ] } },
-    { "id": "v-bar-4-7", "purpose": "Quiz: name the fraction", "spec": "One bar, 7 equal parts, 4 shaded.", "alt": "A bar cut into 7 equal parts with 4 parts shaded.", "file": "content/visuals/s0-fractions-meaning/v-bar-4-7.svg", "checks": { "bars": [ { "parts": 7, "equal": true, "shaded": 4 } ] } },
-    { "id": "v-unequal-3", "purpose": "Quiz: unequal thirds", "spec": "One bar, 3 unequal parts (widths 1, 1, 4), first shaded.", "alt": "A bar cut into 3 parts of different sizes. One small part is shaded.", "file": "content/visuals/s0-fractions-meaning/v-unequal-3.svg", "checks": { "bars": [ { "parts": 3, "equal": false, "shaded": 1 } ] } }
+    {
+      "id": "v-equal-unequal",
+      "purpose": "Contrast equal and unequal parts",
+      "spec": "Two bars of equal length. Top: 4 equal parts. Bottom: 4 unequal parts (widths 1, 2, 3, 6). Nothing shaded. Labels 'Equal' and 'Not equal'.",
+      "alt": "Two bars of the same length. The top bar is cut into 4 equal parts. The bottom bar is cut into 4 parts of different sizes.",
+      "file": "content/visuals/s0-fractions-meaning/v-equal-unequal.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 0
+          },
+          {
+            "parts": 4,
+            "equal": false,
+            "shaded": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-bar-3-4",
+      "purpose": "Show three quarters",
+      "spec": "One bar, 4 equal parts, first 3 shaded.",
+      "alt": "A bar cut into 4 equal parts with 3 parts shaded, showing three quarters.",
+      "file": "content/visuals/s0-fractions-meaning/v-bar-3-4.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-half-vs-eighth",
+      "purpose": "One half is bigger than one eighth",
+      "spec": "Two bars of equal length: 2 equal parts with 1 shaded; 8 equal parts with 1 shaded.",
+      "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded. The bottom bar is cut into 8 equal parts with 1 shaded. The shaded half is much bigger than the shaded eighth.",
+      "file": "content/visuals/s0-fractions-meaning/v-half-vs-eighth.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 2,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 8,
+            "equal": true,
+            "shaded": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-laddoos-12",
+      "purpose": "One third of 12 as equal groups",
+      "spec": "12 dots in 3 groups of 4; first group highlighted.",
+      "alt": "Twelve laddoos arranged in 3 equal groups of 4. One group is highlighted, showing that one third of 12 is 4.",
+      "file": "content/visuals/s0-fractions-meaning/v-laddoos-12.svg",
+      "checks": {
+        "groups": 3,
+        "per_group": 4,
+        "highlighted_groups": 1
+      }
+    },
+    {
+      "id": "v-bar-1-3",
+      "purpose": "Practice: name the fraction",
+      "spec": "One bar, 3 equal parts, 1 shaded.",
+      "alt": "A bar cut into 3 equal parts with 1 part shaded.",
+      "file": "content/visuals/s0-fractions-meaning/v-bar-1-3.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 3,
+            "equal": true,
+            "shaded": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-roti-3-8",
+      "purpose": "Practice: name the fraction of a round roti",
+      "spec": "Circle cut into 8 equal sectors, 3 shaded.",
+      "alt": "A round roti cut into 8 equal slices with 3 slices shaded.",
+      "file": "content/visuals/s0-fractions-meaning/v-roti-3-8.svg",
+      "checks": {
+        "sectors": 8,
+        "shaded": 3
+      }
+    },
+    {
+      "id": "v-unequal-4",
+      "purpose": "Practice: unequal parts are not quarters",
+      "spec": "One bar, 4 unequal parts (widths 5, 1, 1, 1), first (largest) shaded.",
+      "alt": "A bar cut into 4 parts that are not all the same size. The largest part, which covers more than half the bar, is shaded.",
+      "file": "content/visuals/s0-fractions-meaning/v-unequal-4.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 4,
+            "equal": false,
+            "shaded": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-bar-4-7",
+      "purpose": "Quiz: name the fraction",
+      "spec": "One bar, 7 equal parts, 4 shaded.",
+      "alt": "A bar cut into 7 equal parts with 4 parts shaded.",
+      "file": "content/visuals/s0-fractions-meaning/v-bar-4-7.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 7,
+            "equal": true,
+            "shaded": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "v-unequal-3",
+      "purpose": "Quiz: unequal thirds",
+      "spec": "One bar, 3 unequal parts (widths 1, 1, 4), first shaded.",
+      "alt": "A bar cut into 3 parts that are not all the same size. One small part is shaded.",
+      "file": "content/visuals/s0-fractions-meaning/v-unequal-3.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 3,
+            "equal": false,
+            "shaded": 1
+          }
+        ]
+      }
+    }
   ],
   "practice": [
     {
-      "id": "s0-fractions-meaning/p-1", "type": "numeric", "visual": "v-bar-1-3", "objective": 0,
+      "id": "s0-fractions-meaning/p-1",
+      "type": "numeric",
+      "visual": "v-bar-1-3",
+      "objective": 0,
       "prompt": "What fraction of the bar is shaded? Type it like 2/5.",
       "answer": "1/3",
-      "hints": ["How many equal parts is the bar cut into? That number goes on the bottom.", "How many parts are shaded? That number goes on top."],
+      "hints": [
+        "How many equal parts is the bar cut into? That number goes on the bottom.",
+        "How many parts are shaded? That number goes on top."
+      ],
       "explanation": "The bar has 3 equal parts and 1 is shaded, so the shaded fraction is $\\frac{1}{3}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(1, 3)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 3)"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-2", "type": "numeric", "visual": "v-roti-3-8", "objective": 0,
+      "id": "s0-fractions-meaning/p-2",
+      "type": "numeric",
+      "visual": "v-roti-3-8",
+      "objective": 0,
       "prompt": "Amma cut this roti into equal slices. What fraction of the roti is shaded?",
       "answer": "3/8",
-      "hints": ["Count all the slices first.", "There are 8 equal slices. How many are shaded?"],
+      "hints": [
+        "Count all the slices first.",
+        "There are 8 equal slices. How many are shaded?"
+      ],
       "explanation": "There are 8 equal slices and 3 are shaded, so the answer is $\\frac{3}{8}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(3, 8)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 8)"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-3", "type": "true_false", "visual": "v-unequal-4", "objective": 0,
+      "id": "s0-fractions-meaning/p-3",
+      "type": "true_false",
+      "visual": "v-unequal-4",
+      "objective": 0,
       "prompt": "This bar is cut into 4 parts and 1 part is shaded. Is the shaded part one quarter of the bar?",
       "answer": "false",
-      "hints": ["Look at the sizes of the 4 parts. Are they all the same?"],
-      "explanation": "No. Quarters must be 4 **equal** parts. These parts are different sizes, and the shaded part is more than half of the bar.",
-      "verify": { "kind": "manual", "reason": "Depends on the picture: the visual's checks confirm the parts are unequal." }
+      "hints": [
+        "Look at the sizes of the 4 parts. Are they all the same?"
+      ],
+      "explanation": "No. Quarters must be 4 **equal** parts. These parts are not all the same size, and the shaded part is more than half of the bar.",
+      "verify": {
+        "kind": "manual",
+        "reason": "Depends on the picture: the visual's checks confirm the parts are unequal."
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-4", "type": "numeric", "objective": 1,
+      "id": "s0-fractions-meaning/p-4",
+      "type": "numeric",
+      "objective": 1,
       "prompt": "In the fraction $\\frac{5}{8}$, how many equal parts is the whole cut into?",
       "answer": "8",
-      "hints": ["Which number tells how many equal parts: the top or the bottom?"],
+      "hints": [
+        "Which number tells how many equal parts: the top or the bottom?"
+      ],
       "explanation": "The denominator (bottom number) tells how many equal parts the whole is cut into. Here it is 8.",
-      "verify": { "kind": "sympy", "expr": "8" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "8"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-5", "type": "numeric", "objective": 1,
+      "id": "s0-fractions-meaning/p-5",
+      "type": "numeric",
+      "objective": 1,
       "prompt": "A pizza is cut into 6 equal slices. Arjun eats 1 slice and Zoya eats 2 slices. What fraction of the pizza did they eat altogether?",
       "answer": "3/6",
-      "hints": ["How many equal slices does the whole pizza have?", "How many slices were eaten in total?"],
+      "hints": [
+        "How many equal slices does the whole pizza have?",
+        "How many slices were eaten in total?"
+      ],
       "explanation": "The pizza has 6 equal slices and $1 + 2 = 3$ were eaten, so they ate $\\frac{3}{6}$ of the pizza. (That is the same amount as half the pizza.)",
-      "verify": { "kind": "sympy", "expr": "Rational(1 + 2, 6)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1 + 2, 6)"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-6", "type": "numeric", "objective": 2,
+      "id": "s0-fractions-meaning/p-6",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "What is $\\frac{1}{5}$ of 30?",
       "answer": "6",
-      "hints": ["Split 30 into 5 equal groups.", "$30 \\div 5 = ?$"],
+      "hints": [
+        "Split 30 into 5 equal groups.",
+        "$30 \\div 5 = ?$"
+      ],
       "explanation": "Split 30 into 5 equal groups: $30 \\div 5 = 6$. So $\\frac{1}{5}$ of 30 is 6.",
-      "verify": { "kind": "sympy", "expr": "Rational(1, 5) * 30" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 5) * 30"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-7", "type": "numeric", "objective": 2,
+      "id": "s0-fractions-meaning/p-7",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "There are 24 children in a class. $\\frac{2}{3}$ of them come to school by bus. How many children come by bus?",
       "answer": "16",
-      "hints": ["First find $\\frac{1}{3}$ of 24.", "$\\frac{1}{3}$ of 24 is 8. You need 2 of those parts."],
+      "hints": [
+        "First find $\\frac{1}{3}$ of 24.",
+        "$\\frac{1}{3}$ of 24 is 8. You need 2 of those parts."
+      ],
       "explanation": "$\\frac{1}{3}$ of 24 is $24 \\div 3 = 8$. Two of those parts is $2 \\times 8 = 16$ children.",
-      "verify": { "kind": "sympy", "expr": "Rational(2, 3) * 24" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2, 3) * 24"
+      }
     },
     {
-      "id": "s0-fractions-meaning/p-8", "type": "mcq", "objective": 1,
+      "id": "s0-fractions-meaning/p-8",
+      "type": "mcq",
+      "objective": 1,
       "prompt": "Two rotis are the same size. One is cut into 3 equal pieces and the other into 6 equal pieces. Which is bigger: one piece of the first roti or one piece of the second?",
       "options": [
-        { "text": "$\\frac{1}{3}$ of a roti", "value": "1/3", "correct": true },
-        { "text": "$\\frac{1}{6}$ of a roti", "value": "1/6", "correct": false, "why_wrong": "6 is bigger than 3, but cutting into **more** pieces makes each piece **smaller**." }
+        {
+          "text": "A piece of the first roti ($\\frac{1}{3}$)",
+          "value": "1/3",
+          "correct": true
+        },
+        {
+          "text": "A piece of the second roti ($\\frac{1}{6}$)",
+          "value": "1/6",
+          "correct": false,
+          "why_wrong": "6 is bigger than 3, but cutting into **more** pieces makes each piece **smaller**."
+        }
       ],
-      "answer": "$\\frac{1}{3}$ of a roti",
-      "hints": ["Imagine sharing one roti with 3 people, then with 6 people. When does each person get more?"],
+      "answer": "A piece of the first roti ($\\frac{1}{3}$)",
+      "hints": [
+        "Imagine sharing one roti with 3 people, then with 6 people. When does each person get more?"
+      ],
       "explanation": "Cutting the same roti into fewer pieces makes each piece bigger, so $\\frac{1}{3}$ is bigger than $\\frac{1}{6}$.",
-      "verify": { "kind": "sympy", "expr": "Max(Rational(1, 3), Rational(1, 6))" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(1, 3), Rational(1, 6))"
+      }
     }
   ],
   "quiz": [
     {
-      "id": "s0-fractions-meaning/q-1", "type": "numeric", "visual": "v-bar-4-7", "objective": 0,
+      "id": "s0-fractions-meaning/q-1",
+      "type": "numeric",
+      "visual": "v-bar-4-7",
+      "objective": 0,
       "prompt": "What fraction of the bar is shaded?",
       "answer": "4/7",
-      "hints": ["Count all the equal parts for the bottom number."],
+      "hints": [
+        "Count all the equal parts for the bottom number."
+      ],
       "explanation": "There are 7 equal parts and 4 are shaded: $\\frac{4}{7}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(4, 7)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(4, 7)"
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-2", "type": "mcq", "objective": 1,
+      "id": "s0-fractions-meaning/q-2",
+      "type": "mcq",
+      "objective": 1,
       "prompt": "In the fraction $\\frac{2}{9}$, what does the 9 tell us?",
       "options": [
-        { "text": "The whole is cut into 9 equal parts", "correct": true },
-        { "text": "9 parts are shaded", "correct": false, "why_wrong": "The number of parts we count is the **top** number, 2." },
-        { "text": "The fraction is bigger than 1", "correct": false, "why_wrong": "$\\frac{2}{9}$ is only 2 of 9 equal parts, which is less than one whole." }
+        {
+          "text": "The whole is cut into 9 equal parts",
+          "correct": true
+        },
+        {
+          "text": "9 parts are shaded",
+          "correct": false,
+          "why_wrong": "The number of parts we count is the **top** number, 2."
+        },
+        {
+          "text": "The fraction is bigger than 1",
+          "correct": false,
+          "why_wrong": "$\\frac{2}{9}$ is only 2 of 9 equal parts, which is less than one whole."
+        }
       ],
       "answer": "The whole is cut into 9 equal parts",
-      "hints": ["The bottom number is called the denominator. What does it count?"],
+      "hints": [
+        "The bottom number is called the denominator. What does it count?"
+      ],
       "explanation": "The denominator (bottom number) tells how many equal parts the whole is cut into: 9.",
-      "verify": { "kind": "manual", "reason": "Concept question about the meaning of the denominator." }
+      "verify": {
+        "kind": "manual",
+        "reason": "Concept question about the meaning of the denominator."
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-3", "type": "true_false", "visual": "v-unequal-3", "objective": 0,
+      "id": "s0-fractions-meaning/q-3",
+      "type": "true_false",
+      "visual": "v-unequal-3",
+      "objective": 0,
       "prompt": "This bar is cut into 3 parts and 1 part is shaded. Is $\\frac{1}{3}$ of the bar shaded?",
       "answer": "false",
-      "hints": ["Thirds must be 3 equal parts. Are these parts equal?"],
+      "hints": [
+        "Thirds must be 3 equal parts. Are these parts equal?"
+      ],
       "explanation": "No. The parts are not equal, so the shaded part is not a third. It is smaller than a third.",
-      "verify": { "kind": "manual", "reason": "Depends on the picture: the visual's checks confirm the parts are unequal." }
+      "verify": {
+        "kind": "manual",
+        "reason": "Depends on the picture: the visual's checks confirm the parts are unequal."
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-4", "type": "mcq", "objective": 1,
+      "id": "s0-fractions-meaning/q-4",
+      "type": "mcq",
+      "objective": 1,
       "prompt": "Ravi gets $\\frac{1}{4}$ of a watermelon. Sana gets $\\frac{1}{10}$ of the same watermelon. Who gets more?",
       "options": [
-        { "text": "Ravi", "value": "1/4", "correct": true },
-        { "text": "Sana", "value": "1/10", "correct": false, "why_wrong": "10 is bigger than 4, but a watermelon cut into 10 equal parts has **smaller** parts than one cut into 4." }
+        {
+          "text": "Ravi",
+          "value": "1/4",
+          "correct": true
+        },
+        {
+          "text": "Sana",
+          "value": "1/10",
+          "correct": false,
+          "why_wrong": "10 is bigger than 4. But cutting into 10 equal parts makes **smaller** parts than cutting into 4."
+        }
       ],
       "answer": "Ravi",
-      "hints": ["Which is bigger: one of 4 equal parts, or one of 10 equal parts?"],
+      "hints": [
+        "Which is bigger: one of 4 equal parts, or one of 10 equal parts?"
+      ],
       "explanation": "One of 4 equal parts is bigger than one of 10 equal parts, so Ravi gets more.",
-      "verify": { "kind": "sympy", "expr": "Max(Rational(1, 4), Rational(1, 10))" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Max(Rational(1, 4), Rational(1, 10))"
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-5", "type": "numeric", "objective": 2,
+      "id": "s0-fractions-meaning/q-5",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "What is $\\frac{1}{6}$ of 42?",
       "answer": "7",
-      "hints": ["Divide 42 into 6 equal groups."],
+      "hints": [
+        "Divide 42 into 6 equal groups."
+      ],
       "explanation": "$42 \\div 6 = 7$, so $\\frac{1}{6}$ of 42 is 7.",
-      "verify": { "kind": "sympy", "expr": "Rational(1, 6) * 42" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 6) * 42"
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-6", "type": "numeric", "objective": 2,
+      "id": "s0-fractions-meaning/q-6",
+      "type": "numeric",
+      "objective": 2,
       "prompt": "A fruit seller has 40 bananas. He sells $\\frac{3}{8}$ of them. How many bananas does he sell?",
       "answer": "15",
-      "hints": ["First find $\\frac{1}{8}$ of 40.", "Then take 3 of those parts."],
+      "hints": [
+        "First find $\\frac{1}{8}$ of 40.",
+        "Then take 3 of those parts."
+      ],
       "explanation": "$\\frac{1}{8}$ of 40 is $40 \\div 8 = 5$. Three parts is $3 \\times 5 = 15$ bananas.",
-      "verify": { "kind": "sympy", "expr": "Rational(3, 8) * 40" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 8) * 40"
+      }
     },
     {
-      "id": "s0-fractions-meaning/q-7", "type": "numeric", "objective": 0,
+      "id": "s0-fractions-meaning/q-7",
+      "type": "numeric",
+      "objective": 0,
       "prompt": "A ribbon is cut into 10 equal pieces. 7 pieces are used to decorate a diya stand. What fraction of the ribbon is used?",
       "answer": "7/10",
-      "hints": ["How many equal pieces in the whole ribbon? How many were used?"],
+      "hints": [
+        "How many equal pieces in the whole ribbon? How many were used?"
+      ],
       "explanation": "7 of 10 equal pieces were used: $\\frac{7}{10}$.",
-      "verify": { "kind": "sympy", "expr": "Rational(7, 10)" }
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 10)"
+      }
     }
   ],
   "doubts": [
-    { "q": "Is $\\frac{3}{6}$ the same as $\\frac{1}{2}$?", "a": "Yes, they are the same amount. You will see why in the topic on equivalent fractions." },
-    { "q": "Why do we call 4 parts 'quarters'?", "a": "\"Quarter\" is an old word for one of four equal parts. It is the same as saying \"fourths\"." },
-    { "q": "Can the top number be bigger than the bottom number?", "a": "Yes. $\\frac{5}{4}$ means five quarters, which is more than one whole. You will meet these on the number line next." },
-    { "q": "What if I cut something into 1 part?", "a": "Then the one part is the whole thing: $\\frac{1}{1} = 1$." }
+    {
+      "q": "Is $\\frac{3}{6}$ the same as $\\frac{1}{2}$?",
+      "a": "Yes, they are the same amount. You will see why in the topic on equivalent fractions."
+    },
+    {
+      "q": "Why do we call 4 parts 'quarters'?",
+      "a": "\"Quarter\" is an old word for one of four equal parts. It is the same as saying \"fourths\"."
+    },
+    {
+      "q": "Can the top number be bigger than the bottom number?",
+      "a": "Yes. $\\frac{5}{4}$ means five quarters, which is more than one whole. You will meet these on the number line next."
+    },
+    {
+      "q": "What if I cut something into 1 part?",
+      "a": "Then the one part is the whole thing: $\\frac{1}{1} = 1$."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content.py passed (35/0, 3 manual warnings). I worked out all 26 values again with my own SymPy code, confirmed the manual items against the drawn widths (p-3 shades 5/8, q-3 shades 1/6), and checked every visual against make.py and the meta files. 0 blocking issues, 5 suggestions; see content/reviews/s0-fractions-meaning.md."
+    }
   ]
 }
