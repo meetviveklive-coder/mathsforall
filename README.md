@@ -45,7 +45,7 @@ npm test               # unit tests
 Astro 7 needs Node.js 22.23.4 or newer (`.node-version` pins 24 for Cloudflare builds).
 
 ## Deploy (Cloudflare)
-Every push to `main` builds and deploys. Settings: root directory `site`, build command `npm run build`, output directory `dist`, environment variable `NODE_VERSION=24`. Only `approved` topics are published.
+Deployed as a Cloudflare Worker with static assets. Every push to `main` builds and deploys. Settings: root directory empty (repo root), build command `npm run build` (builds `site/` via the root `package.json`), deploy command `npx wrangler deploy` (uses the root `wrangler.jsonc`). Only `approved` topics are published.
 
 ## Commands
 ```bash
