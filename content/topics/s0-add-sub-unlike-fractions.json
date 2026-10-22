@@ -1,0 +1,500 @@
+{
+  "id": "s0-add-sub-unlike-fractions",
+  "title": "Adding and subtracting fractions with different denominators",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Nani is making kheer. She pours $\\frac{1}{2}$ litre of milk into the pot. Then her grandson Aditya adds $\\frac{1}{3}$ litre more.\n\nHow much milk is in the pot now? Halves and thirds are pieces of different sizes, so we cannot count them together yet. In this topic you will learn the trick: give both fractions the **same denominator** first.",
+    "sections": [
+      {
+        "heading": "Why we cannot add them yet",
+        "body": "You already know how to add $\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}$. Both are fifths, so you count the fifths.\n\nNow look at $\\frac{1}{2}$ and $\\frac{1}{3}$. The two bars are the same length. But a half piece is **bigger** than a third piece. The two pieces are not the same size. So we cannot call the total '2 of something' yet.",
+        "visual": "ul-half-third"
+      },
+      {
+        "heading": "Find a common denominator",
+        "body": "We need a size of piece that **both** fractions can be cut into. A *common denominator* is a number that both denominators divide into exactly.\n\nList the multiples of each denominator:\n\n- Multiples of 2: 2, 4, **6**, 8, 10, 12\n- Multiples of 3: 3, **6**, 9, 12\n\n6 is in both lists, so 6 is a common denominator. 12 is one too, but 6 is the smallest. Small numbers keep the working easy.\n\nTip: multiplying the two denominators always gives a common denominator. $2 \\times 3 = 6$ works here."
+      },
+      {
+        "heading": "Rename, then add or subtract",
+        "body": "Now rename each fraction in sixths. Multiply the top and the bottom by the same number:\n\n- $\\frac{1}{2} = \\frac{1 \\times 3}{2 \\times 3} = \\frac{3}{6}$\n- $\\frac{1}{3} = \\frac{1 \\times 2}{3 \\times 2} = \\frac{2}{6}$\n\nNow both are sixths, so count them: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$. Nani's pot has $\\frac{5}{6}$ litre of milk.\n\nSubtracting works the same way: $\\frac{1}{2} - \\frac{1}{3} = \\frac{3}{6} - \\frac{2}{6} = \\frac{1}{6}$.\n\nAlways simplify your answer at the end if you can.",
+        "visual": "ul-sixths"
+      },
+      {
+        "heading": "Two mistakes to watch for",
+        "body": "**Mistake 1: adding the tops and adding the bottoms.** Some people write $\\frac{1}{2} + \\frac{1}{3} = \\frac{2}{5}$. Look at the bars. $\\frac{2}{5}$ is **less** than $\\frac{1}{2}$ on its own! Adding more milk cannot give less milk. Keep the common denominator; add only the numerators.\n\n**Mistake 2: changing only the bottom.** $\\frac{1}{2}$ is not $\\frac{1}{6}$. When you multiply the denominator, multiply the numerator by the same number too.",
+        "visual": "ul-not-2-5"
+      },
+      {
+        "heading": "Mixed numbers",
+        "body": "To add mixed numbers, add the whole numbers, then add the fractions:\n\n$2\\frac{1}{2} + 1\\frac{1}{3} = 3 + \\frac{3}{6} + \\frac{2}{6} = 3\\frac{5}{6}$\n\nSubtracting can be harder. In $3\\frac{1}{4} - 1\\frac{1}{2}$, the fraction $\\frac{1}{4}$ is smaller than $\\frac{1}{2}$. A safe way is to turn both into improper fractions first:\n\n$3\\frac{1}{4} - 1\\frac{1}{2} = \\frac{13}{4} - \\frac{6}{4} = \\frac{7}{4} = 1\\frac{3}{4}$"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Work out $\\frac{2}{3} + \\frac{1}{4}$.",
+        "steps": [
+          "Find a common denominator. Multiples of 3: 3, 6, 9, 12. Multiples of 4: 4, 8, 12. Use 12.",
+          "Rename: $\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$ and $\\frac{1}{4} = \\frac{1 \\times 3}{4 \\times 3} = \\frac{3}{12}$.",
+          "Add the numerators: $\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}$.",
+          "11 and 12 have no common factor except 1, so $\\frac{11}{12}$ is in simplest form."
+        ],
+        "answer": "11/12",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(2, 3) + Rational(1, 4)"
+        }
+      },
+      {
+        "problem": "Joseph has $\\frac{5}{6}$ of a cake. He gives $\\frac{1}{4}$ of the cake to his neighbour. How much of the cake is left?",
+        "steps": [
+          "We need $\\frac{5}{6} - \\frac{1}{4}$.",
+          "Multiples of 6: 6, 12. Multiples of 4: 4, 8, 12. Use 12.",
+          "Rename: $\\frac{5}{6} = \\frac{10}{12}$ and $\\frac{1}{4} = \\frac{3}{12}$.",
+          "Subtract the numerators: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$. So $\\frac{7}{12}$ of the cake is left."
+        ],
+        "answer": "7/12",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(5, 6) - Rational(1, 4)"
+        }
+      },
+      {
+        "problem": "Work out $3\\frac{1}{4} - 1\\frac{1}{2}$.",
+        "steps": [
+          "Turn both into improper fractions: $3\\frac{1}{4} = \\frac{13}{4}$ and $1\\frac{1}{2} = \\frac{3}{2}$.",
+          "Use the common denominator 4: $\\frac{3}{2} = \\frac{6}{4}$.",
+          "Subtract: $\\frac{13}{4} - \\frac{6}{4} = \\frac{7}{4}$.",
+          "Turn it back into a mixed number: 7 quarters is 1 whole and 3 quarters, so $1\\frac{3}{4}$."
+        ],
+        "answer": "1 3/4",
+        "verify": {
+          "kind": "sympy",
+          "expr": "(3 + Rational(1, 4)) - (1 + Rational(1, 2))"
+        }
+      }
+    ],
+    "summary": [
+      "To add or subtract fractions, they must have the same denominator.",
+      "A common denominator is a number both denominators divide into exactly.",
+      "Rename each fraction by multiplying its top and bottom by the same number.",
+      "Then add or subtract the numerators only. Keep the denominator.",
+      "For mixed numbers, add wholes and fractions, or change to improper fractions first."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "ul-half-third",
+      "purpose": "1/2 and 1/3 have pieces of different sizes",
+      "spec": "Two bars of equal length. The top has 2 parts with 1 shaded, labelled 1/2. The bottom has 3 parts with 1 shaded, labelled 1/3.",
+      "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded, labelled one half. The bottom bar is cut into 3 equal parts with 1 shaded, labelled one third. The shaded half is longer than the shaded third.",
+      "file": "content/visuals/s0-add-sub-unlike-fractions/ul-half-third.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 2,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 3,
+            "equal": true,
+            "shaded": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "ul-sixths",
+      "purpose": "3/6 + 2/6 = 5/6",
+      "spec": "Three bars of equal length, each cut into 6 equal parts. Shaded 3, 2 and 5. Labels 3/6, 2/6, 5/6.",
+      "alt": "Three bars of the same length, each cut into 6 equal parts. The first has 3 parts shaded, labelled three sixths. The second has 2 parts shaded, labelled two sixths. The third has 5 parts shaded, labelled five sixths.",
+      "file": "content/visuals/s0-add-sub-unlike-fractions/ul-sixths.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 6,
+            "equal": true,
+            "shaded": 3
+          },
+          {
+            "parts": 6,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 6,
+            "equal": true,
+            "shaded": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "ul-not-2-5",
+      "purpose": "2/5 is less than 1/2, so 1/2 + 1/3 cannot be 2/5",
+      "spec": "Two bars of equal length. The top has 2 parts with 1 shaded, labelled 1/2. The bottom has 5 parts with 2 shaded, labelled 2/5.",
+      "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded, labelled one half. The bottom bar is cut into 5 equal parts with 2 shaded, labelled two fifths. The shaded part of the bottom bar is shorter than the shaded half.",
+      "file": "content/visuals/s0-add-sub-unlike-fractions/ul-not-2-5.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 2,
+            "equal": true,
+            "shaded": 1
+          },
+          {
+            "parts": 5,
+            "equal": true,
+            "shaded": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "ul-p1",
+      "purpose": "Practice: 1/2 + 1/4 using quarters",
+      "spec": "Two bars of equal length, each cut into 4 equal parts. The top has 2 parts shaded. The bottom has 1 part shaded. No labels.",
+      "alt": "Two bars of the same length, each cut into 4 equal parts. The top bar has 2 parts shaded. The bottom bar has 1 part shaded.",
+      "file": "content/visuals/s0-add-sub-unlike-fractions/ul-p1.svg",
+      "checks": {
+        "bars": [
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 2
+          },
+          {
+            "parts": 4,
+            "equal": true,
+            "shaded": 1
+          }
+        ]
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-add-sub-unlike-fractions/p-1",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "The top bar shows $\\frac{1}{2}$ cut into quarters: 2 of its 4 parts are shaded. The bottom bar shows $\\frac{1}{4}$. Work out $\\frac{1}{2} + \\frac{1}{4}$.",
+      "answer": "3/4",
+      "hints": [
+        "How many quarters are shaded in the two bars together?"
+      ],
+      "explanation": "$\\frac{1}{2} = \\frac{2}{4}$. So $\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 2) + Rational(1, 4)"
+      },
+      "visual": "ul-p1"
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "What is the smallest common denominator for $\\frac{1}{4}$ and $\\frac{1}{6}$? Type a whole number.",
+      "answer": "12",
+      "hints": [
+        "List the multiples of 4: 4, 8, 12, ...",
+        "List the multiples of 6: 6, 12, ... Which number comes first in both lists?"
+      ],
+      "explanation": "Multiples of 4: 4, 8, **12**. Multiples of 6: 6, **12**. The smallest number in both lists is 12.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "lcm(4, 6)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "To add $\\frac{2}{3}$ and $\\frac{1}{4}$, you rename both in twelfths. Fill in the box: $\\frac{2}{3} = \\frac{\\square}{12}$ Type the number that goes in the box.",
+      "answer": "8",
+      "hints": [
+        "3 times what is 12?",
+        "Multiply the top by the same number."
+      ],
+      "explanation": "$3 \\times 4 = 12$, so multiply the top by 4 too: $2 \\times 4 = 8$. $\\frac{2}{3} = \\frac{8}{12}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2, 3) * 12"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $\\frac{1}{3} + \\frac{1}{6}$. Give your answer in simplest form.",
+      "answer": "1/2",
+      "hints": [
+        "6 is already a multiple of 3. Rename $\\frac{1}{3}$ in sixths.",
+        "Simplify your answer at the end."
+      ],
+      "explanation": "$\\frac{1}{3} = \\frac{2}{6}$. So $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$. Divide top and bottom by 3: $\\frac{3}{6} = \\frac{1}{2}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 3) + Rational(1, 6)"
+      },
+      "match": "simplest"
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $\\frac{3}{4} - \\frac{1}{3}$.",
+      "answer": "5/12",
+      "hints": [
+        "Use 12 as the common denominator.",
+        "$\\frac{3}{4} = \\frac{9}{12}$ and $\\frac{1}{3} = \\frac{4}{12}$."
+      ],
+      "explanation": "$\\frac{9}{12} - \\frac{4}{12} = \\frac{5}{12}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 4) - Rational(1, 3)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-6",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "What is $\\frac{1}{2} + \\frac{1}{5}$?",
+      "options": [
+        {
+          "text": "$\\frac{7}{10}$",
+          "value": "7/10",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{2}{7}$",
+          "value": "2/7",
+          "correct": false,
+          "why_wrong": "This adds the tops and adds the bottoms. Rename both in tenths first, then add only the tops."
+        },
+        {
+          "text": "$\\frac{6}{10}$",
+          "value": "6/10",
+          "correct": false,
+          "why_wrong": "$\\frac{1}{5}$ was changed to $\\frac{1}{10}$, but the top was not multiplied. $\\frac{1}{5} = \\frac{2}{10}$."
+        },
+        {
+          "text": "$\\frac{2}{10}$",
+          "value": "2/10",
+          "correct": false,
+          "why_wrong": "Both bottoms were changed to 10, but neither top was multiplied. $\\frac{1}{2} = \\frac{5}{10}$ and $\\frac{1}{5} = \\frac{2}{10}$."
+        }
+      ],
+      "answer": "$\\frac{7}{10}$",
+      "hints": [
+        "Use 10 as the common denominator. Remember to multiply the tops too."
+      ],
+      "explanation": "$\\frac{1}{2} = \\frac{5}{10}$ and $\\frac{1}{5} = \\frac{2}{10}$. So $\\frac{5}{10} + \\frac{2}{10} = \\frac{7}{10}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 2) + Rational(1, 5)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-7",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Thomas has a ribbon $\\frac{5}{6}$ metre long. He cuts off $\\frac{1}{3}$ metre for a rakhi. How many metres of ribbon are left? Type your answer as a fraction.",
+      "answer": "1/2",
+      "hints": [
+        "Work out $\\frac{5}{6} - \\frac{1}{3}$.",
+        "Rename $\\frac{1}{3}$ in sixths."
+      ],
+      "explanation": "$\\frac{1}{3} = \\frac{2}{6}$. So $\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6} = \\frac{1}{2}$. Half a metre is left.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 6) - Rational(1, 3)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Work out $1\\frac{1}{2} + 2\\frac{1}{4}$. Type your answer as a mixed number, like 2 1/3.",
+      "answer": "3 3/4",
+      "hints": [
+        "Add the whole numbers first: $1 + 2$.",
+        "Then add $\\frac{1}{2} + \\frac{1}{4}$ using quarters."
+      ],
+      "explanation": "Wholes: $1 + 2 = 3$. Fractions: $\\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}$. Together: $3\\frac{3}{4}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(1 + Rational(1, 2)) + (2 + Rational(1, 4))"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Farida's train journey takes $4\\frac{1}{3}$ hours. She has travelled for $1\\frac{1}{2}$ hours. How many hours are left? Type your answer as a mixed number, like 2 1/3.",
+      "answer": "2 5/6",
+      "hints": [
+        "Turn both into improper fractions: $4\\frac{1}{3} = \\frac{13}{3}$ and $1\\frac{1}{2} = \\frac{3}{2}$.",
+        "Use 6 as the common denominator."
+      ],
+      "explanation": "$\\frac{13}{3} = \\frac{26}{6}$ and $\\frac{3}{2} = \\frac{9}{6}$. So $\\frac{26}{6} - \\frac{9}{6} = \\frac{17}{6} = 2\\frac{5}{6}$ hours.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(4 + Rational(1, 3)) - (1 + Rational(1, 2))"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-add-sub-unlike-fractions/q-1",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "What is the smallest common denominator for $\\frac{1}{6}$ and $\\frac{3}{8}$?",
+      "options": [
+        {
+          "text": "24",
+          "value": "24",
+          "correct": true
+        },
+        {
+          "text": "14",
+          "value": "14",
+          "correct": false,
+          "why_wrong": "This adds the two denominators. 6 and 8 do not divide into 14 exactly."
+        },
+        {
+          "text": "8",
+          "value": "8",
+          "correct": false,
+          "why_wrong": "8 is a multiple of 8, but 6 does not divide into 8 exactly."
+        },
+        {
+          "text": "48",
+          "value": "48",
+          "correct": false,
+          "why_wrong": "48 works as a common denominator, but it is not the smallest. 24 is smaller."
+        }
+      ],
+      "answer": "24",
+      "hints": [
+        "List the multiples of 8: 8, 16, 24, ... Which is the first one 6 divides into?"
+      ],
+      "explanation": "Multiples of 6: 6, 12, 18, **24**. Multiples of 8: 8, 16, **24**. The smallest number in both lists is 24.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "lcm(6, 8)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-2",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $\\frac{2}{5} + \\frac{1}{3}$.",
+      "answer": "11/15",
+      "hints": [
+        "Use 15 as the common denominator."
+      ],
+      "explanation": "$\\frac{2}{5} = \\frac{6}{15}$ and $\\frac{1}{3} = \\frac{5}{15}$. So $\\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2, 5) + Rational(1, 3)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $\\frac{7}{8} - \\frac{1}{2}$.",
+      "answer": "3/8",
+      "hints": [
+        "8 is already a multiple of 2. Rename $\\frac{1}{2}$ in eighths."
+      ],
+      "explanation": "$\\frac{1}{2} = \\frac{4}{8}$. So $\\frac{7}{8} - \\frac{4}{8} = \\frac{3}{8}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 8) - Rational(1, 2)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-4",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Kiran says $\\frac{1}{2} + \\frac{1}{3} = \\frac{2}{5}$. Is she right?",
+      "answer": "false",
+      "hints": [
+        "Is $\\frac{2}{5}$ more or less than $\\frac{1}{2}$?"
+      ],
+      "explanation": "No. She added the tops and the bottoms. $\\frac{2}{5}$ is less than $\\frac{1}{2}$, so it cannot be the total. The right answer is $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(1, 2) + Rational(1, 3), Rational(2, 5))"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "For a Diwali rangoli, Lakshmi uses $\\frac{1}{4}$ kg of red powder and $\\frac{2}{3}$ kg of yellow powder. How many kilograms of powder does she use in all? Type your answer as a fraction.",
+      "answer": "11/12",
+      "hints": [
+        "Work out $\\frac{1}{4} + \\frac{2}{3}$.",
+        "Use 12 as the common denominator."
+      ],
+      "explanation": "$\\frac{1}{4} = \\frac{3}{12}$ and $\\frac{2}{3} = \\frac{8}{12}$. So $\\frac{3}{12} + \\frac{8}{12} = \\frac{11}{12}$ kg.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 4) + Rational(2, 3)"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Work out $2\\frac{2}{3} + 1\\frac{1}{2}$. Type your answer as a mixed number, like 2 1/3.",
+      "answer": "4 1/6",
+      "hints": [
+        "Add the wholes: $2 + 1 = 3$.",
+        "Add the fractions in sixths. Is the fraction part more than 1?"
+      ],
+      "explanation": "Wholes: $2 + 1 = 3$. Fractions: $\\frac{4}{6} + \\frac{3}{6} = \\frac{7}{6} = 1\\frac{1}{6}$. Together: $3 + 1\\frac{1}{6} = 4\\frac{1}{6}$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(2 + Rational(2, 3)) + (1 + Rational(1, 2))"
+      }
+    },
+    {
+      "id": "s0-add-sub-unlike-fractions/q-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Sunil walks $5\\frac{1}{4}$ km on a hill trek. He stops for lunch after $2\\frac{2}{3}$ km. How many kilometres are left after lunch? Type your answer as a mixed number, like 2 1/3.",
+      "answer": "2 7/12",
+      "hints": [
+        "Turn both into improper fractions: $\\frac{21}{4}$ and $\\frac{8}{3}$.",
+        "Use 12 as the common denominator."
+      ],
+      "explanation": "$\\frac{21}{4} = \\frac{63}{12}$ and $\\frac{8}{3} = \\frac{32}{12}$. So $\\frac{63}{12} - \\frac{32}{12} = \\frac{31}{12} = 2\\frac{7}{12}$ km.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(5 + Rational(1, 4)) - (2 + Rational(2, 3))"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Do I have to use the smallest common denominator?",
+      "a": "No. Any common denominator gives the right answer. For $\\frac{1}{4} + \\frac{1}{6}$, using 24 gives $\\frac{6}{24} + \\frac{4}{24} = \\frac{10}{24}$. That simplifies to $\\frac{5}{12}$, the same as using 12. The smallest one keeps the numbers small."
+    },
+    {
+      "q": "How can I find a common denominator quickly?",
+      "a": "First check if the bigger denominator works. For thirds and sixths, 3 divides into 6, so use 6. If not, multiply the two denominators. That always works."
+    },
+    {
+      "q": "Why don't I add the denominators too?",
+      "a": "The denominator tells you the **size** of each piece. When you put sixths together, they are still sixths. So $\\frac{3}{6} + \\frac{2}{6}$ is 5 sixths, not 5 twelfths."
+    },
+    {
+      "q": "What if the fraction part of my answer is more than 1?",
+      "a": "Turn the extra into a whole. For example, $4\\frac{5}{4}$ has $\\frac{5}{4} = 1\\frac{1}{4}$ in it. So $4\\frac{5}{4} = 5\\frac{1}{4}$."
+    }
+  ]
+}
