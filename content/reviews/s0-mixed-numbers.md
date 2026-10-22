@@ -32,3 +32,13 @@ Prerequisites: the topic uses division with remainder (s0-division-meaning) and 
 4. **Cross-topic: how mixed numbers are typed.** SUGGESTION.
    Problem: this topic says "Type a mixed number, like 4 1/3." s0-add-sub-like-fractions says "Type it like 2 1/3." s0-add-sub-unlike-fractions says "Type your answer as a mixed number, like 2 1/3". The method is the same, but the instruction changes from topic to topic.
    Fix: use one wording on every site, for example "Type a mixed number, like 2 1/3." doubts[4] here already explains it well.
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 41 checks, 0 fail, 0 warnings.
+
+1. BLOCKING, p-4 and q-3: fixed with option (b), using the new `improper` rule (now in the schema and the verifier). Both use `"match": "improper"`, and each prompt ends with "Type one fraction, like 7/5." p-4's answer is 7/5, so its example is "like 9/4", which keeps the example from being the answer. Answers (7/5, 14/3) are unchanged. Added doubts[5], "How do I type an improper fraction here?" (example 9/4).
+2. p-9 and q-2: applied. p-9 now asks only "Is 8/5 the same number as 1 3/5?", and Ravi's "wrong fraction" idea moved into the explanation. q-2 now ends with "Is Gurpreet right?", and its explanation starts "No.".
+3. p-8 and q-7: applied. The prompts now say "That is 11 half-litres. How many litres is that?" and "That is 15 quarter-hours. How many hours is that?". p-8 hint 1 now says "11 half-litres".
+4. Mixed-number wording: applied. All six `mixed` prompts (p-2, p-6, p-8, q-1, q-5, q-7) end with "Type a mixed number, like 2 1/3." None of their answers is 2 1/3. doubts[4] now uses 2 1/3 as its example.
+Pronouns: p-8 (Dadaji) uses no pronoun. No diagram changed, so make.py was not re-run.

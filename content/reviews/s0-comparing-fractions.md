@@ -31,3 +31,12 @@ Prerequisites: the topic uses equivalent fractions, times tables and the < and >
 4. **examples[1].problem: "the same size of bar".** SUGGESTION.
    Problem: the wording is awkward.
    Fix: write "Lalitha eats $\frac{4}{9}$ of a mango bar of the same size."
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 46 checks, 0 fail, 0 warnings.
+
+1. Common denominator (sections[2], doubts[0]): applied, using the house definition. Section 2 now says "a number that both 3 and 4 divide into exactly". It finds 12 by listing multiples of the bigger denominator (4, 8, 12), and says 12 is the smallest and that the smallest one is usually the easiest to use. doubts[0] uses the same wording. All "times table" wording is gone: examples[0] step 1, examples[2] step 1, and the hints for p-5, p-6 and q-4 now list multiples of the bigger denominator instead.
+2. p-6 and q-5: applied. Each has a third wrong option ("They walk the same distance" / "Both trains have gone the same distance"), with value `Eq(a, b)` (false, so it does not equal the correct value). The why_wrong explains that the parts are different sizes and gives the renamed fractions.
+3. doubts[2]: applied. Added "because 4 + 4 = 8, which is more than 7". No mixed number used.
+4. examples[1].problem: applied as suggested ("of a mango bar of the same size").

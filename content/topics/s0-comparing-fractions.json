@@ -1,7 +1,7 @@
 {
   "id": "s0-comparing-fractions",
   "title": "Comparing fractions",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Tanvi and her friend Joseph run on the same school track. Tanvi runs $\\frac{3}{4}$ of a lap. Joseph runs $\\frac{2}{3}$ of a lap.\n\nJoseph says, \"We ran the same, because we both stopped one part short!\" Is he right? In this topic you will learn to tell which fraction is bigger, even when the parts are different sizes.",
@@ -18,7 +18,7 @@
       },
       {
         "heading": "Different denominators: make them the same",
-        "body": "What about Tanvi's $\\frac{3}{4}$ and Joseph's $\\frac{2}{3}$? Quarters and thirds are different sizes, so we cannot count parts yet.\n\nRename both fractions with the **same denominator**. 12 is in the 3 times table and the 4 times table, so use twelfths:\n\n- $\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$\n- $\\frac{3}{4} = \\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}$\n\nNow the parts are the same size. 9 twelfths is more than 8 twelfths, so $\\frac{3}{4} > \\frac{2}{3}$. Tanvi ran a little more.\n\nA shared denominator like 12 is called a **common denominator**. Be careful: do not compare only the numerators when the denominators differ.",
+        "body": "What about Tanvi's $\\frac{3}{4}$ and Joseph's $\\frac{2}{3}$? Quarters and thirds are different sizes, so we cannot count parts yet.\n\nRename both fractions with the **same denominator**. We need a number that both 3 and 4 divide into exactly. List the multiples of the bigger denominator, 4: 4, 8, 12. 3 divides into 12 exactly, so use twelfths:\n\n- $\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$\n- $\\frac{3}{4} = \\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}$\n\nNow the parts are the same size. 9 twelfths is more than 8 twelfths, so $\\frac{3}{4} > \\frac{2}{3}$. Tanvi ran a little more.\n\nA number that both denominators divide into exactly is called a **common denominator**. 12 is the smallest one for thirds and quarters. The smallest one is usually the easiest to use. Be careful: do not compare only the numerators when the denominators differ.",
         "visual": "cf-twelfths"
       },
       {
@@ -31,7 +31,7 @@
       {
         "problem": "Which is bigger: $\\frac{5}{6}$ or $\\frac{7}{9}$?",
         "steps": [
-          "The denominators are different, so find a common denominator. 18 is in both the 6 times table and the 9 times table.",
+          "The denominators are different, so find a common denominator. List the multiples of 9: 9, 18. 6 divides into 18 exactly, so use 18.",
           "$\\frac{5}{6} = \\frac{5 \\times 3}{6 \\times 3} = \\frac{15}{18}$.",
           "$\\frac{7}{9} = \\frac{7 \\times 2}{9 \\times 2} = \\frac{14}{18}$.",
           "15 eighteenths is more than 14 eighteenths. So $\\frac{5}{6}$ is bigger."
@@ -43,7 +43,7 @@
         }
       },
       {
-        "problem": "Harpreet eats $\\frac{4}{7}$ of a mango bar. Lalitha eats $\\frac{4}{9}$ of the same size of bar. Who eats more?",
+        "problem": "Harpreet eats $\\frac{4}{7}$ of a mango bar. Lalitha eats $\\frac{4}{9}$ of a mango bar of the same size. Who eats more?",
         "steps": [
           "The numerators are the same: both ate 4 parts.",
           "Sevenths are bigger than ninths, because a bar cut into 7 parts has bigger parts than one cut into 9.",
@@ -58,7 +58,7 @@
       {
         "problem": "Put these in order from smallest to largest: $\\frac{3}{4}$, $\\frac{5}{8}$, $\\frac{1}{2}$.",
         "steps": [
-          "8 is in the 2, 4 and 8 times tables, so use eighths.",
+          "2 and 4 both divide into 8 exactly, so use eighths.",
           "$\\frac{3}{4} = \\frac{6}{8}$, $\\frac{5}{8}$ stays the same, and $\\frac{1}{2} = \\frac{4}{8}$.",
           "Order the numerators: 4, 5, 6.",
           "So the order is $\\frac{1}{2}$, $\\frac{5}{8}$, $\\frac{3}{4}$."
@@ -315,7 +315,7 @@
       "prompt": "Which is bigger: $\\frac{2}{3}$ or $\\frac{5}{8}$? Type the bigger fraction, like 3/4.",
       "answer": "2/3",
       "hints": [
-        "24 is in both the 3 times table and the 8 times table.",
+        "List the multiples of 8: 8, 16, 24. 3 divides into 24 exactly.",
         "Rename both fractions as twenty-fourths."
       ],
       "explanation": "$\\frac{2}{3} = \\frac{16}{24}$ and $\\frac{5}{8} = \\frac{15}{24}$. 16 is more than 15, so $\\frac{2}{3}$ is bigger.",
@@ -340,11 +340,17 @@
           "value": "4/7",
           "correct": false,
           "why_wrong": "4 is more than 3, but sevenths are smaller than fifths. Compare with a common denominator: $\\frac{21}{35}$ is more than $\\frac{20}{35}$."
+        },
+        {
+          "text": "They walk the same distance",
+          "value": "Eq(Rational(3, 5), Rational(4, 7))",
+          "correct": false,
+          "why_wrong": "The two fractions look close, but the parts are different sizes. In thirty-fifths, $\\frac{21}{35}$ is not the same as $\\frac{20}{35}$."
         }
       ],
       "answer": "Neha ($\\frac{3}{5}$ km)",
       "hints": [
-        "35 is in both the 5 times table and the 7 times table.",
+        "List the multiples of 7: 7, 14, 21, 28, 35. 5 divides into 35 exactly.",
         "Rename both fractions as thirty-fifths."
       ],
       "explanation": "$\\frac{3}{5} = \\frac{21}{35}$ and $\\frac{4}{7} = \\frac{20}{35}$. 21 is more than 20, so Neha walks a little further.",
@@ -498,7 +504,7 @@
       "prompt": "Which is bigger: $\\frac{5}{6}$ or $\\frac{4}{5}$? Type the bigger fraction, like 3/4.",
       "answer": "5/6",
       "hints": [
-        "30 is in both the 6 times table and the 5 times table."
+        "List the multiples of 6: 6, 12, 18, 24, 30. 5 divides into 30 exactly."
       ],
       "explanation": "$\\frac{5}{6} = \\frac{25}{30}$ and $\\frac{4}{5} = \\frac{24}{30}$. 25 is more than 24, so $\\frac{5}{6}$ is bigger.",
       "verify": {
@@ -522,6 +528,12 @@
           "text": "The second train ($\\frac{2}{3}$)",
           "value": "2/3",
           "correct": true
+        },
+        {
+          "text": "Both trains have gone the same distance",
+          "value": "Eq(Rational(5, 8), Rational(2, 3))",
+          "correct": false,
+          "why_wrong": "Eighths and thirds are different sizes, so the fractions only look close. In twenty-fourths, $\\frac{15}{24}$ is not the same as $\\frac{16}{24}$."
         }
       ],
       "answer": "The second train ($\\frac{2}{3}$)",
@@ -602,7 +614,7 @@
   "doubts": [
     {
       "q": "Which common denominator should I choose?",
-      "a": "Any number in both times tables works. Multiplying the two denominators always works. A smaller one, like 12 for quarters and thirds, keeps the numbers easy."
+      "a": "Use a number that both denominators divide into exactly. The smallest one is usually the easiest to use. To find it, list the multiples of the bigger denominator. Stop at the first one the smaller denominator divides into. For quarters and thirds, that is 12. Multiplying the two denominators always works too."
     },
     {
       "q": "What if the two fractions come out the same?",
@@ -610,7 +622,7 @@
     },
     {
       "q": "Is there a quick check without a common denominator?",
-      "a": "Sometimes. Compare each fraction with one half. $\\frac{3}{8}$ is less than half, because 3 is less than half of 8. $\\frac{4}{7}$ is more than half. So $\\frac{3}{8} < \\frac{4}{7}$."
+      "a": "Sometimes. Compare each fraction with one half. $\\frac{3}{8}$ is less than half, because 3 is less than half of 8. $\\frac{4}{7}$ is more than half, because 4 + 4 = 8, which is more than 7. So $\\frac{3}{8} < \\frac{4}{7}$."
     },
     {
       "q": "Is $\\frac{1}{2}$ of a big watermelon the same as $\\frac{1}{2}$ of a small one?",

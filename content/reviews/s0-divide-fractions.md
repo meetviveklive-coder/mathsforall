@@ -52,3 +52,16 @@ Prerequisites: the lesson uses improper fractions and mixed numbers (from s0-mix
 - Both topics type mixed numbers the same way: "2 1/3", with the `mixed` rule (q-3 here, p-9 there). Both use "simplest form" with `simplest`. The bigger/smaller wording matches: "multiplying by a fraction less than 1 gives a smaller answer" there, and "dividing by a number less than 1 gives a bigger answer" here. q-8's option 8 × 1/2 uses that rule correctly.
 - The multiply topic's doubts[1] also says "common denominator" before that idea is taught, the same problem as finding 2. If the term is changed, change it in both topics.
 - I noticed a separate problem in s0-multiply-fractions p-8 that is for that topic's verifier: "Dadaji makes 3 pots of kheer ... How many litres of milk does she need?" Dadaji is a grandfather, so "she" does not match. This topic is not affected.
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 44 checks, 0 fail, 0 warnings.
+
+1. p-2: applied. The examples are now "like 2 1/3 or a fraction like 7/3". `value` is kept, so 1 1/2, 3/2 and 6/4 are all still accepted.
+2. doubts[3]: applied ("if they have the same denominator"). The matching change in s0-multiply-fractions doubts[1] was made too.
+3. summary[2]: applied ("Sharing a fraction among 3 people means dividing by 3. That is the same as multiplying by 1/3.").
+4. doubts[4]: applied as suggested.
+5. dv-share-half: applied in the drawing. make.py now has a small `tinted_bars` helper, built on draw.bars. The bottom bar shows sixth 1 dark and sixths 2 and 3 lightly shaded (fill-opacity 0.32, the same as the multiply area models). The meta is read back from the final SVG and now has `tinted`. make.py was re-run. The spec, alt and checks now describe 1 dark and 2 light under the shaded half (checks: shaded 1, tinted 2). sections[3] now says the 3 coloured sixths sit under the half, with each piece (1/6) shown dark.
+6. sections[2]: applied. Added "3 x 3/2 = 9/2, which is also 9 ÷ 2."
+7. visuals[1] and [2] specs: applied. Each is split into shorter sentences.
+House conventions: q-3 ends with "Type a mixed number, like 2 1/3." (answer 3 1/2). "Type a whole number." stays on the count questions p-1, p-8, q-1 and q-7. Nani (hook) is "she".

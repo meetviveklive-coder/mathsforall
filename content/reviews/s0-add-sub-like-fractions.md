@@ -53,3 +53,14 @@ Each alt text, spec and prompt matches its drawing.
 5. **hook: "her Mama".** SUGGESTION.
    Problem: in many Indian homes "Mama" means the mother's brother, but in English it means mother. Both readings work, but a child may wonder who is meant.
    Fix: use "Maa" or "Mama-ji" to make it clear, or keep it as it is if the ambiguity does not matter.
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 41 checks, 0 fail, 1 warning (q-3 manual MCQ, as before).
+
+1. Prerequisites: no content change needed. `curriculum/topic-map.json` already lists `s0-equivalent-fractions` as a prerequisite of this topic (prerequisites: s0-mixed-numbers, s0-equivalent-fractions). So simplest form, p-6 `simplest` and the equivalent-fraction steps are all covered. The q-4 comparison now uses fourteenths and sevenths (see 2), which needs only renaming from equivalent fractions. s0-comparing-fractions is not needed.
+2. q-4: applied as suggested. "Sunil writes 2/7 + 3/7 = 5/14. Is 5/14 less than 3/7?" (true; 3/7 = 6/14). verify is `Lt(Rational(5, 14), Rational(3, 7))`. The hint and explanation are updated.
+3. Dots named by colour: applied. The p-1 prompt, hint and explanation say "the first dot (green)" and "the dot where the jumps land (orange)". The al-p1 and al-nl-jumps alt texts say "The first dot (green)" and "a second dot (orange)". The drawings are unchanged (text only), so make.py was not re-run.
+4. Mixed-number wording: applied. p-7, p-9 and q-7 end with "Type a mixed number, like 2 1/3." (answers 1 3/8, 2 1/5, 1 1/2). q-7 now asks "How many kilometres does she run in all?" instead of "in km".
+5. Hook "her Mama": changed to "her Maa".
+Pronouns: Nani (hook) and Thatha (p-8) use no pronoun.

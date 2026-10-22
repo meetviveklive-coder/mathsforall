@@ -65,9 +65,42 @@ draw.save(OUT, "dv-hops-3-halves", *hops(3, 2, F(1, 2), "Hops of one half from 0
 draw.save(OUT, "dv-hops-34-half", *hops(F(3, 4), 4, F(1, 2), "Hops of one half from 0 to three quarters",
                                           labels="all", line_end=1))
 draw.save(OUT, "dv-hops-3-twothirds", *hops(3, 3, F(2, 3), "Hops of two thirds from 0 to 3"))
-draw.save(OUT, "dv-share-half", *draw.bars([
+def tinted_bars(rows: list[dict], title: str):
+    """Like draw.bars, but each row may also list `tinted` parts, drawn in a light shade.
+    Draws with draw.bars (all parts empty), then sets each part's fill in drawing order.
+    The meta (dark parts as `shaded`, light parts as `tinted`) is read back from the final SVG."""
+    from draw import EMPTY, FILL, STROKE
+    svg, _ = draw.bars([{**r, "shaded": []} for r in rows], title)
+    empty = f"fill:{EMPTY};stroke:{STROKE}"
+    dark_style = f"fill:{FILL};stroke:{STROKE}"
+    light_style = f"fill:{FILL};fill-opacity:0.32;stroke:{STROKE}"
+    styles = []
+    for r in rows:
+        for k in range(len(r["weights"])):
+            if k in r.get("shaded", []):
+                styles.append(dark_style)
+            elif k in r.get("tinted", []):
+                styles.append(light_style)
+            else:
+                styles.append(empty)
+    parts = svg.split(empty)
+    assert len(parts) == len(styles) + 1
+    svg = parts[0] + "".join(st + rest for st, rest in zip(styles, parts[1:]))
+    cells = [c.split("/>")[0] for c in svg.split("<rect ")[1:]]
+    meta_bars, i0 = [], 0
+    for r in rows:
+        row = cells[i0:i0 + len(r["weights"])]
+        i0 += len(row)
+        widths = {c.split('width="')[1].split('"')[0] for c in row}
+        meta_bars.append({"parts": len(row), "equal": len(widths) == 1,
+                          "shaded": sum(dark_style in c for c in row),
+                          "tinted": sum(light_style in c for c in row)})
+    return svg, {"bars": meta_bars}
+
+
+draw.save(OUT, "dv-share-half", *tinted_bars([
     {"weights": EQ(2), "shaded": [0], "label": "1/2"},
-    {"weights": EQ(6), "shaded": [0], "label": "1/6"},
+    {"weights": EQ(6), "shaded": [0], "tinted": [1, 2], "label": "1/6"},
 ], "One half shared into 3 equal pieces"))
 draw.save(OUT, "dv-p1", *hops(2, 4, F(1, 4), "Hops of one quarter from 0 to 2"))
 draw.save(OUT, "dv-q1", *hops(2, 3, F(2, 3), "Hops of two thirds from 0 to 2"))

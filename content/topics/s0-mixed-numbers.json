@@ -186,7 +186,7 @@
       "id": "s0-mixed-numbers/p-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Write $\\frac{9}{4}$ as a mixed number. Type a mixed number, like 4 1/3.",
+      "prompt": "Write $\\frac{9}{4}$ as a mixed number. Type a mixed number, like 2 1/3.",
       "answer": "2 1/4",
       "hints": [
         "How many quarters make one whole?",
@@ -219,7 +219,7 @@
       "id": "s0-mixed-numbers/p-4",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Write $1\\frac{2}{5}$ as an improper fraction.",
+      "prompt": "Write $1\\frac{2}{5}$ as an improper fraction. Type one fraction, like 9/4.",
       "answer": "7/5",
       "hints": [
         "How many fifths make one whole?",
@@ -229,7 +229,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "1 + Rational(2, 5)"
-      }
+      },
+      "match": "improper"
     },
     {
       "id": "s0-mixed-numbers/p-5",
@@ -252,7 +253,7 @@
       "type": "numeric",
       "visual": "mx-p6",
       "objective": 2,
-      "prompt": "Each whole is split into quarters. What number does the dot show? Type a mixed number, like 4 1/3.",
+      "prompt": "Each whole is split into quarters. What number does the dot show? Type a mixed number, like 2 1/3.",
       "answer": "1 3/4",
       "hints": [
         "Which two whole numbers is the dot between?",
@@ -309,10 +310,10 @@
       "id": "s0-mixed-numbers/p-8",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Dadaji fills 11 small bottles with water. Each bottle holds $\\frac{1}{2}$ litre. How many litres of water is that? Type a mixed number, like 4 1/3.",
+      "prompt": "Dadaji fills 11 small bottles with water. Each bottle holds $\\frac{1}{2}$ litre. That is 11 half-litres. How many litres is that? Type a mixed number, like 2 1/3.",
       "answer": "5 1/2",
       "hints": [
-        "11 bottles of half a litre is $\\frac{11}{2}$ litres.",
+        "11 half-litres is $\\frac{11}{2}$ litres.",
         "How many halves make 1 litre?"
       ],
       "explanation": "11 halves is $\\frac{11}{2}$. $11 \\div 2 = 5$, remainder 1. So it is $5\\frac{1}{2}$ litres.",
@@ -326,12 +327,12 @@
       "id": "s0-mixed-numbers/p-9",
       "type": "true_false",
       "objective": 0,
-      "prompt": "Ravi says $\\frac{8}{5}$ is a wrong fraction because 8 is bigger than 5. Is $\\frac{8}{5}$ the same number as $1\\frac{3}{5}$?",
+      "prompt": "Is $\\frac{8}{5}$ the same number as $1\\frac{3}{5}$?",
       "answer": "true",
       "hints": [
         "5 fifths make one whole. How many fifths are left over?"
       ],
-      "explanation": "True. $\\frac{8}{5}$ is 5 fifths (one whole) and 3 more fifths, so it equals $1\\frac{3}{5}$. An improper fraction is a real number, not a mistake.",
+      "explanation": "True. $\\frac{8}{5}$ is 5 fifths (one whole) and 3 more fifths, so it equals $1\\frac{3}{5}$. Some people say $\\frac{8}{5}$ is a wrong fraction because 8 is bigger than 5. It is not wrong. An improper fraction is a real number.",
       "verify": {
         "kind": "relation",
         "expr": "Eq(Rational(8, 5), 1 + Rational(3, 5))"
@@ -343,7 +344,7 @@
       "id": "s0-mixed-numbers/q-1",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Write $\\frac{11}{3}$ as a mixed number. Type a mixed number, like 4 1/3.",
+      "prompt": "Write $\\frac{11}{3}$ as a mixed number. Type a mixed number, like 2 1/3.",
       "answer": "3 2/3",
       "hints": [
         "Divide 11 by 3. What is the remainder?"
@@ -359,12 +360,12 @@
       "id": "s0-mixed-numbers/q-2",
       "type": "true_false",
       "objective": 1,
-      "prompt": "Gurpreet says $3\\frac{1}{2}$ is the same number as $\\frac{4}{2}$.",
+      "prompt": "Gurpreet says $3\\frac{1}{2}$ is the same number as $\\frac{4}{2}$. Is Gurpreet right?",
       "answer": "false",
       "hints": [
         "How many halves are in 3 wholes?"
       ],
-      "explanation": "False. $\\frac{4}{2}$ is only 2. 3 wholes are $3 \\times 2 = 6$ halves, plus 1 half makes $\\frac{7}{2}$.",
+      "explanation": "No. $\\frac{4}{2}$ is only 2. 3 wholes are $3 \\times 2 = 6$ halves, plus 1 half makes $\\frac{7}{2}$.",
       "verify": {
         "kind": "relation",
         "expr": "Eq(3 + Rational(1, 2), Rational(4, 2))"
@@ -374,7 +375,7 @@
       "id": "s0-mixed-numbers/q-3",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Write $4\\frac{2}{3}$ as an improper fraction.",
+      "prompt": "Write $4\\frac{2}{3}$ as an improper fraction. Type one fraction, like 7/5.",
       "answer": "14/3",
       "hints": [
         "4 wholes make how many thirds?"
@@ -383,7 +384,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "4 + Rational(2, 3)"
-      }
+      },
+      "match": "improper"
     },
     {
       "id": "s0-mixed-numbers/q-4",
@@ -405,7 +407,7 @@
       "type": "numeric",
       "visual": "mx-q5",
       "objective": 2,
-      "prompt": "Each whole is split into quarters. What number does the dot show? Type a mixed number, like 4 1/3.",
+      "prompt": "Each whole is split into quarters. What number does the dot show? Type a mixed number, like 2 1/3.",
       "answer": "2 3/4",
       "hints": [
         "Which two whole numbers is the dot between?"
@@ -461,7 +463,7 @@
       "id": "s0-mixed-numbers/q-7",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Farhan's train takes $\\frac{1}{4}$ hour to go from one station to the next. His trip has 15 such stretches. How many hours is the trip? Type a mixed number, like 4 1/3.",
+      "prompt": "Farhan's train takes $\\frac{1}{4}$ hour to go from one station to the next. His trip has 15 such stretches. That is 15 quarter-hours. How many hours is that? Type a mixed number, like 2 1/3.",
       "answer": "3 3/4",
       "hints": [
         "15 quarter-hours is $\\frac{15}{4}$ hours.",
@@ -494,7 +496,11 @@
     },
     {
       "q": "How do I type a mixed number here?",
-      "a": "Type the whole number, a space, then the fraction. For example, type 4 1/3 for four and one third."
+      "a": "Type the whole number, a space, then the fraction. For example, type 2 1/3 for two and one third."
+    },
+    {
+      "q": "How do I type an improper fraction here?",
+      "a": "Type it as one fraction, with no space and no whole number. For example, type 9/4 for nine quarters."
     }
   ]
 }

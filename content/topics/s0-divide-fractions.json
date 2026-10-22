@@ -1,7 +1,7 @@
 {
   "id": "s0-divide-fractions",
   "title": "Dividing fractions",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Nani has 3 litres of lassi for the family. Each glass holds $\\frac{1}{2}$ litre. How many glasses can she fill?\n\nTwo glasses use up 1 litre. So 3 litres fill 6 glasses. We started with 3 and got 6. Dividing gave a **bigger** number! In this topic you will see why.",
@@ -18,11 +18,11 @@
       },
       {
         "heading": "A shortcut: the reciprocal",
-        "body": "Look at a pattern. Each whole holds 2 halves, so 3 wholes hold $3 \\times 2 = 6$ halves.\n\nFor $3 \\div \\frac{2}{3}$: each whole holds 3 thirds, so 3 wholes hold 9 thirds. Each hop uses 2 thirds. That gives $9 \\div 2 = 4\\frac{1}{2}$ hops. This is the same as $3 \\times \\frac{3}{2}$.\n\nTurn a fraction upside down and you get its **reciprocal**. The reciprocal of $\\frac{2}{3}$ is $\\frac{3}{2}$. The reciprocal of 2 is $\\frac{1}{2}$.\n\n**To divide by a fraction, multiply by its reciprocal.**\n\n$\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8}$\n\nKeep the first number as it is. Flip **only** the second one, the number you divide by."
+        "body": "Look at a pattern. Each whole holds 2 halves, so 3 wholes hold $3 \\times 2 = 6$ halves.\n\nFor $3 \\div \\frac{2}{3}$: each whole holds 3 thirds, so 3 wholes hold 9 thirds. Each hop uses 2 thirds. That gives $9 \\div 2 = 4\\frac{1}{2}$ hops. This is the same as $3 \\times \\frac{3}{2}$. $3 \\times \\frac{3}{2} = \\frac{9}{2}$, which is also $9 \\div 2$.\n\nTurn a fraction upside down and you get its **reciprocal**. The reciprocal of $\\frac{2}{3}$ is $\\frac{3}{2}$. The reciprocal of 2 is $\\frac{1}{2}$.\n\n**To divide by a fraction, multiply by its reciprocal.**\n\n$\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8}$\n\nKeep the first number as it is. Flip **only** the second one, the number you divide by."
       },
       {
         "heading": "Sharing a fraction",
-        "body": "Half a roti is left. Three friends share it equally. How much does each friend get?\n\nThat is $\\frac{1}{2} \\div 3$. The bars show that the half splits into 3 pieces. Each piece is $\\frac{1}{6}$ of the whole roti.\n\nThe rule agrees. The reciprocal of 3 is $\\frac{1}{3}$, so $\\frac{1}{2} \\div 3 = \\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6}$.",
+        "body": "Half a roti is left. Three friends share it equally. How much does each friend get?\n\nThat is $\\frac{1}{2} \\div 3$. The bars show that the half splits into 3 pieces. In the bottom bar, the 3 coloured sixths sit under the half. Each piece is $\\frac{1}{6}$ of the whole roti, shown dark.\n\nThe rule agrees. The reciprocal of 3 is $\\frac{1}{3}$, so $\\frac{1}{2} \\div 3 = \\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6}$.",
         "visual": "dv-share-half"
       },
       {
@@ -76,7 +76,7 @@
     "summary": [
       "Dividing by a fraction asks how many times that fraction fits into the number.",
       "To divide by a fraction, multiply by its reciprocal. Flip only the second number.",
-      "Sharing a fraction among n people means dividing by n, which is the same as multiplying by 1/n.",
+      "Sharing a fraction among 3 people means dividing by 3. That is the same as multiplying by 1/3.",
       "Dividing by a number less than 1 gives a bigger answer."
     ]
   },
@@ -106,7 +106,7 @@
     {
       "id": "dv-hops-3-twothirds",
       "purpose": "3 ÷ 2/3: four full hops and half a hop",
-      "spec": "Number line 0 to 3 in thirds, only wholes labelled, dot at 3. Four solid hops of 2/3 numbered 1 to 4, then one dashed hop of 1/3 (half a hop) up to 3.",
+      "spec": "Number line 0 to 3 in thirds, only wholes labelled, dot at 3. Four solid hops of 2/3 are numbered 1 to 4. Then one dashed hop of 1/3 (half a hop) goes up to 3.",
       "alt": "A number line from 0 to 3, split into thirds, with a dot at 3. Four numbered hops, each two thirds long, reach two and two thirds. Then a dashed hop, half the size, covers the last third up to 3.",
       "file": "content/visuals/s0-divide-fractions/dv-hops-3-twothirds.svg",
       "checks": {
@@ -128,7 +128,7 @@
     {
       "id": "dv-hops-34-half",
       "purpose": "Practice: how many halves fit into 3/4",
-      "spec": "Number line 0 to 1 in quarters, every mark labelled, dot at 3/4. One solid hop of 1/2 numbered 1, then one dashed hop of 1/4 (half a hop) up to 3/4.",
+      "spec": "Number line 0 to 1 in quarters, every mark labelled, dot at 3/4. One solid hop of 1/2 is numbered 1. Then one dashed hop of 1/4 (half a hop) goes up to 3/4.",
       "alt": "A number line from 0 to 1 split into quarters. The marks are labelled 0, 1/4, 2/4, 3/4 and 1, with a dot at 3/4. One solid hop, numbered 1, goes from 0 to 2/4. Then a dashed hop, half the size, goes from 2/4 to the dot at 3/4.",
       "file": "content/visuals/s0-divide-fractions/dv-hops-34-half.svg",
       "checks": {
@@ -151,20 +151,22 @@
     {
       "id": "dv-share-half",
       "purpose": "1/2 shared by 3 gives 1/6 each",
-      "spec": "Two bars of equal length. Top: 2 equal parts, 1 shaded, label 1/2. Bottom: 6 equal parts, 1 shaded, label 1/6.",
-      "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded, labelled one half. The bottom bar is cut into 6 equal parts with 1 shaded, labelled one sixth. Three sixths fit exactly under the shaded half.",
+      "spec": "Two bars of equal length. Top: 2 equal parts, 1 shaded, label 1/2. Bottom: 6 equal parts. Part 1 is dark and parts 2 and 3 are light, label 1/6.",
+      "alt": "Two bars of the same length. The top bar is cut into 2 equal parts with 1 shaded, labelled one half. The bottom bar is cut into 6 equal parts, labelled one sixth. Its first 3 parts sit exactly under the shaded half. The first of them is dark and the next 2 are lightly shaded.",
       "file": "content/visuals/s0-divide-fractions/dv-share-half.svg",
       "checks": {
         "bars": [
           {
             "parts": 2,
             "equal": true,
-            "shaded": 1
+            "shaded": 1,
+            "tinted": 0
           },
           {
             "parts": 6,
             "equal": true,
-            "shaded": 1
+            "shaded": 1,
+            "tinted": 2
           }
         ]
       }
@@ -233,7 +235,7 @@
       "id": "s0-divide-fractions/p-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "The solid hop is $\\frac{1}{2}$ long. How many halves fit into $\\frac{3}{4}$? You can type a mixed number like 1 1/2 or a fraction like 3/2.",
+      "prompt": "The solid hop is $\\frac{1}{2}$ long. How many halves fit into $\\frac{3}{4}$? You can type a mixed number like 2 1/3 or a fraction like 7/3.",
       "answer": "3/2",
       "hints": [
         "One full hop reaches $\\frac{2}{4}$.",
@@ -438,7 +440,7 @@
       "id": "s0-divide-fractions/q-3",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Work out $\\frac{7}{8} \\div \\frac{1}{4}$. Give your answer as a mixed number, like 2 1/3.",
+      "prompt": "Work out $\\frac{7}{8} \\div \\frac{1}{4}$. Type a mixed number, like 2 1/3.",
       "answer": "3 1/2",
       "hints": [
         "Multiply by the reciprocal of $\\frac{1}{4}$, which is 4.",
@@ -570,11 +572,11 @@
     },
     {
       "q": "Can I divide fractions without flipping?",
-      "a": "Yes, if they have a common denominator. $\\frac{6}{8} \\div \\frac{3}{8}$ asks how many 3 eighths fit into 6 eighths. That is $6 \\div 3 = 2$."
+      "a": "Yes, if they have the same denominator. $\\frac{6}{8} \\div \\frac{3}{8}$ asks how many 3 eighths fit into 6 eighths. That is $6 \\div 3 = 2$."
     },
     {
       "q": "Does 0 have a reciprocal?",
-      "a": "No. You cannot divide by 0, because no number of empty hops ever reaches anywhere. So 0 has no reciprocal."
+      "a": "No. Flipping $\\frac{0}{1}$ gives $\\frac{1}{0}$, which means $1 \\div 0$. A hop of size 0 never moves you forward, so it can never fit into 1. So 0 has no reciprocal."
     }
   ],
   "review": [

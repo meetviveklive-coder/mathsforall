@@ -1,7 +1,7 @@
 {
   "id": "s0-add-sub-unlike-fractions",
   "title": "Adding and subtracting fractions with different denominators",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Nani is making kheer. She pours $\\frac{1}{2}$ litre of milk into the pot. Then her grandson Aditya adds $\\frac{1}{3}$ litre more.\n\nHow much milk is in the pot now? Halves and thirds are pieces of different sizes, so we cannot count them together yet. In this topic you will learn the trick: give both fractions the **same denominator** first.",
@@ -13,7 +13,7 @@
       },
       {
         "heading": "Find a common denominator",
-        "body": "We need a size of piece that **both** fractions can be cut into. A *common denominator* is a number that both denominators divide into exactly.\n\nList the multiples of each denominator:\n\n- Multiples of 2: 2, 4, **6**, 8, 10, 12\n- Multiples of 3: 3, **6**, 9, 12\n\n6 is in both lists, so 6 is a common denominator. 12 is one too, but 6 is the smallest. Small numbers keep the working easy.\n\nTip: multiplying the two denominators always gives a common denominator. $2 \\times 3 = 6$ works here."
+        "body": "We need a size of piece that **both** fractions can be cut into. A *common denominator* is a number that both denominators divide into exactly.\n\nThe smallest one is usually the easiest to use. To find it, list the multiples of the bigger denominator. Stop at the first one the smaller denominator divides into.\n\nFor halves and thirds, list the multiples of 3: 3, **6**. 2 divides into 6 exactly, so 6 is the smallest common denominator. 12 works too, but its numbers are bigger.\n\nTip: multiplying the two denominators always gives a common denominator. $2 \\times 3 = 6$ works here."
       },
       {
         "heading": "Rename, then add or subtract",
@@ -27,14 +27,14 @@
       },
       {
         "heading": "Mixed numbers",
-        "body": "To add mixed numbers, add the whole numbers, then add the fractions:\n\n$2\\frac{1}{2} + 1\\frac{1}{3} = 3 + \\frac{3}{6} + \\frac{2}{6} = 3\\frac{5}{6}$\n\nSubtracting can be harder. In $3\\frac{1}{4} - 1\\frac{1}{2}$, the fraction $\\frac{1}{4}$ is smaller than $\\frac{1}{2}$. A safe way is to turn both into improper fractions first:\n\n$3\\frac{1}{4} - 1\\frac{1}{2} = \\frac{13}{4} - \\frac{6}{4} = \\frac{7}{4} = 1\\frac{3}{4}$"
+        "body": "To add mixed numbers, add the whole numbers, then add the fractions:\n\n$2\\frac{1}{2} + 1\\frac{1}{3} = 3 + \\frac{3}{6} + \\frac{2}{6} = 3\\frac{5}{6}$\n\nSubtracting can be harder. In $3\\frac{1}{4} - 1\\frac{1}{2}$, the fraction $\\frac{1}{4}$ is smaller than $\\frac{1}{2}$. A safe way is to turn both into improper fractions first:\n\n$3\\frac{1}{4} - 1\\frac{1}{2} = \\frac{13}{4} - \\frac{3}{2} = \\frac{13}{4} - \\frac{6}{4} = \\frac{7}{4} = 1\\frac{3}{4}$"
       }
     ],
     "examples": [
       {
         "problem": "Work out $\\frac{2}{3} + \\frac{1}{4}$.",
         "steps": [
-          "Find a common denominator. Multiples of 3: 3, 6, 9, 12. Multiples of 4: 4, 8, 12. Use 12.",
+          "Find a common denominator. List the multiples of the bigger denominator, 4: 4, 8, 12. 3 divides into 12 exactly, so use 12.",
           "Rename: $\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$ and $\\frac{1}{4} = \\frac{1 \\times 3}{4 \\times 3} = \\frac{3}{12}$.",
           "Add the numerators: $\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}$.",
           "11 and 12 have no common factor except 1, so $\\frac{11}{12}$ is in simplest form."
@@ -49,7 +49,7 @@
         "problem": "Joseph has $\\frac{5}{6}$ of a cake. He gives $\\frac{1}{4}$ of the cake to his neighbour. How much of the cake is left?",
         "steps": [
           "We need $\\frac{5}{6} - \\frac{1}{4}$.",
-          "Multiples of 6: 6, 12. Multiples of 4: 4, 8, 12. Use 12.",
+          "List the multiples of the bigger denominator, 6: 6, 12. 4 divides into 12 exactly, so use 12.",
           "Rename: $\\frac{5}{6} = \\frac{10}{12}$ and $\\frac{1}{4} = \\frac{3}{12}$.",
           "Subtract the numerators: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$. So $\\frac{7}{12}$ of the cake is left."
         ],
@@ -76,7 +76,7 @@
     ],
     "summary": [
       "To add or subtract fractions, they must have the same denominator.",
-      "A common denominator is a number both denominators divide into exactly.",
+      "A common denominator is a number that both denominators divide into exactly. The smallest one is usually the easiest to use.",
       "Rename each fraction by multiplying its top and bottom by the same number.",
       "Then add or subtract the numerators only. Keep the denominator.",
       "For mixed numbers, add wholes and fractions, or change to improper fractions first."
@@ -197,10 +197,10 @@
       "prompt": "What is the smallest common denominator for $\\frac{1}{4}$ and $\\frac{1}{6}$? Type a whole number.",
       "answer": "12",
       "hints": [
-        "List the multiples of 4: 4, 8, 12, ...",
-        "List the multiples of 6: 6, 12, ... Which number comes first in both lists?"
+        "List the multiples of the bigger denominator, 6: 6, 12, ...",
+        "Which is the first one that 4 divides into exactly?"
       ],
-      "explanation": "Multiples of 4: 4, 8, **12**. Multiples of 6: 6, **12**. The smallest number in both lists is 12.",
+      "explanation": "Multiples of 6: 6, **12**. 4 does not divide into 6 exactly, but it does divide into 12. So the smallest common denominator is 12.",
       "verify": {
         "kind": "sympy",
         "expr": "lcm(4, 6)"
@@ -315,7 +315,7 @@
       "id": "s0-add-sub-unlike-fractions/p-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Work out $1\\frac{1}{2} + 2\\frac{1}{4}$. Type your answer as a mixed number, like 2 1/3.",
+      "prompt": "Work out $1\\frac{1}{2} + 2\\frac{1}{4}$. Type a mixed number, like 2 1/3.",
       "answer": "3 3/4",
       "hints": [
         "Add the whole numbers first: $1 + 2$.",
@@ -332,7 +332,7 @@
       "id": "s0-add-sub-unlike-fractions/p-9",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Farida's train journey takes $4\\frac{1}{3}$ hours. She has travelled for $1\\frac{1}{2}$ hours. How many hours are left? Type your answer as a mixed number, like 2 1/3.",
+      "prompt": "Farida's train journey takes $4\\frac{1}{3}$ hours. She has travelled for $1\\frac{1}{2}$ hours. How many hours are left? Type a mixed number, like 2 1/3.",
       "answer": "2 5/6",
       "hints": [
         "Turn both into improper fractions: $4\\frac{1}{3} = \\frac{13}{3}$ and $1\\frac{1}{2} = \\frac{3}{2}$.",
@@ -381,7 +381,7 @@
       "hints": [
         "List the multiples of 8: 8, 16, 24, ... Which is the first one 6 divides into?"
       ],
-      "explanation": "Multiples of 6: 6, 12, 18, **24**. Multiples of 8: 8, 16, **24**. The smallest number in both lists is 24.",
+      "explanation": "List the multiples of 8: 8, 16, **24**. 6 does not divide into 8 or 16 exactly, but it does divide into 24. So the smallest common denominator is 24.",
       "verify": {
         "kind": "sympy",
         "expr": "lcm(6, 8)"
@@ -452,7 +452,7 @@
       "id": "s0-add-sub-unlike-fractions/q-6",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Work out $2\\frac{2}{3} + 1\\frac{1}{2}$. Type your answer as a mixed number, like 2 1/3.",
+      "prompt": "Work out $2\\frac{2}{3} + 1\\frac{1}{2}$. Type a mixed number, like 2 1/3.",
       "answer": "4 1/6",
       "hints": [
         "Add the wholes: $2 + 1 = 3$.",
@@ -469,7 +469,7 @@
       "id": "s0-add-sub-unlike-fractions/q-7",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Sunil walks $5\\frac{1}{4}$ km on a hill trek. He stops for lunch after $2\\frac{2}{3}$ km. How many kilometres are left after lunch? Type your answer as a mixed number, like 2 1/3.",
+      "prompt": "Sunil's hill trek is $5\\frac{1}{4}$ km long. He stops for lunch after $2\\frac{2}{3}$ km. How many kilometres are left? Type a mixed number, like 2 1/3.",
       "answer": "2 7/12",
       "hints": [
         "Turn both into improper fractions: $\\frac{21}{4}$ and $\\frac{8}{3}$.",
@@ -486,11 +486,11 @@
   "doubts": [
     {
       "q": "Do I have to use the smallest common denominator?",
-      "a": "No. Any common denominator gives the right answer. For $\\frac{1}{4} + \\frac{1}{6}$, using 24 gives $\\frac{6}{24} + \\frac{4}{24} = \\frac{10}{24}$. That simplifies to $\\frac{5}{12}$, the same as using 12. The smallest one keeps the numbers small."
+      "a": "No. Any common denominator gives the right answer. For $\\frac{1}{4} + \\frac{1}{6}$, using 24 gives $\\frac{6}{24} + \\frac{4}{24} = \\frac{10}{24}$. That simplifies to $\\frac{5}{12}$, the same as using 12. The smallest one is usually the easiest to use, because the numbers stay small."
     },
     {
       "q": "How can I find a common denominator quickly?",
-      "a": "First check if the bigger denominator works. For thirds and sixths, 3 divides into 6, so use 6. If not, multiply the two denominators. That always works."
+      "a": "List the multiples of the bigger denominator. Stop at the first one the smaller denominator divides into exactly. For thirds and sixths, 3 divides into 6, so use 6. Multiplying the two denominators also always works."
     },
     {
       "q": "Why don't I add the denominators too?",

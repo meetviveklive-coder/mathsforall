@@ -3,12 +3,14 @@
   {
    "parts": 2,
    "equal": true,
-   "shaded": 1
+   "shaded": 1,
+   "tinted": 0
   },
   {
    "parts": 6,
    "equal": true,
-   "shaded": 1
+   "shaded": 1,
+   "tinted": 2
   }
  ]
 }

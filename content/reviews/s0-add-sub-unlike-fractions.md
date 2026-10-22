@@ -29,3 +29,13 @@ Prerequisites: listing multiples comes from s0-factors-multiples (an ancestor). 
 4. **"Common denominator" is defined twice (with s0-comparing-fractions).** SUGGESTION.
    Problem: this topic defines a common denominator as "a number that both denominators divide into exactly", and finds it by listing multiples. s0-comparing-fractions calls it "a shared denominator", and its doubt says "Any number in both times tables works". The two ideas agree, but the wording differs. The comparing doubt's "times tables" wording also does not work beyond 10 × 10. Since s0-comparing-fractions is not a prerequisite here, defining it again is fine.
    Fix: use the same definition in both topics ("a number that both denominators divide into exactly"), and use "multiples" instead of "times tables" in s0-comparing-fractions.
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 38 checks, 0 fail, 0 warnings.
+
+1. q-7: applied as suggested ("Sunil's hill trek is 5 1/4 km long. ... How many kilometres are left?").
+2. sections[4]: applied. The line now shows 13/4 - 3/2 = 13/4 - 6/4 = 7/4 = 1 3/4.
+3. Mixed-number wording: applied. p-8, p-9, q-6 and q-7 end with "Type a mixed number, like 2 1/3." None of their answers is 2 1/3.
+4. Common denominator: applied, using the house definition. sections[1] keeps "a number that both denominators divide into exactly". It now says the smallest one is usually the easiest to use, and that you find it by listing multiples of the bigger denominator. The halves-and-thirds example lists multiples of 3 only. The same method is now used in examples[0] and [1], summary[1], p-2 (hints and explanation), the q-1 explanation and doubts[0] and [1]. The q-1 hint already used this method. "Type a whole number." stays on p-2, because a child might type 1/12 there.
+Pronouns: Nani (hook) is "she".

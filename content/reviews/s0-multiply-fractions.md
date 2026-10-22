@@ -42,3 +42,14 @@ The true/false items p-6 (1/2 × 6 = 3, not more than 6) and q-4 (15 < 20) are r
 5. **Cross-topic wording (with s0-add-sub-unlike-fractions, s0-mixed-numbers, s0-add-sub-like-fractions).** SUGGESTION.
    Problem: p-9 says "Write the answer as a mixed number, for example 2 1/3." The sibling topics say "Type your answer as a mixed number, like 2 1/3", "Type a mixed number, like 4 1/3" and "Type it like 2 1/3". The format they ask for is the same; only the wording differs. Also, this topic says "Write the answer in simplest form", while s0-add-sub-unlike-fractions says "Give your answer in simplest form".
    Fix: use one phrase for each instruction across the Fractions unit.
+
+## Fixes applied (content-writer)
+
+Status set to `draft`. `verify_content.py`: PASS, 42 checks, 0 fail, 0 warnings.
+
+1. p-8 pronoun: applied. Dadaji is now "he" in the prompt and the explanation.
+2. Example 3, step 4: applied as suggested (more than 2 x 1 1/3 = 2 2/3, so 3 fits).
+3. Hook: applied ("No, less than that. He ate half as much.").
+4. "Type a whole number.": dropped from p-8 and q-5, as suggested. I also dropped it from q-1 (a distance, 25 km), where it gave a hint the question did not need. It stays on p-1 (count of diyas) and p-2 (rupees), where a child might otherwise type a fraction.
+5. Wording: applied. p-9 now ends with "Type a mixed number, like 4 1/5." I used 4 1/5 rather than 2 1/3 because 2 1/3 appears in the question itself. Every simplest-form instruction (examples[1], p-5, q-2, q-3, q-7) now reads "Give your answer in simplest form."
+House convention 4: doubts[1] no longer says "common denominator". It now asks "Do the denominators need to match before I multiply?" (raised in the divide review). No diagram changed, so make.py was not re-run.

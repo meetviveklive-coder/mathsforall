@@ -1,10 +1,10 @@
 {
   "id": "s0-multiply-fractions",
   "title": "Multiplying fractions",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
-    "hook": "After Diwali, half a tray of barfi is left. Ishaan eats one third of what is left.\n\nDid Ishaan eat one third of the whole tray? No, much less. By the end of this topic you will know exactly how much he ate.",
+    "hook": "After Diwali, half a tray of barfi is left. Ishaan eats one third of what is left.\n\nDid Ishaan eat one third of the whole tray? No, less than that. He ate half as much. By the end of this topic you will know exactly how much he ate.",
     "sections": [
       {
         "heading": "A fraction of a number",
@@ -46,7 +46,7 @@
         }
       },
       {
-        "problem": "Work out $\\frac{2}{5} \\times \\frac{5}{6}$. Give the answer in simplest form.",
+        "problem": "Work out $\\frac{2}{5} \\times \\frac{5}{6}$. Give your answer in simplest form.",
         "steps": [
           "Multiply the numerators: $2 \\times 5 = 10$.",
           "Multiply the denominators: $5 \\times 6 = 30$.",
@@ -65,7 +65,7 @@
           "Change to improper fractions: $2\\frac{1}{4} = \\frac{9}{4}$ and $1\\frac{1}{3} = \\frac{4}{3}$.",
           "Multiply: $\\frac{9}{4} \\times \\frac{4}{3} = \\frac{9 \\times 4}{4 \\times 3} = \\frac{36}{12}$.",
           "Simplify: $36 \\div 12 = 3$, so $\\frac{36}{12} = 3$.",
-          "Estimate to check: $2\\frac{1}{4}$ is a bit more than 2, and $1\\frac{1}{3}$ is a bit more than 1. So expect a bit more than 2. An answer of 3 fits."
+          "Estimate to check: $2\\frac{1}{4} \\times 1\\frac{1}{3}$ is more than $2 \\times 1\\frac{1}{3} = 2\\frac{2}{3}$. So expect more than $2\\frac{2}{3}$. An answer of 3 fits."
         ],
         "answer": "3",
         "verify": {
@@ -283,7 +283,7 @@
       "id": "s0-multiply-fractions/p-5",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Work out $\\frac{3}{4} \\times \\frac{2}{3}$. Write the answer in simplest form.",
+      "prompt": "Work out $\\frac{3}{4} \\times \\frac{2}{3}$. Give your answer in simplest form.",
       "answer": "1/2",
       "hints": [
         "Multiply top by top and bottom by bottom.",
@@ -356,13 +356,13 @@
       "id": "s0-multiply-fractions/p-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Dadaji makes 3 pots of kheer. Each pot needs $1\\frac{1}{3}$ litres of milk. How many litres of milk does she need? Type a whole number.",
+      "prompt": "Dadaji makes 3 pots of kheer. Each pot needs $1\\frac{1}{3}$ litres of milk. How many litres of milk does he need?",
       "answer": "4",
       "hints": [
         "Work out $1\\frac{1}{3} \\times 3$.",
         "$1\\frac{1}{3} = \\frac{4}{3}$."
       ],
-      "explanation": "$1\\frac{1}{3} \\times 3 = \\frac{4}{3} \\times 3 = \\frac{12}{3} = 4$. She needs 4 litres.",
+      "explanation": "$1\\frac{1}{3} \\times 3 = \\frac{4}{3} \\times 3 = \\frac{12}{3} = 4$. He needs 4 litres.",
       "verify": {
         "kind": "sympy",
         "expr": "(1 + Rational(1, 3)) * 3"
@@ -372,7 +372,7 @@
       "id": "s0-multiply-fractions/p-9",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Work out $2\\frac{1}{3} \\times 1\\frac{1}{2}$. Write the answer as a mixed number, for example 2 1/3.",
+      "prompt": "Work out $2\\frac{1}{3} \\times 1\\frac{1}{2}$. Type a mixed number, like 4 1/5.",
       "answer": "3 1/2",
       "hints": [
         "Change both to improper fractions.",
@@ -391,7 +391,7 @@
       "id": "s0-multiply-fractions/q-1",
       "type": "numeric",
       "objective": 0,
-      "prompt": "A cycle ride from Mysuru to a nearby village is 40 km. Lakshmi has ridden $\\frac{5}{8}$ of the way. How many kilometres has she ridden? Type a whole number.",
+      "prompt": "A cycle ride from Mysuru to a nearby village is 40 km. Lakshmi has ridden $\\frac{5}{8}$ of the way. How many kilometres has she ridden?",
       "answer": "25",
       "hints": [
         "Find $\\frac{1}{8}$ of 40 first."
@@ -407,7 +407,7 @@
       "type": "numeric",
       "visual": "mf-q2",
       "objective": 1,
-      "prompt": "This area model shows $\\frac{1}{4} \\times \\frac{2}{5}$. What fraction of the whole rectangle is dark? Write it in simplest form.",
+      "prompt": "This area model shows $\\frac{1}{4} \\times \\frac{2}{5}$. What fraction of the whole rectangle is dark? Give your answer in simplest form.",
       "answer": "1/10",
       "hints": [
         "Count all the cells, then count the dark cells.",
@@ -424,7 +424,7 @@
       "id": "s0-multiply-fractions/q-3",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Work out $\\frac{3}{5} \\times \\frac{5}{6}$. Write the answer in simplest form.",
+      "prompt": "Work out $\\frac{3}{5} \\times \\frac{5}{6}$. Give your answer in simplest form.",
       "answer": "1/2",
       "hints": [
         "Multiply top by top and bottom by bottom.",
@@ -456,7 +456,7 @@
       "id": "s0-multiply-fractions/q-5",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Work out $1\\frac{1}{4} \\times 2\\frac{2}{5}$. Type a whole number.",
+      "prompt": "Work out $1\\frac{1}{4} \\times 2\\frac{2}{5}$.",
       "answer": "3",
       "hints": [
         "Change both to improper fractions.",
@@ -513,7 +513,7 @@
       "id": "s0-multiply-fractions/q-7",
       "type": "numeric",
       "objective": 1,
-      "prompt": "A rangoli covers $\\frac{2}{3}$ of a square board. Kiran colours $\\frac{1}{4}$ of the rangoli red. What fraction of the whole board is red? Write it in simplest form.",
+      "prompt": "A rangoli covers $\\frac{2}{3}$ of a square board. Kiran colours $\\frac{1}{4}$ of the rangoli red. What fraction of the whole board is red? Give your answer in simplest form.",
       "answer": "1/6",
       "hints": [
         "Work out $\\frac{1}{4}$ of $\\frac{2}{3}$.",
@@ -533,8 +533,8 @@
       "a": "Multiplying by $\\frac{1}{2}$ means taking half. Half of something is less than all of it. Any fraction less than 1 takes only a part, so the answer is smaller."
     },
     {
-      "q": "Do I need a common denominator to multiply fractions?",
-      "a": "No. You multiply the numerators and multiply the denominators. The denominators do not need to match."
+      "q": "Do the denominators need to match before I multiply?",
+      "a": "No. You multiply the numerators and multiply the denominators. The denominators do not need to be the same."
     },
     {
       "q": "Is $\\frac{1}{3}$ of $\\frac{1}{2}$ the same as $\\frac{1}{2}$ of $\\frac{1}{3}$?",
