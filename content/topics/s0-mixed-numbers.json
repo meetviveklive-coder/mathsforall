@@ -196,7 +196,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "Rational(9, 4)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-mixed-numbers/p-3",
@@ -261,7 +262,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "1 + 3 * Rational(1, 4)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-mixed-numbers/p-7",
@@ -317,7 +319,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "11 * Rational(1, 2)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-mixed-numbers/p-9",
@@ -349,7 +352,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "Rational(11, 3)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-mixed-numbers/q-2",
@@ -410,7 +414,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "2 + 3 * Rational(1, 4)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-mixed-numbers/q-6",
@@ -466,7 +471,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "15 * Rational(1, 4)"
-      }
+      },
+      "match": "mixed"
     }
   ],
   "doubts": [

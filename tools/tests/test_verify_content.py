@@ -149,3 +149,10 @@ def test_exact_rule_needs_fraction():
     rep = vc.Report("t")
     vc.check_match_rule(rep, "q", {"type": "numeric", "answer": "2", "match": "exact"})
     assert rep.fails
+
+
+@pytest.mark.parametrize("answer,ok", [("2 1/3", True), ("3", True), ("7/3", False), ("1 4/3", False)])
+def test_mixed_rule(answer, ok):
+    rep = vc.Report("t")
+    vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "mixed"})
+    assert (not rep.fails) == ok

@@ -35,7 +35,7 @@ export interface Question {
   hints: string[];
   explanation: string;
   visual?: string;
-  match?: 'value' | 'simplest' | 'exact';
+  match?: 'value' | 'simplest' | 'exact' | 'mixed';
 }
 export interface Visual { id: string; alt: string; file?: string }
 export interface Topic {

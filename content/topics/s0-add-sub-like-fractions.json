@@ -330,7 +330,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "Rational(5, 8) + Rational(6, 8)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-add-sub-like-fractions/p-8",
@@ -362,7 +363,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "Rational(7, 5) + Rational(4, 5)"
-      }
+      },
+      "match": "mixed"
     }
   ],
   "quiz": [
@@ -487,7 +489,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "Rational(3, 4) + Rational(3, 4)"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-add-sub-like-fractions/q-8",

@@ -325,7 +325,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "(1 + Rational(1, 2)) + (2 + Rational(1, 4))"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-add-sub-unlike-fractions/p-9",
@@ -341,7 +342,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "(4 + Rational(1, 3)) - (1 + Rational(1, 2))"
-      }
+      },
+      "match": "mixed"
     }
   ],
   "quiz": [
@@ -460,7 +462,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "(2 + Rational(2, 3)) + (1 + Rational(1, 2))"
-      }
+      },
+      "match": "mixed"
     },
     {
       "id": "s0-add-sub-unlike-fractions/q-7",
@@ -476,7 +479,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "(5 + Rational(1, 4)) - (2 + Rational(2, 3))"
-      }
+      },
+      "match": "mixed"
     }
   ],
   "doubts": [

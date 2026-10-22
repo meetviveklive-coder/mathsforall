@@ -9,7 +9,7 @@ export interface Frac {
   d: number; // denominator as typed (> 0)
 }
 
-export type MatchRule = 'value' | 'simplest' | 'exact';
+export type MatchRule = 'value' | 'simplest' | 'exact' | 'mixed';
 
 export function gcd(a: number, b: number): number {
   a = Math.abs(a);
@@ -66,7 +66,14 @@ export type CheckResult =
   | { status: 'wrong' }
   | { status: 'unreadable' }
   | { status: 'not-simplest' } // right value, but the question asks for simplest form
-  | { status: 'wrong-form' }; // right value, but the question asks for a specific denominator
+  | { status: 'wrong-form' } // right value, but the question asks for a specific denominator
+  | { status: 'not-mixed' }; // right value, but the question asks for a mixed number
+
+/** True when the input is typed as a mixed number with a proper fraction part, e.g. "2 1/3". */
+export function isMixedForm(raw: string): boolean {
+  const m = raw.trim().replace(/\s*\/\s*/g, '/').match(/^-?(\d+) (\d+)\/(\d+)$/);
+  return !!m && Number(m[2]) < Number(m[3]) && Number(m[3]) > 0;
+}
 
 /** Check a typed numeric answer against the stored answer using the question's match rule. */
 export function checkNumeric(input: string, answer: string, rule: MatchRule = 'value'): CheckResult {
@@ -77,5 +84,6 @@ export function checkNumeric(input: string, answer: string, rule: MatchRule = 'v
   if (!sameValue(got, want)) return { status: 'wrong' };
   if (rule === 'simplest' && gcd(got.n, got.d) !== 1) return { status: 'not-simplest' };
   if (rule === 'exact' && (got.n !== want.n || got.d !== want.d)) return { status: 'wrong-form' };
+  if (rule === 'mixed' && !isMixedForm(input) && !(got.d === 1 || got.n % got.d === 0)) return { status: 'not-mixed' };
   return { status: 'correct' };
 }

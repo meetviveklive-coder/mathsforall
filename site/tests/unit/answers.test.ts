@@ -41,3 +41,17 @@ describe('checkNumeric', () => {
     expect(checkNumeric('three quarters', '3/4').status).toBe('unreadable');
   });
 });
+
+describe('mixed-number rule', () => {
+  it('needs a mixed number with a proper fraction part', () => {
+    expect(checkNumeric('2 1/3', '2 1/3', 'mixed').status).toBe('correct');
+    expect(checkNumeric('7/3', '2 1/3', 'mixed').status).toBe('not-mixed');
+    expect(checkNumeric('1 4/3', '2 1/3', 'mixed').status).toBe('not-mixed');
+    expect(checkNumeric('2 2/6', '2 1/3', 'mixed').status).toBe('correct');
+    expect(checkNumeric('2 1/2', '2 1/3', 'mixed').status).toBe('wrong');
+  });
+  it('accepts a whole number when the value is whole', () => {
+    expect(checkNumeric('3', '3', 'mixed').status).toBe('correct');
+    expect(checkNumeric('6/2', '3', 'mixed').status).toBe('correct');
+  });
+});

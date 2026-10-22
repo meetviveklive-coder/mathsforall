@@ -382,7 +382,8 @@
       "verify": {
         "kind": "sympy",
         "expr": "(2 + Rational(1, 3)) * (1 + Rational(1, 2))"
-      }
+      },
+      "match": "mixed"
     }
   ],
   "quiz": [
