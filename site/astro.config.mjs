@@ -8,5 +8,6 @@ export default defineConfig({
   output: 'static',
   build: { format: 'file', inlineStylesheets: 'always', assets: 'assets' },
   devToolbar: { enabled: false },
-  vite: { server: { fs: { allow: ['..'] } } },
+  // assetsInlineLimit 0: never inline fonts as data: URIs (the CSP allows fonts from 'self' only).
+  vite: { server: { fs: { allow: ['..'] } }, build: { assetsInlineLimit: 0 } },
 });

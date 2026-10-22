@@ -26,6 +26,8 @@ function fix(file) {
     fs.writeFileSync(file, out);
     changed++;
   }
+  // public/_headers sets font-src 'self'; an inlined font would be blocked by the browser.
+  if (/url\(\s*["']?data:(font|application\/font)/i.test(out)) external.push(`${path.relative(dist, file)}: inlined data: font (blocked by CSP)`);
   if (file.endsWith('.html')) {
     const re = /\b(?:src|href)\s*=\s*["'](?:https?:)?\/\/[^"']+/gi;
     for (const m of out.matchAll(re)) external.push(`${path.relative(dist, file)}: ${m[0]}`);
@@ -34,7 +36,7 @@ function fix(file) {
 
 walk(dist);
 if (external.length) {
-  console.error('External URLs found (not allowed):\n' + external.join('\n'));
+  console.error('Not allowed by the site security policy:\n' + external.join('\n'));
   process.exit(1);
 }
 console.log(`relativize: rewrote ${changed} file(s); no external URLs.`);
