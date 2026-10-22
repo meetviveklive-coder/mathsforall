@@ -163,3 +163,10 @@ def test_improper_rule(answer, ok):
     rep = vc.Report("t")
     vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "improper"})
     assert (not rep.fails) == ok
+
+
+@pytest.mark.parametrize("answer,ok", [("0.75", True), ("12", True), (".5", True), ("3/4", False), ("1 1/2", False)])
+def test_decimal_rule(answer, ok):
+    rep = vc.Report("t")
+    vc.check_match_rule(rep, "q", {"type": "numeric", "answer": answer, "match": "decimal"})
+    assert (not rep.fails) == ok

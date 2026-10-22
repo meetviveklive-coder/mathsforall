@@ -188,6 +188,11 @@ def check_match_rule(rep: Report, where: str, q: dict):
             rep.fail(where, "match 'exact' needs an answer written as a/b")
         else:
             rep.ok()
+    elif rule == "decimal":
+        if re.fullmatch(r"\s*-?(\d+(\.\d+)?|\.\d+)\s*", q["answer"]):
+            rep.ok()
+        else:
+            rep.fail(where, "match 'decimal' needs an answer written as a decimal or whole number, like 0.75")
     elif rule == "improper":
         if m:
             rep.ok()

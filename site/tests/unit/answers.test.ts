@@ -65,3 +65,14 @@ describe('improper-fraction rule', () => {
     expect(checkNumeric('8/5', '7/5', 'improper').status).toBe('wrong');
   });
 });
+
+describe('decimal rule', () => {
+  it('needs a decimal, not a fraction', () => {
+    expect(checkNumeric('0.75', '0.75', 'decimal').status).toBe('correct');
+    expect(checkNumeric('.75', '0.75', 'decimal').status).toBe('correct');
+    expect(checkNumeric('0.750', '0.75', 'decimal').status).toBe('correct');
+    expect(checkNumeric('3/4', '0.75', 'decimal').status).toBe('not-decimal');
+    expect(checkNumeric('0.57', '0.75', 'decimal').status).toBe('wrong');
+    expect(checkNumeric('₹12.50', '12.5', 'decimal').status).toBe('correct');
+  });
+});
