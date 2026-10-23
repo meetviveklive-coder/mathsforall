@@ -1,7 +1,7 @@
 {
   "id": "s0-decimals-meaning",
   "title": "Decimals: tenths and hundredths",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Joseph's Nana buys a bunch of coriander at the market. The price tag says ₹12.50.\n\nThat small dot matters a lot. Without it, the tag would say 1250 rupees! The dot shows where the whole rupees end. So ₹12.50 is 12 rupees and 50 paise. In this topic you will find out what the digits after the dot mean.",
@@ -674,6 +674,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes"
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "s0-comparing-decimals",
   "title": "Comparing and rounding decimals",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "It is sports day. In the long jump, Lalitha jumps 2.4 m. Her friend Farhan jumps 2.35 m.\n\nFarhan says, \"I jumped further! 35 is bigger than 4.\" Is he right? In this topic you will learn to compare decimals, place them on a number line, and round them.",
@@ -605,6 +605,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes"
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

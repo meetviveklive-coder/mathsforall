@@ -1,7 +1,7 @@
 {
   "id": "s0-add-sub-decimals",
   "title": "Adding and subtracting decimals",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Farhan goes to the stationery shop with a ₹500 note. A notebook costs ₹48.50. A geometry box costs ₹125.75.\n\nHow much does he pay? How much change does he get back? You already add and subtract whole numbers in columns. Decimals use the same columns, with one new rule. Let's find it.",
@@ -669,6 +669,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes"
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }
