@@ -38,3 +38,22 @@ Prerequisites and wording: long division is by one-digit numbers only (3, 4, 5, 
 4. One thousand is written 1000 everywhere (section 2 heading and body, summary, q-1, q-2); four-digit values 3450, 1025, 4675 and 4700 have no comma. Section 2 now says "100 paise make 1 rupee, so ₹7 is 700 paise." doubts[2] also uses the shared sentence.
 
 Also (house rules): money typing example changed from "like 45.50" to "like 12.75" (45.50 shares the digits 4 and 5 with the answer 54). Decimal typing example changed to "like 0.7" in p-5 (answer 0.14), p-7 (prompt contains 0.4) and q-7 (answer 2.4). No visual depends on the changed items; make.py not re-run. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-23. Result: **verified** (0 blocking, 1 suggestion).
+
+Checks run: `tools/verify_content.py` (52 pass, 0 fail). Read `git diff 72fdf28 HEAD` for this topic. Re-solved each changed item with my own exact `Rational` code.
+
+- Finding 1 fixed. q-6: 80 × 2.5 = 200 (80 × 25 = 2000, one place from the right gives 200.0). The rough check (₹160 to ₹240) still holds. Hints and explanation agree.
+- Finding 2 fixed. The topic map now lists s0-multiply-fractions as a prerequisite. Section 3 names the fraction rule, then the grid reason follows.
+- Finding 3 fixed. q-8: 24.50 ÷ 0.5 = 49 = 2 × 24.50 = 245 ÷ 5. The halving hint comes first.
+- Finding 4 fixed. One thousand is "1000" everywhere a child sees it (3450, 1025, 4675, 4700 checked). "100 paise make 1 rupee" is in section 2 and doubts[2] (120 ÷ 30 = 4).
+- No visual or alt text changed, and no changed item refers to a diagram. Section 2 still matches md-div100 (7 ÷ 100 = 0.07).
+- Typing examples: money "like 12.75" (answers 3.50, 54, 200, 49); decimals "like 0.4" or "like 0.7". None equals or closely resembles its answer. Every decimal and money answer uses `decimal`, which compares exact values, so no rounded value can pass.
+
+New finding:
+
+1. **p-5: "The grid shows $0.7 \times 0.2$ ... Type a decimal, like 0.7."** SUGGESTION.
+   Problem: the new typing example repeats a number in the prompt. A child may wonder whether 0.7 is a clue. It is not the answer (0.14), so it cannot mark anyone wrongly.
+   Fix: use "like 0.5" in p-5.

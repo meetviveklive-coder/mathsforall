@@ -43,3 +43,16 @@ Wording: every sentence is 20 words or fewer. Contexts (power bank, torch, stadi
 4. doubts[2]: "Hundredths also match paise: 100 paise make 1 rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
 
 No visual changed. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-23. Result: **verified** (0 blocking, 0 new suggestions).
+
+Checks run: `tools/verify_content.py` (44 pass, 0 fail). Read `git diff 72fdf28 HEAD` for this topic. Re-solved each changed item with my own exact SymPy code.
+
+- Finding 1 fixed. p-5 (20% = 1/5) ends "Type a fraction, like 3/10." and q-4 (15% = 3/20, gcd 1) ends "Type a fraction, like 7/10." Both use `simplest`. Neither example resembles its answer.
+- Finding 2 fixed. doubts[3]: 3/8 = 0.375 = 37.5%, and "37 and a half hundredths" is right. doubts[4]: 1/3 = 0.3̇ = 33⅓% exactly, and 33/100 < 1/3, so "33% is a little less than 1/3" is right. The 0.3̇ notation now matches s0-fractions-decimals-conversion.
+- Finding 3 fixed. q-2: "Which decimal is the same as 8%?" Only 0.08 has that value. 0.8 and 8 are still wrong and their why_wrong notes still hold.
+- Finding 4 fixed. doubts[2] uses "100 paise make 1 rupee", and 37 paise = ₹0.37.
+- Match rules: percent answers use `value` with "Type the number only, like 40." (63, 85, 55, 75, 130, 9, 90, 36). Decimal answers (0.03, 0.01) use `decimal`. Simplest answers (1/5, 3/20) use `simplest`. Values are compared exactly, so 0.33 can never stand for 1/3, and no answer here is 1/3.
+- No visual or alt text changed. pm-p1 and pm-q1 still match p-1 (63) and q-1 (9).

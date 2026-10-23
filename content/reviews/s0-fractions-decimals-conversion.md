@@ -35,3 +35,16 @@ Prerequisites and wording: "biggest common factor" matches the approved fraction
 3. Hook: "Tanvi's Bua" is now "Tanvi's Mama" (not Chacha, which Bhaskar's item already uses). q-5: Shreya's Ajji now walks to the market, not the temple.
 
 Also (house rules): q-1 typing example changed to "like 7/10." because the answer 3/50 shares its numerator with 3/10. No visual changed. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-23. Result: **verified** (0 blocking, 0 new suggestions).
+
+Checks run: `tools/verify_content.py` (54 pass, 0 fail). Read `git diff 72fdf28 HEAD` for this topic. Re-solved each changed item with my own exact SymPy code.
+
+- Finding 1 addressed. q-7's options are 3/4, 3/5, 1/8 and 2/3. I checked with `factorint` that 4, 5 and 8 have only 2s and 5s and 3 does not. So "4, 5 and 8 can be made into 100, 10 and 1000" (4 × 25, 5 × 2, 8 × 125) is right, and 2/3 is the only never-ending decimal. The writer's reason for keeping `Rational(2, 3)` (no `factorint` in the whitelist, and `relation` needs true/false) is sound.
+- Finding 2 settled. "1000" is now the shared form, and s0-multiply-divide-decimals matches it.
+- Finding 3 fixed. The hook uses Tanvi's Mama, and Shreya's Ajji walks to the market. q-5's maths (1/5 = 0.2) is unchanged.
+- q-1: "like 7/10" for answer 3/50 (gcd 1, `simplest`). No simplest-form example equals or resembles its answer (2/5, 17/20, 2/25, 3/50 and 13/20 against 3/10 or 7/10). Decimal examples (0.3 and 0.4 against 0.6, 0.35, 0.125, 0.36, 0.875) are fine.
+- 0.33 for 1/3: answers are compared as exact fractions in `site/src/lib/answers.ts`, and 33/100 ≠ 1/3. Answers 1/3 and 2/3 appear only in MCQs (p-8, q-7). p-9 and q-6 are true/false with answer false.
+- No visual or alt text changed. The hook and q-5 do not use a diagram.

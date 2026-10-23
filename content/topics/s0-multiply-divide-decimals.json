@@ -1,7 +1,7 @@
 {
   "id": "s0-multiply-divide-decimals",
   "title": "Multiplying and dividing decimals",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Anil's Amma rides a scooter to work. Petrol costs ₹102.50 a litre. She buys 10 litres. How much does she pay?\n\nAt home, Anil's Papa cuts 4.5 m of cloth into 3 equal pieces for cushion covers. How long is each piece?\n\nYou already multiply and divide whole numbers. With decimals, you find the digits the same way. The new question is where the decimal point goes. In this topic you will find out, and see why.",
@@ -344,7 +344,7 @@
       "type": "numeric",
       "visual": "md-p5",
       "objective": 1,
-      "prompt": "The grid shows $0.7 \\times 0.2$. Each small square is one hundredth. What decimal is dark? Type a decimal, like 0.7.",
+      "prompt": "The grid shows $0.7 \\times 0.2$. Each small square is one hundredth. What decimal is dark? Type a decimal, like 0.25.",
       "answer": "0.14",
       "hints": [
         "Count the dark squares. The dark block is 7 squares wide and 2 squares tall.",
@@ -652,6 +652,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content 52 pass. All 33 values re-solved with own Rational code; all agree. MCQ distractors checked. 5 visuals rendered and match alt/spec. 0 blocking, 4 suggestions (multi-digit products such as 80 x 275, multiply-fractions not in prerequisite chain, q-8 numbers next to the 45.50 typing example, 1,000 vs 1000 and paise sentence). See content/reviews/s0-multiply-divide-decimals.md."
+    },
+    {
+      "date": "2026-10-23",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes. verify_content 52 pass. Diff 72fdf28..HEAD reviewed; q-6 (80 x 2.5 = 200), q-8 (24.50 / 0.5 = 49), 1000 without comma, paise sentence re-solved with own Rational code; s0-multiply-fractions now a prerequisite. No visual changed. Typing examples differ from answers; decimal rule compares exact values. 0 blocking, 1 suggestion."
     }
   ]
 }
