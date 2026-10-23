@@ -1,7 +1,7 @@
 {
   "id": "s0-multiply-divide-decimals",
   "title": "Multiplying and dividing decimals",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Anil's Amma rides a scooter to work. Petrol costs ₹102.50 a litre. She buys 10 litres. How much does she pay?\n\nAt home, Anil's Papa cuts 4.5 m of cloth into 3 equal pieces for cushion covers. How long is each piece?\n\nYou already multiply and divide whole numbers. With decimals, you find the digits the same way. The new question is where the decimal point goes. In this topic you will find out, and see why.",
@@ -12,13 +12,13 @@
         "visual": "md-x10"
       },
       {
-        "heading": "100 and 1,000, and dividing",
-        "body": "Multiplying by 100 is multiplying by 10 twice. So every digit moves **two places** left. Multiplying by 1,000 moves every digit **three places** left.\n\nCount the zeros. 10 has one zero, 100 has two and 1,000 has three. That is how many places the digits move.\n\n- $3.45 \\times 100 = 345$\n- $3.45 \\times 1{,}000 = 3{,}450$\n\nIn 3,450 the ones place would be empty, so it gets a 0. This zero matters. It keeps the 3 in the thousands place.\n\nDividing works the other way. Each digit moves to the **right**, by one place for each zero.\n\n- $45.6 \\div 10 = 4.56$\n- $45.6 \\div 100 = 0.456$\n\nIn the chart, $7 \\div 100$ moves the 7 from the ones place to the hundredths place. The ones and tenths places are now empty, so they get zeros: $7 \\div 100 = 0.07$. This makes sense with money. ₹7 shared by 100 children is 7 paise each, which is ₹0.07.\n\nNow the hook. Petrol costs ₹102.50 a litre, so 10 litres cost ₹1,025.",
+        "heading": "100 and 1000, and dividing",
+        "body": "Multiplying by 100 is multiplying by 10 twice. So every digit moves **two places** left. Multiplying by 1000 moves every digit **three places** left.\n\nCount the zeros. 10 has one zero, 100 has two and 1000 has three. That is how many places the digits move.\n\n- $3.45 \\times 100 = 345$\n- $3.45 \\times 1000 = 3450$\n\nIn 3450 the ones place would be empty, so it gets a 0. This zero matters. It keeps the 3 in the thousands place.\n\nDividing works the other way. Each digit moves to the **right**, by one place for each zero.\n\n- $45.6 \\div 10 = 4.56$\n- $45.6 \\div 100 = 0.456$\n\nIn the chart, $7 \\div 100$ moves the 7 from the ones place to the hundredths place. The ones and tenths places are now empty, so they get zeros: $7 \\div 100 = 0.07$. This makes sense with money. 100 paise make 1 rupee, so ₹7 is 700 paise. ₹7 shared by 100 children is 7 paise each, which is ₹0.07.\n\nNow the hook. Petrol costs ₹102.50 a litre, so 10 litres cost ₹1025.",
         "visual": "md-div100"
       },
       {
         "heading": "A decimal times a decimal",
-        "body": "Start with a decimal times a whole number. $0.4 \\times 3$ is 4 tenths, three times. That is 12 tenths, which is 1.2.\n\nNow try $0.3 \\times 0.4$. It means 0.3 of 0.4. Write each decimal as a fraction. Then multiply the numerators and multiply the denominators:\n\n$0.3 \\times 0.4 = \\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100} = 0.12$\n\nThe grid shows why. The whole square is 1. The 4 shaded rows are 0.4 of the square. The 3 shaded columns are 0.3 of it. They overlap in 12 dark squares.\n\nEach small square is one hundredth. So $0.3 \\times 0.4$ is 12 hundredths, which is 0.12.\n\nTenths times tenths gives hundredths. Notice that 0.12 is smaller than 0.4. Taking a part of something gives less than the whole thing.",
+        "body": "Start with a decimal times a whole number. $0.4 \\times 3$ is 4 tenths, three times. That is 12 tenths, which is 1.2.\n\nNow try $0.3 \\times 0.4$. It means 0.3 of 0.4. Write each decimal as a fraction. Then use the rule you met for multiplying fractions: multiply the numerators and multiply the denominators.\n\n$0.3 \\times 0.4 = \\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100} = 0.12$\n\nThe grid shows why. The whole square is 1. The 4 shaded rows are 0.4 of the square. The 3 shaded columns are 0.3 of it. They overlap in 12 dark squares.\n\nEach small square is one hundredth. So $0.3 \\times 0.4$ is 12 hundredths, which is 0.12.\n\nTenths times tenths gives hundredths. Notice that 0.12 is smaller than 0.4. Taking a part of something gives less than the whole thing.",
         "visual": "md-grid"
       },
       {
@@ -38,8 +38,8 @@
           "The cost is $46.75 \\times 100$. 100 has two zeros, so every digit moves two places left.",
           "4 tens become 4 thousands. 6 ones become 6 hundreds.",
           "7 tenths become 7 tens. 5 hundredths become 5 ones.",
-          "So $46.75 \\times 100 = 4{,}675$. The kitchen pays ₹4,675.",
-          "Rough check: ₹47 a kg for 100 kg is ₹4,700. So ₹4,675 makes sense."
+          "So $46.75 \\times 100 = 4675$. The kitchen pays ₹4675.",
+          "Rough check: ₹47 a kg for 100 kg is ₹4700. So ₹4675 makes sense."
         ],
         "answer": "4675",
         "verify": {
@@ -77,8 +77,8 @@
       }
     ],
     "summary": [
-      "Multiplying by 10, 100 or 1,000 moves every digit 1, 2 or 3 places left. The point stays where it is.",
-      "Dividing by 10, 100 or 1,000 moves every digit 1, 2 or 3 places right. Fill empty places with zeros.",
+      "Multiplying by 10, 100 or 1000 moves every digit 1, 2 or 3 places left. The point stays where it is.",
+      "Dividing by 10, 100 or 1000 moves every digit 1, 2 or 3 places right. Fill empty places with zeros.",
       "Tenths times tenths gives hundredths: 0.3 × 0.4 = 12/100 = 0.12.",
       "To multiply decimals, multiply without the points. Then count the decimal places in both numbers, from the right.",
       "To divide by a whole number, use long division and keep the point straight above the point.",
@@ -326,7 +326,7 @@
       "id": "s0-multiply-divide-decimals/p-4",
       "type": "numeric",
       "objective": 0,
-      "prompt": "A shop sells a box of 100 erasers for ₹350. What is the price of one eraser? Type the amount in rupees, like 45.50.",
+      "prompt": "A shop sells a box of 100 erasers for ₹350. What is the price of one eraser? Type the amount in rupees, like 12.75.",
       "answer": "3.50",
       "hints": [
         "Divide ₹350 by 100.",
@@ -344,7 +344,7 @@
       "type": "numeric",
       "visual": "md-p5",
       "objective": 1,
-      "prompt": "The grid shows $0.7 \\times 0.2$. Each small square is one hundredth. What decimal is dark? Type a decimal, like 0.4.",
+      "prompt": "The grid shows $0.7 \\times 0.2$. Each small square is one hundredth. What decimal is dark? Type a decimal, like 0.7.",
       "answer": "0.14",
       "hints": [
         "Count the dark squares. The dark block is 7 squares wide and 2 squares tall.",
@@ -361,7 +361,7 @@
       "id": "s0-multiply-divide-decimals/p-6",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Onions cost ₹36 per kg. Ramesh buys 1.5 kg. How much does he pay? Type the amount in rupees, like 45.50.",
+      "prompt": "Onions cost ₹36 per kg. Ramesh buys 1.5 kg. How much does he pay? Type the amount in rupees, like 12.75.",
       "answer": "54",
       "hints": [
         "Work out $36 \\times 1.5$.",
@@ -378,7 +378,7 @@
       "id": "s0-multiply-divide-decimals/p-7",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Work out $0.4 \\times 0.02$. Type a decimal, like 0.4.",
+      "prompt": "Work out $0.4 \\times 0.02$. Type a decimal, like 0.7.",
       "answer": "0.008",
       "hints": [
         "Multiply without the points: $4 \\times 2$.",
@@ -452,7 +452,7 @@
         "The 7 is in the hundredths place in 0.072. Where is it in 72?",
         "How many places left did each digit move?"
       ],
-      "explanation": "The 7 moves from the hundredths place to the tens place. That is three places left. Moving three places left means multiplying by 1,000.",
+      "explanation": "The 7 moves from the hundredths place to the tens place. That is three places left. Moving three places left means multiplying by 1000.",
       "verify": {
         "kind": "sympy",
         "expr": "72 / Rational(72, 1000)"
@@ -462,13 +462,13 @@
       "id": "s0-multiply-divide-decimals/q-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "A stack of 1,000 sheets of paper is 85 mm thick. How thick is one sheet, in mm? Type a decimal, like 0.4.",
+      "prompt": "A stack of 1000 sheets of paper is 85 mm thick. How thick is one sheet, in mm? Type a decimal, like 0.4.",
       "answer": "0.085",
       "hints": [
-        "Divide 85 by 1,000.",
+        "Divide 85 by 1000.",
         "Each digit moves three places to the right."
       ],
-      "explanation": "Dividing by 1,000 moves every digit three places right. 8 tens become 8 hundredths, and 5 ones become 5 thousandths. Zeros fill the ones and tenths places: 0.085 mm.",
+      "explanation": "Dividing by 1000 moves every digit three places right. 8 tens become 8 hundredths, and 5 ones become 5 thousandths. Zeros fill the ones and tenths places: 0.085 mm.",
       "verify": {
         "kind": "sympy",
         "expr": "Rational(85, 1000)"
@@ -576,16 +576,16 @@
       "id": "s0-multiply-divide-decimals/q-6",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Cloth costs ₹80 per metre. Tenzin buys 2.75 m of cloth for a curtain. How much does he pay? Type the amount in rupees, like 45.50.",
-      "answer": "220",
+      "prompt": "Cloth costs ₹80 per metre. Tenzin buys 2.5 m of cloth for a curtain. How much does he pay? Type the amount in rupees, like 12.75.",
+      "answer": "200",
       "hints": [
-        "Work out $80 \\times 2.75$.",
-        "First work out $80 \\times 275$. Then count two places from the right."
+        "Work out $80 \\times 2.5$.",
+        "First work out $80 \\times 25$. Then count one place from the right."
       ],
-      "explanation": "$80 \\times 275 = 22{,}000$. 2.75 has two digits after the point, so the answer is 220.00. Tenzin pays ₹220. Check: 2 m cost ₹160 and 3 m cost ₹240, so ₹220 fits.",
+      "explanation": "$80 \\times 25 = 2000$. 2.5 has one digit after the point, so the answer is 200.0. Tenzin pays ₹200. Check: 2 m cost ₹160 and 3 m cost ₹240, so ₹200 fits.",
       "verify": {
         "kind": "sympy",
-        "expr": "80 * Rational(275, 100)"
+        "expr": "80 * Rational(25, 10)"
       },
       "match": "decimal"
     },
@@ -593,7 +593,7 @@
       "id": "s0-multiply-divide-decimals/q-7",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Nirmala cuts 9.6 m of rope into 4 equal pieces for a swing. How long is each piece, in metres? Type a decimal, like 0.4.",
+      "prompt": "Nirmala cuts 9.6 m of rope into 4 equal pieces for a swing. How long is each piece, in metres? Type a decimal, like 0.7.",
       "answer": "2.4",
       "hints": [
         "Work out $9.6 \\div 4$ by long division.",
@@ -610,16 +610,16 @@
       "id": "s0-multiply-divide-decimals/q-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Sohan's Mami pays ₹22.50 for 0.5 kg of tomatoes. What is the price for 1 kg? Type the amount in rupees, like 45.50.",
-      "answer": "45",
+      "prompt": "Sohan's Mami pays ₹24.50 for 0.5 kg of tomatoes. What is the price for 1 kg? Type the amount in rupees, like 12.75.",
+      "answer": "49",
       "hints": [
-        "Price for 1 kg = cost ÷ number of kg. Work out $22.50 \\div 0.5$.",
-        "Multiply both numbers by 10 first."
+        "0.5 kg is half a kg. How much would 2 halves cost?",
+        "Or work out $24.50 \\div 0.5$. Multiply both numbers by 10 first."
       ],
-      "explanation": "Multiply both by 10: $22.5 \\div 0.5$ becomes $225 \\div 5 = 45$. The price is ₹45 per kg. Check: 0.5 kg is half a kg, and half of ₹45 is ₹22.50.",
+      "explanation": "0.5 kg is half a kg, and 1 kg is 2 halves. So 1 kg costs $2 \\times ₹24.50 = ₹49$. Or divide: multiply both by 10, so $24.5 \\div 0.5$ becomes $245 \\div 5 = 49$. The price is ₹49 per kg.",
       "verify": {
         "kind": "sympy",
-        "expr": "Rational(2250, 100) / Rational(5, 10)"
+        "expr": "Rational(2450, 100) / Rational(5, 10)"
       },
       "match": "decimal"
     }
@@ -635,7 +635,7 @@
     },
     {
       "q": "Why can I multiply both numbers by 10 when I divide?",
-      "a": "Division asks how many times one number fits into the other. Make both 10 times bigger, and the answer stays the same. For ₹1.20 ÷ ₹0.30, think in paise: 120 paise ÷ 30 paise is 4."
+      "a": "Division asks how many times one number fits into the other. Make both 10 times bigger, and the answer stays the same. For ₹1.20 ÷ ₹0.30, think in paise. 100 paise make 1 rupee, so ₹1.20 is 120 paise and ₹0.30 is 30 paise. 120 paise ÷ 30 paise is 4."
     },
     {
       "q": "What if the division does not come out exactly?",

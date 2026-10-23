@@ -34,3 +34,12 @@ Wording: every sentence is 20 words or fewer. Contexts (power bank, torch, stadi
 4. **Cross-topic: the paise sentence in doubts[2].** SUGGESTION.
    Problem: "like paise in a rupee" does not use the shared sentence "100 paise make 1 rupee" from s0-decimals-meaning and s0-add-sub-decimals.
    Fix: "Hundredths also match paise: 100 paise make 1 rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
+
+## Fixes applied (content-writer)
+
+1. p-5 now ends "Type a fraction, like 3/10."; q-4 ends "Type a fraction, like 7/10." (3/10 is too close to the answer 3/20). Both say "simplest form" and use `simplest`.
+2. doubts[3]: "That is 37 and a half hundredths, so it is 37.5%." doubts[4]: "$\frac{1}{3} = 0.\dot{3}$, and the 3s never stop. So it is $33\frac{1}{3}\%$ exactly. People often say about 33%, but 33% is a little less than $\frac{1}{3}$."
+3. q-2 prompt: "Mrinalini's torch battery shows 8%. Which decimal is the same as 8%?"
+4. doubts[2]: "Hundredths also match paise: 100 paise make 1 rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
+
+No visual changed. Status set to draft.

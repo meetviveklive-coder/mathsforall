@@ -1,10 +1,10 @@
 {
   "id": "s0-fractions-decimals-conversion",
   "title": "Converting between fractions and decimals",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
-    "hook": "Tanvi's Bua asks the shopkeeper for $\\frac{3}{4}$ kg of tomatoes. The scale on the counter shows 0.75 kg. Bua nods. That is exactly right!\n\n$\\frac{3}{4}$ and 0.75 are two ways to write the same amount. In this topic you will change fractions into decimals, and decimals into fractions. You will also meet decimals that never end.",
+    "hook": "Tanvi's Mama asks the shopkeeper for $\\frac{3}{4}$ kg of tomatoes. The scale on the counter shows 0.75 kg. Mama nods. That is exactly right!\n\n$\\frac{3}{4}$ and 0.75 are two ways to write the same amount. In this topic you will change fractions into decimals, and decimals into fractions. You will also meet decimals that never end.",
     "sections": [
       {
         "heading": "Decimal to fraction: read the last place",
@@ -532,7 +532,7 @@
       "id": "s0-fractions-decimals-conversion/q-1",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Write 0.06 as a fraction in simplest form. Type a fraction, like 3/10.",
+      "prompt": "Write 0.06 as a fraction in simplest form. Type a fraction, like 7/10.",
       "answer": "3/50",
       "hints": [
         "0.06 is 6 hundredths.",
@@ -599,7 +599,7 @@
       "id": "s0-fractions-decimals-conversion/q-5",
       "type": "mcq",
       "objective": 1,
-      "prompt": "Shreya's Ajji walks $\\frac{1}{5}$ km to the temple. Shreya writes this as 1.5 km. Which decimal is right?",
+      "prompt": "Shreya's Ajji walks $\\frac{1}{5}$ km to the market. Shreya writes this as 1.5 km. Which decimal is right?",
       "options": [
         {
           "text": "1.5",
@@ -684,7 +684,7 @@
       "hints": [
         "Can you make the bottom 10, 100 or 1000? If you can, the decimal ends."
       ],
-      "explanation": "No multiple of 3 is 10, 100 or 1000. $2 \\div 3$ leaves remainder 2 every time, so $\\frac{2}{3} = 0.666\\ldots$ never ends.",
+      "explanation": "The bottom is 3. 3 cannot be made into 10, 100 or 1000 by multiplying. So $\\frac{2}{3}$ cannot be written as tenths, hundredths or thousandths. $2 \\div 3$ leaves remainder 2 every time, so $\\frac{2}{3} = 0.666\\ldots$ never ends. The other bottoms, 4, 5 and 8, can be made into 100, 10 and 1000.",
       "verify": {
         "kind": "sympy",
         "expr": "Rational(2, 3)"

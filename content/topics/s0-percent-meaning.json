@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-meaning",
   "title": "Percent means 'out of 100'",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Tanvi's Appa charges the power bank before a long train journey to Guwahati. Its little screen shows **37%**.\n\nIs that a lot of charge, or only a little? The sign % is read **percent**. In this topic you will find out what it means. You will also see that 37%, $\\frac{37}{100}$ and 0.37 are three names for one amount.",
@@ -317,7 +317,7 @@
       "id": "s0-percent-meaning/p-5",
       "type": "numeric",
       "objective": 1,
-      "prompt": "A water jar is 20% full. Write 20% as a fraction in simplest form.",
+      "prompt": "A water jar is 20% full. Write 20% as a fraction in simplest form. Type a fraction, like 3/10.",
       "answer": "1/5",
       "hints": [
         "First write 20% over 100.",
@@ -432,7 +432,7 @@
       "id": "s0-percent-meaning/q-2",
       "type": "mcq",
       "objective": 1,
-      "prompt": "Mrinalini's torch battery shows 8%. Which decimal of a full charge is that?",
+      "prompt": "Mrinalini's torch battery shows 8%. Which decimal is the same as 8%?",
       "options": [
         {
           "text": "0.8",
@@ -482,7 +482,7 @@
       "id": "s0-percent-meaning/q-4",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Write 15% as a fraction in simplest form.",
+      "prompt": "Write 15% as a fraction in simplest form. Type a fraction, like 7/10.",
       "answer": "3/20",
       "hints": [
         "First write 15% over 100.",
@@ -587,15 +587,15 @@
     },
     {
       "q": "Why out of 100? Why not out of 10?",
-      "a": "100 small parts let us show amounts more finely. Hundredths also match two decimal places, like paise in a rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
+      "a": "100 small parts let us show amounts more finely. Hundredths also match paise: 100 paise make 1 rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
     },
     {
       "q": "What if the bottom number does not go into 100, like 3/8?",
-      "a": "Divide to get a decimal first: $3 \\div 8 = 0.375$. That is 37 hundredths and half of one more. So it is 37.5%. A percent can have a decimal point too."
+      "a": "Divide to get a decimal first: $3 \\div 8 = 0.375$. That is 37 and a half hundredths, so it is 37.5%. A percent can have a decimal point too."
     },
     {
       "q": "What is 1/3 as a percent?",
-      "a": "$\\frac{1}{3} = 0.333...$, and the 3s never stop. So it is 33 and one third percent exactly. People often round it to 33%."
+      "a": "$\\frac{1}{3} = 0.\\dot{3}$, and the 3s never stop. So it is $33\\frac{1}{3}\\%$ exactly. People often say about 33%, but 33% is a little less than $\\frac{1}{3}$."
     }
   ],
   "review": [

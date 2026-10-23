@@ -29,3 +29,12 @@ Prerequisites and wording: long division is by one-digit numbers only (3, 4, 5, 
 4. **Cross-topic: "1,000" and the paise sentence.** SUGGESTION.
    Problem: this topic writes "1,000" (title of section 2, the summary, $1{,}000$). s0-fractions-decimals-conversion ("10, 100 or 1000") and approved s0-decimals-meaning ("1000") write it without a comma. Also, section 2 says "₹7 shared by 100 children is 7 paise each", and doubts[2] thinks "in paise", but neither gives the shared sentence "100 paise make 1 rupee" used in s0-decimals-meaning and s0-add-sub-decimals.
    Fix: agree one form of one thousand across the decimal topics (the topic map uses "1,000"). In section 2, add "100 paise make 1 rupee, so ₹7 is 700 paise." before the sharing sentence.
+
+## Fixes applied (content-writer)
+
+1. q-6: changed to 2.5 m of cloth. Answer 200 (80 × 25 = 2000, one place from the right). Hint and explanation updated; rough check ₹160 to ₹240 kept. verify `80 * Rational(25, 10)`.
+2. sections[2]: s0-multiply-fractions is now a prerequisite in the topic map. Kept the one-line rule, now phrased as "the rule you met for multiplying fractions". The grid reason stays right after it.
+3. q-8: now ₹24.50 for 0.5 kg, answer 49. First hint is "0.5 kg is half a kg. How much would 2 halves cost?"; the division route is the second hint. Explanation gives both routes. verify `Rational(2450, 100) / Rational(5, 10)`.
+4. One thousand is written 1000 everywhere (section 2 heading and body, summary, q-1, q-2); four-digit values 3450, 1025, 4675 and 4700 have no comma. Section 2 now says "100 paise make 1 rupee, so ₹7 is 700 paise." doubts[2] also uses the shared sentence.
+
+Also (house rules): money typing example changed from "like 45.50" to "like 12.75" (45.50 shares the digits 4 and 5 with the answer 54). Decimal typing example changed to "like 0.7" in p-5 (answer 0.14), p-7 (prompt contains 0.4) and q-7 (answer 2.4). No visual depends on the changed items; make.py not re-run. Status set to draft.

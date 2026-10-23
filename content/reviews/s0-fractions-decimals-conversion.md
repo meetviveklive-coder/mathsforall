@@ -27,3 +27,11 @@ Prerequisites and wording: "biggest common factor" matches the approved fraction
 3. **Context: hook and the Ajji items.** SUGGESTION.
    Problem: the hook has Tanvi's Bua buying tomatoes, and s0-multiply-divide-decimals q-8 also has a woman (Sohan's Mami) buying tomatoes. Here both grandmothers (Prakash's Ajji, Shreya's Ajji) appear in kitchen or temple roles. None is wrong, and Bhaskar's Chacha cycling balances it a little. The approved decimal topics were asked to vary similar repetition.
    Fix: give the hook to a man (for example, "Tanvi's Chacha asks for 3/4 kg of tomatoes"), or give one Ajji a different activity, such as walking to the bus stop or a market.
+
+## Fixes applied (content-writer)
+
+1. q-7: explanation now states a fixed reason: "The bottom is 3. 3 cannot be made into 10, 100 or 1000 by multiplying.", and notes that 4, 5 and 8 can be made into 100, 10 and 1000. The verify block stays `sympy` `Rational(2, 3)`: the tool's whitelist has no `factorint`, and a `relation` check needs a true/false answer, so it cannot be used on an MCQ. The reason in the explanation is the checkable record.
+2. One thousand stays "1000" (no comma), the agreed form across the decimal topics; s0-multiply-divide-decimals was changed to match. No number here has 5 or more digits.
+3. Hook: "Tanvi's Bua" is now "Tanvi's Mama" (not Chacha, which Bhaskar's item already uses). q-5: Shreya's Ajji now walks to the market, not the temple.
+
+Also (house rules): q-1 typing example changed to "like 7/10." because the answer 3/50 shares its numerator with 3/10. No visual changed. Status set to draft.
