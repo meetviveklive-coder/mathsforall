@@ -71,7 +71,8 @@ export type CheckResult =
   | { status: 'wrong-form' } // right value, but the question asks for a specific denominator
   | { status: 'not-mixed' } // right value, but the question asks for a mixed number
   | { status: 'not-improper' } // right value, but the question asks for a single fraction like 7/5
-  | { status: 'not-decimal' }; // right value, but the question asks for a decimal
+  | { status: 'not-decimal' } // right value, but the question asks for a decimal
+  | { status: 'not-fraction' }; // right value typed as a decimal, but the question asks for a fraction
 
 /** True when the input is typed as a mixed number with a proper fraction part, e.g. "2 1/3". */
 export function isMixedForm(raw: string): boolean {
@@ -86,6 +87,7 @@ export function checkNumeric(input: string, answer: string, rule: MatchRule = 'v
   const want = parseAnswer(answer);
   if (!want) throw new Error(`Stored answer is not a number: ${answer}`);
   if (!sameValue(got, want)) return { status: 'wrong' };
+  if (rule === 'simplest' && input.includes('.')) return { status: 'not-fraction' };
   if (rule === 'simplest' && gcd(got.n, got.d) !== 1) return { status: 'not-simplest' };
   if (rule === 'exact' && (got.n !== want.n || got.d !== want.d)) return { status: 'wrong-form' };
   if (rule === 'decimal' && input.includes('/')) return { status: 'not-decimal' };

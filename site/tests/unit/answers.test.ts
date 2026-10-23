@@ -85,3 +85,11 @@ describe('percent answers', () => {
     expect(checkNumeric('20%', '25').status).toBe('wrong');
   });
 });
+
+describe('simplest-form fraction asked, decimal typed', () => {
+  it('asks for a fraction instead of saying "not simplest"', () => {
+    expect(checkNumeric('0.4', '2/5', 'simplest').status).toBe('not-fraction');
+    expect(checkNumeric('2/5', '2/5', 'simplest').status).toBe('correct');
+    expect(checkNumeric('4/10', '2/5', 'simplest').status).toBe('not-simplest');
+  });
+});

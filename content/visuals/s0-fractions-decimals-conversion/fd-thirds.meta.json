@@ -1,0 +1,54 @@
+{
+ "start": "0",
+ "end": "1",
+ "top": {
+  "spaces_per_unit": 3,
+  "labels": [
+   "1/3",
+   "2/3"
+  ],
+  "labels_at_own_value": true
+ },
+ "bottom": {
+  "spaces_per_unit": 10,
+  "labels": [
+   "0",
+   "0.1",
+   "0.2",
+   "0.3",
+   "0.4",
+   "0.5",
+   "0.6",
+   "0.7",
+   "0.8",
+   "0.9",
+   "1"
+  ],
+  "labels_at_own_value": true
+ },
+ "lined_up": [
+  [
+   "0",
+   "0"
+  ],
+  [
+   "1",
+   "1"
+  ]
+ ],
+ "lined_up_equal": true,
+ "not_lined_up": [
+  "1/3",
+  "2/3"
+ ],
+ "between": {
+  "1/3": [
+   "0.3",
+   "0.4"
+  ],
+  "2/3": [
+   "0.6",
+   "0.7"
+  ]
+ }
+}
