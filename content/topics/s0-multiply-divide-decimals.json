@@ -1,7 +1,7 @@
 {
   "id": "s0-multiply-divide-decimals",
   "title": "Multiplying and dividing decimals",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Anil's Amma rides a scooter to work. Petrol costs ₹102.50 a litre. She buys 10 litres. How much does she pay?\n\nAt home, Anil's Papa cuts 4.5 m of cloth into 3 equal pieces for cushion covers. How long is each piece?\n\nYou already multiply and divide whole numbers. With decimals, you find the digits the same way. The new question is where the decimal point goes. In this topic you will find out, and see why.",
@@ -658,6 +658,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content 52 pass. Diff 72fdf28..HEAD reviewed; q-6 (80 x 2.5 = 200), q-8 (24.50 / 0.5 = 49), 1000 without comma, paise sentence re-solved with own Rational code; s0-multiply-fractions now a prerequisite. No visual changed. Typing examples differ from answers; decimal rule compares exact values. 0 blocking, 1 suggestion."
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

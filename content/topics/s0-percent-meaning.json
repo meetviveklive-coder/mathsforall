@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-meaning",
   "title": "Percent means 'out of 100'",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Tanvi's Appa charges the power bank before a long train journey to Guwahati. Its little screen shows **37%**.\n\nIs that a lot of charge, or only a little? The sign % is read **percent**. In this topic you will find out what it means. You will also see that 37%, $\\frac{37}{100}$ and 0.37 are three names for one amount.",
@@ -610,6 +610,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content 44 pass. Diff reviewed: p-5 and q-4 typing phrases (answers 1/5, 3/20, simplest), q-2 wording, doubts 3/8 = 37.5% and 1/3 = 33 1/3% re-solved; paise sentence. No visual changed. 0 blocking, 0 new suggestions."
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

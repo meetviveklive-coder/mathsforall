@@ -1,7 +1,7 @@
 {
   "id": "s0-fractions-decimals-conversion",
   "title": "Converting between fractions and decimals",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Tanvi's Mama asks the shopkeeper for $\\frac{3}{4}$ kg of tomatoes. The scale on the counter shows 0.75 kg. Mama nods. That is exactly right!\n\n$\\frac{3}{4}$ and 0.75 are two ways to write the same amount. In this topic you will change fractions into decimals, and decimals into fractions. You will also meet decimals that never end.",
@@ -766,6 +766,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content 54 pass. Diff reviewed: q-1 example 7/10 (answer 3/50), q-7 explanation (4, 5, 8 have only 2s and 5s; 3 does not), hook and q-5 context. No visual changed. 0.33 cannot match 1/3 (exact fractions; 1/3 and 2/3 only in MCQs). 0 blocking, 0 new suggestions."
+    },
+    {
+      "date": "2026-10-23",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }
