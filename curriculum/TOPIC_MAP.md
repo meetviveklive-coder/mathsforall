@@ -228,7 +228,7 @@
 - Solve money problems with rupees and paise
 - *Watch for:* Lining up the last digits instead of the decimal points
 
-**31. Multiplying and dividing decimals** · [30, 16] · 35 min
+**31. Multiplying and dividing decimals** · [30, 16, 26] · 35 min
 
 - Multiply and divide decimals by 10, 100 and 1,000
 - Multiply a decimal by a decimal

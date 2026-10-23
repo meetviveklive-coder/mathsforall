@@ -1,7 +1,7 @@
 {
   "id": "s0-fractions-decimals-conversion",
   "title": "Converting between fractions and decimals",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Tanvi's Bua asks the shopkeeper for $\\frac{3}{4}$ kg of tomatoes. The scale on the counter shows 0.75 kg. Bua nods. That is exactly right!\n\n$\\frac{3}{4}$ and 0.75 are two ways to write the same amount. In this topic you will change fractions into decimals, and decimals into fractions. You will also meet decimals that never end.",
@@ -752,6 +752,14 @@
     {
       "q": "What about decimals bigger than 1, like 1.5?",
       "a": "They work the same way. 1.5 is 15 tenths, so $1.5 = \\frac{15}{10}$. Divide both by 5 to get $\\frac{3}{2}$."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 54 pass. All values re-solved with own Rational code; q-7 checked by prime factors of each denominator. No recurring decimal is typed and no typed answer is 1/3 or 2/3; 0.33 is never accepted for 1/3. 4 visuals rendered and match. 0 blocking, 3 suggestions. See content/reviews/s0-fractions-decimals-conversion.md."
     }
   ]
 }

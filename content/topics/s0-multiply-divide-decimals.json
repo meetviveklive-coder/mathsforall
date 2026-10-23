@@ -1,7 +1,7 @@
 {
   "id": "s0-multiply-divide-decimals",
   "title": "Multiplying and dividing decimals",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Anil's Amma rides a scooter to work. Petrol costs ₹102.50 a litre. She buys 10 litres. How much does she pay?\n\nAt home, Anil's Papa cuts 4.5 m of cloth into 3 equal pieces for cushion covers. How long is each piece?\n\nYou already multiply and divide whole numbers. With decimals, you find the digits the same way. The new question is where the decimal point goes. In this topic you will find out, and see why.",
@@ -644,6 +644,14 @@
     {
       "q": "Do I line up the points when I multiply?",
       "a": "No. Lining up the points is for adding and subtracting. To multiply, leave the points out, multiply, then count the decimal places."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 52 pass. All 33 values re-solved with own Rational code; all agree. MCQ distractors checked. 5 visuals rendered and match alt/spec. 0 blocking, 4 suggestions (multi-digit products such as 80 x 275, multiply-fractions not in prerequisite chain, q-8 numbers next to the 45.50 typing example, 1,000 vs 1000 and paise sentence). See content/reviews/s0-multiply-divide-decimals.md."
     }
   ]
 }

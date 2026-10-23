@@ -631,7 +631,8 @@
       "unit": "Decimals",
       "prerequisites": [
         "s0-add-sub-decimals",
-        "s0-long-division"
+        "s0-long-division",
+        "s0-multiply-fractions"
       ],
       "objectives": [
         "Multiply and divide decimals by 10, 100 and 1,000",
