@@ -31,6 +31,8 @@ export function parseAnswer(raw: string): Frac | null {
     .replace(/^rs\.?\s*/i, '')
     .replace(/[−–]/g, '-') // unicode minus and en dash
     .replace(/\s*\/\s*/g, '/')
+    // Percent questions store the number of percent ("25"); a typed "25%" or "25 %" means the same.
+    .replace(/\s*%$/, '')
     .trim();
   if (/^-?\d{1,3}(,\d{2,3})+(\.\d+)?$/.test(t)) t = t.replace(/,/g, ''); // 1,25,000 or 125,000
 

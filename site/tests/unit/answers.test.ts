@@ -76,3 +76,12 @@ describe('decimal rule', () => {
     expect(checkNumeric('₹12.50', '12.5', 'decimal').status).toBe('correct');
   });
 });
+
+describe('percent answers', () => {
+  it('accepts a trailing % sign on a percent answer stored as a number', () => {
+    expect(checkNumeric('25%', '25').status).toBe('correct');
+    expect(checkNumeric('25 %', '25').status).toBe('correct');
+    expect(checkNumeric('12.5%', '12.5', 'decimal').status).toBe('correct');
+    expect(checkNumeric('20%', '25').status).toBe('wrong');
+  });
+});
