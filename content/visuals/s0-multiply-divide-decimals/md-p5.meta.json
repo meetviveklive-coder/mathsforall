@@ -1,0 +1,19 @@
+{
+ "columns": 10,
+ "rows": 10,
+ "cells": 100,
+ "equal": true,
+ "shaded_columns": 7,
+ "shaded_rows": 2,
+ "dark": 14,
+ "light": 62,
+ "dark_block": [
+  7,
+  2
+ ],
+ "dark_decimal": "0.14",
+ "labels": {
+  "top": "0.7",
+  "left": "0.2"
+ }
+}

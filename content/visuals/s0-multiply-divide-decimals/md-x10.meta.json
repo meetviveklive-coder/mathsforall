@@ -1,0 +1,37 @@
+{
+ "headings": [
+  "Tens",
+  "Ones",
+  "Tenths",
+  "Hundredths"
+ ],
+ "rows": [
+  {
+   "digits": [
+    "",
+    "3",
+    "4",
+    "5"
+   ],
+   "value": "3.45"
+  },
+  {
+   "digits": [
+    "3",
+    "4",
+    "5",
+    ""
+   ],
+   "value": "34.5"
+  }
+ ],
+ "point_fixed": true,
+ "arrows": 3,
+ "shift": {
+  "places": 1,
+  "direction": "left"
+ },
+ "ratio": "10",
+ "filled_zeros": 0,
+ "label": "\u00d7 10"
+}

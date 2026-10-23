@@ -1,0 +1,649 @@
+{
+  "id": "s0-multiply-divide-decimals",
+  "title": "Multiplying and dividing decimals",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Anil's Amma rides a scooter to work. Petrol costs ₹102.50 a litre. She buys 10 litres. How much does she pay?\n\nAt home, Anil's Papa cuts 4.5 m of cloth into 3 equal pieces for cushion covers. How long is each piece?\n\nYou already multiply and divide whole numbers. With decimals, you find the digits the same way. The new question is where the decimal point goes. In this topic you will find out, and see why.",
+    "sections": [
+      {
+        "heading": "Multiply by 10: every digit moves one place left",
+        "body": "Each place is worth 10 times the place on its right. 1 ten is 10 ones, and 1 one is 10 tenths.\n\nSo when you multiply by 10, every digit becomes worth 10 times as much. Each digit moves **one place to the left**.\n\nLook at $3.45 \\times 10$ in the chart:\n\n- 3 ones become 3 tens.\n- 4 tenths become 4 ones.\n- 5 hundredths become 5 tenths.\n\nSo $3.45 \\times 10 = 34.5$. The decimal point stays in its own column. The digits move past it.\n\nPeople often say \"the point moves one place right\". It is really the digits that move left.\n\nBe careful: $3.45 \\times 10$ is **not** 3.450. A zero at the end of a decimal does not change its value. 3.450 is still 3.45.",
+        "visual": "md-x10"
+      },
+      {
+        "heading": "100 and 1,000, and dividing",
+        "body": "Multiplying by 100 is multiplying by 10 twice. So every digit moves **two places** left. Multiplying by 1,000 moves every digit **three places** left.\n\nCount the zeros. 10 has one zero, 100 has two and 1,000 has three. That is how many places the digits move.\n\n- $3.45 \\times 100 = 345$\n- $3.45 \\times 1{,}000 = 3{,}450$\n\nIn 3,450 the ones place would be empty, so it gets a 0. This zero matters. It keeps the 3 in the thousands place.\n\nDividing works the other way. Each digit moves to the **right**, by one place for each zero.\n\n- $45.6 \\div 10 = 4.56$\n- $45.6 \\div 100 = 0.456$\n\nIn the chart, $7 \\div 100$ moves the 7 from the ones place to the hundredths place. The ones and tenths places are now empty, so they get zeros: $7 \\div 100 = 0.07$. This makes sense with money. ₹7 shared by 100 children is 7 paise each, which is ₹0.07.\n\nNow the hook. Petrol costs ₹102.50 a litre, so 10 litres cost ₹1,025.",
+        "visual": "md-div100"
+      },
+      {
+        "heading": "A decimal times a decimal",
+        "body": "Start with a decimal times a whole number. $0.4 \\times 3$ is 4 tenths, three times. That is 12 tenths, which is 1.2.\n\nNow try $0.3 \\times 0.4$. It means 0.3 of 0.4. Write each decimal as a fraction. Then multiply the numerators and multiply the denominators:\n\n$0.3 \\times 0.4 = \\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100} = 0.12$\n\nThe grid shows why. The whole square is 1. The 4 shaded rows are 0.4 of the square. The 3 shaded columns are 0.3 of it. They overlap in 12 dark squares.\n\nEach small square is one hundredth. So $0.3 \\times 0.4$ is 12 hundredths, which is 0.12.\n\nTenths times tenths gives hundredths. Notice that 0.12 is smaller than 0.4. Taking a part of something gives less than the whole thing.",
+        "visual": "md-grid"
+      },
+      {
+        "heading": "The shortcut: count the decimal places",
+        "body": "You don't need a grid every time. Here is the shortcut.\n\n1. Multiply the numbers as if there were no points.\n2. Count the digits after the point in **both** numbers together.\n3. Give the answer that many digits after the point. Count from the **right**.\n\nFor $2.5 \\times 1.5$, first work out $25 \\times 15 = 375$. 2.5 has one digit after the point, and 1.5 has one. That makes two. Count two places from the right: 3.75.\n\nWhy two places? $2.5 = \\frac{25}{10}$ and $1.5 = \\frac{15}{10}$. Tenths times tenths gives hundredths, so the answer is 375 hundredths.\n\nDon't count from the left. Two places from the left gives 37.5, which is far too big. Check with a rough guess. $2.5 \\times 1.5$ is between $2 \\times 1 = 2$ and $3 \\times 2 = 6$. Only 3.75 fits."
+      },
+      {
+        "heading": "Dividing decimals",
+        "body": "**By a whole number.** Use long division. Divide each place from the left. Carry any remainder to the next place on the right. Put the point in the answer straight above the point in the number.\n\nIn the hook, 4.5 m of cloth is cut into 3 equal pieces. 4 ones ÷ 3 is 1, remainder 1. That 1 one is 10 tenths. With the 5 tenths, that makes 15 tenths. 15 tenths ÷ 3 is 5 tenths. So $4.5 \\div 3 = 1.5$, and each piece is 1.5 m.\n\n**By a decimal.** First multiply **both** numbers by 10, or by 100. Stop when the number you divide by is a whole number. The answer does not change.\n\n$1.2 \\div 0.3$ asks: how many 0.3s fit into 1.2? The number line shows 4 hops. Now multiply both by 10: $12 \\div 3 = 4$. Same answer.\n\nWhy? 1.2 is 12 tenths and 0.3 is 3 tenths. 3 tenths fit into 12 tenths as many times as 3 fits into 12.",
+        "visual": "md-hops"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Rice costs ₹46.75 per kg. A school kitchen buys 100 kg. How much does it pay?",
+        "steps": [
+          "The cost is $46.75 \\times 100$. 100 has two zeros, so every digit moves two places left.",
+          "4 tens become 4 thousands. 6 ones become 6 hundreds.",
+          "7 tenths become 7 tens. 5 hundredths become 5 ones.",
+          "So $46.75 \\times 100 = 4{,}675$. The kitchen pays ₹4,675.",
+          "Rough check: ₹47 a kg for 100 kg is ₹4,700. So ₹4,675 makes sense."
+        ],
+        "answer": "4675",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(4675, 100) * 100"
+        }
+      },
+      {
+        "problem": "Work out $0.2 \\times 0.3$.",
+        "steps": [
+          "Multiply without the points: $2 \\times 3 = 6$.",
+          "0.2 has one digit after the point, and 0.3 has one. So the answer needs two.",
+          "6 is only one digit. Put a 0 in front of it to fill the tenths place: 0.06.",
+          "Check with fractions: $\\frac{2}{10} \\times \\frac{3}{10} = \\frac{6}{100} = 0.06$."
+        ],
+        "answer": "0.06",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(2, 10) * Rational(3, 10)"
+        }
+      },
+      {
+        "problem": "Farida's Nana has 4.8 m of cloth. He cuts it into pieces 0.6 m long to make bags. How many pieces does he get?",
+        "steps": [
+          "The question asks how many 0.6s fit into 4.8. That is $4.8 \\div 0.6$.",
+          "0.6 is not a whole number. Multiply both numbers by 10: $48 \\div 6$.",
+          "$48 \\div 6 = 8$.",
+          "Check: $8 \\times 0.6$ is 48 tenths, which is 4.8. He gets 8 pieces."
+        ],
+        "answer": "8",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(48, 10) / Rational(6, 10)"
+        }
+      }
+    ],
+    "summary": [
+      "Multiplying by 10, 100 or 1,000 moves every digit 1, 2 or 3 places left. The point stays where it is.",
+      "Dividing by 10, 100 or 1,000 moves every digit 1, 2 or 3 places right. Fill empty places with zeros.",
+      "Tenths times tenths gives hundredths: 0.3 × 0.4 = 12/100 = 0.12.",
+      "To multiply decimals, multiply without the points. Then count the decimal places in both numbers, from the right.",
+      "To divide by a whole number, use long division and keep the point straight above the point.",
+      "To divide by a decimal, multiply both numbers by 10 or 100 first. The answer does not change.",
+      "Check every answer with a rough guess."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "md-x10",
+      "purpose": "3.45 × 10: each digit moves one place left past a fixed decimal point",
+      "spec": "Place-value columns Tens, Ones, Tenths, Hundredths with a fixed point column. Top row 3.45, bottom row 34.5. One arrow from each digit to the column one place left. Label × 10.",
+      "alt": "Place-value columns headed Tens, Ones, Tenths and Hundredths, with the decimal point in its own column. The top row is 3.45. The bottom row is 34.5. The label on the left says times 10. Three arrows go from the 3, 4 and 5 down to the column one place to the left. The point stays in the same column.",
+      "file": "content/visuals/s0-multiply-divide-decimals/md-x10.svg",
+      "checks": {
+        "headings": [
+          "Tens",
+          "Ones",
+          "Tenths",
+          "Hundredths"
+        ],
+        "rows": [
+          {
+            "digits": [
+              "",
+              "3",
+              "4",
+              "5"
+            ],
+            "value": "3.45"
+          },
+          {
+            "digits": [
+              "3",
+              "4",
+              "5",
+              ""
+            ],
+            "value": "34.5"
+          }
+        ],
+        "point_fixed": true,
+        "arrows": 3,
+        "shift": {
+          "places": 1,
+          "direction": "left"
+        },
+        "ratio": "10",
+        "filled_zeros": 0,
+        "label": "× 10"
+      }
+    },
+    {
+      "id": "md-div100",
+      "purpose": "7 ÷ 100: the 7 moves two places right and zeros fill the empty places",
+      "spec": "Columns Ones, Tenths, Hundredths with a fixed point column. Top row 7. Bottom row 0.07, with the two zeros as filled-in zeros in dashed boxes. One arrow from the 7 to the hundredths column. Label ÷ 100.",
+      "alt": "Place-value columns headed Ones, Tenths and Hundredths, with the decimal point in its own column. The top row is 7 in the ones column. The label on the left says divide by 100. An arrow goes from the 7 down to the hundredths column. The bottom row is 0.07. Its two zeros, in the ones and tenths columns, are in dashed boxes.",
+      "file": "content/visuals/s0-multiply-divide-decimals/md-div100.svg",
+      "checks": {
+        "headings": [
+          "Ones",
+          "Tenths",
+          "Hundredths"
+        ],
+        "rows": [
+          {
+            "digits": [
+              "7",
+              "",
+              ""
+            ],
+            "value": "7"
+          },
+          {
+            "digits": [
+              "0",
+              "0",
+              "7"
+            ],
+            "value": "0.07"
+          }
+        ],
+        "point_fixed": true,
+        "arrows": 1,
+        "shift": {
+          "places": 2,
+          "direction": "right"
+        },
+        "ratio": "1/100",
+        "filled_zeros": 2,
+        "label": "÷ 100"
+      }
+    },
+    {
+      "id": "md-grid",
+      "purpose": "0.3 × 0.4 as an area model on a hundred grid",
+      "spec": "10 by 10 grid. The first 3 columns and the top 4 rows are lightly shaded. The 3 by 4 overlap is dark (12 squares). Label 0.3 over the shaded columns and 0.4 beside the shaded rows.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The first 3 columns are lightly shaded and labelled 0.3. The top 4 rows are lightly shaded and labelled 0.4. Where they overlap, a block 3 squares wide and 4 squares tall is dark. That is 12 dark squares.",
+      "file": "content/visuals/s0-multiply-divide-decimals/md-grid.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded_columns": 3,
+        "shaded_rows": 4,
+        "dark": 12,
+        "light": 46,
+        "dark_block": [
+          3,
+          4
+        ],
+        "dark_decimal": "0.12",
+        "labels": {
+          "top": "0.3",
+          "left": "0.4"
+        }
+      }
+    },
+    {
+      "id": "md-hops",
+      "purpose": "1.2 ÷ 0.3 as hops of 0.3 from 0 to 1.2",
+      "spec": "Number line from 0 to 1.2 with a tick every tenth (12 spaces). Four equal hops of 0.3 drawn above, numbered 1 to 4. Labels 0, 0.3, 0.6, 0.9 and 1.2.",
+      "alt": "A number line from 0 to 1.2 with a small tick every tenth. Four equal hops are drawn above it, numbered 1, 2, 3 and 4. Each hop covers 3 tenths. The labels below the line are 0, 0.3, 0.6, 0.9 and 1.2.",
+      "file": "content/visuals/s0-multiply-divide-decimals/md-hops.svg",
+      "checks": {
+        "start": "0",
+        "end": "6/5",
+        "spaces": 12,
+        "hops": 4,
+        "hop_length": "3/10",
+        "last_hop_ends_at": "6/5",
+        "labels": [
+          "0",
+          "0.3",
+          "0.6",
+          "0.9",
+          "1.2"
+        ]
+      }
+    },
+    {
+      "id": "md-p5",
+      "purpose": "Practice: 0.7 × 0.2 on a hundred grid",
+      "spec": "10 by 10 grid. The first 7 columns and the top 2 rows are lightly shaded. The 7 by 2 overlap is dark. Label 0.7 over the shaded columns and 0.2 beside the shaded rows.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The first 7 columns are lightly shaded and labelled 0.7. The top 2 rows are lightly shaded and labelled 0.2. Where they overlap, a block 7 squares wide and 2 squares tall is dark.",
+      "file": "content/visuals/s0-multiply-divide-decimals/md-p5.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded_columns": 7,
+        "shaded_rows": 2,
+        "dark": 14,
+        "light": 62,
+        "dark_block": [
+          7,
+          2
+        ],
+        "dark_decimal": "0.14",
+        "labels": {
+          "top": "0.7",
+          "left": "0.2"
+        }
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-multiply-divide-decimals/p-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Work out $5.82 \\times 10$. Type a decimal, like 0.4.",
+      "answer": "58.2",
+      "hints": [
+        "Multiplying by 10 moves every digit one place to the left.",
+        "5 ones become 5 tens. Where do the 8 tenths go?"
+      ],
+      "explanation": "5 ones become 5 tens, 8 tenths become 8 ones, and 2 hundredths become 2 tenths. So $5.82 \\times 10 = 58.2$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(582, 100) * 10"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-2",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which number is $0.6 \\times 100$?",
+      "options": [
+        {
+          "text": "60",
+          "value": "60",
+          "correct": true
+        },
+        {
+          "text": "0.600",
+          "value": "0.600",
+          "correct": false,
+          "why_wrong": "Adding zeros at the end of a decimal does not change it. 0.600 is still 0.6. The digits must move two places left."
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "correct": false,
+          "why_wrong": "This moves the 6 only one place left. That is $0.6 \\times 10$. For 100, move it two places."
+        },
+        {
+          "text": "0.006",
+          "value": "0.006",
+          "correct": false,
+          "why_wrong": "This moves the 6 to the right, which divides. Multiplying by 100 makes the number bigger."
+        }
+      ],
+      "answer": "60",
+      "hints": [
+        "100 has two zeros. How many places does each digit move?"
+      ],
+      "explanation": "Multiplying by 100 moves every digit two places left. 6 tenths become 6 tens. The empty ones place gets a 0, so the answer is 60.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(6, 10) * 100"
+      }
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Work out $23.5 \\div 100$. Type a decimal, like 0.4.",
+      "answer": "0.235",
+      "hints": [
+        "Dividing by 100 moves every digit two places to the right.",
+        "2 tens become 2 tenths. The ones place is then empty."
+      ],
+      "explanation": "Each digit moves two places right. 2 tens become 2 tenths, 3 ones become 3 hundredths, and 5 tenths become 5 thousandths. The empty ones place gets a 0: 0.235.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(235, 10) / 100"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-4",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "A shop sells a box of 100 erasers for ₹350. What is the price of one eraser? Type the amount in rupees, like 45.50.",
+      "answer": "3.50",
+      "hints": [
+        "Divide ₹350 by 100.",
+        "Each digit moves two places to the right."
+      ],
+      "explanation": "$350 \\div 100$ moves each digit two places right. 3 hundreds become 3 ones and 5 tens become 5 tenths. One eraser costs ₹3.50.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(350, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-5",
+      "type": "numeric",
+      "visual": "md-p5",
+      "objective": 1,
+      "prompt": "The grid shows $0.7 \\times 0.2$. Each small square is one hundredth. What decimal is dark? Type a decimal, like 0.4.",
+      "answer": "0.14",
+      "hints": [
+        "Count the dark squares. The dark block is 7 squares wide and 2 squares tall.",
+        "Each small square is one hundredth."
+      ],
+      "explanation": "The dark block has $7 \\times 2 = 14$ squares. That is 14 hundredths, so $0.7 \\times 0.2 = 0.14$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 10) * Rational(2, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Onions cost ₹36 per kg. Ramesh buys 1.5 kg. How much does he pay? Type the amount in rupees, like 45.50.",
+      "answer": "54",
+      "hints": [
+        "Work out $36 \\times 1.5$.",
+        "First work out $36 \\times 15$. Then count one place from the right."
+      ],
+      "explanation": "$36 \\times 15 = 540$. 1.5 has one digit after the point, so the answer is 54.0. Ramesh pays ₹54. Check: 1 kg is ₹36 and half a kg is ₹18, and $36 + 18 = 54$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "36 * Rational(15, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-7",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $0.4 \\times 0.02$. Type a decimal, like 0.4.",
+      "answer": "0.008",
+      "hints": [
+        "Multiply without the points: $4 \\times 2$.",
+        "0.4 has one digit after the point and 0.02 has two. How many does the answer need?"
+      ],
+      "explanation": "$4 \\times 2 = 8$. The answer needs $1 + 2 = 3$ digits after the point. Fill the empty places with zeros: 0.008.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(4, 10) * Rational(2, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-8",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Mohan works out $1.2 \\times 3.4$. He gets $12 \\times 34 = 408$. Then he counts two places from the left and writes 40.8. Is he right?",
+      "answer": "false",
+      "hints": [
+        "Count the places from the right, not the left.",
+        "Make a rough guess: $1 \\times 3 = 3$ and $2 \\times 4 = 8$."
+      ],
+      "explanation": "No. The answer needs two digits after the point, counted from the right: 4.08. The guess agrees, because 4.08 is between 3 and 8. 40.8 is far too big.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(12, 10) * Rational(34, 10), Rational(408, 10))"
+      }
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Work out $7.2 \\div 4$. Type a decimal, like 0.4.",
+      "answer": "1.8",
+      "hints": [
+        "7 ones ÷ 4 is 1, remainder 3.",
+        "The 3 ones left over are 30 tenths. Add the 2 tenths."
+      ],
+      "explanation": "7 ones ÷ 4 is 1, remainder 3. The 3 ones are 30 tenths, and with 2 more tenths that makes 32 tenths. 32 tenths ÷ 4 is 8 tenths. So $7.2 \\div 4 = 1.8$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(72, 10) / 4"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/p-10",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Kavitha has 3.6 m of ribbon. She cuts it into pieces 0.4 m long. How many pieces does she get? Type a whole number.",
+      "answer": "9",
+      "hints": [
+        "Work out $3.6 \\div 0.4$.",
+        "Multiply both numbers by 10 first."
+      ],
+      "explanation": "Multiply both by 10: $3.6 \\div 0.4$ becomes $36 \\div 4 = 9$. Check: $9 \\times 0.4 = 3.6$. She gets 9 pieces.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(36, 10) / Rational(4, 10)"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-multiply-divide-decimals/q-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Fill in the box: $0.072 \\times \\square = 72$ Type the number that goes in the box.",
+      "answer": "1000",
+      "hints": [
+        "The 7 is in the hundredths place in 0.072. Where is it in 72?",
+        "How many places left did each digit move?"
+      ],
+      "explanation": "The 7 moves from the hundredths place to the tens place. That is three places left. Moving three places left means multiplying by 1,000.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "72 / Rational(72, 1000)"
+      }
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "A stack of 1,000 sheets of paper is 85 mm thick. How thick is one sheet, in mm? Type a decimal, like 0.4.",
+      "answer": "0.085",
+      "hints": [
+        "Divide 85 by 1,000.",
+        "Each digit moves three places to the right."
+      ],
+      "explanation": "Dividing by 1,000 moves every digit three places right. 8 tens become 8 hundredths, and 5 ones become 5 thousandths. Zeros fill the ones and tenths places: 0.085 mm.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(85, 1000)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-3",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which number is $4.5 \\times 10$?",
+      "options": [
+        {
+          "text": "4.50",
+          "value": "4.50",
+          "correct": false,
+          "why_wrong": "Putting a zero on the end does not change a decimal. 4.50 is still 4.5. Each digit must move one place left."
+        },
+        {
+          "text": "45",
+          "value": "45",
+          "correct": true
+        },
+        {
+          "text": "40.5",
+          "value": "40.5",
+          "correct": false,
+          "why_wrong": "Only the 4 was multiplied by 10. The 5 tenths must also move, and become 5 ones."
+        },
+        {
+          "text": "0.45",
+          "value": "0.45",
+          "correct": false,
+          "why_wrong": "The digits moved right, which divides by 10. Multiplying by 10 makes the number bigger."
+        }
+      ],
+      "answer": "45",
+      "hints": [
+        "Each digit moves one place to the left."
+      ],
+      "explanation": "4 ones become 4 tens, and 5 tenths become 5 ones. So $4.5 \\times 10 = 45$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(45, 10) * 10"
+      }
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Work out $1.5 \\times 2.4$. Type a decimal, like 0.4.",
+      "answer": "3.6",
+      "hints": [
+        "First work out $15 \\times 24$.",
+        "How many digits after the point are there in 1.5 and 2.4 together?"
+      ],
+      "explanation": "$15 \\times 24 = 360$. The answer needs two digits after the point: 3.60, which is 3.6. Rough check: between $1 \\times 2 = 2$ and $2 \\times 3 = 6$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 10) * Rational(24, 10)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-5",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "What is $0.3 \\times 0.2$?",
+      "options": [
+        {
+          "text": "0.6",
+          "value": "0.6",
+          "correct": false,
+          "why_wrong": "Tenths times tenths gives hundredths, not tenths. Count both decimal places: the answer needs two digits after the point."
+        },
+        {
+          "text": "0.06",
+          "value": "0.06",
+          "correct": true
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "correct": false,
+          "why_wrong": "The points were left out. 0.3 and 0.2 are both less than 1, so the answer must be less than 1."
+        },
+        {
+          "text": "0.5",
+          "value": "0.5",
+          "correct": false,
+          "why_wrong": "This adds 3 tenths and 2 tenths. The question asks you to multiply."
+        }
+      ],
+      "answer": "0.06",
+      "hints": [
+        "Write each as tenths. What do tenths times tenths give?"
+      ],
+      "explanation": "$\\frac{3}{10} \\times \\frac{2}{10} = \\frac{6}{100}$, which is 0.06. The answer needs two digits after the point, so a 0 fills the tenths place.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 10) * Rational(2, 10)"
+      }
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Cloth costs ₹80 per metre. Tenzin buys 2.75 m of cloth for a curtain. How much does he pay? Type the amount in rupees, like 45.50.",
+      "answer": "220",
+      "hints": [
+        "Work out $80 \\times 2.75$.",
+        "First work out $80 \\times 275$. Then count two places from the right."
+      ],
+      "explanation": "$80 \\times 275 = 22{,}000$. 2.75 has two digits after the point, so the answer is 220.00. Tenzin pays ₹220. Check: 2 m cost ₹160 and 3 m cost ₹240, so ₹220 fits.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "80 * Rational(275, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Nirmala cuts 9.6 m of rope into 4 equal pieces for a swing. How long is each piece, in metres? Type a decimal, like 0.4.",
+      "answer": "2.4",
+      "hints": [
+        "Work out $9.6 \\div 4$ by long division.",
+        "9 ones ÷ 4 is 2, remainder 1. The 1 one left over is 10 tenths."
+      ],
+      "explanation": "9 ones ÷ 4 is 2, remainder 1. That 1 one is 10 tenths, and with the 6 tenths it makes 16 tenths. 16 tenths ÷ 4 is 4 tenths. Each piece is 2.4 m.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(96, 10) / 4"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-multiply-divide-decimals/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Sohan's Mami pays ₹22.50 for 0.5 kg of tomatoes. What is the price for 1 kg? Type the amount in rupees, like 45.50.",
+      "answer": "45",
+      "hints": [
+        "Price for 1 kg = cost ÷ number of kg. Work out $22.50 \\div 0.5$.",
+        "Multiply both numbers by 10 first."
+      ],
+      "explanation": "Multiply both by 10: $22.5 \\div 0.5$ becomes $225 \\div 5 = 45$. The price is ₹45 per kg. Check: 0.5 kg is half a kg, and half of ₹45 is ₹22.50.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2250, 100) / Rational(5, 10)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Does the decimal point really move?",
+      "a": "Not really. The point always sits between the ones and the tenths. When you multiply by 10, the digits move one place left, past the point. Saying \"the point moves right\" is a quick way to remember it."
+    },
+    {
+      "q": "What if the answer has fewer digits than it needs after the point?",
+      "a": "Fill the empty places with zeros, just after the point. For $0.2 \\times 0.3$, $2 \\times 3 = 6$, and the answer needs two places. So it is 0.06."
+    },
+    {
+      "q": "Why can I multiply both numbers by 10 when I divide?",
+      "a": "Division asks how many times one number fits into the other. Make both 10 times bigger, and the answer stays the same. For ₹1.20 ÷ ₹0.30, think in paise: 120 paise ÷ 30 paise is 4."
+    },
+    {
+      "q": "What if the division does not come out exactly?",
+      "a": "Put zeros after the point and keep going. For $7 \\div 4$, write 7 as 7.00. 7 ÷ 4 is 1, remainder 3. 30 tenths ÷ 4 is 7, remainder 2. 20 hundredths ÷ 4 is 5. So $7 \\div 4 = 1.75$."
+    },
+    {
+      "q": "Do I line up the points when I multiply?",
+      "a": "No. Lining up the points is for adding and subtracting. To multiply, leave the points out, multiply, then count the decimal places."
+    }
+  ]
+}
