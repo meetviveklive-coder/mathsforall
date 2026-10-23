@@ -1,0 +1,18 @@
+{
+ "one_bar": true,
+ "equal": true,
+ "total_blocks": 5,
+ "groups": [
+  {
+   "label": "Yellow",
+   "blocks": 2,
+   "fraction_of_whole": "2/5"
+  },
+  {
+   "label": "Red",
+   "blocks": 3,
+   "fraction_of_whole": "3/5"
+  }
+ ],
+ "ratio": "2 : 3"
+}

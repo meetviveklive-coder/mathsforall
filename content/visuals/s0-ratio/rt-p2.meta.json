@@ -1,0 +1,22 @@
+{
+ "rows": [
+  {
+   "label": "Red",
+   "blocks": 4,
+   "touching": true,
+   "block_value": "1",
+   "row_value": "4"
+  },
+  {
+   "label": "White",
+   "blocks": 3,
+   "touching": true,
+   "block_value": "1",
+   "row_value": "3"
+  }
+ ],
+ "equal": true,
+ "total_blocks": 7,
+ "ratio": "4 : 3",
+ "sum_of_rows": "7"
+}

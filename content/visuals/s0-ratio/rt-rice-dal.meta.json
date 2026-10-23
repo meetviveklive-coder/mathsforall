@@ -1,0 +1,22 @@
+{
+ "rows": [
+  {
+   "label": "Rice",
+   "blocks": 2,
+   "touching": true,
+   "block_value": "1",
+   "row_value": "2"
+  },
+  {
+   "label": "Dal",
+   "blocks": 1,
+   "touching": true,
+   "block_value": "1",
+   "row_value": "1"
+  }
+ ],
+ "equal": true,
+ "total_blocks": 3,
+ "ratio": "2 : 1",
+ "sum_of_rows": "3"
+}

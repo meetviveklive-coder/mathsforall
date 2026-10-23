@@ -1,0 +1,23 @@
+{
+ "rows": [
+  {
+   "label": "Asha",
+   "blocks": 3,
+   "touching": true,
+   "block_value": "100",
+   "row_value": "300"
+  },
+  {
+   "label": "Tenzing",
+   "blocks": 2,
+   "touching": true,
+   "block_value": "100",
+   "row_value": "200"
+  }
+ ],
+ "equal": true,
+ "total_blocks": 5,
+ "ratio": "3 : 2",
+ "total_text": "5 equal parts make \u20b9500",
+ "sum_of_rows": "500"
+}

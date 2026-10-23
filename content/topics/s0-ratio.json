@@ -1,0 +1,472 @@
+{
+  "id": "s0-ratio",
+  "title": "Ratio",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Sneha's Baba makes khichdi on a rainy evening. For the 4 people at home, he uses 2 cups of rice and 1 cup of moong dal.\n\nThis Sunday, 8 people are coming. Sneha says, \"Just add 2 more cups of each!\" That makes 4 cups of rice and 3 cups of dal.\n\nWill the khichdi taste the same? A **ratio** helps you answer.",
+    "sections": [
+      {
+        "heading": "A ratio compares two amounts",
+        "body": "Baba uses 2 cups of rice for every 1 cup of dal. We say the ratio of rice to dal is **2 to 1**. We write it as $2 : 1$.\n\nIn the bars, each block is 1 cup. The rice bar has 2 blocks. The dal bar has 1 block.\n\n**The order matters.** The first number goes with the first thing you name.\n\n- Rice to dal is $2 : 1$.\n- Dal to rice is $1 : 2$.\n\nThese are not the same. $1 : 2$ would mean twice as much dal as rice. That is a very different khichdi!",
+        "visual": "rt-rice-dal"
+      },
+      {
+        "heading": "Parts of the whole",
+        "body": "Gauri mixes paint for a rangoli. She uses 2 cups of yellow and 3 cups of red. The ratio of yellow to red is $2 : 3$.\n\nHow much of **all** the paint is yellow? Look at the bar. All the paint is $2 + 3 = 5$ equal parts. Yellow is 2 of those 5 parts.\n\nSo yellow is $\\frac{2}{5}$ of the paint, and red is $\\frac{3}{5}$.\n\nA common mistake is to say yellow is $\\frac{2}{3}$ of the paint. That is wrong. The 3 counts only the red parts, not the whole. To find the whole, **add the parts**.",
+        "visual": "rt-paint-parts"
+      },
+      {
+        "heading": "Simplifying a ratio",
+        "body": "A ratio stays the same when you **multiply or divide both numbers by the same number**. This is just like equivalent fractions.\n\nIn a cricket match, Farida scored 24 runs and Joseph scored 16 runs. The ratio of Farida's runs to Joseph's runs is $24 : 16$.\n\nThe biggest number that divides both 24 and 16 is 8:\n\n$24 : 16 = (24 \\div 8) : (16 \\div 8) = 3 : 2$\n\n3 and 2 have no common factor except 1. So $3 : 2$ is the **simplest form**. For every 3 runs Farida scored, Joseph scored 2.\n\nNow back to the khichdi. To feed 8 people instead of 4, double both amounts: $2 : 1 = 4 : 2$. Sneha's idea of adding 2 cups to each gives $4 : 3$. Adding does not keep the ratio, so the taste changes."
+      },
+      {
+        "heading": "Sharing in a ratio",
+        "body": "Asha and Tenzing win ₹500 at the school science fair for their model. Asha worked on it for 3 days and Tenzing for 2 days. They agree to share the prize in the ratio $3 : 2$.\n\nFollow three steps.\n\n1. **Add the parts.** $3 + 2 = 5$ equal parts in all.\n2. **Find one part.** $₹500 \\div 5 = ₹100$.\n3. **Multiply.** Asha gets $3 \\times ₹100 = ₹300$. Tenzing gets $2 \\times ₹100 = ₹200$.\n\nCheck: $₹300 + ₹200 = ₹500$. In the bars, every block is the same size, ₹100.\n\nAsha gets 3 parts out of 5. That is $\\frac{3}{5}$ of the prize, not $\\frac{3}{2}$ of it.",
+        "visual": "rt-share-500"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Kiran uses 12 spoons of white powder and 18 spoons of red powder for a rangoli. Write the ratio of red to white in simplest form.",
+        "steps": [
+          "Red comes first, so the ratio is $18 : 12$, not $12 : 18$.",
+          "Find the biggest number that divides both 18 and 12. Factors of 18: 1, 2, 3, 6, 9, 18. Factors of 12: 1, 2, 3, 4, 6, 12. The biggest common factor is 6.",
+          "Divide both by 6: $18 : 12 = 3 : 2$.",
+          "3 and 2 have no common factor except 1. So red to white is $3 : 2$ in simplest form."
+        ],
+        "answer": "true",
+        "verify": {
+          "kind": "relation",
+          "expr": "And(Eq(gcd(18, 12), 6), Eq(Rational(18, 12), Rational(3, 2)), Eq(gcd(3, 2), 1))"
+        }
+      },
+      {
+        "problem": "Baba's khichdi uses rice and dal in the ratio $2 : 1$. For a festival lunch he uses 6 cups of rice. How many cups of dal does he need?",
+        "steps": [
+          "The ratio of rice to dal must stay $2 : 1$.",
+          "2 cups of rice became 6 cups. $2 \\times 3 = 6$.",
+          "Multiply the dal by the same number: $1 \\times 3 = 3$.",
+          "So $2 : 1 = 6 : 3$. He needs 3 cups of dal."
+        ],
+        "answer": "3",
+        "verify": {
+          "kind": "sympy",
+          "expr": "1 * (6 / 2)"
+        }
+      },
+      {
+        "problem": "Arjun and Imran scored 84 runs together. The ratio of Arjun's runs to Imran's runs is $4 : 3$. How many runs did Imran score?",
+        "steps": [
+          "Add the parts: $4 + 3 = 7$ equal parts.",
+          "Find one part: $84 \\div 7 = 12$ runs.",
+          "Imran has 3 parts: $3 \\times 12 = 36$ runs.",
+          "Check: Arjun has $4 \\times 12 = 48$ runs, and $48 + 36 = 84$. So Imran scored 36 runs."
+        ],
+        "answer": "36",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(84, 4 + 3) * 3"
+        }
+      }
+    ],
+    "summary": [
+      "A ratio compares two amounts. 2 : 1 is read \"2 to 1\".",
+      "Order matters. Rice to dal 2 : 1 is not the same as dal to rice 1 : 2.",
+      "In 2 : 3 there are 2 + 3 = 5 parts in all. The first amount is 2/5 of the whole, not 2/3.",
+      "Multiply or divide both numbers by the same number to get an equal ratio. Adding does not work.",
+      "A ratio is in simplest form when the numbers have no common factor except 1.",
+      "To share in a ratio: add the parts, find one part, then multiply."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "rt-rice-dal",
+      "purpose": "Rice to dal is 2 : 1",
+      "spec": "Bar model. Row Rice: 2 equal blocks, each labelled 1 cup. Row Dal: 1 block of the same size, labelled 1 cup.",
+      "alt": "Two rows of equal blocks. The row labelled Rice has 2 blocks, each marked 1 cup. The row labelled Dal has 1 block of the same size, marked 1 cup.",
+      "file": "content/visuals/s0-ratio/rt-rice-dal.svg",
+      "checks": {
+        "rows": [
+          {"label": "Rice", "blocks": 2, "block_value": "1", "row_value": "2"},
+          {"label": "Dal", "blocks": 1, "block_value": "1", "row_value": "1"}
+        ],
+        "equal": true,
+        "ratio": "2 : 1"
+      }
+    },
+    {
+      "id": "rt-paint-parts",
+      "purpose": "In 2 : 3, yellow is 2 parts out of 5",
+      "spec": "One bar cut into 5 equal blocks. The first 2 are shaded and bracketed Yellow, 2 parts. The last 3 are white and bracketed Red, 3 parts. Above: 5 equal parts in all.",
+      "alt": "One bar cut into 5 equal parts, with the words 5 equal parts in all above it. The first 2 parts are shaded and marked Yellow, 2 parts. The other 3 parts are marked Red, 3 parts.",
+      "file": "content/visuals/s0-ratio/rt-paint-parts.svg",
+      "checks": {
+        "one_bar": true,
+        "equal": true,
+        "total_blocks": 5,
+        "groups": [
+          {"label": "Yellow", "blocks": 2, "fraction_of_whole": "2/5"},
+          {"label": "Red", "blocks": 3, "fraction_of_whole": "3/5"}
+        ],
+        "ratio": "2 : 3"
+      }
+    },
+    {
+      "id": "rt-share-500",
+      "purpose": "₹500 shared in the ratio 3 : 2",
+      "spec": "Bar model. Row Asha: 3 equal blocks, each ₹100. Row Tenzing: 2 blocks of the same size, each ₹100. Below: 5 equal parts make ₹500.",
+      "alt": "Two rows of equal blocks. The row labelled Asha has 3 blocks, each marked ₹100. The row labelled Tenzing has 2 blocks of the same size, each marked ₹100. Below them it says 5 equal parts make ₹500.",
+      "file": "content/visuals/s0-ratio/rt-share-500.svg",
+      "checks": {
+        "rows": [
+          {"label": "Asha", "blocks": 3, "block_value": "100", "row_value": "300"},
+          {"label": "Tenzing", "blocks": 2, "block_value": "100", "row_value": "200"}
+        ],
+        "equal": true,
+        "total_blocks": 5,
+        "ratio": "3 : 2",
+        "total_text": "5 equal parts make ₹500",
+        "sum_of_rows": "500"
+      }
+    },
+    {
+      "id": "rt-p2",
+      "purpose": "Practice: red to white is 4 : 3",
+      "spec": "Bar model. Row Red: 4 equal blocks, each 1 cup. Row White: 3 blocks of the same size, each 1 cup.",
+      "alt": "Two rows of equal blocks. The row labelled Red has 4 blocks, each marked 1 cup. The row labelled White has 3 blocks of the same size, each marked 1 cup.",
+      "file": "content/visuals/s0-ratio/rt-p2.svg",
+      "checks": {
+        "rows": [
+          {"label": "Red", "blocks": 4, "block_value": "1"},
+          {"label": "White", "blocks": 3, "block_value": "1"}
+        ],
+        "equal": true,
+        "ratio": "4 : 3"
+      }
+    },
+    {
+      "id": "rt-p6",
+      "purpose": "Practice: in 3 : 4, blue is 3 parts out of 7",
+      "spec": "One bar cut into 7 equal blocks. The first 3 are shaded and bracketed Blue, 3 parts. The last 4 are white and bracketed White, 4 parts. Above: 7 equal parts in all.",
+      "alt": "One bar cut into 7 equal parts, with the words 7 equal parts in all above it. The first 3 parts are shaded and marked Blue, 3 parts. The other 4 parts are marked White, 4 parts.",
+      "file": "content/visuals/s0-ratio/rt-p6.svg",
+      "checks": {
+        "one_bar": true,
+        "equal": true,
+        "total_blocks": 7,
+        "groups": [
+          {"label": "Blue", "blocks": 3, "fraction_of_whole": "3/7"},
+          {"label": "White", "blocks": 4, "fraction_of_whole": "4/7"}
+        ],
+        "ratio": "3 : 4"
+      }
+    },
+    {
+      "id": "rt-p7",
+      "purpose": "Practice: 12 laddoos shared in the ratio 2 : 1",
+      "spec": "Bar model with empty blocks. Row Ishita: 2 equal blocks. Row Kunal: 1 block of the same size. Below: 3 equal parts make 12 laddoos.",
+      "alt": "Two rows of equal empty blocks. The row labelled Ishita has 2 blocks. The row labelled Kunal has 1 block of the same size. Below them it says 3 equal parts make 12 laddoos.",
+      "file": "content/visuals/s0-ratio/rt-p7.svg",
+      "checks": {
+        "rows": [
+          {"label": "Ishita", "blocks": 2},
+          {"label": "Kunal", "blocks": 1}
+        ],
+        "equal": true,
+        "total_blocks": 3,
+        "ratio": "2 : 1",
+        "total_text": "3 equal parts make 12 laddoos"
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-ratio/p-1",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "In a cricket match, Neha hits 4 sixes and 7 fours. What is the ratio of fours to sixes?",
+      "options": [
+        {"text": "$7 : 4$", "value": "7/4", "correct": true},
+        {"text": "$4 : 7$", "value": "4/7", "correct": false, "why_wrong": "This is sixes to fours. The question names fours first, so the number of fours, 7, comes first."},
+        {"text": "$7 : 11$", "value": "7/11", "correct": false, "why_wrong": "11 is all the hits together. The question compares fours with sixes, not with all the hits."},
+        {"text": "$4 : 11$", "value": "4/11", "correct": false, "why_wrong": "This compares sixes with all the hits. The question asks for fours to sixes."}
+      ],
+      "answer": "$7 : 4$",
+      "hints": [
+        "Which is named first in the question, fours or sixes?",
+        "Write the number of fours first."
+      ],
+      "explanation": "Fours come first, so write the number of fours first. Neha hit 7 fours and 4 sixes, so the ratio is $7 : 4$.",
+      "verify": {"kind": "sympy", "expr": "Rational(7, 4)"}
+    },
+    {
+      "id": "s0-ratio/p-2",
+      "type": "numeric",
+      "visual": "rt-p2",
+      "objective": 0,
+      "prompt": "The bars show the cups of red and white powder in a rangoli mix. Fill in the box: red to white is $4 : \\square$. Type the number that goes in the box.",
+      "answer": "3",
+      "hints": [
+        "Count the blocks in the White row."
+      ],
+      "explanation": "There are 4 cups of red and 3 cups of white. So red to white is $4 : 3$.",
+      "verify": {"kind": "sympy", "expr": "7 - 4"}
+    },
+    {
+      "id": "s0-ratio/p-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Simplify: $10 : 15 = 2 : \\square$. Type the number that goes in the box.",
+      "answer": "3",
+      "hints": [
+        "What did you divide 10 by to get 2?",
+        "Divide 15 by the same number."
+      ],
+      "explanation": "$10 \\div 5 = 2$, so divide 15 by 5 as well: $15 \\div 5 = 3$. So $10 : 15 = 2 : 3$.",
+      "verify": {"kind": "sympy", "expr": "15 / gcd(10, 15)"}
+    },
+    {
+      "id": "s0-ratio/p-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Simplify: $16 : 24 = \\square : 3$. Type the number that goes in the box.",
+      "answer": "2",
+      "hints": [
+        "What did you divide 24 by to get 3?",
+        "Divide 16 by the same number."
+      ],
+      "explanation": "$24 \\div 8 = 3$, so divide 16 by 8 as well: $16 \\div 8 = 2$. So $16 : 24 = 2 : 3$.",
+      "verify": {"kind": "sympy", "expr": "16 / gcd(16, 24)"}
+    },
+    {
+      "id": "s0-ratio/p-5",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "A khichdi recipe uses rice and dal in the ratio $2 : 1$. Which ratio is the same as $2 : 1$?",
+      "options": [
+        {"text": "$6 : 3$", "value": "6/3", "correct": true},
+        {"text": "$3 : 2$", "value": "3/2", "correct": false, "why_wrong": "This adds 1 to both numbers. Adding changes the ratio. Multiply or divide both numbers instead."},
+        {"text": "$4 : 1$", "value": "4", "correct": false, "why_wrong": "Only the rice was doubled. To keep the ratio, double the dal too: $4 : 2$."},
+        {"text": "$1 : 2$", "value": "1/2", "correct": false, "why_wrong": "This swaps the order. It would mean twice as much dal as rice."}
+      ],
+      "answer": "$6 : 3$",
+      "hints": [
+        "Multiply both numbers by the same number."
+      ],
+      "explanation": "Multiply both numbers by 3: $2 \\times 3 = 6$ and $1 \\times 3 = 3$. So $2 : 1 = 6 : 3$. There is still twice as much rice as dal.",
+      "verify": {"kind": "sympy", "expr": "Rational(2, 1)"}
+    },
+    {
+      "id": "s0-ratio/p-6",
+      "type": "mcq",
+      "visual": "rt-p6",
+      "objective": 0,
+      "prompt": "Dhruv mixes blue and white paint in the ratio $3 : 4$. What fraction of all the paint is blue?",
+      "options": [
+        {"text": "$\\frac{3}{7}$", "value": "3/7", "correct": true},
+        {"text": "$\\frac{3}{4}$", "value": "3/4", "correct": false, "why_wrong": "4 counts only the white parts. All the paint is $3 + 4 = 7$ parts, so blue is 3 parts out of 7."},
+        {"text": "$\\frac{4}{7}$", "value": "4/7", "correct": false, "why_wrong": "This is the white paint. Blue is 3 of the 7 parts."}
+      ],
+      "answer": "$\\frac{3}{7}$",
+      "hints": [
+        "How many equal parts are in the whole bar?",
+        "How many of them are blue?"
+      ],
+      "explanation": "All the paint is $3 + 4 = 7$ equal parts. Blue is 3 of them. So blue is $\\frac{3}{7}$ of the paint.",
+      "verify": {"kind": "sympy", "expr": "Rational(3, 3 + 4)"}
+    },
+    {
+      "id": "s0-ratio/p-7",
+      "type": "numeric",
+      "visual": "rt-p7",
+      "objective": 2,
+      "prompt": "Ishita and her brother Kunal share 12 laddoos in the ratio $2 : 1$. How many laddoos does Ishita get? Type a whole number.",
+      "answer": "8",
+      "hints": [
+        "3 equal blocks make 12 laddoos. How many laddoos are in one block?",
+        "Ishita has 2 blocks."
+      ],
+      "explanation": "There are $2 + 1 = 3$ parts. One part is $12 \\div 3 = 4$ laddoos. Ishita gets $2 \\times 4 = 8$ laddoos, and Kunal gets 4. Check: $8 + 4 = 12$.",
+      "verify": {"kind": "sympy", "expr": "Rational(12, 2 + 1) * 2"}
+    },
+    {
+      "id": "s0-ratio/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Anil and Lata buy a ₹240 box of rangoli colours together. They pay in the ratio $5 : 3$. How much does Lata pay? Type the amount in rupees, like 45.",
+      "answer": "90",
+      "hints": [
+        "Add the parts: $5 + 3$.",
+        "Find one part, then multiply by Lata's number of parts."
+      ],
+      "explanation": "There are $5 + 3 = 8$ parts. One part is $₹240 \\div 8 = ₹30$. Lata pays $3 \\times ₹30 = ₹90$. Anil pays $5 \\times ₹30 = ₹150$. Check: $₹150 + ₹90 = ₹240$.",
+      "verify": {"kind": "sympy", "expr": "Rational(240, 5 + 3) * 3"}
+    },
+    {
+      "id": "s0-ratio/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Pallavi's Nani makes idli batter with rice and urad dal in the ratio $3 : 1$. She uses 12 cups in all. How many cups of rice does she use? Type a whole number.",
+      "answer": "9",
+      "hints": [
+        "How many parts are there in all?",
+        "Find one part, then multiply by 3."
+      ],
+      "explanation": "There are $3 + 1 = 4$ parts. One part is $12 \\div 4 = 3$ cups. Rice is $3 \\times 3 = 9$ cups, and dal is 3 cups. Check: $9 + 3 = 12$.",
+      "verify": {"kind": "sympy", "expr": "Rational(12, 3 + 1) * 3"}
+    },
+    {
+      "id": "s0-ratio/p-10",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "Tara and Abdul share a science fair prize of ₹70 in the ratio $3 : 4$. Tara says she gets ₹30. Is she right?",
+      "answer": "true",
+      "hints": [
+        "How many parts are there in all?",
+        "Find one part first."
+      ],
+      "explanation": "Yes. There are $3 + 4 = 7$ parts. One part is $₹70 \\div 7 = ₹10$. Tara gets $3 \\times ₹10 = ₹30$, and Abdul gets ₹40.",
+      "verify": {"kind": "relation", "expr": "Eq(Rational(70, 3 + 4) * 3, 30)"}
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-ratio/q-1",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "A school garden has 9 marigold plants and 5 tulsi plants. What is the ratio of tulsi plants to marigold plants?",
+      "options": [
+        {"text": "$9 : 5$", "value": "9/5", "correct": false, "why_wrong": "This is marigold to tulsi. Tulsi is named first, so 5 comes first."},
+        {"text": "$5 : 9$", "value": "5/9", "correct": true},
+        {"text": "$5 : 14$", "value": "5/14", "correct": false, "why_wrong": "14 is all the plants. The question compares tulsi with marigold, not with all the plants."}
+      ],
+      "answer": "$5 : 9$",
+      "hints": [
+        "Which plant is named first in the question?"
+      ],
+      "explanation": "Tulsi is named first, so its number comes first. There are 5 tulsi plants and 9 marigold plants, so the ratio is $5 : 9$.",
+      "verify": {"kind": "sympy", "expr": "Rational(5, 9)"}
+    },
+    {
+      "id": "s0-ratio/q-2",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Manpreet mixes green and white paint in the ratio $1 : 4$. What fraction of all the paint is green?",
+      "options": [
+        {"text": "$\\frac{1}{4}$", "value": "1/4", "correct": false, "why_wrong": "4 counts only the white parts. All the paint is $1 + 4 = 5$ parts."},
+        {"text": "$\\frac{1}{5}$", "value": "1/5", "correct": true},
+        {"text": "$\\frac{4}{5}$", "value": "4/5", "correct": false, "why_wrong": "This is the white paint. Green is only 1 of the 5 parts."}
+      ],
+      "answer": "$\\frac{1}{5}$",
+      "hints": [
+        "Add the parts to find the whole."
+      ],
+      "explanation": "All the paint is $1 + 4 = 5$ equal parts. Green is 1 of them, so green is $\\frac{1}{5}$ of the paint.",
+      "verify": {"kind": "sympy", "expr": "Rational(1, 1 + 4)"}
+    },
+    {
+      "id": "s0-ratio/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Simplify: $21 : 28 = 3 : \\square$. Type the number that goes in the box.",
+      "answer": "4",
+      "hints": [
+        "What did you divide 21 by to get 3?"
+      ],
+      "explanation": "$21 \\div 7 = 3$, so divide 28 by 7 as well: $28 \\div 7 = 4$. So $21 : 28 = 3 : 4$.",
+      "verify": {"kind": "sympy", "expr": "28 / gcd(21, 28)"}
+    },
+    {
+      "id": "s0-ratio/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Sunita scored 45 runs and Lalit scored 30 runs. Write the ratio of Sunita's runs to Lalit's runs in simplest form. Fill in the box: $\\square : 2$. Type the number that goes in the box.",
+      "answer": "3",
+      "hints": [
+        "Start with $45 : 30$.",
+        "The biggest number that divides both 45 and 30 is 15."
+      ],
+      "explanation": "The ratio is $45 : 30$. Divide both by 15: $45 \\div 15 = 3$ and $30 \\div 15 = 2$. So it is $3 : 2$.",
+      "verify": {"kind": "sympy", "expr": "45 / gcd(45, 30)"}
+    },
+    {
+      "id": "s0-ratio/q-5",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Kabir's recipe uses rice and dal in the ratio $3 : 1$. He adds 2 more cups of each, so he has 5 cups of rice and 3 cups of dal. Is $5 : 3$ the same ratio as $3 : 1$?",
+      "answer": "false",
+      "hints": [
+        "Is 5 three times 3?",
+        "Adding the same number does not keep a ratio."
+      ],
+      "explanation": "No. In $3 : 1$, there is 3 times as much rice as dal. In $5 : 3$, there is less than 2 times as much. Adding changes the ratio. To keep it, multiply both numbers, for example $3 : 1 = 6 : 2$.",
+      "verify": {"kind": "relation", "expr": "Eq(Rational(5, 3), Rational(3, 1))"}
+    },
+    {
+      "id": "s0-ratio/q-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Priya and Sameer win ₹720 at a science fair. They share it in the ratio $5 : 3$. How much does Priya get? Type the amount in rupees, like 45.",
+      "answer": "450",
+      "hints": [
+        "Add the parts: $5 + 3$.",
+        "Find one part, then multiply by 5."
+      ],
+      "explanation": "There are $5 + 3 = 8$ parts. One part is $₹720 \\div 8 = ₹90$. Priya gets $5 \\times ₹90 = ₹450$, and Sameer gets ₹270. Check: $₹450 + ₹270 = ₹720$.",
+      "verify": {"kind": "sympy", "expr": "Rational(720, 5 + 3) * 5"}
+    },
+    {
+      "id": "s0-ratio/q-7",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Meera and Dev share 15 mangoes in the ratio $2 : 3$. How many mangoes does Meera get?",
+      "options": [
+        {"text": "10", "value": "10", "correct": false, "why_wrong": "This takes $\\frac{2}{3}$ of 15. But $2 : 3$ means 2 parts out of $2 + 3 = 5$, so Meera gets $\\frac{2}{5}$ of 15."},
+        {"text": "6", "value": "6", "correct": true},
+        {"text": "9", "value": "9", "correct": false, "why_wrong": "This is Dev's share. Meera is named first, so she gets 2 parts."}
+      ],
+      "answer": "6",
+      "hints": [
+        "How many parts are there in all?"
+      ],
+      "explanation": "There are $2 + 3 = 5$ parts. One part is $15 \\div 5 = 3$ mangoes. Meera gets $2 \\times 3 = 6$, and Dev gets 9. Check: $6 + 9 = 15$.",
+      "verify": {"kind": "sympy", "expr": "Rational(15, 2 + 3) * 2"}
+    },
+    {
+      "id": "s0-ratio/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Rehana's family travels 150 km to Kochi. They go by bus and then by train, in the ratio $1 : 4$. How many kilometres do they go by train? Type a whole number.",
+      "answer": "120",
+      "hints": [
+        "How many parts are there in all?",
+        "Find one part, then multiply by 4."
+      ],
+      "explanation": "There are $1 + 4 = 5$ parts. One part is $150 \\div 5 = 30$ km. The train part is $4 \\times 30 = 120$ km, and the bus part is 30 km. Check: $30 + 120 = 150$.",
+      "verify": {"kind": "sympy", "expr": "Rational(150, 1 + 4) * 4"}
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Is the ratio 2 : 3 the same as the fraction 2/3?",
+      "a": "Not as a part of the whole. With 2 cups of yellow and 3 cups of red, yellow is 2 parts out of 5. So yellow is $\\frac{2}{5}$ of all the paint. The ratio only compares yellow with red."
+    },
+    {
+      "q": "Does the order really matter?",
+      "a": "Yes. Rice to dal $2 : 1$ means twice as much rice. Dal to rice $2 : 1$ means twice as much dal. Always put the first thing named first."
+    },
+    {
+      "q": "Do I have to simplify a ratio before I share?",
+      "a": "No. You get the same answer either way. Sharing ₹100 in $4 : 6$ gives 10 parts of ₹10, so ₹40 and ₹60. In $2 : 3$ it is 5 parts of ₹20, so again ₹40 and ₹60. Simplifying first just makes the numbers smaller."
+    },
+    {
+      "q": "Can a ratio compare three things?",
+      "a": "Yes. A khichdi might use rice, dal and vegetables in the ratio $2 : 1 : 1$. To share in it, add all the parts: $2 + 1 + 1 = 4$. Then find one part and multiply, as before."
+    },
+    {
+      "q": "What if the two amounts are in different units?",
+      "a": "Change them to the same unit first. For 1 kg of rice and 500 g of dal, write 1 kg as 1000 g. Then rice to dal is $1000 : 500$, which simplifies to $2 : 1$."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "rows": [
+  {
+   "label": "Ishita",
+   "blocks": 2,
+   "touching": true
+  },
+  {
+   "label": "Kunal",
+   "blocks": 1,
+   "touching": true
+  }
+ ],
+ "equal": true,
+ "total_blocks": 3,
+ "ratio": "2 : 1",
+ "total_text": "3 equal parts make 12 laddoos"
+}
