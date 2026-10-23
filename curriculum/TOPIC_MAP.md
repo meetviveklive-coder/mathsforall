@@ -251,14 +251,14 @@
 - Recognise common benchmarks (50%, 25%, 10%, 1%)
 - *Watch for:* Thinking a percent cannot be more than 100; Writing 5% as 0.5
 
-**34. Finding a percentage of an amount** · [33, 26] · 25 min
+**34. Finding a percentage of an amount** · [33, 26, 31] · 25 min
 
 - Find a percentage of an amount using 10% and 1% steps
 - Find a percentage of an amount by multiplication
 - Express one quantity as a percentage of another
 - *Watch for:* Finding 20% by dividing by 20; Using the wrong whole when expressing as a percentage
 
-**35. Discounts, GST and percentage change** · [34, 31] · 30 min
+**35. Discounts, GST and percentage change** · [34] · 30 min
 
 - Calculate a price after a discount
 - Calculate a price after adding GST

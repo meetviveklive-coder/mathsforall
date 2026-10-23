@@ -93,3 +93,15 @@ describe('simplest-form fraction asked, decimal typed', () => {
     expect(checkNumeric('4/10', '2/5', 'simplest').status).toBe('not-simplest');
   });
 });
+
+describe('units after the number', () => {
+  it('ignores a unit word that does not change the value', () => {
+    expect(checkNumeric('27 km', '27').status).toBe('correct');
+    expect(checkNumeric('27km', '27').status).toBe('correct');
+    expect(checkNumeric('₹150 rupees', '150').status).toBe('correct');
+    expect(checkNumeric('2.5 kg', '2.5', 'decimal').status).toBe('correct');
+  });
+  it('does not treat paise as rupees', () => {
+    expect(checkNumeric('50 paise', '50').status).toBe('unreadable');
+  });
+});

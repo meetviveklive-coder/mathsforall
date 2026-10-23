@@ -1,0 +1,13 @@
+{
+ "parts": 10,
+ "equal": true,
+ "part_percent": "10",
+ "caption": "Each part is 10%.",
+ "part_amount": "50",
+ "whole": "500",
+ "whole_label": "100% = \u20b9500",
+ "shaded_percent": "30",
+ "shaded_parts": "3",
+ "shaded_amount": "150",
+ "shaded_label": "30% = ?"
+}

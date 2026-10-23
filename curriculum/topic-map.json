@@ -692,7 +692,8 @@
       "unit": "Percent and ratio",
       "prerequisites": [
         "s0-percent-meaning",
-        "s0-multiply-fractions"
+        "s0-multiply-fractions",
+        "s0-multiply-divide-decimals"
       ],
       "objectives": [
         "Find a percentage of an amount using 10% and 1% steps",
@@ -711,8 +712,7 @@
       "stage": 0,
       "unit": "Percent and ratio",
       "prerequisites": [
-        "s0-percent-of-quantity",
-        "s0-multiply-divide-decimals"
+        "s0-percent-of-quantity"
       ],
       "objectives": [
         "Calculate a price after a discount",

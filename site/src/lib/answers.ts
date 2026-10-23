@@ -33,6 +33,9 @@ export function parseAnswer(raw: string): Frac | null {
     .replace(/\s*\/\s*/g, '/')
     // Percent questions store the number of percent ("25"); a typed "25%" or "25 %" means the same.
     .replace(/\s*%$/, '')
+    // A unit after the number does not change it: "27 km", "5 kg", "40 rupees".
+    // Paise are left out on purpose: "50 paise" is not 50 rupees.
+    .replace(/\s*(km|m|cm|mm|kg|g|ml|l|litres?|liters?|rupees?|rs\.?|hours?|minutes?|people|children)$/i, '')
     .trim();
   if (/^-?\d{1,3}(,\d{2,3})+(\.\d+)?$/.test(t)) t = t.replace(/,/g, ''); // 1,25,000 or 125,000
 

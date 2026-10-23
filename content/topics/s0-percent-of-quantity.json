@@ -1,0 +1,559 @@
+{
+  "id": "s0-percent-of-quantity",
+  "title": "Finding a percentage of an amount",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Wangmo and her Ama are on a 240 km train journey. Ama looks out of the window and says, \"We have done 35% of the journey.\"\n\nHow many kilometres is that? You know that 35% means 35 out of 100. But the journey is 240 km, not 100 km. In this topic you will learn three ways to find a percentage of any amount. You will also find what percent one amount is of another.",
+    "sections": [
+      {
+        "heading": "Start with 10%",
+        "body": "10% is $\\frac{10}{100}$, which is $\\frac{1}{10}$. So to find 10% of an amount, **divide it by 10**.\n\nThis bar is the whole journey, 240 km. The whole is 100%. The bar is cut into 10 equal parts, so each part is 10%. Each part is $240 \\div 10 = 24$ km.\n\n- 30% is 3 parts: $3 \\times 24 = 72$ km.\n- 5% is half of one part: $24 \\div 2 = 12$ km.\n- 35% is 30% and 5%: $72 + 12 = 84$ km.\n\nThe shaded part is 3 and a half parts. So 35% of 240 km is **84 km**.\n\n**Watch out.** To find 20%, do not divide by 20. 20% is 2 parts of 10%. So 20% of 240 km is $2 \\times 24 = 48$ km. Dividing by 20 gives $240 \\div 20 = 12$. That is only 5%.",
+        "visual": "poq-bar-35"
+      },
+      {
+        "heading": "Steps of 1%",
+        "body": "1% is $\\frac{1}{100}$. So to find 1% of an amount, **divide it by 100**.\n\nTake ₹300. 1% of ₹300 is $300 \\div 100 = 3$, so ₹3. And 10% of ₹300 is ₹30.\n\nNow build other percents from 10% steps and 1% steps.\n\n- 4% is 4 lots of 1%: $4 \\times 3 = 12$, so ₹12.\n- 42% is 40% and 2%: $120 + 6 = 126$, so ₹126.\n- 9% is 10% take away 1%: $30 - 3 = 27$, so ₹27.\n\nAny whole-number percent can be built this way."
+      },
+      {
+        "heading": "Multiply by the fraction",
+        "body": "You know that **of** means multiply. So 25% of ₹360 means $25\\% \\times 360$.\n\n25% is $\\frac{1}{4}$. So:\n\n$25\\% \\text{ of } 360 = \\frac{1}{4} \\times 360 = 360 \\div 4 = 90$\n\nNow look at the bar. Each 10% part is ₹36. 25% is 2 and a half parts: $36 + 36 + 18 = 90$. Both ways give ₹90.\n\nThe benchmarks make this quick.\n\n- 50% is $\\frac{1}{2}$: halve the amount.\n- 25% is $\\frac{1}{4}$: divide by 4.\n- 75% is $\\frac{3}{4}$: divide by 4, then multiply by 3.\n- 20% is $\\frac{1}{5}$: divide by 5.\n\nFor any other percent, write it over 100. For example, $35\\% \\text{ of } 80 = \\frac{35}{100} \\times 80 = \\frac{2800}{100} = 28$.",
+        "visual": "poq-bar-25"
+      },
+      {
+        "heading": "Multiply by the decimal",
+        "body": "A percent is also a decimal. 35% is 35 hundredths, which is 0.35. So 35% of 80 is $0.35 \\times 80$.\n\nMultiply without the point first: $35 \\times 80 = 2800$. 0.35 has two places after the point. So the answer has two places too: 28.00, which is 28.\n\nCheck with 10% steps. 10% of 80 is 8. So 30% is 24, and 5% is 4. $24 + 4 = 28$. Same answer.\n\nSo you have three ways, and they all agree.\n\n- **10% and 1% steps** are easy to do in your head.\n- **A fraction** is quick for 50%, 25%, 75% and 20%.\n- **A decimal** works for any percent, like 37% or 8%."
+      },
+      {
+        "heading": "What percent is it?",
+        "body": "Sometimes you know both amounts and want the percent.\n\n40 people are on a bus to the mela. 14 of them are children. What percent are children?\n\n1. Write the part over the whole. Children out of all the people is $\\frac{14}{40}$.\n2. Make the bottom 100: $\\frac{14}{40} = \\frac{7}{20} = \\frac{35}{100}$.\n3. 35 out of 100 is **35%**.\n\nOn the bar, the whole is 40 people. So each 10% part is 4 people. 14 people fill 3 and a half parts. That is 35%.\n\n**Use the right whole.** The other 26 people are adults. Do not write $\\frac{14}{26}$. That compares children with adults, not with everyone. Ask yourself, \"Percent of what?\" That amount goes on the bottom.",
+        "visual": "poq-bar-whole"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Find 15% of ₹460.",
+        "steps": [
+          "10% is $\\frac{1}{10}$. So 10% of ₹460 is $460 \\div 10 = 46$, which is ₹46.",
+          "5% is half of 10%. So 5% of ₹460 is $46 \\div 2 = 23$, which is ₹23.",
+          "15% is 10% and 5%: $46 + 23 = 69$.",
+          "So 15% of ₹460 is ₹69."
+        ],
+        "answer": "69",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(15, 100) * 460"
+        }
+      },
+      {
+        "problem": "Pallavi's Bua is driving 120 km to Nashik. She has driven 65% of the way. How many kilometres has she driven?",
+        "steps": [
+          "65% is 0.65. So 65% of 120 km is $0.65 \\times 120$.",
+          "Multiply without the point: $65 \\times 120 = 7800$.",
+          "0.65 has two places after the point. So the answer is 78.00, which is 78.",
+          "Check with steps: 50% is 60 km, 10% is 12 km and 5% is 6 km. $60 + 12 + 6 = 78$.",
+          "She has driven 78 km."
+        ],
+        "answer": "78",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(65, 100) * 120"
+        }
+      },
+      {
+        "problem": "Zoya's cricket team makes 160 runs. 48 of those runs come from fours. What percent of the runs come from fours?",
+        "steps": [
+          "The whole is all the runs, 160. The part is 48. So the fraction is $\\frac{48}{160}$.",
+          "Simplify. Divide the top and the bottom by 16: $\\frac{48 \\div 16}{160 \\div 16} = \\frac{3}{10}$.",
+          "Make the bottom 100: $\\frac{3}{10} = \\frac{30}{100}$.",
+          "30 out of 100 is 30%. So 30% of the runs come from fours.",
+          "Check: 10% of 160 is 16, so 30% is $3 \\times 16 = 48$. That matches."
+        ],
+        "answer": "30",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(48, 160) * 100"
+        }
+      }
+    ],
+    "summary": [
+      "10% is 1/10, so divide by 10. 1% is 1/100, so divide by 100.",
+      "Build other percents from these steps: 35% = 30% + 5%, and 9% = 10% - 1%.",
+      "20% is 2 lots of 10%. It is not the amount divided by 20.",
+      "\"Of\" means multiply. 25% of 360 = 1/4 × 360 = 90.",
+      "A percent is a decimal too. 35% of 80 = 0.35 × 80 = 28.",
+      "To find what percent one amount is of another, write part/whole. Then make the bottom 100.",
+      "Always ask \"percent of what?\" That whole goes on the bottom."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "poq-bar-35",
+      "purpose": "35% of 240 km built from 10% parts",
+      "spec": "Percent bar for 240 km. 10 equal parts, 24 under each. Shade 3.5 parts. Bracket under the shaded part: 35% = 84 km.",
+      "alt": "A bar labelled 100% = 240 km is cut into 10 equal parts. The caption says each part is 10%. The number 24 is under each part. The first 3 parts and half of the fourth part are shaded. A bracket under the shaded part says 35% = 84 km.",
+      "file": "content/visuals/s0-percent-of-quantity/poq-bar-35.svg",
+      "checks": {
+        "parts": 10,
+        "equal": true,
+        "part_percent": "10",
+        "caption": "Each part is 10%.",
+        "part_amount": "24",
+        "whole": "240",
+        "whole_label": "100% = 240 km",
+        "shaded_percent": "35",
+        "shaded_parts": "3.5",
+        "shaded_amount": "84",
+        "shaded_label": "35% = 84 km"
+      }
+    },
+    {
+      "id": "poq-bar-25",
+      "purpose": "25% of ₹360 is 2 and a half 10% parts",
+      "spec": "Percent bar for ₹360. 10 equal parts, 36 under each. Shade 2.5 parts. Bracket under the shaded part: 25% = ₹90.",
+      "alt": "A bar labelled 100% = ₹360 is cut into 10 equal parts. The caption says each part is 10%. The number 36 is under each part. The first 2 parts and half of the third part are shaded. A bracket under the shaded part says 25% = ₹90.",
+      "file": "content/visuals/s0-percent-of-quantity/poq-bar-25.svg",
+      "checks": {
+        "parts": 10,
+        "equal": true,
+        "part_percent": "10",
+        "caption": "Each part is 10%.",
+        "part_amount": "36",
+        "whole": "360",
+        "whole_label": "100% = ₹360",
+        "shaded_percent": "25",
+        "shaded_parts": "2.5",
+        "shaded_amount": "90",
+        "shaded_label": "25% = ₹90"
+      }
+    },
+    {
+      "id": "poq-bar-whole",
+      "purpose": "14 people out of 40 is 35%",
+      "spec": "Percent bar for 40 people. 10 equal parts, 4 under each. Shade 3.5 parts. Bracket under the shaded part: 35% = 14 people.",
+      "alt": "A bar labelled 100% = 40 people is cut into 10 equal parts. The caption says each part is 10%. The number 4 is under each part. The first 3 parts and half of the fourth part are shaded. A bracket under the shaded part says 35% = 14 people.",
+      "file": "content/visuals/s0-percent-of-quantity/poq-bar-whole.svg",
+      "checks": {
+        "parts": 10,
+        "equal": true,
+        "part_percent": "10",
+        "caption": "Each part is 10%.",
+        "part_amount": "4",
+        "whole": "40",
+        "whole_label": "100% = 40 people",
+        "shaded_percent": "35",
+        "shaded_parts": "3.5",
+        "shaded_amount": "14",
+        "shaded_label": "35% = 14 people"
+      }
+    },
+    {
+      "id": "poq-p1",
+      "purpose": "Practice: 30% of ₹500",
+      "spec": "Percent bar for ₹500. 10 equal parts, 50 under each. Shade 3 parts. Bracket under the shaded part: 30% = ?",
+      "alt": "A bar labelled 100% = ₹500 is cut into 10 equal parts. The caption says each part is 10%. The number 50 is under each part. The first 3 parts are shaded. A bracket under the shaded part says 30% = ?",
+      "file": "content/visuals/s0-percent-of-quantity/poq-p1.svg",
+      "checks": {
+        "parts": 10,
+        "equal": true,
+        "part_percent": "10",
+        "caption": "Each part is 10%.",
+        "part_amount": "50",
+        "whole": "500",
+        "whole_label": "100% = ₹500",
+        "shaded_percent": "30",
+        "shaded_parts": "3",
+        "shaded_amount": "150",
+        "shaded_label": "30% = ?"
+      }
+    },
+    {
+      "id": "poq-q1",
+      "purpose": "Quiz: 60% of 180 km",
+      "spec": "Percent bar for 180 km. 10 equal parts, 18 under each. Shade 6 parts. Bracket under the shaded part: 60% = ?",
+      "alt": "A bar labelled 100% = 180 km is cut into 10 equal parts. The caption says each part is 10%. The number 18 is under each part. The first 6 parts are shaded. A bracket under the shaded part says 60% = ?",
+      "file": "content/visuals/s0-percent-of-quantity/poq-q1.svg",
+      "checks": {
+        "parts": 10,
+        "equal": true,
+        "part_percent": "10",
+        "caption": "Each part is 10%.",
+        "part_amount": "18",
+        "whole": "180",
+        "whole_label": "100% = 180 km",
+        "shaded_percent": "60",
+        "shaded_parts": "6",
+        "shaded_amount": "108",
+        "shaded_label": "60% = ?"
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-percent-of-quantity/p-1",
+      "type": "numeric",
+      "visual": "poq-p1",
+      "objective": 0,
+      "prompt": "The bar is ₹500, which is 100%. Each part is 10%. How many rupees is the shaded 30%? Type the amount in rupees, like 45.50.",
+      "answer": "150",
+      "hints": [
+        "Each part is ₹50. How many parts are shaded?"
+      ],
+      "explanation": "Each 10% part is $500 \\div 10 = 50$ rupees. 30% is 3 parts: $3 \\times 50 = 150$. So 30% of ₹500 is ₹150.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(30, 100) * 500"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-of-quantity/p-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "A train journey is 270 km long. What is 10% of the journey? Type the number of kilometres, like 15.",
+      "answer": "27",
+      "hints": [
+        "10% is $\\frac{1}{10}$.",
+        "Divide 270 by 10."
+      ],
+      "explanation": "10% is $\\frac{1}{10}$, so divide by 10: $270 \\div 10 = 27$. So 10% of the journey is 27 km.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(10, 100) * 270"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-3",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Manoj wants to find 20% of ₹350. Which amount is right?",
+      "options": [
+        {
+          "text": "₹17.50",
+          "value": "35/2",
+          "correct": false,
+          "why_wrong": "This divides ₹350 by 20. That finds $\\frac{1}{20}$, which is 5%. 20% is $\\frac{1}{5}$, so divide by 5."
+        },
+        {
+          "text": "₹35",
+          "value": "35",
+          "correct": false,
+          "why_wrong": "₹35 is 10% of ₹350. 20% is 2 lots of 10%, so double it."
+        },
+        {
+          "text": "₹70",
+          "value": "70",
+          "correct": true
+        },
+        {
+          "text": "₹330",
+          "value": "330",
+          "correct": false,
+          "why_wrong": "This takes away 20 rupees. 20% is not ₹20. It is 20 out of every 100, so it depends on the whole amount."
+        }
+      ],
+      "answer": "₹70",
+      "hints": [
+        "First find 10% of ₹350.",
+        "20% is 2 lots of 10%."
+      ],
+      "explanation": "10% of ₹350 is $350 \\div 10 = 35$. 20% is 2 lots of 10%: $2 \\times 35 = 70$. So 20% of ₹350 is ₹70.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(20, 100) * 350"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-4",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "1% of ₹800 is ₹8. What is 7% of ₹800? Type the amount in rupees, like 45.50.",
+      "answer": "56",
+      "hints": [
+        "7% is 7 lots of 1%."
+      ],
+      "explanation": "7% is 7 lots of 1%. So 7% of ₹800 is $7 \\times 8 = 56$, which is ₹56.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 100) * 800"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-of-quantity/p-5",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Find 12% of 450 km. Use 10% and 1% steps. Type the number of kilometres, like 15.",
+      "answer": "54",
+      "hints": [
+        "10% of 450 is $450 \\div 10$. 1% of 450 is $450 \\div 100$.",
+        "12% is 10% and 2 lots of 1%."
+      ],
+      "explanation": "10% of 450 is 45. 1% of 450 is 4.5, so 2% is 9. 12% is $45 + 9 = 54$. So 12% of 450 km is 54 km.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(12, 100) * 450"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Kiran's Dada makes 48 rotis for a family lunch. 25% of them are bajra rotis. How many bajra rotis is that? Type a whole number.",
+      "answer": "12",
+      "hints": [
+        "25% is the same as $\\frac{1}{4}$.",
+        "Find $\\frac{1}{4}$ of 48."
+      ],
+      "explanation": "25% is $\\frac{1}{4}$. So 25% of 48 is $\\frac{1}{4} \\times 48 = 48 \\div 4 = 12$. There are 12 bajra rotis.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(25, 100) * 48"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-7",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "15% of 60 kg is $0.15 \\times 60$. Work it out. Type the number of kilograms, like 4.",
+      "answer": "9",
+      "hints": [
+        "Multiply without the point first: $15 \\times 60$.",
+        "0.15 has two places after the point."
+      ],
+      "explanation": "$15 \\times 60 = 900$. 0.15 has two places after the point, so the answer is 9.00, which is 9. Check: 10% of 60 is 6 and 5% is 3. $6 + 3 = 9$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 100) * 60"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-8",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Sourav has ₹70. He gives 35% of it to a flood relief fund. How much does he give? Type the amount in rupees, like 45.50.",
+      "answer": "24.50",
+      "hints": [
+        "35% is 0.35. Work out $0.35 \\times 70$.",
+        "Or use steps: 10% of 70 is 7. Find 30% and 5%."
+      ],
+      "explanation": "$0.35 \\times 70$: first $35 \\times 70 = 2450$. Two places after the point give 24.50. Check: 30% is 21 and 5% is 3.50. $21 + 3.50 = 24.50$. He gives ₹24.50.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(35, 100) * 70"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-of-quantity/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Gurpreet's family is driving 120 km to Amritsar. They have driven 90 km so far. What percent of the journey have they driven? Type the number only, like 40.",
+      "answer": "75",
+      "hints": [
+        "Write the part over the whole: $\\frac{90}{120}$.",
+        "Simplify, then make the bottom 100."
+      ],
+      "explanation": "The part is 90 km and the whole is 120 km. $\\frac{90}{120} = \\frac{3}{4} = \\frac{75}{100}$. So they have driven 75% of the journey.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(90, 120) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/p-10",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "A hall has 30 men and 20 women. Iqbal says the women are $\\frac{20}{30}$ of all the people. Is he right?",
+      "answer": "false",
+      "hints": [
+        "How many people are in the hall in all?",
+        "The whole goes on the bottom."
+      ],
+      "explanation": "No. All the people make $30 + 20 = 50$. So the women are $\\frac{20}{50}$ of the people, which is $\\frac{40}{100}$ or 40%. $\\frac{20}{30}$ compares women with men, not with everyone.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(20, 30), Rational(20, 30 + 20))"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-percent-of-quantity/q-1",
+      "type": "numeric",
+      "visual": "poq-q1",
+      "objective": 0,
+      "prompt": "The bar is a 180 km journey, which is 100%. Each part is 10%. How many kilometres is the shaded 60%? Type the number of kilometres, like 15.",
+      "answer": "108",
+      "hints": [
+        "Each part is 18 km. How many parts are shaded?"
+      ],
+      "explanation": "Each 10% part is $180 \\div 10 = 18$ km. 60% is 6 parts: $6 \\times 18 = 108$. So 60% of 180 km is 108 km.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(60, 100) * 180"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/q-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Find 5% of ₹260. Type the amount in rupees, like 45.50.",
+      "answer": "13",
+      "hints": [
+        "First find 10% of ₹260.",
+        "5% is half of 10%."
+      ],
+      "explanation": "10% of ₹260 is $260 \\div 10 = 26$. 5% is half of that: $26 \\div 2 = 13$. So 5% of ₹260 is ₹13.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 100) * 260"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-of-quantity/q-3",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "Sunil says 20% of 80 is 4, because $80 \\div 20 = 4$. Is he right?",
+      "answer": "false",
+      "hints": [
+        "What is 10% of 80?",
+        "20% is 2 lots of 10%."
+      ],
+      "explanation": "No. 10% of 80 is 8, so 20% is $2 \\times 8 = 16$. Dividing by 20 finds $\\frac{1}{20}$ of 80, which is only 5%.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(20, 100) * 80, 80 / 20)"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "120 people come to a village mela. 75% of them stay for the puppet show. How many people stay? Type a whole number.",
+      "answer": "90",
+      "hints": [
+        "75% is $\\frac{3}{4}$.",
+        "Find $\\frac{1}{4}$ of 120 first."
+      ],
+      "explanation": "75% is $\\frac{3}{4}$. $\\frac{1}{4}$ of 120 is $120 \\div 4 = 30$. So $\\frac{3}{4}$ of 120 is $3 \\times 30 = 90$. 90 people stay.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(75, 100) * 120"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/q-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Mohan's Nana spends ₹65 on vegetables. 15% of that is for onions. How much are the onions? Type the amount in rupees, like 45.50.",
+      "answer": "9.75",
+      "hints": [
+        "15% is 0.15. Work out $0.15 \\times 65$.",
+        "Or use steps: 10% of 65 is 6.50. Then find 5%."
+      ],
+      "explanation": "$15 \\times 65 = 975$. 0.15 has two places after the point, so $0.15 \\times 65 = 9.75$. Check: 10% is 6.50 and 5% is 3.25. $6.50 + 3.25 = 9.75$. The onions cost ₹9.75.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 100) * 65"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-of-quantity/q-6",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A village in Sikkim has 75 houses. 60 of them have solar panels. What percent of the houses have solar panels? Type the number only, like 40.",
+      "answer": "80",
+      "hints": [
+        "Write the part over the whole: $\\frac{60}{75}$.",
+        "Both 60 and 75 can be divided by 15."
+      ],
+      "explanation": "$\\frac{60}{75} = \\frac{4}{5}$, dividing the top and the bottom by 15. Then $\\frac{4}{5} = \\frac{80}{100}$. So 80% of the houses have solar panels.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(60, 75) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/q-7",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Devika lights 60 diyas for Diwali. 12 are red and 48 are yellow. What percent of the diyas are red?",
+      "options": [
+        {
+          "text": "12%",
+          "value": "12",
+          "correct": false,
+          "why_wrong": "12 is the number of red diyas, not a percent. 12% would be 12 out of 100, but there are only 60 diyas."
+        },
+        {
+          "text": "20%",
+          "value": "20",
+          "correct": true
+        },
+        {
+          "text": "25%",
+          "value": "25",
+          "correct": false,
+          "why_wrong": "This uses $\\frac{12}{48}$, which compares red with yellow. The question asks about all the diyas, so the whole is 60."
+        },
+        {
+          "text": "80%",
+          "value": "80",
+          "correct": false,
+          "why_wrong": "80% is the yellow diyas: $\\frac{48}{60}$. The question asks about the red ones."
+        }
+      ],
+      "answer": "20%",
+      "hints": [
+        "What is the whole here: the yellow diyas, or all the diyas?",
+        "Write red over all the diyas, then make the bottom 100."
+      ],
+      "explanation": "The whole is all 60 diyas. Red is $\\frac{12}{60} = \\frac{1}{5} = \\frac{20}{100}$. So 20% of the diyas are red.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(12, 60) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-of-quantity/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Ritwik's walk to school is 1 km. He has walked 250 m so far. What percent of the walk has he done? Type the number only, like 40.",
+      "answer": "25",
+      "hints": [
+        "Write both lengths in metres. 1 km is 1000 m.",
+        "Write the part over the whole: $\\frac{250}{1000}$."
+      ],
+      "explanation": "1 km is 1000 m. So the fraction is $\\frac{250}{1000} = \\frac{25}{100}$, dividing the top and the bottom by 10. He has done 25% of the walk.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(250, 1000) * 100"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Which of the three ways should I use?",
+      "a": "Any of them gives the same answer. Use 10% and 1% steps for working in your head. Use a fraction for 50%, 25%, 75% and 20%. Use a decimal for harder percents, like 37%. Checking with a second way is a good habit."
+    },
+    {
+      "q": "Why doesn't 20% mean divide by 20?",
+      "a": "$20\\% = \\frac{20}{100} = \\frac{1}{5}$. So 20% means divide by 5, not by 20. Dividing by 20 finds $\\frac{1}{20}$, and that is 5%."
+    },
+    {
+      "q": "Is 8% of 50 the same as 50% of 8?",
+      "a": "Yes! Both are $\\frac{8 \\times 50}{100} = 4$. So you can swap them when one way is easier. 50% of 8 is half of 8, which is 4."
+    },
+    {
+      "q": "Can a percentage of an amount be bigger than the amount?",
+      "a": "Yes, when the percent is more than 100%. 100% of 40 km is all 40 km. So 150% of 40 km is 40 km and half again: $40 + 20 = 60$ km."
+    },
+    {
+      "q": "What if the fraction will not make 100 at the bottom, like 7 out of 8?",
+      "a": "Divide to get a decimal first: $7 \\div 8 = 0.875$. That is 87 and a half hundredths, so it is 87.5%."
+    }
+  ]
+}
