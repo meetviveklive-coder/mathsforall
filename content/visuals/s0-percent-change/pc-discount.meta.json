@@ -1,0 +1,41 @@
+{
+ "rows": [
+  {
+   "label": "Before: \u20b9800",
+   "segments": [
+    {
+     "value": "800",
+     "style": "fill",
+     "text": "100% = \u20b9800",
+     "percent_of_original": "100"
+    }
+   ],
+   "amount": "800",
+   "length": "800",
+   "percent_of_original": "100"
+  },
+  {
+   "label": "Sale: 25% off",
+   "segments": [
+    {
+     "value": "600",
+     "style": "fill",
+     "text": "You pay \u20b9600",
+     "percent_of_original": "75"
+    },
+    {
+     "value": "200",
+     "style": "cut",
+     "text": "25% = \u20b9200",
+     "percent_of_original": "25"
+    }
+   ],
+   "amount": "600",
+   "length": "800",
+   "percent_of_original": "75"
+  }
+ ],
+ "original": "800",
+ "label_overlaps": 0,
+ "labels_inside": true
+}

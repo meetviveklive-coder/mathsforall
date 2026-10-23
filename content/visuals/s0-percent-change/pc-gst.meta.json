@@ -1,0 +1,41 @@
+{
+ "rows": [
+  {
+   "label": "Price: \u20b93000",
+   "segments": [
+    {
+     "value": "3000",
+     "style": "fill",
+     "text": "100% = \u20b93000",
+     "percent_of_original": "100"
+    }
+   ],
+   "amount": "3000",
+   "length": "3000",
+   "percent_of_original": "100"
+  },
+  {
+   "label": "With 5% GST: \u20b93150",
+   "segments": [
+    {
+     "value": "3000",
+     "style": "fill",
+     "text": "\u20b93000",
+     "percent_of_original": "100"
+    },
+    {
+     "value": "150",
+     "style": "extra",
+     "text": "GST \u20b9150",
+     "percent_of_original": "5"
+    }
+   ],
+   "amount": "3150",
+   "length": "3150",
+   "percent_of_original": "105"
+  }
+ ],
+ "original": "3000",
+ "label_overlaps": 0,
+ "labels_inside": true
+}

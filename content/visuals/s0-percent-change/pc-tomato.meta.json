@@ -1,0 +1,77 @@
+{
+ "rows": [
+  {
+   "label": "Before: \u20b940 a kg",
+   "segments": [
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    }
+   ],
+   "amount": "40",
+   "length": "40",
+   "percent_of_original": "100"
+  },
+  {
+   "label": "Now: \u20b950 a kg",
+   "segments": [
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "fill",
+     "text": "\u20b910",
+     "percent_of_original": "25"
+    },
+    {
+     "value": "10",
+     "style": "extra",
+     "text": "+\u20b910",
+     "percent_of_original": "25"
+    }
+   ],
+   "amount": "50",
+   "length": "50",
+   "percent_of_original": "125"
+  }
+ ],
+ "original": "40",
+ "label_overlaps": 0,
+ "labels_inside": true
+}

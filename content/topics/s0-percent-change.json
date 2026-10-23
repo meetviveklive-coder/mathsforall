@@ -1,0 +1,644 @@
+{
+  "id": "s0-percent-change",
+  "title": "Discounts, GST and percentage change",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Kabir and his Nani walk into a Diwali sale. A big sign says **25% off**. The wall clock Nani likes was ₹800. What does it cost now?\n\nAt the counter, the bill has a line called **GST**. It adds a little to some prices.\n\nOn the way home, Nani grumbles. Tomatoes were ₹40 a kg last month. Now they are ₹50. By what percent did the price go up?\n\nYou already know how to find a percentage of an amount. In this topic you will use it to answer all three questions.",
+    "sections": [
+      {
+        "heading": "The price after a discount",
+        "body": "A **discount** is money taken off a price. In a sale, the discount is often a percent of the **original price**. The original price is the price before the sale.\n\nThe wall clock was ₹800, and the sale gives 25% off.\n\n1. Find the discount. 25% is a quarter. A quarter of ₹800 is ₹200.\n2. Take it away. $800 - 200 = 600$.\n\nSo the sale price is ₹600.\n\nLook at the bars. The top bar is the original price, 100%. In the bottom bar, the 25% part is cut off. You pay the rest.\n\n**A shortcut.** If 25% is taken off, you pay $100\\% - 25\\% = 75\\%$ of the price. 75% is 0.75. So the sale price is $800 \\times 0.75 = 600$. It is the same answer, in one step.",
+        "visual": "pc-discount"
+      },
+      {
+        "heading": "The price after adding GST",
+        "body": "**GST** is a tax. A tax is money paid to the government. It helps pay for things like roads and hospitals. GST is added on top of the price of many things you buy.\n\nGST is a percent of the price. Different things have different GST:\n\n- **0%**: roti, paneer and exercise books.\n- **5%**: bicycles, toothpaste and ghee.\n- **18%**: televisions and air conditioners.\n\nBhavna's Papa buys a bicycle. The price is ₹3000, and GST is 5%.\n\n1. Find the GST. 10% of ₹3000 is ₹300. 5% is half of that, so it is ₹150.\n2. Add it on. $3000 + 150 = 3150$.\n\nHe pays ₹3150. This time the bar grows. A small 5% piece is added to the end.\n\n**A shortcut.** With 5% added, you pay $100\\% + 5\\% = 105\\%$ of the price. 105% is 1.05. So the total is $3000 \\times 1.05 = 3150$.\n\nA discount takes a percent **off**. GST puts a percent **on**.",
+        "visual": "pc-gst"
+      },
+      {
+        "heading": "Percentage increase and decrease",
+        "body": "Nani's tomatoes went from ₹40 to ₹50 a kg. The price rose by ₹10.\n\nIs ₹10 a big rise? It depends on where you started. ₹10 more on ₹40 tomatoes is a lot. ₹10 more on a ₹3000 bicycle is tiny. So we compare the change with the **original** value. That is the value before the change.\n\n$\\text{percentage change} = \\dfrac{\\text{change}}{\\text{original value}} \\times 100$\n\nFor the tomatoes: $\\frac{10}{40} \\times 100 = 25$. The price rose by **25%**.\n\nThe bars show why. ₹40 is 4 parts of ₹10. The rise is 1 more part. 1 part out of 4 is $\\frac{1}{4}$, which is 25%.\n\n**Watch out.** Do not divide by the new price. $\\frac{10}{50} \\times 100 = 20$, and 20% is wrong here. Always divide by the value before the change.\n\nA fall works the same way. Onions drop from ₹50 to ₹40 a kg. The change is ₹10, and the original is ₹50. $\\frac{10}{50} \\times 100 = 20$, so it is a **20% decrease**.",
+        "visual": "pc-tomato"
+      },
+      {
+        "heading": "Up 20%, then down 20%",
+        "body": "Here is a puzzle. A school bag costs ₹500. Its price goes up by 20%. Later, the new price comes down by 20%. Is it back to ₹500?\n\n- **Up 20%.** 20% of ₹500 is ₹100. The price becomes ₹600.\n- **Down 20%.** Now the 20% is of ₹600, not ₹500. 20% of ₹600 is ₹120. The price becomes $600 - 120 = 480$.\n\nSo the bag ends at **₹480**, not ₹500.\n\nBoth changes are 20%. But they are 20% of different amounts. The fall is taken from the bigger price, ₹600. So the fall, ₹120, is bigger than the rise, ₹100.\n\nIn the diagram, the dashed mark shows ₹500. The last bar stops short of it.",
+        "visual": "pc-up-down"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "In an Onam sale, Lakshmi's Appa buys a silk saree. Its original price is ₹1200. The sale gives 15% off. What is the sale price?",
+        "steps": [
+          "Find 15% of ₹1200 in steps. 10% of ₹1200 is ₹120.",
+          "5% is half of 10%, so it is ₹60.",
+          "15% is $120 + 60 = 180$. The discount is ₹180.",
+          "Take it away: $1200 - 180 = 1020$. The sale price is ₹1020.",
+          "Check with the shortcut. 15% off means you pay 85%. $1200 \\times 0.85 = 1020$."
+        ],
+        "answer": "1020",
+        "verify": {
+          "kind": "sympy",
+          "expr": "1200 - Rational(15, 100) * 1200"
+        }
+      },
+      {
+        "problem": "Thomas's Ammachi buys a television for ₹12000. GST on televisions is 18%. What is the total price?",
+        "steps": [
+          "Find 18% of ₹12000. Split 18% into 10% and 8%.",
+          "10% of ₹12000 is ₹1200. 1% is ₹120, so 8% is $8 \\times 120 = 960$.",
+          "18% is $1200 + 960 = 2160$. The GST is ₹2160.",
+          "Add it on: $12000 + 2160 = 14160$. The total is ₹14160.",
+          "Check with the shortcut. You pay 118%, which is 1.18. $12000 \\times 1.18 = 14160$."
+        ],
+        "answer": "14160",
+        "verify": {
+          "kind": "sympy",
+          "expr": "12000 + Rational(18, 100) * 12000"
+        }
+      },
+      {
+        "problem": "A city bus fare goes up from ₹20 to ₹23. What is the percentage increase?",
+        "steps": [
+          "The change is $23 - 20 = 3$ rupees.",
+          "The original value is the old fare, ₹20. Divide by 20, not by 23.",
+          "$\\frac{3}{20} \\times 100 = \\frac{300}{20} = 15$.",
+          "The fare went up by 15%.",
+          "Check: 10% of ₹20 is ₹2 and 5% is ₹1. So 15% of ₹20 is ₹3, which matches the rise."
+        ],
+        "answer": "15",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(23 - 20, 20) * 100"
+        }
+      }
+    ],
+    "summary": [
+      "A discount is a percent taken off the original price. Find the discount, then subtract it.",
+      "Shortcut: 25% off means you pay 75%. Multiply the price by 0.75.",
+      "GST is a tax added on top of a price. Different items have different GST, such as 0%, 5% or 18%.",
+      "Shortcut: with 5% GST you pay 105%. Multiply the price by 1.05.",
+      "Percentage change = change ÷ original value × 100.",
+      "Always divide by the value before the change, not the new value.",
+      "Up 20% then down 20% does not bring you back. ₹500 becomes ₹600, then ₹480."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "pc-discount",
+      "purpose": "A 25% discount on ₹800: ₹200 is cut off and you pay ₹600",
+      "spec": "Two bars drawn to the same scale (₹800 fills the width). Top bar: one piece, ₹800, labelled 'Before: ₹800' and '100% = ₹800'. Bottom bar labelled 'Sale: 25% off': a shaded ₹600 piece labelled 'You pay ₹600' and a dashed empty ₹200 piece labelled '25% = ₹200'.",
+      "alt": "Two bars of the same full length. The top bar is labelled Before: ₹800, and under it, 100% = ₹800. The bottom bar is labelled Sale: 25% off. Its first three quarters are shaded and labelled You pay ₹600. The last quarter is an empty dashed box labelled 25% = ₹200.",
+      "file": "content/visuals/s0-percent-change/pc-discount.svg",
+      "checks": {
+        "original": "800",
+        "rows": [
+          {
+            "label": "Before: ₹800",
+            "amount": "800",
+            "length": "800",
+            "segments": [
+              {"value": "800", "style": "fill", "text": "100% = ₹800"}
+            ]
+          },
+          {
+            "label": "Sale: 25% off",
+            "amount": "600",
+            "length": "800",
+            "percent_of_original": "75",
+            "segments": [
+              {"value": "600", "style": "fill", "text": "You pay ₹600", "percent_of_original": "75"},
+              {"value": "200", "style": "cut", "text": "25% = ₹200", "percent_of_original": "25"}
+            ]
+          }
+        ],
+        "label_overlaps": 0,
+        "labels_inside": true
+      }
+    },
+    {
+      "id": "pc-gst",
+      "purpose": "5% GST on ₹3000: ₹150 is added, ₹3150 in all",
+      "spec": "Two bars drawn to the same scale (₹3150 fills the width). Top bar: one piece, ₹3000, labelled 'Price: ₹3000' and '100% = ₹3000'. Bottom bar labelled 'With 5% GST: ₹3150': a ₹3000 piece labelled '₹3000' and a small ₹150 piece in a second colour labelled 'GST ₹150'.",
+      "alt": "Two bars drawn to the same scale. The top bar is labelled Price: ₹3000, and under it, 100% = ₹3000. The bottom bar is labelled With 5% GST: ₹3150. It has the same ₹3000 piece, plus a thin extra piece at the end in a different colour, labelled GST ₹150. So the bottom bar is a little longer.",
+      "file": "content/visuals/s0-percent-change/pc-gst.svg",
+      "checks": {
+        "original": "3000",
+        "rows": [
+          {
+            "label": "Price: ₹3000",
+            "amount": "3000",
+            "segments": [
+              {"value": "3000", "style": "fill", "text": "100% = ₹3000"}
+            ]
+          },
+          {
+            "label": "With 5% GST: ₹3150",
+            "amount": "3150",
+            "percent_of_original": "105",
+            "segments": [
+              {"value": "3000", "style": "fill", "text": "₹3000"},
+              {"value": "150", "style": "extra", "text": "GST ₹150", "percent_of_original": "5"}
+            ]
+          }
+        ],
+        "label_overlaps": 0,
+        "labels_inside": true
+      }
+    },
+    {
+      "id": "pc-tomato",
+      "purpose": "Tomatoes rise from ₹40 to ₹50: the rise is 1 part on 4, so 25%",
+      "spec": "Two bars drawn to the same scale (₹50 fills the width). Top bar labelled 'Before: ₹40 a kg': 4 equal ₹10 pieces, each labelled '₹10'. Bottom bar labelled 'Now: ₹50 a kg': the same 4 pieces plus a fifth ₹10 piece in a second colour labelled '+₹10'.",
+      "alt": "Two bars drawn to the same scale. The top bar is labelled Before: ₹40 a kg. It has 4 equal pieces, each labelled ₹10. The bottom bar is labelled Now: ₹50 a kg. It has the same 4 pieces of ₹10, plus one more equal piece in a different colour, labelled +₹10.",
+      "file": "content/visuals/s0-percent-change/pc-tomato.svg",
+      "checks": {
+        "original": "40",
+        "rows": [
+          {
+            "label": "Before: ₹40 a kg",
+            "amount": "40",
+            "segments": [
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"}
+            ]
+          },
+          {
+            "label": "Now: ₹50 a kg",
+            "amount": "50",
+            "percent_of_original": "125",
+            "segments": [
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "fill", "text": "₹10"},
+              {"value": "10", "style": "extra", "text": "+₹10", "percent_of_original": "25"}
+            ]
+          }
+        ],
+        "label_overlaps": 0,
+        "labels_inside": true
+      }
+    },
+    {
+      "id": "pc-up-down",
+      "purpose": "₹500 up 20% is ₹600; then down 20% is ₹480, not ₹500",
+      "spec": "Three bars drawn to the same scale (₹600 fills the width). 'Start: ₹500': one ₹500 piece. 'Up 20%: ₹600': a ₹500 piece and a ₹100 piece in a second colour labelled '+₹100'. 'Then down 20%: ₹480': a ₹480 piece and a dashed empty ₹120 piece labelled '−₹120'. A short dashed mark at ₹500 on each bar.",
+      "alt": "Three bars drawn to the same scale. The first is labelled Start: ₹500. The second is labelled Up 20%: ₹600. It is the ₹500 piece plus an extra ₹100 piece in a different colour. The third is labelled Then down 20%: ₹480. It has a shaded ₹480 piece and an empty dashed ₹120 piece at the end. A dashed mark at ₹500 shows that the shaded part of the third bar stops short of ₹500.",
+      "file": "content/visuals/s0-percent-change/pc-up-down.svg",
+      "checks": {
+        "original": "500",
+        "guide": "500",
+        "rows": [
+          {
+            "label": "Start: ₹500",
+            "amount": "500",
+            "segments": [
+              {"value": "500", "style": "fill", "text": "₹500"}
+            ]
+          },
+          {
+            "label": "Up 20%: ₹600",
+            "amount": "600",
+            "percent_of_original": "120",
+            "segments": [
+              {"value": "500", "style": "fill", "text": "₹500"},
+              {"value": "100", "style": "extra", "text": "+₹100", "percent_of_original": "20"}
+            ]
+          },
+          {
+            "label": "Then down 20%: ₹480",
+            "amount": "480",
+            "length": "600",
+            "percent_of_original": "96",
+            "segments": [
+              {"value": "480", "style": "fill", "text": "₹480"},
+              {"value": "120", "style": "cut", "text": "−₹120"}
+            ]
+          }
+        ],
+        "label_overlaps": 0,
+        "labels_inside": true
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-percent-change/p-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "In an Eid sale, Fathima buys a kurta. Its original price is ₹600. The sale gives 10% off. How much does she pay? Type the amount in rupees, like 45.50.",
+      "answer": "540",
+      "hints": [
+        "10% of an amount is the amount ÷ 10.",
+        "Find the discount, then take it away from ₹600."
+      ],
+      "explanation": "10% of ₹600 is $600 \\div 10 = 60$. So the discount is ₹60. She pays $600 - 60 = 540$, which is ₹540.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "600 - Rational(10, 100) * 600"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/p-2",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "At a Diwali sale, Gurpreet's Dadaji buys a pressure cooker. It was ₹1400, and the sale gives 25% off. What is the sale price? Type the amount in rupees, like 45.50.",
+      "answer": "1050",
+      "hints": [
+        "25% is a quarter. What is a quarter of ₹1400?",
+        "Take the discount away from ₹1400."
+      ],
+      "explanation": "25% is a quarter, and $1400 \\div 4 = 350$. So the discount is ₹350. The sale price is $1400 - 350 = 1050$, which is ₹1050. Check: you pay 75%, and $1400 \\times 0.75 = 1050$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "1400 - Rational(25, 100) * 1400"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/p-3",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "A shop sign says **30% off**. What percent of the original price do you pay?",
+      "options": [
+        {
+          "text": "70%",
+          "value": "70",
+          "correct": true
+        },
+        {
+          "text": "30%",
+          "value": "30",
+          "correct": false,
+          "why_wrong": "30% is the part taken off. You pay the part that is left: $100\\% - 30\\% = 70\\%$."
+        },
+        {
+          "text": "130%",
+          "value": "130",
+          "correct": false,
+          "why_wrong": "130% means 30% was added on. A discount takes 30% off, so you pay less than 100%."
+        }
+      ],
+      "answer": "70%",
+      "hints": [
+        "The original price is 100%.",
+        "Take 30% away from 100%."
+      ],
+      "explanation": "The original price is 100%. 30% is taken off, so you pay $100\\% - 30\\% = 70\\%$ of the price.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "100 - 30"
+      }
+    },
+    {
+      "id": "s0-percent-change/p-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Nikhil buys a tube of toothpaste. The price is ₹84, and GST is 5%. How much does he pay in all? Type the amount in rupees, like 45.50.",
+      "answer": "88.20",
+      "hints": [
+        "10% of ₹84 is ₹8.40. 5% is half of that.",
+        "Add the GST to ₹84."
+      ],
+      "explanation": "10% of ₹84 is ₹8.40, so 5% is ₹4.20. He pays $84 + 4.20 = 88.20$, which is ₹88.20. Check: $84 \\times 1.05 = 88.2$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "84 + Rational(5, 100) * 84"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Debashish's Pishi buys an air conditioner. The price is ₹25000, and GST is 18%. What is the total price? Type the amount in rupees, like 45.50.",
+      "answer": "29500",
+      "hints": [
+        "Split 18% into 10% and 8%. 10% of ₹25000 is ₹2500.",
+        "1% of ₹25000 is ₹250. What is 8%?"
+      ],
+      "explanation": "10% of ₹25000 is ₹2500. 1% is ₹250, so 8% is $8 \\times 250 = 2000$. The GST is $2500 + 2000 = 4500$. The total is $25000 + 4500 = 29500$, which is ₹29500.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "25000 + Rational(18, 100) * 25000"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/p-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Ayesha's Abbu buys a jar of ghee for ₹640. GST on ghee is 5%. How much is the GST alone? Type the amount in rupees, like 45.50.",
+      "answer": "32",
+      "hints": [
+        "The question asks only for the GST, not the total.",
+        "10% of ₹640 is ₹64. 5% is half of that."
+      ],
+      "explanation": "10% of ₹640 is ₹64. 5% is half of that, so the GST is ₹32. The total would be ₹672, but the question asks for the GST alone.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 100) * 640"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/p-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "In the rainy season, tomatoes rise from ₹30 to ₹45 a kg. What is the percentage increase? Type the number only, like 40.",
+      "answer": "50",
+      "hints": [
+        "First find the change in rupees.",
+        "Divide the change by the original price, ₹30. Then multiply by 100."
+      ],
+      "explanation": "The change is $45 - 30 = 15$ rupees. The original price is ₹30. $\\frac{15}{30} \\times 100 = 50$, so the price rose by 50%. ₹15 is half of ₹30.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(45 - 30, 30) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-change/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "After the festival, marigold flowers drop from ₹80 to ₹56 a kg. What is the percentage decrease? Type the number only, like 40.",
+      "answer": "30",
+      "hints": [
+        "The change is $80 - 56$ rupees.",
+        "Divide the change by the price before the drop. Then multiply by 100."
+      ],
+      "explanation": "The change is $80 - 56 = 24$ rupees. The original price is ₹80. $\\frac{24}{80} \\times 100 = 30$, so it is a 30% decrease. Check: 10% of ₹80 is ₹8, and 30% is ₹24.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(80 - 56, 80) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-change/p-9",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "Milk goes up from ₹50 to ₹60 a litre. Anjali works out $\\frac{10}{60} \\times 100$ to find the percentage increase. Is her method right?",
+      "answer": "false",
+      "hints": [
+        "Which price was there before the change?",
+        "The change must be compared with the original price."
+      ],
+      "explanation": "No. She divided by the new price, ₹60. The original price is ₹50. $\\frac{10}{50} \\times 100 = 20$, so the rise is 20%. Her way gives about 16.7%, which is too small.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(10, 60) * 100, Rational(60 - 50, 50) * 100)"
+      }
+    },
+    {
+      "id": "s0-percent-change/p-10",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "A bus fare is ₹40. It goes up by 10%. Later the new fare comes down by 10%. What is the fare now? Type the amount in rupees, like 45.50.",
+      "answer": "39.60",
+      "hints": [
+        "First find the fare after the 10% rise.",
+        "The 10% fall is 10% of the new fare, not of ₹40."
+      ],
+      "explanation": "10% of ₹40 is ₹4, so the fare goes up to ₹44. Then 10% of ₹44 is ₹4.40. The fare comes down to $44 - 4.40 = 39.60$, which is ₹39.60. It does not go back to ₹40.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "40 * Rational(110, 100) * Rational(90, 100)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-percent-change/q-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "At a Diwali sale, Sneha's Mama buys a set of clay lamps. The original price is ₹250. The sale gives 20% off. What is the sale price? Type the amount in rupees, like 45.50.",
+      "answer": "200",
+      "hints": [
+        "10% of ₹250 is ₹25. What is 20%?",
+        "Take the discount away from ₹250."
+      ],
+      "explanation": "10% of ₹250 is ₹25, so 20% is ₹50. The sale price is $250 - 50 = 200$, which is ₹200. Check: you pay 80%, and $250 \\times 0.8 = 200$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "250 - Rational(20, 100) * 250"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/q-2",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "In an Onam sale, Anoop buys a shirt. Its original price is ₹800, with 15% off. What is the sale price?",
+      "options": [
+        {
+          "text": "₹120",
+          "value": "120",
+          "correct": false,
+          "why_wrong": "₹120 is the discount, the money taken off. The sale price is what is left: $800 - 120$."
+        },
+        {
+          "text": "₹680",
+          "value": "680",
+          "correct": true
+        },
+        {
+          "text": "₹785",
+          "value": "785",
+          "correct": false,
+          "why_wrong": "This takes off ₹15, not 15%. 15% of ₹800 is ₹120."
+        },
+        {
+          "text": "₹920",
+          "value": "920",
+          "correct": false,
+          "why_wrong": "This adds the discount on. A discount is taken off, so the sale price is less than ₹800."
+        }
+      ],
+      "answer": "₹680",
+      "hints": [
+        "10% of ₹800 is ₹80. 5% is half of that.",
+        "Find 15%, then take it away from ₹800."
+      ],
+      "explanation": "10% of ₹800 is ₹80 and 5% is ₹40. So 15% is ₹120. The sale price is $800 - 120 = 680$, which is ₹680.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "800 - Rational(15, 100) * 800"
+      }
+    },
+    {
+      "id": "s0-percent-change/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Tashi's Didi buys a bicycle for ₹4800. GST on bicycles is 5%. What is the total price? Type the amount in rupees, like 45.50.",
+      "answer": "5040",
+      "hints": [
+        "10% of ₹4800 is ₹480. 5% is half of that.",
+        "Add the GST to ₹4800."
+      ],
+      "explanation": "10% of ₹4800 is ₹480, so 5% is ₹240. The total is $4800 + 240 = 5040$, which is ₹5040. Check: $4800 \\times 1.05 = 5040$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "4800 + Rational(5, 100) * 4800"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-change/q-4",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "A television costs ₹20000. GST on televisions is 18%. Which calculation gives the total price?",
+      "options": [
+        {
+          "text": "$20000 \\times 0.18$",
+          "value": "3600",
+          "correct": false,
+          "why_wrong": "This gives only the GST, ₹3600. You still need to add it to the price."
+        },
+        {
+          "text": "$20000 + 18$",
+          "value": "20018",
+          "correct": false,
+          "why_wrong": "This adds ₹18, not 18%. 18% of ₹20000 is much more than ₹18."
+        },
+        {
+          "text": "$20000 \\times 1.8$",
+          "value": "36000",
+          "correct": false,
+          "why_wrong": "1.8 is 180%, not 118%. 118% is 1.18, because 18% is 0.18."
+        },
+        {
+          "text": "$20000 \\times 1.18$",
+          "value": "23600",
+          "correct": true
+        }
+      ],
+      "answer": "$20000 \\times 1.18$",
+      "hints": [
+        "With 18% added, what percent of the price do you pay?",
+        "Write that percent as a decimal."
+      ],
+      "explanation": "You pay $100\\% + 18\\% = 118\\%$ of the price. 118% is 1.18. So the total is $20000 \\times 1.18 = 23600$, which is ₹23600.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "20000 + Rational(18, 100) * 20000"
+      }
+    },
+    {
+      "id": "s0-percent-change/q-5",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "The fare for a short auto-rickshaw ride goes up from ₹25 to ₹30. What is the percentage increase? Type the number only, like 40.",
+      "answer": "20",
+      "hints": [
+        "The change is ₹5. What was the fare before the change?",
+        "Divide the change by the original fare. Then multiply by 100."
+      ],
+      "explanation": "The change is $30 - 25 = 5$ rupees. The original fare is ₹25. $\\frac{5}{25} \\times 100 = 20$, so the fare went up by 20%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(30 - 25, 25) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-change/q-6",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "Tomatoes go up from ₹60 to ₹75 a kg. By what percent did the price rise?",
+      "options": [
+        {
+          "text": "15%",
+          "value": "15",
+          "correct": false,
+          "why_wrong": "₹15 is the change in rupees, not a percent. Compare it with the original price: $\\frac{15}{60} \\times 100$."
+        },
+        {
+          "text": "20%",
+          "value": "20",
+          "correct": false,
+          "why_wrong": "This is $\\frac{15}{75} \\times 100$. It divides by the new price. Divide by the original price, ₹60."
+        },
+        {
+          "text": "25%",
+          "value": "25",
+          "correct": true
+        },
+        {
+          "text": "125%",
+          "value": "125",
+          "correct": false,
+          "why_wrong": "₹75 is 125% of ₹60. That is the new price as a percent of the old. The rise is only the extra 25%."
+        }
+      ],
+      "answer": "25%",
+      "hints": [
+        "Find the change in rupees first.",
+        "Divide by the price before the rise."
+      ],
+      "explanation": "The change is $75 - 60 = 15$ rupees. The original price is ₹60. $\\frac{15}{60} \\times 100 = 25$, so the price rose by 25%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(75 - 60, 60) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-change/q-7",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "A train ticket costs ₹150. The fare goes up by 20%. Later, the new fare comes down by 20%. Rinku says the ticket is back to ₹150. Is she right?",
+      "answer": "false",
+      "hints": [
+        "Find the fare after the rise first.",
+        "The fall is 20% of the new fare, not of ₹150."
+      ],
+      "explanation": "No. 20% of ₹150 is ₹30, so the fare goes up to ₹180. Then 20% of ₹180 is ₹36. The fare comes down to $180 - 36 = 144$. The ticket ends at ₹144, not ₹150.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(150 * Rational(120, 100) * Rational(80, 100), 150)"
+      }
+    },
+    {
+      "id": "s0-percent-change/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "In an Eid sale, a bag that was ₹400 now costs ₹340. What percent is the discount? Type the number only, like 40.",
+      "answer": "15",
+      "hints": [
+        "How many rupees were taken off?",
+        "Compare that with the original price, ₹400."
+      ],
+      "explanation": "The discount is $400 - 340 = 60$ rupees. The original price is ₹400. $\\frac{60}{400} \\times 100 = 15$, so the discount is 15%. Check: 10% of ₹400 is ₹40 and 5% is ₹20, which makes ₹60.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(400 - 340, 400) * 100"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Why do I divide by the old price and not the new one?",
+      "a": "A percentage change tells you how big the change is compared with where you started. The start is the original value, so it goes at the bottom. If you divide by the new value, you get a different, wrong answer. For ₹40 to ₹50, $\\frac{10}{40}$ gives 25%, but $\\frac{10}{50}$ gives 20%."
+    },
+    {
+      "q": "Is 50% off the same as half price?",
+      "a": "Yes. 50% is $\\frac{1}{2}$. So 50% off takes away half, and you pay the other half. A ₹300 toy with 50% off costs ₹150."
+    },
+    {
+      "q": "Why is there no GST on roti?",
+      "a": "Some everyday things have 0% GST. Roti, paneer and exercise books are like this. 0% of any price is ₹0, so nothing is added to the bill."
+    },
+    {
+      "q": "Can a price go up by more than 100%?",
+      "a": "Yes. Say a fare goes from ₹20 to ₹50. The change is ₹30. $\\frac{30}{20} \\times 100 = 150$, so it went up by 150%. Going up by 100% means the price doubled."
+    },
+    {
+      "q": "What if the price goes down 20% first, then up 20%?",
+      "a": "It still does not come back. ₹100 down 20% is ₹80. Then 20% of ₹80 is ₹16, so it goes up to ₹96. The rise is smaller because it is 20% of a smaller amount."
+    }
+  ]
+}

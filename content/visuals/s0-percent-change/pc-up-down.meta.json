@@ -1,0 +1,62 @@
+{
+ "rows": [
+  {
+   "label": "Start: \u20b9500",
+   "segments": [
+    {
+     "value": "500",
+     "style": "fill",
+     "text": "\u20b9500",
+     "percent_of_original": "100"
+    }
+   ],
+   "amount": "500",
+   "length": "500",
+   "percent_of_original": "100"
+  },
+  {
+   "label": "Up 20%: \u20b9600",
+   "segments": [
+    {
+     "value": "500",
+     "style": "fill",
+     "text": "\u20b9500",
+     "percent_of_original": "100"
+    },
+    {
+     "value": "100",
+     "style": "extra",
+     "text": "+\u20b9100",
+     "percent_of_original": "20"
+    }
+   ],
+   "amount": "600",
+   "length": "600",
+   "percent_of_original": "120"
+  },
+  {
+   "label": "Then down 20%: \u20b9480",
+   "segments": [
+    {
+     "value": "480",
+     "style": "fill",
+     "text": "\u20b9480",
+     "percent_of_original": "96"
+    },
+    {
+     "value": "120",
+     "style": "cut",
+     "text": "\u2212\u20b9120",
+     "percent_of_original": "24"
+    }
+   ],
+   "amount": "480",
+   "length": "600",
+   "percent_of_original": "96"
+  }
+ ],
+ "original": "500",
+ "label_overlaps": 0,
+ "labels_inside": true,
+ "guide": "500"
+}
