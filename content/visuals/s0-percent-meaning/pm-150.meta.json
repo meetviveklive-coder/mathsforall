@@ -1,0 +1,31 @@
+{
+ "grids": [
+  {
+   "columns": 10,
+   "rows": 10,
+   "cells": 100,
+   "equal": true,
+   "shaded": 100,
+   "full_columns": 10,
+   "square_block": "10x10",
+   "percent": "100",
+   "decimal": "1",
+   "label": "100%"
+  },
+  {
+   "columns": 10,
+   "rows": 10,
+   "cells": 100,
+   "equal": true,
+   "shaded": 50,
+   "full_columns": 5,
+   "square_block": null,
+   "percent": "50",
+   "decimal": "0.5",
+   "label": "50%"
+  }
+ ],
+ "total_shaded": 150,
+ "total_percent": "150",
+ "caption": "150% = 1.5"
+}

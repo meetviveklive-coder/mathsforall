@@ -1,0 +1,45 @@
+{
+ "grids": [
+  {
+   "columns": 10,
+   "rows": 10,
+   "cells": 100,
+   "equal": true,
+   "shaded": 50,
+   "full_columns": 5,
+   "square_block": null,
+   "percent": "50",
+   "decimal": "0.5",
+   "label": "50%",
+   "fraction": "1/2"
+  },
+  {
+   "columns": 10,
+   "rows": 10,
+   "cells": 100,
+   "equal": true,
+   "shaded": 25,
+   "full_columns": 0,
+   "square_block": "5x5",
+   "percent": "25",
+   "decimal": "0.25",
+   "label": "25%",
+   "fraction": "1/4"
+  },
+  {
+   "columns": 10,
+   "rows": 10,
+   "cells": 100,
+   "equal": true,
+   "shaded": 10,
+   "full_columns": 1,
+   "square_block": null,
+   "percent": "10",
+   "decimal": "0.1",
+   "label": "10%",
+   "fraction": "1/10"
+  }
+ ],
+ "total_shaded": 85,
+ "total_percent": "85"
+}

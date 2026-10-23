@@ -1,0 +1,601 @@
+{
+  "id": "s0-percent-meaning",
+  "title": "Percent means 'out of 100'",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Tanvi's Appa charges the power bank before a long train journey to Guwahati. Its little screen shows **37%**.\n\nIs that a lot of charge, or only a little? The sign % is read **percent**. In this topic you will find out what it means. You will also see that 37%, $\\frac{37}{100}$ and 0.37 are three names for one amount.",
+    "sections": [
+      {
+        "heading": "Percent means out of 100",
+        "body": "*Cent* is an old word for 100. A century is 100 years, and a century in cricket is 100 runs. So **percent** means \"out of 100\".\n\nThink of the whole as a grid of 100 equal small squares. Each small square is $\\frac{1}{100}$ of the whole. That is **1%**.\n\nIn this grid, 37 small squares are shaded. That is 37 out of 100, so it is **37%**.\n\nYou already know two other names for 37 out of 100. As a fraction it is $\\frac{37}{100}$. As a decimal it is 0.37. So:\n\n$37\\% = \\frac{37}{100} = 0.37$\n\nTanvi's power bank has 37 parts of charge out of 100. That is a bit more than a third full.",
+        "visual": "pm-grid-37"
+      },
+      {
+        "heading": "From a percent to a fraction or a decimal",
+        "body": "A percent is a number of hundredths. So write it over 100.\n\n- $30\\% = \\frac{30}{100}$. Divide the top and the bottom by 10 to get the simplest form, $\\frac{3}{10}$.\n- $30\\% = \\frac{30}{100} = 0.30$, because 30 hundredths is 0.30. That is the same as 0.3.\n\nWatch the small percents. $5\\% = \\frac{5}{100}$, which is 5 hundredths. The tenths place is empty, so it gets a 0. **5% is 0.05**, not 0.5.\n\n0.5 is 5 tenths, which is 50 hundredths. So 0.5 is **50%**. Look at the two grids. 5% is only 5 small squares. 50% is half the grid.",
+        "visual": "pm-grid-5-50"
+      },
+      {
+        "heading": "From a decimal or a fraction to a percent",
+        "body": "**Decimal to percent.** Count the hundredths.\n\n- 0.83 is 83 hundredths, so it is 83%.\n- 0.6 is 6 tenths. That is the same as 0.60, or 60 hundredths. So 0.6 is 60%, not 6%.\n- 0.07 is 7 hundredths, so it is 7%.\n\n**Fraction to percent.** Find an equivalent fraction with 100 at the bottom. Multiply the top and the bottom by the same number.\n\n- $\\frac{3}{4} = \\frac{3 \\times 25}{4 \\times 25} = \\frac{75}{100}$, so $\\frac{3}{4}$ is 75%.\n- $\\frac{7}{20} = \\frac{7 \\times 5}{20 \\times 5} = \\frac{35}{100}$, so $\\frac{7}{20}$ is 35%."
+      },
+      {
+        "heading": "Benchmarks to remember",
+        "body": "Some percents come up again and again. Learn these by heart.\n\n- **100%** is the whole: all 100 squares.\n- **50%** is half: $\\frac{50}{100} = \\frac{1}{2}$.\n- **25%** is a quarter: $\\frac{25}{100} = \\frac{1}{4}$, because $4 \\times 25 = 100$.\n- **10%** is a tenth: $\\frac{10}{100} = \\frac{1}{10}$. On the grid it is one full column.\n- **1%** is a hundredth: $\\frac{1}{100} = 0.01$. On the grid it is one small square.\n\nIn these grids, the 25% is shaded as a 5 by 5 square. It still has 25 small squares. Four blocks like it would cover the whole grid.\n\nBenchmarks help you picture a percent. A stadium 50% full is half full. A battery at 10% has only a tenth of its charge left.",
+        "visual": "pm-benchmarks"
+      },
+      {
+        "heading": "More than 100%",
+        "body": "Can a percent be more than 100? Yes. 100% is one whole. More than one whole is more than 100%.\n\nHere the first grid is full. That is 100 hundredths, or 100%. The second grid has 50 more hundredths shaded. In all, that is 150 hundredths, so it is **150%**.\n\n$150\\% = \\frac{150}{100} = 1.5$, which is one and a half wholes.\n\nWhen does this happen? Say the usual July rain in a town is the whole, 100%. One July, one and a half times as much rain falls. That July got 150% of its usual rain.",
+        "visual": "pm-150"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "A cricket stadium in Kolkata is 45% full. Write 45% as a fraction in simplest form.",
+        "steps": [
+          "Percent means out of 100. So $45\\% = \\frac{45}{100}$.",
+          "45 and 100 can both be divided by 5: $\\frac{45 \\div 5}{100 \\div 5} = \\frac{9}{20}$.",
+          "9 and 20 have no common factor except 1. So the simplest form is $\\frac{9}{20}$.",
+          "As a decimal, 45% is 0.45. So a bit less than half the seats are filled."
+        ],
+        "answer": "9/20",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(45, 100)"
+        }
+      },
+      {
+        "problem": "Write $\\frac{3}{5}$ as a percent.",
+        "steps": [
+          "We want 100 at the bottom. $5 \\times 20 = 100$.",
+          "Multiply the top and the bottom by 20: $\\frac{3 \\times 20}{5 \\times 20} = \\frac{60}{100}$.",
+          "60 out of 100 is 60%. So $\\frac{3}{5} = 60\\%$."
+        ],
+        "answer": "60",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(3, 5) * 100"
+        }
+      },
+      {
+        "problem": "Write 1.25 as a percent.",
+        "steps": [
+          "1.25 is 1 whole and 25 hundredths.",
+          "1 whole is 100 hundredths. So 1.25 is $100 + 25 = 125$ hundredths.",
+          "125 hundredths is 125%. It is more than 100%, because 1.25 is more than one whole."
+        ],
+        "answer": "125",
+        "verify": {
+          "kind": "sympy",
+          "expr": "Rational(125, 100) * 100"
+        }
+      }
+    ],
+    "summary": [
+      "Percent means \"out of 100\". The sign % is read \"percent\".",
+      "37% = 37/100 = 0.37. These are three names for one amount.",
+      "Percent to decimal: write it as hundredths. 5% = 0.05, not 0.5.",
+      "Decimal to percent: count the hundredths. 0.6 = 0.60 = 60%.",
+      "Fraction to percent: make the bottom 100. 3/4 = 75/100 = 75%.",
+      "Benchmarks: 100% is the whole and 50% is a half.",
+      "25% is a quarter, 10% is a tenth and 1% is a hundredth.",
+      "More than one whole is more than 100%. 1.5 = 150%."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "pm-grid-37",
+      "purpose": "37% as 37 out of 100 squares",
+      "spec": "10 by 10 grid of equal squares. Shade down the columns: 3 full columns and the top 7 squares of column 4.",
+      "alt": "A square cut into 10 columns and 10 rows, making 100 equal small squares. The first 3 columns are fully shaded. The top 7 squares of the fourth column are also shaded. In all, 37 squares are shaded.",
+      "file": "content/visuals/s0-percent-meaning/pm-grid-37.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 37,
+        "full_columns": 3,
+        "percent": "37",
+        "decimal": "0.37"
+      }
+    },
+    {
+      "id": "pm-grid-5-50",
+      "purpose": "5% is 0.05 and 50% is 0.5",
+      "spec": "Two 10 by 10 grids side by side. Left: top 5 squares of column 1 shaded, labelled 5%. Right: 5 full columns shaded, labelled 50%.",
+      "alt": "Two squares, each cut into 100 equal small squares. The left square is labelled 5%. Only the top 5 squares of its first column are shaded. The right square is labelled 50%. Its first 5 columns are shaded, which is half the square.",
+      "file": "content/visuals/s0-percent-meaning/pm-grid-5-50.svg",
+      "checks": {
+        "grids": [
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 5,
+            "full_columns": 0,
+            "decimal": "0.05",
+            "label": "5%"
+          },
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 50,
+            "full_columns": 5,
+            "decimal": "0.5",
+            "label": "50%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pm-benchmarks",
+      "purpose": "Benchmarks 50% = 1/2, 25% = 1/4, 10% = 1/10",
+      "spec": "Three 10 by 10 grids. Left: 5 full columns, labelled 50% and 1/2. Middle: a 5 by 5 square of cells in the top-left corner, labelled 25% and 1/4. Right: 1 full column, labelled 10% and 1/10.",
+      "alt": "Three squares, each cut into 100 equal small squares. The first has its first 5 columns shaded and is labelled 50% and one half. The second has a 5 by 5 block of 25 squares shaded in its top-left corner. It is labelled 25% and one quarter. The third has its first column shaded and is labelled 10% and one tenth.",
+      "file": "content/visuals/s0-percent-meaning/pm-benchmarks.svg",
+      "checks": {
+        "grids": [
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 50,
+            "full_columns": 5,
+            "label": "50%",
+            "fraction": "1/2"
+          },
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 25,
+            "square_block": "5x5",
+            "label": "25%",
+            "fraction": "1/4"
+          },
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 10,
+            "full_columns": 1,
+            "label": "10%",
+            "fraction": "1/10"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pm-150",
+      "purpose": "150% as one full grid and half of another",
+      "spec": "Two 10 by 10 grids. Left: all 100 squares shaded, labelled 100%. Right: 5 full columns shaded, labelled 50%. Caption: 150% = 1.5.",
+      "alt": "Two squares, each cut into 100 equal small squares. The left square is fully shaded and labelled 100%. The right square has its first 5 columns shaded and is labelled 50%. In all, 150 small squares are shaded. The caption says 150% = 1.5.",
+      "file": "content/visuals/s0-percent-meaning/pm-150.svg",
+      "checks": {
+        "grids": [
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 100,
+            "full_columns": 10,
+            "label": "100%"
+          },
+          {
+            "cells": 100,
+            "equal": true,
+            "shaded": 50,
+            "full_columns": 5,
+            "label": "50%"
+          }
+        ],
+        "total_shaded": 150,
+        "total_percent": "150",
+        "caption": "150% = 1.5"
+      }
+    },
+    {
+      "id": "pm-p1",
+      "purpose": "Practice: 63 squares shaded",
+      "spec": "10 by 10 grid. Shade down the columns: 6 full columns and the top 3 squares of column 7.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The first 6 columns are fully shaded. The top 3 squares of the seventh column are also shaded.",
+      "file": "content/visuals/s0-percent-meaning/pm-p1.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 63,
+        "full_columns": 6
+      }
+    },
+    {
+      "id": "pm-q1",
+      "purpose": "Quiz: 9 squares shaded",
+      "spec": "10 by 10 grid. The top 9 squares of column 1 are shaded.",
+      "alt": "A square cut into 100 equal small squares, in 10 columns and 10 rows. The top 9 squares of the first column are shaded. No column is fully shaded.",
+      "file": "content/visuals/s0-percent-meaning/pm-q1.svg",
+      "checks": {
+        "columns": 10,
+        "rows": 10,
+        "cells": 100,
+        "equal": true,
+        "shaded": 9,
+        "full_columns": 0
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-percent-meaning/p-1",
+      "type": "numeric",
+      "visual": "pm-p1",
+      "objective": 0,
+      "prompt": "The whole grid is 100%. What percent of the grid is shaded? Type the number only, like 40.",
+      "answer": "63",
+      "hints": [
+        "Each full column is 10 small squares. How many full columns are shaded?",
+        "Add the shaded squares in the part-filled column."
+      ],
+      "explanation": "6 full columns are 60 squares. 3 more make 63 squares out of 100. So 63% is shaded.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "(6 * 10 + 3) * Rational(1, 100) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-2",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write 3% as a decimal. Type a decimal, like 0.4.",
+      "answer": "0.03",
+      "hints": [
+        "3% is 3 hundredths.",
+        "Is there anything in the tenths place?"
+      ],
+      "explanation": "$3\\% = \\frac{3}{100}$, which is 3 hundredths. The tenths place is empty, so it gets a 0: 0.03.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 100)"
+      },
+      "match": "decimal"
+    },
+    {
+      "id": "s0-percent-meaning/p-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write 0.85 as a percent. Type the number only, like 40.",
+      "answer": "85",
+      "hints": [
+        "How many hundredths is 0.85?"
+      ],
+      "explanation": "0.85 is 85 hundredths. 85 out of 100 is 85%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(85, 100) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-4",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Which decimal is the same as 5%?",
+      "options": [
+        {
+          "text": "0.5",
+          "value": "5/10",
+          "correct": false,
+          "why_wrong": "0.5 is 5 tenths, which is 50 hundredths. So 0.5 is 50%, not 5%."
+        },
+        {
+          "text": "0.05",
+          "value": "5/100",
+          "correct": true
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "correct": false,
+          "why_wrong": "5 is 5 wholes, which is 500%. The % sign means the 5 is out of 100."
+        },
+        {
+          "text": "0.005",
+          "value": "5/1000",
+          "correct": false,
+          "why_wrong": "0.005 is 5 thousandths. Percent means hundredths, so the 5 goes in the second place after the point."
+        }
+      ],
+      "answer": "0.05",
+      "hints": [
+        "5% means 5 out of 100. Which place is hundredths?"
+      ],
+      "explanation": "$5\\% = \\frac{5}{100}$, which is 5 hundredths. The tenths place gets a 0, so 5% is 0.05.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 100)"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "A water jar is 20% full. Write 20% as a fraction in simplest form.",
+      "answer": "1/5",
+      "hints": [
+        "First write 20% over 100.",
+        "20 and 100 can both be divided by 20."
+      ],
+      "explanation": "$20\\% = \\frac{20}{100}$. Divide the top and the bottom by 20: $\\frac{1}{5}$. So the jar is one fifth full.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(20, 100)"
+      },
+      "match": "simplest"
+    },
+    {
+      "id": "s0-percent-meaning/p-6",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write $\\frac{11}{20}$ as a percent. Type the number only, like 40.",
+      "answer": "55",
+      "hints": [
+        "What do you multiply 20 by to get 100?",
+        "Multiply the top by the same number."
+      ],
+      "explanation": "$20 \\times 5 = 100$. So $\\frac{11}{20} = \\frac{11 \\times 5}{20 \\times 5} = \\frac{55}{100}$, which is 55%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(11, 20) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Fill in the box: $10\\% = \\frac{1}{\\square}$ Type the number that goes in the box.",
+      "answer": "10",
+      "hints": [
+        "10% is $\\frac{10}{100}$. Write it in simplest form.",
+        "On a hundred grid, 10% is one full column. How many columns make the whole grid?"
+      ],
+      "explanation": "$10\\% = \\frac{10}{100}$. Divide the top and the bottom by 10 to get $\\frac{1}{10}$. One column out of 10 columns.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "1 / Rational(10, 100)"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-8",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "Harpreet says a jar that is 100% full is completely full. Is she right?",
+      "answer": "true",
+      "hints": [
+        "100% means 100 out of 100."
+      ],
+      "explanation": "Yes. 100% is $\\frac{100}{100}$, which is 1 whole. So the whole jar is full.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(100, 100), 1)"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-9",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Lalit's Chachi says her phone battery is three quarters full. What percent is that? Type the number only, like 40.",
+      "answer": "75",
+      "hints": [
+        "A quarter is 25%.",
+        "Three quarters is 3 lots of 25%."
+      ],
+      "explanation": "A quarter is 25%, because $4 \\times 25 = 100$. Three quarters is $3 \\times 25 = 75$ out of 100, so it is 75%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 4) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/p-10",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Last monsoon, Anbu's village got 1.3 times its usual rain. Write 1.3 as a percent. Type the number only, like 40.",
+      "answer": "130",
+      "hints": [
+        "1 whole is 100 hundredths.",
+        "1.3 is the same as 1.30. How many hundredths is that?"
+      ],
+      "explanation": "1.3 = 1.30. That is 1 whole and 30 hundredths, or $100 + 30 = 130$ hundredths. So it is 130%. It is more than 100% because it is more than one whole.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(13, 10) * 100"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-percent-meaning/q-1",
+      "type": "numeric",
+      "visual": "pm-q1",
+      "objective": 0,
+      "prompt": "Each small square is 1% of the grid. What percent is shaded? Type the number only, like 40.",
+      "answer": "9",
+      "hints": [
+        "Is any full column shaded?",
+        "Count the shaded small squares."
+      ],
+      "explanation": "9 small squares out of 100 are shaded. So 9% is shaded. As a decimal it is 0.09.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "9 * Rational(1, 100) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-2",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Mrinalini's torch battery shows 8%. Which decimal of a full charge is that?",
+      "options": [
+        {
+          "text": "0.8",
+          "value": "8/10",
+          "correct": false,
+          "why_wrong": "0.8 is 8 tenths, which is 80 hundredths. That would be 80%, not 8%."
+        },
+        {
+          "text": "0.08",
+          "value": "8/100",
+          "correct": true
+        },
+        {
+          "text": "8",
+          "value": "8",
+          "correct": false,
+          "why_wrong": "8 is 8 full charges, which is 800%. The % sign means 8 out of 100."
+        }
+      ],
+      "answer": "0.08",
+      "hints": [
+        "8% is 8 hundredths."
+      ],
+      "explanation": "$8\\% = \\frac{8}{100}$, which is 8 hundredths. The tenths place gets a 0, so it is 0.08.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(8, 100)"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write 0.9 as a percent. Type the number only, like 40.",
+      "answer": "90",
+      "hints": [
+        "0.9 is the same as 0.90.",
+        "How many hundredths is 0.90?"
+      ],
+      "explanation": "0.9 is 9 tenths, which is 90 hundredths. So 0.9 is 90%, not 9%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(9, 10) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-4",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write 15% as a fraction in simplest form.",
+      "answer": "3/20",
+      "hints": [
+        "First write 15% over 100.",
+        "15 and 100 can both be divided by 5."
+      ],
+      "explanation": "$15\\% = \\frac{15}{100}$. Divide the top and the bottom by 5: $\\frac{3}{20}$. 3 and 20 have no common factor except 1.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 100)"
+      },
+      "match": "simplest"
+    },
+    {
+      "id": "s0-percent-meaning/q-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Write $\\frac{9}{25}$ as a percent. Type the number only, like 40.",
+      "answer": "36",
+      "hints": [
+        "What do you multiply 25 by to get 100?"
+      ],
+      "explanation": "$25 \\times 4 = 100$. So $\\frac{9}{25} = \\frac{9 \\times 4}{25 \\times 4} = \\frac{36}{100}$, which is 36%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(9, 25) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-6",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "A cricket stadium in Chennai is one quarter full. Which percent of the seats are filled?",
+      "options": [
+        {
+          "text": "4%",
+          "value": "4",
+          "correct": false,
+          "why_wrong": "4% is only 4 out of 100. One quarter means 1 out of 4 equal parts, which is 25 out of 100."
+        },
+        {
+          "text": "25%",
+          "value": "25",
+          "correct": true
+        },
+        {
+          "text": "40%",
+          "value": "40",
+          "correct": false,
+          "why_wrong": "40% is 0.4. That mixes up $\\frac{1}{4}$ with 4 tenths. In fact $\\frac{1}{4} = 0.25$."
+        }
+      ],
+      "answer": "25%",
+      "hints": [
+        "How many 25s make 100?"
+      ],
+      "explanation": "$\\frac{1}{4} = \\frac{25}{100}$, because $4 \\times 25 = 100$. So one quarter is 25%.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 4) * 100"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-7",
+      "type": "true_false",
+      "objective": 0,
+      "prompt": "One July, Shillong got 150% of its usual July rain. Tsering says this is impossible, because a percent cannot be more than 100. Is he right?",
+      "answer": "false",
+      "hints": [
+        "100% is the usual amount, one whole. Can there be more than one whole?"
+      ],
+      "explanation": "No. 150% is $\\frac{150}{100} = 1.5$. That means one and a half times the usual rain. More than one whole is more than 100%.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Le(Rational(150, 100), 1)"
+      }
+    },
+    {
+      "id": "s0-percent-meaning/q-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "Write 1% as a decimal. Type a decimal, like 0.4.",
+      "answer": "0.01",
+      "hints": [
+        "1% is one small square out of 100."
+      ],
+      "explanation": "$1\\% = \\frac{1}{100}$, which is 1 hundredth. The tenths place gets a 0: 0.01.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 100)"
+      },
+      "match": "decimal"
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Is 50% the same as 1/2, or a bit more?",
+      "a": "Exactly the same. $50\\% = \\frac{50}{100}$, and that simplifies to $\\frac{1}{2}$. They are two names for one amount."
+    },
+    {
+      "q": "Can a battery show 120%?",
+      "a": "No. A full battery is the whole, 100%. It cannot hold more than full. A stadium cannot be more than 100% full either. But rain can be 120% of the usual amount, because the usual amount is not a limit."
+    },
+    {
+      "q": "Why out of 100? Why not out of 10?",
+      "a": "100 small parts let us show amounts more finely. Hundredths also match two decimal places, like paise in a rupee. So 37% is 0.37, just as 37 paise is ₹0.37."
+    },
+    {
+      "q": "What if the bottom number does not go into 100, like 3/8?",
+      "a": "Divide to get a decimal first: $3 \\div 8 = 0.375$. That is 37 hundredths and half of one more. So it is 37.5%. A percent can have a decimal point too."
+    },
+    {
+      "q": "What is 1/3 as a percent?",
+      "a": "$\\frac{1}{3} = 0.333...$, and the 3s never stop. So it is 33 and one third percent exactly. People often round it to 33%."
+    }
+  ]
+}
