@@ -92,3 +92,24 @@ Other changes (conventions):
   - am-p2: 3 arcs and 1 dot.
   - Solid and spotted dots in every group, row and frame SVG: 3/4, 4/2, 4/4, 5/3, 3/5, 2/6, 7/5, 8/4 and 9/5. All match their checks.
 - `verify_content.py`: PASS, 43 checks passed (one fewer, because q-7 is gone), 0 failed, 0 warnings.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 1 suggestion). Notes: re-check after fixes.
+
+Checks run:
+- `tools/verify_content.py`: PASS, 43 checks, 0 fail, 0 warnings.
+- I read `git diff 616b950 HEAD`. Every change listed under "Fixes applied" is present, and there are no other changes.
+- With my own SymPy code I re-solved every changed item: p-2 = 9, p-5 true, p-7 = 12, q-2 false, q-4 = 14 and q-5 false. All agree. Dropping q-7 leaves 6 quiz questions. Objectives 1 and 2 are both still tested (q-2 and q-5).
+- Redrawn pictures, counted from the SVG geometry and on light and dark renders:
+  - am-hops-5-3: 3 arcs (5→6→7→8), a start dot at 5 and a filled landing dot at 8. The hop numbers 1, 2 and 3 are 11px, weight 400 and muted. The axis labels are 15px, weight 600. This matches the meta, the alt and the section 2 text.
+  - am-p2: 3 arcs (6→7→8→9), a start dot at 6 and no landing dot. The last arrow points at 9. The answer 9 and "Read the number under the line" fit this.
+  - am-p5, am-p7 and am-q4 (questions changed): 2 plain and 6 spotted dots; 8+2 / 2 and 9+1 / 4. All match.
+- Findings 1–7 from the first review are fixed. The text a learner reads no longer names a colour, a "counter" or a "circle", because dots are named by shape ("plain", "with a spot"). The heading is "Count on". "Sum" is defined clearly. All alt sentences are 12 words or fewer.
+- Cross-topic: "count on" and "dots" match s0-subtraction-meaning. The landing mark (fill colour, r=7, stroke 1.5) is the same in both topics. Each of p-5, q-2 and q-5 ends "True or false?" and its explanation starts "True."/"False.". No numbers above 20.
+
+### Findings
+
+1. **am-hops-5-3, am-p2: hop numbers.** SUGGESTION.
+   Problem: the muted hop numbers have a contrast of about 3:1 against the page in light mode (#8a938d) and about 3.3:1 in dark mode (#6b746f on the surface colour). At 11px this is below the 4.5:1 target for small text. The child does not need them, because the lesson text says each landing, so this is not blocking.
+   Fix: optional. Use 12px, or a slightly darker muted tone (for example the site's `--muted`), and keep them smaller than the axis labels.

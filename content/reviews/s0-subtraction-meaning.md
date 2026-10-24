@@ -80,3 +80,31 @@ Other changes (conventions):
   - Their explanations start "False.".
   - Answers and verify expressions are unchanged.
 - `verify_content.py`: PASS, 45 checks passed, 0 failed, 0 warnings.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 1 suggestion). Notes: re-check after fixes.
+
+Checks run:
+- `tools/verify_content.py`: PASS, 45 checks, 0 fail, 0 warnings.
+- I read `git diff 616b950 HEAD`. Every change listed under "Fixes applied" is present, and there are no other changes.
+- With my own SymPy code I re-solved every changed item: p-1 = 4, p-2 = 5, p-3 = 3, p-5 = 3, p-7 false, p-8 false, q-1 = 3, q-2 = 5, q-3 = 4, q-4 ($7 + 8 = 15$, and the two distractors are 23 and 22), and q-6 false. All agree.
+- sm-hops, redrawn, counted from the SVG and on light and dark renders:
+  - Top line: 3 back arcs (9→8→7→6), a start dot at 9 and a filled landing dot at 6.
+  - Bottom line: 3 forward arcs (4→5→6→7), a start dot at 4 and a filled landing dot at 7.
+  - There are no rings left. The landing mark is the same as in s0-addition-meaning.
+  - The picture matches the meta, the alt and the section 3 text.
+- The pictures for questions whose wording changed were also re-checked on the renders: sm-p1 (6 with 2 crossed), sm-p2 (9 with 4 crossed), sm-p3 (9/6 with 3 boxed), sm-q1 (10 with 7 crossed), sm-q2 (8/3 with 5 boxed) and sm-q3 (a dot at 6). All match.
+- Findings 1–6 are fixed:
+  - "count up" is gone, and "count on" is used throughout.
+  - "circle", "counter" and "dashed" no longer appear in learner text.
+  - p-8 now asks a question.
+  - The alt sentences are 12 words or fewer.
+  - q-4 reads "Which sum should equal 15?".
+- Cross-topic: the terms and the landing mark match s0-addition-meaning. Each of p-7, p-8 and q-6 ends "True or false?". No numbers above 20 and no negative answers.
+
+### Findings
+
+1. **q-6 prompt.** SUGGESTION.
+   Problem: "$4 + 2$ is the same as $2 + 4$. $4 - 2$ is the same as $2 - 4$ too. True or false?" puts a true sentence before the false claim. "False" is the only defensible answer, because "too" marks the second sentence as the claim. Still, a 6-year-old might judge the first sentence.
+   Fix: optional. Make the first sentence a reminder, not a claim: "Order does not matter in adding. $4 - 2$ is the same as $2 - 4$. True or false?"

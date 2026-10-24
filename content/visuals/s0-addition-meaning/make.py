@@ -88,7 +88,7 @@ def hops(lo, hi, start, n, title, show_land=True):
         body.append(f'<path d="M{_f(heads[0][0])},{_f(heads[0][1])} L{_f(b)},{_f(y - 6)} L{_f(heads[1][0])},{_f(heads[1][1])}" '
                     f'style="fill:none;stroke:{POINT};stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/>')
         # hop numbers are small and light, so they are not mistaken for number-line labels
-        body.append(_text((a + b) / 2, top - 4, str(k + 1), 11, weight="400", color=MUTED))
+        body.append(_text((a + b) / 2, top - 4, str(k + 1), 12, weight="600", color=POINT))
         arcs.append((lo + (a - x0) / unit, lo + (b - x0) / unit))
         v += 1
     meta = {"start": m["start"], "end": m["end"], "spaces_per_unit": m["spaces_per_unit"],

@@ -83,3 +83,28 @@ Date: 2026-10-24. Status set back to "draft". The existing review entry is kept.
 6. Section 2 adds "This is like filling a ten-frame." after the trade.
 
 - `verify_content.py`: PASS, 44 checks passed, 0 failed, 0 warnings.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 0 new suggestions). Notes: re-check after fixes.
+
+Checks run:
+- `tools/verify_content.py`: PASS, 44 checks, 0 fail, 0 warnings.
+- I read `git diff 616b950 HEAD`. Only the topic JSON changed. The SVGs and make.py are unchanged, so the counts from the first review still hold.
+- I re-solved the changed items with my own code:
+  - p-6: $29 + 44 = 73$. Simulating each error gives the distractors: no carry gives 63, and adding the carry to the ones gives 64.
+  - q-2: $56 + 28 = 84$. The same two errors give 74 and 75.
+  - Each MCQ has exactly one correct option, and each new why_wrong describes its error correctly.
+  - q-6: $3 \cdot 10 + 12 = 4 \cdot 10 + 2 = 42$, so the answer is true.
+- Findings 1–6 are fixed:
+  - No three-digit number remains in any learner-facing string.
+  - "different colour" is gone. "The last stick is the new ten" matches rg-add-blocks, where the eighth stick is the new one.
+  - The hook no longer has "5 overs".
+  - q-6 is split into short sentences.
+  - All alt sentences are 15 words or fewer.
+  - "This is like filling a ten-frame" uses an idea from s0-addition-meaning, which is a prerequisite through s0-subtraction-meaning.
+- Cross-topic: q-6 ends "True or false?" and its explanation starts "True.". "Check by adding" and "take away" still match s0-subtraction-meaning.
+
+### Findings
+
+None.

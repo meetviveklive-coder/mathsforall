@@ -1,7 +1,7 @@
 {
   "id": "s0-subtraction-meaning",
   "title": "What subtraction means",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Meera has 8 mangoes. She gives 3 mangoes to her friend Kabir.\n\nHow many mangoes does Meera have now? Let us find out.",
@@ -540,7 +540,7 @@
       "id": "s0-subtraction-meaning/q-6",
       "type": "true_false",
       "objective": 2,
-      "prompt": "$4 + 2$ is the same as $2 + 4$. $4 - 2$ is the same as $2 - 4$ too. True or false?",
+      "prompt": "$4 - 2$ is the same as $2 - 4$. True or false?",
       "answer": "false",
       "hints": [
         "Start with 2. Can you take away 4?"
@@ -580,6 +580,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content.py 45 pass. All 17 answers re-solved with own SymPy; all 12 visuals counted (objects, crosses, pairs, hops) and match. Uses only addition ideas taught in s0-addition-meaning. Order-matters treatment avoids negatives correctly. 0 blocking; 6 suggestions in content/reviews/s0-subtraction-meaning.md ('count up' vs 'count on', p-8 phrasing)."
+    },
+    {
+      "date": "2026-10-24",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes: all 6 findings fixed; 13 changed items re-solved; sm-hops re-counted (6 arcs, 2 start dots, filled landing dots at 6 and 7, same mark as addition) and rendered light and dark; 0 blocking, 1 suggestion (q-6 two-sentence true/false)."
     }
   ]
 }
