@@ -137,7 +137,8 @@ def _hops(y, start, end, origin, hops, body):
     meta = {"hops": drawn, "direction": "back" if sign < 0 else "forward"}
     if end_x is not None:
         land = start + (end_x - x0) / unit
-        body.append(f'<circle cx="{_f(end_x)}" cy="{_f(y)}" r="7" style="fill:{EMPTY};stroke:{POINT};stroke-width:3"/>')
+        # filled landing dot, drawn exactly as in s0-addition-meaning
+        body.append(f'<circle cx="{_f(end_x)}" cy="{_f(y)}" r="7" style="fill:{FILL};stroke:{STROKE};stroke-width:1.5"/>')
         meta["lands_on"] = str(land)
     return meta
 
@@ -165,7 +166,7 @@ draw.save(OUT, "sm-compare", *compare_rows(7, 4, "A row of 7 and a row of 4 matc
 draw.save(OUT, "sm-hops", *hop_lines([
     {"start": 0, "end": 10, "from": 9, "hops": -3},
     {"start": 0, "end": 10, "from": 4, "hops": 3},
-], "Count back 3 from 9; count up from 4 to 7"))
+], "Count back 3 from 9; count on from 4 to 7"))
 draw.save(OUT, "sm-check-12", *ten_frames([
     {"filled": 10, "crossed": [5, 6, 7, 8, 9]},
     {"filled": 2},

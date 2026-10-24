@@ -63,3 +63,32 @@ The flagged items:
    - This topic marks the landing point with a filled orange dot, but subtraction uses an empty ring.
    - Subtraction says "count up" for the strategy this topic calls "count on".
    Fix: agree on one word for the drawn objects and one landing mark. Ask the subtraction writer to say "count on" (or "count up, like counting on").
+
+## Fixes applied (content-writer)
+
+Date: 2026-10-24. Status set back to "draft". The existing review entry is kept.
+
+1. Colour-only cues: sections 1, 4 and 5 now name the two kinds of dot by shape: "plain dots" and "dots with a spot (in the middle)". The ten-frame text says "the top frame" and "the bottom frame". The p-7 and q-4 hints and explanations say "dots", not "green counters". All alts now use the same shape words, and "counters" became "dots" everywhere a child reads it. Specs keep the colours, next to the shape words.
+2. The section 2 heading is now "Count on". "Start with the bigger number" now appears only in section 4, and in its summary line ("Order does not matter: 3 + 5 = 5 + 3. So start with the bigger number."). Summary line 2 no longer says "bigger".
+3. am-p2 / p-2: both fixes are applied.
+   - In make.py, the hop numbers are now 11px, normal weight and muted. The number-line labels are 15px, weight 600, in the text colour. This also changes am-hops-5-3. Both SVGs were redrawn, and their meta did not change.
+   - The p-2 prompt adds "Read the number under the line."
+   - Both alts and specs now say "Small numbers 1, 2 and 3 sit above the hops".
+4. Dropped q-7, so the quiz has 6 questions. q-5 still covers objective 2.
+5. am-p5 alt split into short sentences, using the am-order-3-5 pattern. am-order-3-5, am-groups-3-4 and the ten-frame alts were also split, to about 12 words or fewer.
+6. Section 3 now ends: "The answer when you add is called the **sum**. In $3 + 4 = 7$, the sum is 7." I used this in place of "the answer to an adding", which reads awkwardly.
+7. Cross-topic: s0-subtraction-meaning now says "dots" and "count on". Its landing mark is now the same filled dot as am-hops-5-3: fill-colour circle, r=7, dark stroke 1.5.
+
+Other changes (conventions):
+- The true/false items now end "True or false?":
+  - p-5: "$2 + 6$ is the same as $6 + 2$."
+  - q-2: "He gets 12. $9 + 4 = 12$."
+  - q-5: "$4 + 6$ and $6 + 4$ give different sums."
+  - Their explanations now start "True." or "False.".
+  - Answers and verify expressions are unchanged.
+- The p-2 explanation is split into short sentences.
+- Counted again after redraw:
+  - am-hops-5-3: 3 arcs and 2 dots.
+  - am-p2: 3 arcs and 1 dot.
+  - Solid and spotted dots in every group, row and frame SVG: 3/4, 4/2, 4/4, 5/3, 3/5, 2/6, 7/5, 8/4 and 9/5. All match their checks.
+- `verify_content.py`: PASS, 43 checks passed (one fewer, because q-7 is gone), 0 failed, 0 warnings.

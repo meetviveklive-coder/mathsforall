@@ -5,9 +5,10 @@ two groups of counters, number-line hops, a row of counters counted from
 each end, and ten-frames. Their meta is read back from the shapes drawn,
 like draw.py.
 
-Counters in the first group are solid orange. Counters in the second group
-are green with a centre spot in the background colour, so the two groups differ by shape as well as
-colour.
+Counters in the first group are solid orange ("plain dots" in the text). Counters in the
+second group are green with a centre spot in the background colour ("dots with a spot"), so the
+two groups differ by shape as well as colour. The landing point of hops is a filled dot, drawn
+the same way as in s0-subtraction-meaning.
 """
 import math
 import sys
@@ -86,7 +87,8 @@ def hops(lo, hi, start, n, title, show_land=True):
             heads.append((float(b) - 8 * (ux * c - uy * s_), float(y - 6) - 8 * (ux * s_ + uy * c)))
         body.append(f'<path d="M{_f(heads[0][0])},{_f(heads[0][1])} L{_f(b)},{_f(y - 6)} L{_f(heads[1][0])},{_f(heads[1][1])}" '
                     f'style="fill:none;stroke:{POINT};stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/>')
-        body.append(_text((a + b) / 2, top - 4, str(k + 1), 14, weight="700", color=POINT))
+        # hop numbers are small and light, so they are not mistaken for number-line labels
+        body.append(_text((a + b) / 2, top - 4, str(k + 1), 11, weight="400", color=MUTED))
         arcs.append((lo + (a - x0) / unit, lo + (b - x0) / unit))
         v += 1
     meta = {"start": m["start"], "end": m["end"], "spaces_per_unit": m["spaces_per_unit"],

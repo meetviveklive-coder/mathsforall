@@ -1,7 +1,7 @@
 {
   "id": "s0-subtraction-meaning",
   "title": "What subtraction means",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Meera has 8 mangoes. She gives 3 mangoes to her friend Kabir.\n\nHow many mangoes does Meera have now? Let us find out.",
@@ -19,12 +19,12 @@
       {
         "heading": "Hops on a number line",
         "visual": "sm-hops",
-        "body": "**Count back.** Look at the top line. Start at 9. Make 3 hops back: 8, 7, 6. You land on 6. So $9 - 3 = 6$.\n\n**Count up.** Look at the bottom line. Start at 4. Hop up to 7: 5, 6, 7. That is 3 hops. So $7 - 4 = 3$.\n\nCount the hops, not the start number."
+        "body": "**Count back.** Look at the top line. Start at 9. Make 3 hops back: 8, 7, 6. You land on 6. So $9 - 3 = 6$.\n\n**Count on.** Look at the bottom line. Start at 4. Count on to 7: 5, 6, 7. That is 3 hops. So $7 - 4 = 3$. This is counting on, like in adding.\n\nCount the hops, not the start number."
       },
       {
         "heading": "Check by adding",
         "visual": "sm-check-12",
-        "body": "A ten-frame has 10 boxes. Here are two ten-frames with 12 counters.\n\n5 counters are crossed out. Count the rest. 7 are left. So $12 - 5 = 7$.\n\nNow put the 5 back with the 7. $7 + 5 = 12$. We are back at 12!\n\nSo adding checks taking away. $12 - 5 = 7$ is right, because $7 + 5 = 12$."
+        "body": "A ten-frame has 10 boxes. Here are two ten-frames with 12 dots.\n\n5 dots are crossed out. Count the rest. 7 are left. So $12 - 5 = 7$.\n\nNow put the 5 back with the 7. $7 + 5 = 12$. We are back at 12!\n\nSo adding checks taking away. $12 - 5 = 7$ is right, because $7 + 5 = 12$."
       },
       {
         "heading": "Order matters",
@@ -51,7 +51,7 @@
         "problem": "Ravi made 9 runs. Anu made 5 runs. How many more runs did Ravi make?",
         "steps": [
           "We want the difference between 9 and 5.",
-          "Start at 5. Count up to 9: 6, 7, 8, 9.",
+          "Start at 5. Count on to 9: 6, 7, 8, 9.",
           "That is 4 hops. So $9 - 5 = 4$.",
           "Check by adding: $4 + 5 = 9$. Ravi made 4 more runs."
         ],
@@ -79,7 +79,7 @@
       "Subtraction can mean taking away. Count what is left.",
       "Subtraction can also find the difference: how many more.",
       "We write subtraction with the minus sign: $8 - 3 = 5$.",
-      "On a number line, count back. Or count up and count the hops.",
+      "On a number line, count back. Or count on and count the hops.",
       "Check by adding: $12 - 5 = 7$ because $7 + 5 = 12$.",
       "Order matters: $5 - 3$ is not the same as $3 - 5$."
     ]
@@ -88,8 +88,8 @@
     {
       "id": "sm-take-away",
       "purpose": "Take away: 8 mangoes, 3 given away",
-      "spec": "One row of 8 counters. The last 3 are crossed out.",
-      "alt": "A row of 8 mangoes drawn as circles. The last 3 are crossed out with an X. 5 are not crossed out.",
+      "spec": "One row of 8 dots. The last 3 are crossed out.",
+      "alt": "A row of 8 mangoes drawn as dots. The last 3 are crossed out with an X. 5 are not crossed out.",
       "file": "content/visuals/s0-subtraction-meaning/sm-take-away.svg",
       "checks": {
         "objects": 8,
@@ -100,8 +100,8 @@
     {
       "id": "sm-compare",
       "purpose": "Difference: 7 and 4 matched in pairs",
-      "spec": "Top row of 7 counters, bottom row of 4. Each bottom counter is joined to the one above it. The 3 top counters with no partner are in a dashed box.",
-      "alt": "Two rows of marbles drawn as circles. The top row has 7. The bottom row has 4. Dashed lines join 4 pairs, one top and one bottom. The last 3 marbles in the top row have no partner and sit inside a dashed box.",
+      "spec": "Top row of 7 dots, bottom row of 4. Each bottom dot is joined to the one above it by a dashed line. The 3 top dots with no partner are in a dashed box (the only box in the picture).",
+      "alt": "Two rows of marbles drawn as dots. The top row has 7. The bottom row has 4. Lines join 4 pairs, one top and one bottom. The last 3 top marbles have no partner. They sit inside a box.",
       "file": "content/visuals/s0-subtraction-meaning/sm-compare.svg",
       "checks": {
         "top_row": 7,
@@ -113,9 +113,9 @@
     },
     {
       "id": "sm-hops",
-      "purpose": "Count back 9 − 3 and count up from 4 to 7",
-      "spec": "Two number lines from 0 to 10. Top: dot at 9, 3 hops back, ring at 6. Bottom: dot at 4, 3 hops forward, ring at 7.",
-      "alt": "Two number lines from 0 to 10. On the top line, a dot is at 9. Three arrows hop back one step each, to 8, 7 and 6. A ring marks 6. On the bottom line, a dot is at 4. Three arrows hop forward one step each, to 5, 6 and 7. A ring marks 7.",
+      "purpose": "Count back 9 − 3, and count on from 4 to 7",
+      "spec": "Two number lines from 0 to 10. Top: dot at 9, 3 hops back, filled landing dot at 6. Bottom: dot at 4, 3 hops forward, filled landing dot at 7. The landing dot is drawn as in s0-addition-meaning.",
+      "alt": "Two number lines from 0 to 10. On the top line, a dot is at 9. Three arrows hop back one step each, to 8, 7 and 6. A second dot sits on 6. On the bottom line, a dot is at 4. Three arrows hop forward one step each, to 5, 6 and 7. A second dot sits on 7.",
       "file": "content/visuals/s0-subtraction-meaning/sm-hops.svg",
       "checks": {
         "lines": [
@@ -143,8 +143,8 @@
     {
       "id": "sm-check-12",
       "purpose": "12 − 5 = 7 on two ten-frames",
-      "spec": "Two ten-frames side by side. The first is full (10 counters), with its bottom row of 5 crossed out. The second has 2 counters.",
-      "alt": "Two ten-frames side by side, each with 10 boxes in 2 rows of 5. The first frame is full with 10 counters. Its whole bottom row of 5 counters is crossed out. The second frame has 2 counters and 8 empty boxes. In all there are 12 counters, 5 crossed out and 7 not crossed out.",
+      "spec": "Two ten-frames side by side. The first is full (10 dots), with its bottom row of 5 crossed out. The second has 2 dots.",
+      "alt": "Two ten-frames side by side. Each has 10 boxes in 2 rows of 5. The first frame is full with 10 dots. Its whole bottom row of 5 dots is crossed out. The second frame has 2 dots and 8 empty boxes. In all there are 12 dots. 5 are crossed out and 7 are not.",
       "file": "content/visuals/s0-subtraction-meaning/sm-check-12.svg",
       "checks": {
         "frames": [
@@ -169,8 +169,8 @@
     {
       "id": "sm-order",
       "purpose": "Only 3 laddoos: cannot take away 5",
-      "spec": "One row of 3 counters, none crossed out.",
-      "alt": "A row of 3 laddoos drawn as circles. None is crossed out.",
+      "spec": "One row of 3 dots, none crossed out.",
+      "alt": "A row of 3 laddoos drawn as dots. None is crossed out.",
       "file": "content/visuals/s0-subtraction-meaning/sm-order.svg",
       "checks": {
         "objects": 3,
@@ -180,8 +180,8 @@
     {
       "id": "sm-p1",
       "purpose": "Practice: 6 birds, 2 fly away",
-      "spec": "One row of 6 counters. The last 2 are crossed out.",
-      "alt": "A row of 6 birds drawn as circles. The last 2 are crossed out with an X. 4 are not crossed out.",
+      "spec": "One row of 6 dots. The last 2 are crossed out.",
+      "alt": "A row of 6 birds drawn as dots. The last 2 are crossed out with an X. 4 are not crossed out.",
       "file": "content/visuals/s0-subtraction-meaning/sm-p1.svg",
       "checks": {
         "objects": 6,
@@ -192,8 +192,8 @@
     {
       "id": "sm-p2",
       "purpose": "Practice: 9 − 4 on a ten-frame",
-      "spec": "One ten-frame. Top row: 5 counters. Bottom row: 4 counters, all crossed out, and 1 empty box.",
-      "alt": "One ten-frame with 10 boxes in 2 rows of 5. It has 9 counters. The top row has 5 counters. The bottom row has 4 counters, all crossed out, and 1 empty box.",
+      "spec": "One ten-frame. Top row: 5 dots. Bottom row: 4 dots, all crossed out, and 1 empty box.",
+      "alt": "One ten-frame with 10 boxes in 2 rows of 5. It has 9 dots. The top row has 5 dots. The bottom row has 4 dots, all crossed out. It also has 1 empty box.",
       "file": "content/visuals/s0-subtraction-meaning/sm-p2.svg",
       "checks": {
         "frames": [
@@ -212,8 +212,8 @@
     {
       "id": "sm-p3",
       "purpose": "Practice: difference of 9 and 6",
-      "spec": "Top row of 9 counters, bottom row of 6, matched in pairs. The 3 top counters with no partner are in a dashed box.",
-      "alt": "Two rows of marbles drawn as circles. The top row has 9. The bottom row has 6. Dashed lines join 6 pairs. The last 3 marbles in the top row have no partner and sit inside a dashed box.",
+      "spec": "Top row of 9 dots, bottom row of 6, matched in pairs by dashed lines. The 3 top dots with no partner are in a dashed box (the only box in the picture).",
+      "alt": "Two rows of marbles drawn as dots. The top row has 9. The bottom row has 6. Lines join 6 pairs. The last 3 top marbles have no partner. They sit inside a box.",
       "file": "content/visuals/s0-subtraction-meaning/sm-p3.svg",
       "checks": {
         "top_row": 9,
@@ -244,8 +244,8 @@
     {
       "id": "sm-q1",
       "purpose": "Quiz: 10 laddoos, 7 eaten",
-      "spec": "One row of 10 counters. The last 7 are crossed out.",
-      "alt": "A row of 10 laddoos drawn as circles. The last 7 are crossed out with an X. The first 3 are not crossed out.",
+      "spec": "One row of 10 dots. The last 7 are crossed out.",
+      "alt": "A row of 10 laddoos drawn as dots. The last 7 are crossed out with an X. The first 3 are not crossed out.",
       "file": "content/visuals/s0-subtraction-meaning/sm-q1.svg",
       "checks": {
         "objects": 10,
@@ -256,8 +256,8 @@
     {
       "id": "sm-q2",
       "purpose": "Quiz: difference of 8 and 3",
-      "spec": "Top row of 8 counters, bottom row of 3, matched in pairs. The 5 top counters with no partner are in a dashed box.",
-      "alt": "Two rows of pencils drawn as circles. The top row has 8. The bottom row has 3. Dashed lines join 3 pairs. The last 5 in the top row have no partner and sit inside a dashed box.",
+      "spec": "Top row of 8 dots, bottom row of 3, matched in pairs by dashed lines. The 5 top dots with no partner are in a dashed box (the only box in the picture).",
+      "alt": "Two rows of pencils drawn as dots. The top row has 8. The bottom row has 3. Lines join 3 pairs. The last 5 top pencils have no partner. They sit inside a box.",
       "file": "content/visuals/s0-subtraction-meaning/sm-q2.svg",
       "checks": {
         "top_row": 8,
@@ -269,7 +269,7 @@
     },
     {
       "id": "sm-q3",
-      "purpose": "Quiz: count up from 6 to 10",
+      "purpose": "Quiz: count on from 6 to 10",
       "spec": "Number line from 0 to 10, every whole number labelled, dot at 6. No hops drawn.",
       "alt": "A number line from 0 to 10. Every whole number from 0 to 10 is labelled. A dot is at 6.",
       "file": "content/visuals/s0-subtraction-meaning/sm-q3.svg",
@@ -292,7 +292,7 @@
       "type": "numeric",
       "visual": "sm-p1",
       "objective": 0,
-      "prompt": "6 birds sit on a wire. Each circle is a bird. The 2 crossed-out birds fly away. How many birds are left? Type a number.",
+      "prompt": "6 birds sit on a wire. Each dot is a bird. The 2 crossed-out birds fly away. How many birds are left? Type a number.",
       "answer": "4",
       "hints": [
         "Count only the birds with no X."
@@ -308,12 +308,12 @@
       "type": "numeric",
       "visual": "sm-p2",
       "objective": 0,
-      "prompt": "The ten-frame has 9 counters. 4 are crossed out. Fill in the box: $9 - 4 = \\square$ Type the number that goes in the box.",
+      "prompt": "The ten-frame has 9 dots. 4 are crossed out. Fill in the box: $9 - 4 = \\square$ Type the number that goes in the box.",
       "answer": "5",
       "hints": [
-        "Count the counters with no X."
+        "Count the dots with no X."
       ],
-      "explanation": "The top row has 5 counters with no X. So $9 - 4 = 5$.",
+      "explanation": "The top row has 5 dots with no X. So $9 - 4 = 5$.",
       "verify": {
         "kind": "sympy",
         "expr": "9 - 4"
@@ -328,7 +328,7 @@
       "answer": "3",
       "hints": [
         "Look at the marbles with no partner.",
-        "Count the marbles in the dashed box."
+        "Count the marbles in the box."
       ],
       "explanation": "6 marbles make pairs. 3 of Gurpreet's marbles have no partner. So Gurpreet has 3 more. $9 - 6 = 3$.",
       "verify": {
@@ -379,10 +379,10 @@
       ],
       "answer": "3",
       "hints": [
-        "Start at 9. Count up to 12.",
+        "Start at 9. Count on to 12.",
         "Count the hops: 10, 11, 12."
       ],
-      "explanation": "Start at 9 and count up to 12: 10, 11, 12. That is 3 hops. So $12 - 9 = 3$. Joseph has 3 more.",
+      "explanation": "Start at 9 and count on to 12: 10, 11, 12. That is 3 hops. So $12 - 9 = 3$. Joseph has 3 more.",
       "verify": {
         "kind": "sympy",
         "expr": "12 - 9"
@@ -407,12 +407,12 @@
       "id": "s0-subtraction-meaning/p-7",
       "type": "true_false",
       "objective": 1,
-      "prompt": "Babu says $10 - 3 = 6$. He checks: $6 + 3 = 9$. Is $10 - 3 = 6$ right?",
+      "prompt": "Babu says $10 - 3 = 6$. He checks: $6 + 3 = 9$. Babu is right. True or false?",
       "answer": "false",
       "hints": [
         "Does $6 + 3$ get you back to 10?"
       ],
-      "explanation": "No. $6 + 3 = 9$, not 10. So 6 is not right. $10 - 3 = 7$, because $7 + 3 = 10$.",
+      "explanation": "False. $6 + 3 = 9$, not 10. So 6 is not right. $10 - 3 = 7$, because $7 + 3 = 10$.",
       "verify": {
         "kind": "relation",
         "expr": "Eq(10 - 3, 6)"
@@ -422,12 +422,12 @@
       "id": "s0-subtraction-meaning/p-8",
       "type": "true_false",
       "objective": 2,
-      "prompt": "Anu has 4 laddoos. She can take away 6 laddoos from them.",
+      "prompt": "Anu has 4 laddoos. She can take away 6 laddoos. True or false?",
       "answer": "false",
       "hints": [
         "Can you take 6 away if you only have 4?"
       ],
-      "explanation": "No. Anu has only 4 laddoos. She cannot take away 6. There are not enough.",
+      "explanation": "False. Anu has only 4 laddoos. She cannot take away 6. There are not enough.",
       "verify": {
         "kind": "relation",
         "expr": "Ge(4, 6)"
@@ -440,7 +440,7 @@
       "type": "numeric",
       "visual": "sm-q1",
       "objective": 0,
-      "prompt": "Tara had 10 laddoos. Each circle is a laddoo. Her family ate the crossed-out ones. How many laddoos are left? Type a number.",
+      "prompt": "Tara had 10 laddoos. Each dot is a laddoo. Her family ate the crossed-out ones. How many laddoos are left? Type a number.",
       "answer": "3",
       "hints": [
         "Count only the laddoos with no X."
@@ -460,7 +460,7 @@
       "answer": "5",
       "hints": [
         "Match them in pairs.",
-        "Count the pencils in the dashed box."
+        "Count the pencils in the box."
       ],
       "explanation": "3 pencils make pairs. 5 of Arjun's pencils have no partner. So Arjun has 5 more. $8 - 3 = 5$. Subtraction finds the difference too.",
       "verify": {
@@ -473,13 +473,13 @@
       "type": "numeric",
       "visual": "sm-q3",
       "objective": 0,
-      "prompt": "What is $10 - 6$? Start at the dot on 6. Count up to 10. Count your hops. Type a number.",
+      "prompt": "What is $10 - 6$? Start at the dot on 6. Count on to 10. Count your hops. Type a number.",
       "answer": "4",
       "hints": [
         "Do not count 6. Say 7, 8, 9, 10.",
         "Count how many numbers you said."
       ],
-      "explanation": "From 6, count up: 7, 8, 9, 10. That is 4 hops. So $10 - 6 = 4$.",
+      "explanation": "From 6, count on: 7, 8, 9, 10. That is 4 hops. So $10 - 6 = 4$.",
       "verify": {
         "kind": "sympy",
         "expr": "10 - 6"
@@ -489,7 +489,7 @@
       "id": "s0-subtraction-meaning/q-4",
       "type": "mcq",
       "objective": 1,
-      "prompt": "You want to check $15 - 8 = 7$. Which adding sum should give 15?",
+      "prompt": "You want to check $15 - 8 = 7$. Which sum should equal 15?",
       "options": [
         {
           "text": "$7 + 8$",
@@ -540,12 +540,12 @@
       "id": "s0-subtraction-meaning/q-6",
       "type": "true_false",
       "objective": 2,
-      "prompt": "$4 + 2$ is the same as $2 + 4$. Is $4 - 2$ the same as $2 - 4$ too?",
+      "prompt": "$4 + 2$ is the same as $2 + 4$. $4 - 2$ is the same as $2 - 4$ too. True or false?",
       "answer": "false",
       "hints": [
         "Start with 2. Can you take away 4?"
       ],
-      "explanation": "No. $4 - 2$: start with 4, take away 2. 2 are left. For $2 - 4$, you have only 2. You cannot take away 4. Order does not matter in adding. It does matter in subtraction.",
+      "explanation": "False. $4 - 2$: start with 4, take away 2. 2 are left. For $2 - 4$, you have only 2. You cannot take away 4. Order does not matter in adding. It does matter in subtraction.",
       "verify": {
         "kind": "relation",
         "expr": "Eq(4 - 2, 2 - 4)"

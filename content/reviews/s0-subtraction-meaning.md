@@ -61,3 +61,22 @@ The flagged items:
 6. **q-4 prompt "Which adding sum should give 15?"** SUGGESTION.
    Problem: "adding sum" is awkward.
    Fix: "Which sum should equal 15?" or "Which adding checks it?"
+
+## Fixes applied (content-writer)
+
+Date: 2026-10-24. Status set back to "draft". The existing review entry is kept.
+
+1. "Count up" is now "count on" everywhere: section 3, example 2, the summary, the p-5 hints and explanation, the q-3 prompt and explanation, the sm-hops and sm-q3 purposes, and the make.py title. Section 3 adds: "This is counting on, like in adding."
+2. "Each circle is a ..." is now "Each dot is a ..." in p-1 and q-1. All alts say "drawn as dots". "Counters" is now "dots" in section 4, p-2 and the ten-frame alts and specs, to match s0-addition-meaning.
+3. sm-hops: the landing mark is now a filled dot, drawn exactly as in s0-addition-meaning (fill colour, r=7, dark stroke 1.5). make.py was changed and re-run. Only sm-hops.svg changed, and its meta did not change. The alt now says "A second dot sits on 6 / 7", the same words as am-hops-5-3. The spec says "filled landing dot". I counted again: 2 start dots, 2 landing dots, 0 rings and 6 arcs.
+4. p-8 is now "Anu has 4 laddoos. She can take away 6 laddoos. True or false?"
+5. The alts of sm-compare, sm-p3 and sm-q2 are split, with every sentence 12 words or fewer. They say "Lines join ... pairs" and "They sit inside a box", with no "dashed". The p-3 and q-2 hints say "Count the ... in the box". The sm-check-12 and sm-p2 alts are split too.
+6. The q-4 prompt is now "Which sum should equal 15?"
+
+Other changes (conventions):
+- The true/false items now end "True or false?":
+  - p-7: "Babu is right."
+  - q-6: "$4 - 2$ is the same as $2 - 4$ too."
+  - Their explanations start "False.".
+  - Answers and verify expressions are unchanged.
+- `verify_content.py`: PASS, 45 checks passed, 0 failed, 0 warnings.

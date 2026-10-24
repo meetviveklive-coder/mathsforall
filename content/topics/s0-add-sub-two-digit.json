@@ -1,10 +1,10 @@
 {
   "id": "s0-add-sub-two-digit",
   "title": "Adding and subtracting with regrouping",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
-    "hook": "Ishaan's team is playing cricket in the lane. They score 38 runs in the first 5 overs. Then they score 45 more runs. How many runs is that in all?\n\nAdd the ones first: $8 + 5 = 13$. But the ones place can hold only one digit! So what happens to 13 ones? In this topic you will find out. You will also learn to subtract when there are not enough ones.",
+    "hook": "Ishaan's team is playing cricket in the lane. They score 38 runs. Then they score 45 more runs. How many runs is that in all?\n\nAdd the ones first: $8 + 5 = 13$. But the ones place can hold only one digit! So what happens to 13 ones? In this topic you will find out. You will also learn to subtract when there are not enough ones.",
     "sections": [
       {
         "heading": "Tens and ones",
@@ -13,7 +13,7 @@
       },
       {
         "heading": "Adding: trade 10 ones for 1 ten",
-        "body": "Let's add $38 + 45$ with sticks and squares. 38 is 3 tens and 8 ones. 45 is 4 tens and 5 ones.\n\nPut them together. You get 7 tens and 13 ones. That is too many ones for one place.\n\nSo make a trade. Ring 10 ones and swap them for 1 ten stick. Now you have 8 tens and 3 ones. That is 83. The new ten is in a different colour.\n\nSo $38 + 45 = 83$. This trade is called **carrying**.",
+        "body": "Let's add $38 + 45$ with sticks and squares. 38 is 3 tens and 8 ones. 45 is 4 tens and 5 ones.\n\nPut them together. You get 7 tens and 13 ones. That is too many ones for one place.\n\nSo make a trade. Ring 10 ones and swap them for 1 ten stick. This is like filling a ten-frame. Now you have 8 tens and 3 ones. That is 83. The last stick is the new ten.\n\nSo $38 + 45 = 83$. This trade is called **carrying**.",
         "visual": "rg-add-blocks"
       },
       {
@@ -92,7 +92,7 @@
       "id": "rg-47",
       "purpose": "Recall: 47 as 4 tens and 7 ones",
       "spec": "One row, label 47: 4 ten-sticks of 10 cells each, 7 one-squares in rows of 5.",
-      "alt": "Base-ten picture labelled 47. There are 4 tall ten-sticks, each split into 10 small parts. Next to them are 7 small one-squares, in a row of 5 and a row of 2.",
+      "alt": "A picture labelled 47. There are 4 tall ten-sticks. Each stick has 10 small parts. Next to them are 7 small one-squares. They are in a row of 5 and a row of 2.",
       "file": "content/visuals/s0-add-sub-two-digit/rg-47.svg",
       "checks": {
         "rows": [
@@ -117,8 +117,8 @@
     {
       "id": "rg-add-blocks",
       "purpose": "38 + 45 with sticks and squares, trading 10 ones for 1 ten",
-      "spec": "Rows labelled 38, 45, Both, Trade. Both: 7 tens, 13 ones, 10 ones ringed. Trade: 8 tens (1 new), 3 ones.",
-      "alt": "Four rows of ten-sticks and one-squares. Row 38: 3 sticks and 8 squares. Row 45: 4 sticks and 5 squares. Row Both: 7 sticks and 13 squares, with a ring round 10 of the squares. Row Trade: 8 sticks and 3 squares. The eighth stick is the new ten, in a different colour.",
+      "spec": "Rows labelled 38, 45, Both, Trade. Both: 7 tens, 13 ones, 10 ones ringed. Trade: 8 tens, 3 ones; the new ten is the last (eighth) stick, also drawn in the second colour.",
+      "alt": "Four rows of ten-sticks and one-squares. Row 38: 3 sticks and 8 squares. Row 45: 4 sticks and 5 squares. Row Both: 7 sticks and 13 squares. A ring goes round 10 of the squares. Row Trade: 8 sticks and 3 squares. The last stick is the new ten.",
       "file": "content/visuals/s0-add-sub-two-digit/rg-add-blocks.svg",
       "checks": {
         "rows": [
@@ -226,8 +226,8 @@
     {
       "id": "rg-sub-blocks",
       "purpose": "52 − 27 with sticks and squares, breaking 1 ten into 10 ones",
-      "spec": "Rows labelled 52, Break, Take. Break: 4 tens, 12 ones (10 new, ringed). Take: 2 tens and 7 ones crossed, 25 left.",
-      "alt": "Three rows of ten-sticks and one-squares. Row 52: 5 sticks and 2 squares. Row Break: 4 sticks and 12 squares. The 10 squares from the broken ten are in a different colour, with a ring round them. Row Take: the same 4 sticks and 12 squares, with 2 sticks and 7 squares crossed out. 2 sticks and 5 squares are left.",
+      "spec": "Rows labelled 52, Break, Take. Break: 4 tens, 12 ones; the 10 new ones are the first 10 squares, ringed (also drawn in the second colour). Take: 2 tens and 7 ones crossed, 25 left.",
+      "alt": "Three rows of ten-sticks and one-squares. Row 52: 5 sticks and 2 squares. Row Break: 4 sticks and 12 squares. A ring goes round 10 of the squares. They are the 10 ones from the broken ten. Row Take: the same 4 sticks and 12 squares. 2 sticks and 7 squares are crossed out. 2 sticks and 5 squares are left.",
       "file": "content/visuals/s0-add-sub-two-digit/rg-sub-blocks.svg",
       "checks": {
         "rows": [
@@ -508,10 +508,10 @@
           "why_wrong": "This forgets the carried ten. $9 + 4 = 13$, so 1 ten goes to the tens. Tens: $2 + 4 + 1 = 7$, not 6."
         },
         {
-          "text": "$613$",
-          "value": "613",
+          "text": "$64$",
+          "value": "64",
           "correct": false,
-          "why_wrong": "This writes all of 13 in the ones place. Only one digit fits there. Write 3 and carry the 1 ten."
+          "why_wrong": "The carried 1 went into the ones. But it is 1 ten, so it goes above the tens. Ones: 3. Tens: $2 + 4 + 1 = 7$."
         }
       ],
       "answer": "$73$",
@@ -610,10 +610,10 @@
           "correct": true
         },
         {
-          "text": "$714$",
-          "value": "714",
+          "text": "$75$",
+          "value": "75",
           "correct": false,
-          "why_wrong": "This writes all of 14 in the ones place. Only one digit fits there. Write 4 and carry the 1 ten."
+          "why_wrong": "The carried 1 went into the ones. But it is 1 ten, so it goes above the tens. Ones: 4. Tens: $5 + 2 + 1 = 8$."
         }
       ],
       "answer": "$84$",
@@ -697,12 +697,12 @@
       "id": "s0-add-sub-two-digit/q-6",
       "type": "true_false",
       "objective": 2,
-      "prompt": "Thomas says 3 tens and 12 ones is the same number as 4 tens and 2 ones. Is he right?",
+      "prompt": "Thomas has 3 tens and 12 ones. Sana has 4 tens and 2 ones. They have the same number. True or false?",
       "answer": "true",
       "hints": [
         "12 ones is 1 ten and 2 ones."
       ],
-      "explanation": "Yes. Trade 10 of the 12 ones for 1 ten. 3 tens and 1 more ten make 4 tens, and 2 ones are left. Both are 42.",
+      "explanation": "True. Trade 10 of Thomas's 12 ones for 1 ten. 3 tens and 1 more ten make 4 tens. 2 ones are left. Both numbers are 42.",
       "verify": {
         "kind": "relation",
         "expr": "Eq(3*10 + 12, 4*10 + 2)"

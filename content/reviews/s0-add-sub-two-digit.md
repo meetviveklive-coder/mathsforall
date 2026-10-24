@@ -63,3 +63,23 @@ The flagged items:
 6. **Cross-topic note.** SUGGESTION.
    Problem: none of the words for the method conflict between topics: "carrying" and "borrowing" are new here, and "take away" and "check by adding" match s0-subtraction-meaning. One small point: s0-addition-meaning's "make 10" (fill a ten-frame) is the same idea as "trade 10 ones for 1 ten", but this topic never says so.
    Fix: optional. Add to section 2: "This is like filling a ten-frame."
+
+## Fixes applied (content-writer)
+
+Date: 2026-10-24. Status set back to "draft". The existing review entry is kept.
+
+1. Each three-digit distractor is replaced with an in-range error, as suggested: the carried 1 is added to the ones instead of the tens.
+   - p-6: "613" is now "64" (ones 3+1=4, tens 2+4=6).
+   - q-2: "714" is now "75" (ones 4+1=5, tens 5+2=7).
+   - Each has its own why_wrong. Each MCQ still has exactly one correct option, and verify passes.
+2. In section 2, "The new ten is in a different colour." is now "The last stick is the new ten."
+   - rg-add-blocks alt: "The last stick is the new ten."
+   - rg-sub-blocks alt: "A ring goes round 10 of the squares. They are the 10 ones from the broken ten."
+   - The specs say that colour is only a second cue.
+   - The drawings did not change, so make.py was not re-run.
+3. The hook is now "They score 38 runs. Then they score 45 more runs."
+4. q-6 is now "Thomas has 3 tens and 12 ones. Sana has 4 tens and 2 ones. They have the same number. True or false?" The answer is still true, and the verify expression did not change. The explanation starts with "True.".
+5. The rg-47 and rg-sub-blocks alts are split, and every sentence is 15 words or fewer. "Base-ten picture" is now "A picture" in rg-47.
+6. Section 2 adds "This is like filling a ten-frame." after the trade.
+
+- `verify_content.py`: PASS, 44 checks passed, 0 failed, 0 warnings.
