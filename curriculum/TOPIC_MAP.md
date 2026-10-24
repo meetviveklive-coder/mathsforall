@@ -251,7 +251,7 @@
 - Recognise common benchmarks (50%, 25%, 10%, 1%)
 - *Watch for:* Thinking a percent cannot be more than 100; Writing 5% as 0.5
 
-**34. Finding a percentage of an amount** · [33, 26, 31] · 25 min
+**34. Finding a percentage of an amount** · [33, 31] · 25 min
 
 - Find a percentage of an amount using 10% and 1% steps
 - Find a percentage of an amount by multiplication

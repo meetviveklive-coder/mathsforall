@@ -692,7 +692,6 @@
       "unit": "Percent and ratio",
       "prerequisites": [
         "s0-percent-meaning",
-        "s0-multiply-fractions",
         "s0-multiply-divide-decimals"
       ],
       "objectives": [
