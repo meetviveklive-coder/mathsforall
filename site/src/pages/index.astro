@@ -45,8 +45,29 @@ const clientData = {
     </p>
   </section>
 
+  <section id="learners" class="card learners" aria-labelledby="learners-title">
+    <h2 id="learners-title" class="h3">Who's learning?</h2>
+    <p class="small muted">Each learner has their own map on this device. Names never leave this device.</p>
+    <ul class="learner-list" id="learner-list"></ul>
+    <form id="add-learner" class="add-learner" autocomplete="off">
+      <label for="new-learner" class="sr-only">New learner's name</label>
+      <input id="new-learner" type="text" maxlength="20" placeholder="Add a learner's name" />
+      <button class="btn secondary" type="submit">Add</button>
+    </form>
+    <details class="manage" id="manage">
+      <summary class="small">Rename or remove&nbsp;<span id="manage-name"></span></summary>
+      <form id="rename-learner" class="add-learner" autocomplete="off">
+        <label for="rename-input" class="sr-only">New name</label>
+        <input id="rename-input" type="text" maxlength="20" />
+        <button class="btn secondary" type="submit">Rename</button>
+      </form>
+      <button class="btn quiet danger" type="button" id="remove-learner">Remove this learner and their progress</button>
+      <p class="small muted" id="remove-note" hidden>The only learner cannot be removed.</p>
+    </details>
+  </section>
+
   <section id="map" aria-labelledby="map-title">
-    <h2 id="map-title">Your map</h2>
+    <h2 id="map-title"><span id="map-owner">Your</span> map</h2>
     <p class="small muted">Topics light up as you master them. A topic opens when the topics before it are mastered.</p>
     <ul class="legend small" aria-label="Legend">
       <li><span class="dot mastered"></span>Mastered</li>
@@ -98,7 +119,7 @@ const clientData = {
   <script type="application/json" id="map-data" set:html={JSON.stringify(clientData).replace(/</g, '\\u003c')} />
   <script>
     import { topicState, missingPrerequisites, type MapTopic } from '../lib/mastery';
-    import { load, storageAvailable } from '../lib/progress';
+    import { load, storageAvailable, activeLearner } from '../lib/progress';
 
     const data = JSON.parse(document.getElementById('map-data')!.textContent!) as {
       topics: MapTopic[]; published: string[]; titles: Record<string, string>;
@@ -135,6 +156,10 @@ const clientData = {
       card.hidden = false;
     }
     if (!storageAvailable()) document.getElementById('storage-warning')!.hidden = false;
+    document.getElementById('map-owner')!.textContent = `${activeLearner().name}'s`;
+  </script>
+  <script>
+    import '../scripts/learners';
   </script>
 </Base>
 

@@ -83,6 +83,13 @@ Purpose: Show progress as a map, not a score.
 Acceptance Criteria:
 - Topics coloured by state: locked, available, in progress, mastered, due for review.
 
+### Feature 5b — Who's learning?
+Purpose: Several children on one device each keep their own map.
+Acceptance Criteria:
+- Add, switch, rename and remove learners from the map page; the last learner cannot be removed.
+- The header always shows who is learning.
+- Names stay on the device.
+
 ### Feature 6 — Progress export/import
 Purpose: Move progress between devices without accounts.
 Acceptance Criteria:

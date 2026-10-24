@@ -28,12 +28,22 @@ const { title, description = 'Free maths, one idea at a time. No grades, no rank
     <header class="site-header">
       <div class="wrap bar">
         <a class="wordmark" href={`${root}index.html`}>Ganit</a>
-        <nav><a href={`${root}index.html#map`}>Map</a></nav>
+        <nav>
+          <a class="who" href={`${root}index.html#learners`} aria-label="Change who is learning">
+            <span class="who-label">Learning:</span> <span data-learner-name>…</span>
+          </a>
+          <a href={`${root}index.html#map`}>Map</a>
+        </nav>
       </div>
     </header>
     <main class="wrap">
       <slot />
     </main>
+    <script>
+      import { activeLearner } from '../lib/progress';
+      const el = document.querySelector('[data-learner-name]');
+      if (el) el.textContent = activeLearner().name;
+    </script>
     <footer class="wrap site-footer small muted">
       <p>Free to use. Your progress stays on this device. No accounts, no tracking.</p>
     </footer>
@@ -49,6 +59,11 @@ const { title, description = 'Free maths, one idea at a time. No grades, no rank
   .site-header { border-bottom: 1px solid var(--border); background: var(--surface); margin-bottom: 24px; }
   .bar { display: flex; align-items: center; justify-content: space-between; min-height: 56px; }
   .wordmark { font-weight: 800; font-size: 1.25rem; letter-spacing: .02em; color: var(--text); text-decoration: none; }
+  nav { display: flex; align-items: center; gap: 4px; min-width: 0; }
   nav a { font-weight: 600; text-decoration: none; padding: 12px 8px; }
+  nav a.who { border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; line-height: 1.4; font-weight: 600;
+    max-width: 52vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .who-label { color: var(--muted); font-weight: 400; }
+  @media (max-width: 380px) { .who-label { display: none; } }
   .site-footer { margin-top: 48px; padding-bottom: 32px; }
 </style>

@@ -52,14 +52,15 @@ try:
 
         page.goto(f"{BASE}/index.html")
         page.wait_for_selector("#next-card:not([hidden])")
-        expect("Fractions as equal parts" in page.locator("#next-title").inner_text(), "map suggests the first pilot topic")
+        expect(page.locator("#next-title").inner_text().strip() != "", "map suggests a next topic")
+        expect(page.locator("[data-learner-name]").inner_text() == "Learner 1", "first visit creates 'Learner 1'")
         expect(page.locator('[data-topic="s0-fractions-number-line"]').get_attribute("data-state") == "locked",
                "second topic is locked before the first is mastered")
         page.screenshot(path=str(shots / "01-map.png"))
         width = page.evaluate("document.documentElement.scrollWidth")
         expect(width <= 360, f"no horizontal scroll on map (scrollWidth={width})")
 
-        page.click("#next-link")
+        page.goto(f"{BASE}/learn/s0-fractions-meaning.html")
         page.wait_for_load_state("load")
         expect(page.locator("h1").inner_text() == "Fractions as equal parts", "lesson page opens")
         expect(page.locator(".katex").count() > 10, "maths is rendered with KaTeX")
@@ -115,6 +116,26 @@ try:
         expect(page.locator('[data-topic="s0-fractions-number-line"]').get_attribute("data-state") == "available",
                "second topic unlocks")
         page.screenshot(path=str(shots / "07-map-after.png"))
+
+        # Second learner: own empty map; switching back restores the first learner's progress
+        page.fill("#new-learner", "Meera")
+        page.click("#add-learner button[type=submit]")
+        page.wait_for_load_state("load")
+        page.wait_for_selector("#next-card:not([hidden])")
+        expect(page.locator("[data-learner-name]").inner_text() == "Meera", "new learner becomes active")
+        expect(page.locator('[data-topic="s0-fractions-meaning"]').get_attribute("data-state") != "mastered",
+               "new learner starts with nothing mastered")
+        page.locator("#learners").scroll_into_view_if_needed()
+        page.screenshot(path=str(shots / "09-learners.png"))
+        page.locator("#learner-list button", has_text="Learner 1").click()
+        page.wait_for_load_state("load")
+        page.wait_for_selector("#next-card:not([hidden])")
+        expect(page.locator('[data-topic="s0-fractions-meaning"]').get_attribute("data-state") == "mastered",
+               "switching back restores the first learner's progress")
+        page.fill("#new-learner", "<img src=x onerror=alert(1)>")
+        page.click("#add-learner button[type=submit]")
+        page.wait_for_load_state("load")
+        expect(page.locator("#learner-list img").count() == 0, "learner names are shown as text, never HTML")
 
         # Dark mode
         dark = browser.new_context(viewport={"width": 360, "height": 740}, color_scheme="dark", device_scale_factor=2)

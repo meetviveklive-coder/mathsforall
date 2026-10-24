@@ -27,6 +27,7 @@ Private (authoring only): none required for the pilot.
 ## 6. Data Protection (children)
 - Collected personal data: none.
 - Progress stays in the learner's browser; export files contain no personal data.
+- "Who's learning?" stores a display name typed by a parent (max 20 characters, up to 6 learners) in the browser only. Names are never sent anywhere and are rendered with textContent, never as HTML (covered by the end-to-end test).
 - India DPDP Rules 2025 (notified 14 Nov 2025): verifiable parental consent is required to process a child's personal data, with most obligations in force about 18 months after notification. This design avoids processing personal data entirely. Any future feature that collects data (accounts, AI tutor, voice) requires a fresh privacy review and legal advice before build. (Not legal advice.)
 - "Report a mistake" must not collect names or emails from children; it should open a pre-filled report containing only the question ID.
 
