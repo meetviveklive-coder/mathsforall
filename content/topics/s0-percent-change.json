@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-change",
   "title": "Discounts, GST and percentage change",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Kabir and his Nani walk into a Diwali sale. A big sign says **25% off**. The wall clock Nani likes was ₹800. What does it cost now?\n\nAt the counter, the bill has a line called **GST**. It adds a little to some prices.\n\nOn the way home, Nani grumbles. Tomatoes were ₹40 a kg last month. Now they are ₹50. By what percent did the price go up?\n\nYou already know how to find a percentage of an amount. In this topic you will use it to answer all three questions.",
@@ -99,7 +99,11 @@
             "amount": "800",
             "length": "800",
             "segments": [
-              {"value": "800", "style": "fill", "text": "100% = ₹800"}
+              {
+                "value": "800",
+                "style": "fill",
+                "text": "100% = ₹800"
+              }
             ]
           },
           {
@@ -108,8 +112,18 @@
             "length": "800",
             "percent_of_original": "75",
             "segments": [
-              {"value": "600", "style": "fill", "text": "You pay ₹600", "percent_of_original": "75"},
-              {"value": "200", "style": "cut", "text": "25% = ₹200", "percent_of_original": "25"}
+              {
+                "value": "600",
+                "style": "fill",
+                "text": "You pay ₹600",
+                "percent_of_original": "75"
+              },
+              {
+                "value": "200",
+                "style": "cut",
+                "text": "25% = ₹200",
+                "percent_of_original": "25"
+              }
             ]
           }
         ],
@@ -130,7 +144,11 @@
             "label": "Price: ₹3000",
             "amount": "3000",
             "segments": [
-              {"value": "3000", "style": "fill", "text": "100% = ₹3000"}
+              {
+                "value": "3000",
+                "style": "fill",
+                "text": "100% = ₹3000"
+              }
             ]
           },
           {
@@ -138,8 +156,17 @@
             "amount": "3150",
             "percent_of_original": "105",
             "segments": [
-              {"value": "3000", "style": "fill", "text": "₹3000"},
-              {"value": "150", "style": "extra", "text": "GST ₹150", "percent_of_original": "5"}
+              {
+                "value": "3000",
+                "style": "fill",
+                "text": "₹3000"
+              },
+              {
+                "value": "150",
+                "style": "extra",
+                "text": "GST ₹150",
+                "percent_of_original": "5"
+              }
             ]
           }
         ],
@@ -160,10 +187,26 @@
             "label": "Before: ₹40 a kg",
             "amount": "40",
             "segments": [
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"}
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              }
             ]
           },
           {
@@ -171,11 +214,32 @@
             "amount": "50",
             "percent_of_original": "125",
             "segments": [
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "fill", "text": "₹10"},
-              {"value": "10", "style": "extra", "text": "+₹10", "percent_of_original": "25"}
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "fill",
+                "text": "₹10"
+              },
+              {
+                "value": "10",
+                "style": "extra",
+                "text": "+₹10",
+                "percent_of_original": "25"
+              }
             ]
           }
         ],
@@ -197,7 +261,11 @@
             "label": "Start: ₹500",
             "amount": "500",
             "segments": [
-              {"value": "500", "style": "fill", "text": "₹500"}
+              {
+                "value": "500",
+                "style": "fill",
+                "text": "₹500"
+              }
             ]
           },
           {
@@ -205,8 +273,17 @@
             "amount": "600",
             "percent_of_original": "120",
             "segments": [
-              {"value": "500", "style": "fill", "text": "₹500"},
-              {"value": "100", "style": "extra", "text": "+₹100", "percent_of_original": "20"}
+              {
+                "value": "500",
+                "style": "fill",
+                "text": "₹500"
+              },
+              {
+                "value": "100",
+                "style": "extra",
+                "text": "+₹100",
+                "percent_of_original": "20"
+              }
             ]
           },
           {
@@ -215,8 +292,16 @@
             "length": "600",
             "percent_of_original": "96",
             "segments": [
-              {"value": "480", "style": "fill", "text": "₹480"},
-              {"value": "120", "style": "cut", "text": "−₹120"}
+              {
+                "value": "480",
+                "style": "fill",
+                "text": "₹480"
+              },
+              {
+                "value": "120",
+                "style": "cut",
+                "text": "−₹120"
+              }
             ]
           }
         ],
@@ -639,6 +724,14 @@
     {
       "q": "What if the price goes down 20% first, then up 20%?",
       "a": "It still does not come back. ₹100 down 20% is ₹80. Then 20% of ₹80 is ₹16, so it goes up to ₹96. The rise is smaller because it is 20% of a smaller amount."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 48 pass. All values re-solved with own Rational code. GST slabs match GST 2.0 (0%, 5%, 18%; no 12% or 28%). Percent answers use 'Type the number only, like 40.'; rupee answers use decimal. 4 visuals rendered and match; the ₹500 guide in pc-up-down is hard to see (suggestion). No marks or scores. 0 blocking, 5 suggestions. See content/reviews/s0-percent-change.md."
     }
   ]
 }

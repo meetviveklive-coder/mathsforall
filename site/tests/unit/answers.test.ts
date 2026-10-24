@@ -105,3 +105,11 @@ describe('units after the number', () => {
     expect(checkNumeric('50 paise', '50').status).toBe('unreadable');
   });
 });
+
+describe('spelled-out units', () => {
+  it('ignores full unit words too', () => {
+    expect(checkNumeric('27 kilometres', '27').status).toBe('correct');
+    expect(checkNumeric('3 metres', '3').status).toBe('correct');
+    expect(checkNumeric('2.5 kilograms', '2.5').status).toBe('correct');
+  });
+});

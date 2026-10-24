@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-of-quantity",
   "title": "Finding a percentage of an amount",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Wangmo and her Ama are on a 240 km train journey. Ama looks out of the window and says, \"We have done 35% of the journey.\"\n\nHow many kilometres is that? You know that 35% means 35 out of 100. But the journey is 240 km, not 100 km. In this topic you will learn three ways to find a percentage of any amount. You will also find what percent one amount is of another.",
@@ -554,6 +554,14 @@
     {
       "q": "What if the fraction will not make 100 at the bottom, like 7 out of 8?",
       "a": "Divide to get a decimal first: $7 \\div 8 = 0.875$. That is 87 and a half hundredths, so it is 87.5%."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 42 pass. All values re-solved with own Rational code. Rupee answers use decimal with 'like 45.50' (parser accepts 150, 150.00, ₹150, '150 rupees'); percent answers use 'Type the number only, like 40.'. MCQ distractors checked. 5 visuals rendered and match meta and alt. No marks or scores. 0 blocking, 5 suggestions. See content/reviews/s0-percent-of-quantity.md."
     }
   ]
 }

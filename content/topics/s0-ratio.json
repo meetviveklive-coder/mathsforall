@@ -1,7 +1,7 @@
 {
   "id": "s0-ratio",
   "title": "Ratio",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Sneha's Baba makes khichdi on a rainy evening. For the 4 people at home, he uses 2 cups of rice and 1 cup of moong dal.\n\nThis Sunday, 8 people are coming. Sneha says, \"Just add 2 more cups of each!\" That makes 4 cups of rice and 3 cups of dal.\n\nWill the khichdi taste the same? A **ratio** helps you answer.",
@@ -88,8 +88,18 @@
       "file": "content/visuals/s0-ratio/rt-rice-dal.svg",
       "checks": {
         "rows": [
-          {"label": "Rice", "blocks": 2, "block_value": "1", "row_value": "2"},
-          {"label": "Dal", "blocks": 1, "block_value": "1", "row_value": "1"}
+          {
+            "label": "Rice",
+            "blocks": 2,
+            "block_value": "1",
+            "row_value": "2"
+          },
+          {
+            "label": "Dal",
+            "blocks": 1,
+            "block_value": "1",
+            "row_value": "1"
+          }
         ],
         "equal": true,
         "ratio": "2 : 1"
@@ -106,8 +116,16 @@
         "equal": true,
         "total_blocks": 5,
         "groups": [
-          {"label": "Yellow", "blocks": 2, "fraction_of_whole": "2/5"},
-          {"label": "Red", "blocks": 3, "fraction_of_whole": "3/5"}
+          {
+            "label": "Yellow",
+            "blocks": 2,
+            "fraction_of_whole": "2/5"
+          },
+          {
+            "label": "Red",
+            "blocks": 3,
+            "fraction_of_whole": "3/5"
+          }
         ],
         "ratio": "2 : 3"
       }
@@ -120,8 +138,18 @@
       "file": "content/visuals/s0-ratio/rt-share-500.svg",
       "checks": {
         "rows": [
-          {"label": "Asha", "blocks": 3, "block_value": "100", "row_value": "300"},
-          {"label": "Tenzing", "blocks": 2, "block_value": "100", "row_value": "200"}
+          {
+            "label": "Asha",
+            "blocks": 3,
+            "block_value": "100",
+            "row_value": "300"
+          },
+          {
+            "label": "Tenzing",
+            "blocks": 2,
+            "block_value": "100",
+            "row_value": "200"
+          }
         ],
         "equal": true,
         "total_blocks": 5,
@@ -138,8 +166,16 @@
       "file": "content/visuals/s0-ratio/rt-p2.svg",
       "checks": {
         "rows": [
-          {"label": "Red", "blocks": 4, "block_value": "1"},
-          {"label": "White", "blocks": 3, "block_value": "1"}
+          {
+            "label": "Red",
+            "blocks": 4,
+            "block_value": "1"
+          },
+          {
+            "label": "White",
+            "blocks": 3,
+            "block_value": "1"
+          }
         ],
         "equal": true,
         "ratio": "4 : 3"
@@ -156,8 +192,16 @@
         "equal": true,
         "total_blocks": 7,
         "groups": [
-          {"label": "Blue", "blocks": 3, "fraction_of_whole": "3/7"},
-          {"label": "White", "blocks": 4, "fraction_of_whole": "4/7"}
+          {
+            "label": "Blue",
+            "blocks": 3,
+            "fraction_of_whole": "3/7"
+          },
+          {
+            "label": "White",
+            "blocks": 4,
+            "fraction_of_whole": "4/7"
+          }
         ],
         "ratio": "3 : 4"
       }
@@ -170,8 +214,14 @@
       "file": "content/visuals/s0-ratio/rt-p7.svg",
       "checks": {
         "rows": [
-          {"label": "Ishita", "blocks": 2},
-          {"label": "Kunal", "blocks": 1}
+          {
+            "label": "Ishita",
+            "blocks": 2
+          },
+          {
+            "label": "Kunal",
+            "blocks": 1
+          }
         ],
         "equal": true,
         "total_blocks": 3,
@@ -187,10 +237,29 @@
       "objective": 0,
       "prompt": "In a cricket match, Neha hits 4 sixes and 7 fours. What is the ratio of fours to sixes?",
       "options": [
-        {"text": "$7 : 4$", "value": "7/4", "correct": true},
-        {"text": "$4 : 7$", "value": "4/7", "correct": false, "why_wrong": "This is sixes to fours. The question names fours first, so the number of fours, 7, comes first."},
-        {"text": "$7 : 11$", "value": "7/11", "correct": false, "why_wrong": "11 is all the hits together. The question compares fours with sixes, not with all the hits."},
-        {"text": "$4 : 11$", "value": "4/11", "correct": false, "why_wrong": "This compares sixes with all the hits. The question asks for fours to sixes."}
+        {
+          "text": "$7 : 4$",
+          "value": "7/4",
+          "correct": true
+        },
+        {
+          "text": "$4 : 7$",
+          "value": "4/7",
+          "correct": false,
+          "why_wrong": "This is sixes to fours. The question names fours first, so the number of fours, 7, comes first."
+        },
+        {
+          "text": "$7 : 11$",
+          "value": "7/11",
+          "correct": false,
+          "why_wrong": "11 is all the hits together. The question compares fours with sixes, not with all the hits."
+        },
+        {
+          "text": "$4 : 11$",
+          "value": "4/11",
+          "correct": false,
+          "why_wrong": "This compares sixes with all the hits. The question asks for fours to sixes."
+        }
       ],
       "answer": "$7 : 4$",
       "hints": [
@@ -198,7 +267,10 @@
         "Write the number of fours first."
       ],
       "explanation": "Fours come first, so write the number of fours first. Neha hit 7 fours and 4 sixes, so the ratio is $7 : 4$.",
-      "verify": {"kind": "sympy", "expr": "Rational(7, 4)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(7, 4)"
+      }
     },
     {
       "id": "s0-ratio/p-2",
@@ -211,7 +283,10 @@
         "Count the blocks in the White row."
       ],
       "explanation": "There are 4 cups of red and 3 cups of white. So red to white is $4 : 3$.",
-      "verify": {"kind": "sympy", "expr": "7 - 4"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "7 - 4"
+      }
     },
     {
       "id": "s0-ratio/p-3",
@@ -224,7 +299,10 @@
         "Divide 15 by the same number."
       ],
       "explanation": "$10 \\div 5 = 2$, so divide 15 by 5 as well: $15 \\div 5 = 3$. So $10 : 15 = 2 : 3$.",
-      "verify": {"kind": "sympy", "expr": "15 / gcd(10, 15)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "15 / gcd(10, 15)"
+      }
     },
     {
       "id": "s0-ratio/p-4",
@@ -237,7 +315,10 @@
         "Divide 16 by the same number."
       ],
       "explanation": "$24 \\div 8 = 3$, so divide 16 by 8 as well: $16 \\div 8 = 2$. So $16 : 24 = 2 : 3$.",
-      "verify": {"kind": "sympy", "expr": "16 / gcd(16, 24)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "16 / gcd(16, 24)"
+      }
     },
     {
       "id": "s0-ratio/p-5",
@@ -245,17 +326,39 @@
       "objective": 1,
       "prompt": "A khichdi recipe uses rice and dal in the ratio $2 : 1$. Which ratio is the same as $2 : 1$?",
       "options": [
-        {"text": "$6 : 3$", "value": "6/3", "correct": true},
-        {"text": "$3 : 2$", "value": "3/2", "correct": false, "why_wrong": "This adds 1 to both numbers. Adding changes the ratio. Multiply or divide both numbers instead."},
-        {"text": "$4 : 1$", "value": "4", "correct": false, "why_wrong": "Only the rice was doubled. To keep the ratio, double the dal too: $4 : 2$."},
-        {"text": "$1 : 2$", "value": "1/2", "correct": false, "why_wrong": "This swaps the order. It would mean twice as much dal as rice."}
+        {
+          "text": "$6 : 3$",
+          "value": "6/3",
+          "correct": true
+        },
+        {
+          "text": "$3 : 2$",
+          "value": "3/2",
+          "correct": false,
+          "why_wrong": "This adds 1 to both numbers. Adding changes the ratio. Multiply or divide both numbers instead."
+        },
+        {
+          "text": "$4 : 1$",
+          "value": "4",
+          "correct": false,
+          "why_wrong": "Only the rice was doubled. To keep the ratio, double the dal too: $4 : 2$."
+        },
+        {
+          "text": "$1 : 2$",
+          "value": "1/2",
+          "correct": false,
+          "why_wrong": "This swaps the order. It would mean twice as much dal as rice."
+        }
       ],
       "answer": "$6 : 3$",
       "hints": [
         "Multiply both numbers by the same number."
       ],
       "explanation": "Multiply both numbers by 3: $2 \\times 3 = 6$ and $1 \\times 3 = 3$. So $2 : 1 = 6 : 3$. There is still twice as much rice as dal.",
-      "verify": {"kind": "sympy", "expr": "Rational(2, 1)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(2, 1)"
+      }
     },
     {
       "id": "s0-ratio/p-6",
@@ -264,9 +367,23 @@
       "objective": 0,
       "prompt": "Dhruv mixes blue and white paint in the ratio $3 : 4$. What fraction of all the paint is blue?",
       "options": [
-        {"text": "$\\frac{3}{7}$", "value": "3/7", "correct": true},
-        {"text": "$\\frac{3}{4}$", "value": "3/4", "correct": false, "why_wrong": "4 counts only the white parts. All the paint is $3 + 4 = 7$ parts, so blue is 3 parts out of 7."},
-        {"text": "$\\frac{4}{7}$", "value": "4/7", "correct": false, "why_wrong": "This is the white paint. Blue is 3 of the 7 parts."}
+        {
+          "text": "$\\frac{3}{7}$",
+          "value": "3/7",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{3}{4}$",
+          "value": "3/4",
+          "correct": false,
+          "why_wrong": "4 counts only the white parts. All the paint is $3 + 4 = 7$ parts, so blue is 3 parts out of 7."
+        },
+        {
+          "text": "$\\frac{4}{7}$",
+          "value": "4/7",
+          "correct": false,
+          "why_wrong": "This is the white paint. Blue is 3 of the 7 parts."
+        }
       ],
       "answer": "$\\frac{3}{7}$",
       "hints": [
@@ -274,7 +391,10 @@
         "How many of them are blue?"
       ],
       "explanation": "All the paint is $3 + 4 = 7$ equal parts. Blue is 3 of them. So blue is $\\frac{3}{7}$ of the paint.",
-      "verify": {"kind": "sympy", "expr": "Rational(3, 3 + 4)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(3, 3 + 4)"
+      }
     },
     {
       "id": "s0-ratio/p-7",
@@ -288,7 +408,10 @@
         "Ishita has 2 blocks."
       ],
       "explanation": "There are $2 + 1 = 3$ parts. One part is $12 \\div 3 = 4$ laddoos. Ishita gets $2 \\times 4 = 8$ laddoos, and Kunal gets 4. Check: $8 + 4 = 12$.",
-      "verify": {"kind": "sympy", "expr": "Rational(12, 2 + 1) * 2"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(12, 2 + 1) * 2"
+      }
     },
     {
       "id": "s0-ratio/p-8",
@@ -301,7 +424,10 @@
         "Find one part, then multiply by Lata's number of parts."
       ],
       "explanation": "There are $5 + 3 = 8$ parts. One part is $₹240 \\div 8 = ₹30$. Lata pays $3 \\times ₹30 = ₹90$. Anil pays $5 \\times ₹30 = ₹150$. Check: $₹150 + ₹90 = ₹240$.",
-      "verify": {"kind": "sympy", "expr": "Rational(240, 5 + 3) * 3"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(240, 5 + 3) * 3"
+      }
     },
     {
       "id": "s0-ratio/p-9",
@@ -314,7 +440,10 @@
         "Find one part, then multiply by 3."
       ],
       "explanation": "There are $3 + 1 = 4$ parts. One part is $12 \\div 4 = 3$ cups. Rice is $3 \\times 3 = 9$ cups, and dal is 3 cups. Check: $9 + 3 = 12$.",
-      "verify": {"kind": "sympy", "expr": "Rational(12, 3 + 1) * 3"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(12, 3 + 1) * 3"
+      }
     },
     {
       "id": "s0-ratio/p-10",
@@ -327,7 +456,10 @@
         "Find one part first."
       ],
       "explanation": "Yes. There are $3 + 4 = 7$ parts. One part is $₹70 \\div 7 = ₹10$. Tara gets $3 \\times ₹10 = ₹30$, and Abdul gets ₹40.",
-      "verify": {"kind": "relation", "expr": "Eq(Rational(70, 3 + 4) * 3, 30)"}
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(70, 3 + 4) * 3, 30)"
+      }
     }
   ],
   "quiz": [
@@ -337,16 +469,33 @@
       "objective": 0,
       "prompt": "A school garden has 9 marigold plants and 5 tulsi plants. What is the ratio of tulsi plants to marigold plants?",
       "options": [
-        {"text": "$9 : 5$", "value": "9/5", "correct": false, "why_wrong": "This is marigold to tulsi. Tulsi is named first, so 5 comes first."},
-        {"text": "$5 : 9$", "value": "5/9", "correct": true},
-        {"text": "$5 : 14$", "value": "5/14", "correct": false, "why_wrong": "14 is all the plants. The question compares tulsi with marigold, not with all the plants."}
+        {
+          "text": "$9 : 5$",
+          "value": "9/5",
+          "correct": false,
+          "why_wrong": "This is marigold to tulsi. Tulsi is named first, so 5 comes first."
+        },
+        {
+          "text": "$5 : 9$",
+          "value": "5/9",
+          "correct": true
+        },
+        {
+          "text": "$5 : 14$",
+          "value": "5/14",
+          "correct": false,
+          "why_wrong": "14 is all the plants. The question compares tulsi with marigold, not with all the plants."
+        }
       ],
       "answer": "$5 : 9$",
       "hints": [
         "Which plant is named first in the question?"
       ],
       "explanation": "Tulsi is named first, so its number comes first. There are 5 tulsi plants and 9 marigold plants, so the ratio is $5 : 9$.",
-      "verify": {"kind": "sympy", "expr": "Rational(5, 9)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(5, 9)"
+      }
     },
     {
       "id": "s0-ratio/q-2",
@@ -354,16 +503,33 @@
       "objective": 0,
       "prompt": "Manpreet mixes green and white paint in the ratio $1 : 4$. What fraction of all the paint is green?",
       "options": [
-        {"text": "$\\frac{1}{4}$", "value": "1/4", "correct": false, "why_wrong": "4 counts only the white parts. All the paint is $1 + 4 = 5$ parts."},
-        {"text": "$\\frac{1}{5}$", "value": "1/5", "correct": true},
-        {"text": "$\\frac{4}{5}$", "value": "4/5", "correct": false, "why_wrong": "This is the white paint. Green is only 1 of the 5 parts."}
+        {
+          "text": "$\\frac{1}{4}$",
+          "value": "1/4",
+          "correct": false,
+          "why_wrong": "4 counts only the white parts. All the paint is $1 + 4 = 5$ parts."
+        },
+        {
+          "text": "$\\frac{1}{5}$",
+          "value": "1/5",
+          "correct": true
+        },
+        {
+          "text": "$\\frac{4}{5}$",
+          "value": "4/5",
+          "correct": false,
+          "why_wrong": "This is the white paint. Green is only 1 of the 5 parts."
+        }
       ],
       "answer": "$\\frac{1}{5}$",
       "hints": [
         "Add the parts to find the whole."
       ],
       "explanation": "All the paint is $1 + 4 = 5$ equal parts. Green is 1 of them, so green is $\\frac{1}{5}$ of the paint.",
-      "verify": {"kind": "sympy", "expr": "Rational(1, 1 + 4)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(1, 1 + 4)"
+      }
     },
     {
       "id": "s0-ratio/q-3",
@@ -375,7 +541,10 @@
         "What did you divide 21 by to get 3?"
       ],
       "explanation": "$21 \\div 7 = 3$, so divide 28 by 7 as well: $28 \\div 7 = 4$. So $21 : 28 = 3 : 4$.",
-      "verify": {"kind": "sympy", "expr": "28 / gcd(21, 28)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "28 / gcd(21, 28)"
+      }
     },
     {
       "id": "s0-ratio/q-4",
@@ -388,7 +557,10 @@
         "The biggest number that divides both 45 and 30 is 15."
       ],
       "explanation": "The ratio is $45 : 30$. Divide both by 15: $45 \\div 15 = 3$ and $30 \\div 15 = 2$. So it is $3 : 2$.",
-      "verify": {"kind": "sympy", "expr": "45 / gcd(45, 30)"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "45 / gcd(45, 30)"
+      }
     },
     {
       "id": "s0-ratio/q-5",
@@ -401,7 +573,10 @@
         "Adding the same number does not keep a ratio."
       ],
       "explanation": "No. In $3 : 1$, there is 3 times as much rice as dal. In $5 : 3$, there is less than 2 times as much. Adding changes the ratio. To keep it, multiply both numbers, for example $3 : 1 = 6 : 2$.",
-      "verify": {"kind": "relation", "expr": "Eq(Rational(5, 3), Rational(3, 1))"}
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(Rational(5, 3), Rational(3, 1))"
+      }
     },
     {
       "id": "s0-ratio/q-6",
@@ -414,7 +589,10 @@
         "Find one part, then multiply by 5."
       ],
       "explanation": "There are $5 + 3 = 8$ parts. One part is $₹720 \\div 8 = ₹90$. Priya gets $5 \\times ₹90 = ₹450$, and Sameer gets ₹270. Check: $₹450 + ₹270 = ₹720$.",
-      "verify": {"kind": "sympy", "expr": "Rational(720, 5 + 3) * 5"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(720, 5 + 3) * 5"
+      }
     },
     {
       "id": "s0-ratio/q-7",
@@ -422,16 +600,33 @@
       "objective": 2,
       "prompt": "Meera and Dev share 15 mangoes in the ratio $2 : 3$. How many mangoes does Meera get?",
       "options": [
-        {"text": "10", "value": "10", "correct": false, "why_wrong": "This takes $\\frac{2}{3}$ of 15. But $2 : 3$ means 2 parts out of $2 + 3 = 5$, so Meera gets $\\frac{2}{5}$ of 15."},
-        {"text": "6", "value": "6", "correct": true},
-        {"text": "9", "value": "9", "correct": false, "why_wrong": "This is Dev's share. Meera is named first, so she gets 2 parts."}
+        {
+          "text": "10",
+          "value": "10",
+          "correct": false,
+          "why_wrong": "This takes $\\frac{2}{3}$ of 15. But $2 : 3$ means 2 parts out of $2 + 3 = 5$, so Meera gets $\\frac{2}{5}$ of 15."
+        },
+        {
+          "text": "6",
+          "value": "6",
+          "correct": true
+        },
+        {
+          "text": "9",
+          "value": "9",
+          "correct": false,
+          "why_wrong": "This is Dev's share. Meera is named first, so she gets 2 parts."
+        }
       ],
       "answer": "6",
       "hints": [
         "How many parts are there in all?"
       ],
       "explanation": "There are $2 + 3 = 5$ parts. One part is $15 \\div 5 = 3$ mangoes. Meera gets $2 \\times 3 = 6$, and Dev gets 9. Check: $6 + 9 = 15$.",
-      "verify": {"kind": "sympy", "expr": "Rational(15, 2 + 3) * 2"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(15, 2 + 3) * 2"
+      }
     },
     {
       "id": "s0-ratio/q-8",
@@ -444,7 +639,10 @@
         "Find one part, then multiply by 4."
       ],
       "explanation": "There are $1 + 4 = 5$ parts. One part is $150 \\div 5 = 30$ km. The train part is $4 \\times 30 = 120$ km, and the bus part is 30 km. Check: $30 + 120 = 150$.",
-      "verify": {"kind": "sympy", "expr": "Rational(150, 1 + 4) * 4"}
+      "verify": {
+        "kind": "sympy",
+        "expr": "Rational(150, 1 + 4) * 4"
+      }
     }
   ],
   "doubts": [
@@ -467,6 +665,14 @@
     {
       "q": "What if the two amounts are in different units?",
       "a": "Change them to the same unit first. For 1 kg of rice and 500 g of dal, write 1 kg as 1000 g. Then rice to dal is $1000 : 500$, which simplifies to $2 : 1$."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content 47 pass. All values re-solved with own Rational code. No typed ratio; box questions for simplifying. MCQ ratio options have no equal pairs and order is tested by unequal a/b values. 6 visuals rendered and match. No marks or test scores. 0 blocking, 5 suggestions. See content/reviews/s0-ratio.md."
     }
   ]
 }

@@ -35,7 +35,7 @@ export function parseAnswer(raw: string): Frac | null {
     .replace(/\s*%$/, '')
     // A unit after the number does not change it: "27 km", "5 kg", "40 rupees".
     // Paise are left out on purpose: "50 paise" is not 50 rupees.
-    .replace(/\s*(km|m|cm|mm|kg|g|ml|l|litres?|liters?|rupees?|rs\.?|hours?|minutes?|people|children)$/i, '')
+    .replace(/\s*(km|m|cm|mm|kg|g|ml|l|kilomet(?:re|er)s?|met(?:re|er)s?|centimet(?:re|er)s?|kilograms?|grams?|litres?|liters?|rupees?|rs\.?|hours?|minutes?|people|children)$/i, '')
     .trim();
   if (/^-?\d{1,3}(,\d{2,3})+(\.\d+)?$/.test(t)) t = t.replace(/,/g, ''); // 1,25,000 or 125,000
 
