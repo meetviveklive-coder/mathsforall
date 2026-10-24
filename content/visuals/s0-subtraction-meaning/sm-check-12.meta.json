@@ -1,0 +1,19 @@
+{
+ "frames": [
+  {
+   "boxes": 10,
+   "counters": 10,
+   "crossed": 5,
+   "empty_boxes": 0
+  },
+  {
+   "boxes": 10,
+   "counters": 2,
+   "crossed": 0,
+   "empty_boxes": 8
+  }
+ ],
+ "counters": 12,
+ "crossed": 5,
+ "left": 7
+}

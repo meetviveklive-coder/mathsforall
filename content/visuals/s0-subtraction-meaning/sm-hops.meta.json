@@ -1,0 +1,22 @@
+{
+ "lines": [
+  {
+   "start": "0",
+   "end": "10",
+   "spaces_per_unit": 1,
+   "from": "9",
+   "hops": 3,
+   "direction": "back",
+   "lands_on": "6"
+  },
+  {
+   "start": "0",
+   "end": "10",
+   "spaces_per_unit": 1,
+   "from": "4",
+   "hops": 3,
+   "direction": "forward",
+   "lands_on": "7"
+  }
+ ]
+}

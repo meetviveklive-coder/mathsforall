@@ -1,0 +1,13 @@
+{
+ "frames": [
+  {
+   "boxes": 10,
+   "counters": 9,
+   "crossed": 4,
+   "empty_boxes": 1
+  }
+ ],
+ "counters": 9,
+ "crossed": 4,
+ "left": 5
+}
