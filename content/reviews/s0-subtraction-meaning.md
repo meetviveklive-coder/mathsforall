@@ -1,0 +1,63 @@
+# Review: s0-subtraction-meaning
+
+Reviewer: math-verifier, 2026-10-22. Result: **verified** (0 blocking, 6 suggestions).
+
+Standard used: the young-learner addendum (a reader of about 6 years old).
+
+Checks run:
+- `tools/verify_content.py`: 45 checks pass, 0 fail, 0 warnings.
+- I worked out all 3 examples and all 14 practice and quiz answers again with my own SymPy code. All of them agree.
+- I counted every object in all 12 SVGs. I did this from make.py, by counting the circles and the X marks (pairs of thick lines) in each SVG, and on a rendered image. Every picture matches its alt, spec, checks and question:
+  - take-away: 8, with 3 crossed out.
+  - p1: 6, with 2 crossed out.
+  - q1: 10, with 7 crossed out.
+  - order: 3, with none crossed out.
+  - compare: 7 and 4 (3 extra).
+  - p3: 9 and 6 (3 extra).
+  - q2: 8 and 3 (5 extra).
+  - check-12: 10 + 2, with the bottom row of 5 crossed out, leaving 7.
+  - p2: 9, with 4 crossed out and 5 left in the top row.
+  - hops: 9 to 6 back, and 4 to 7 forward.
+  - p4: a dot at 12 on a line from 5 to 15.
+  - q3: a dot at 6 on a line from 0 to 10.
+- Each MCQ has exactly one correct option, and each distractor matches its reason:
+  - p-5: 4 comes from counting 9 as a hop. 21 comes from adding.
+  - q-4: 15+8 and 15+7 both add to the start number.
+- All numbers are within 20. No answer is negative. "−" is taught in section 1 before any use.
+
+Uses of addition: the topic uses these ideas from s0-addition-meaning:
+- "order does not matter in adding" (the 3 + 5 example matches addition section 4);
+- number-line hops;
+- ten-frames;
+- addition facts within 20 (7+5, 7+6, 7+8, 6+8, 6+4, 4+5).
+The addition topic teaches all of these. The two topics give the ten-frame the same definition ("A ten-frame has 10 boxes").
+
+The flagged items:
+- **"Order matters" without negatives.** Acceptable. "Start with 3, take away 5? There are not enough" is true, and it does not suggest that 3 − 5 is 0. The "Not yet" in the doubt leaves room for negatives later. q-6 and example 3 ask only whether the two are the same, and "false" is the only defensible answer.
+- **Plain circles as objects.** Acceptable. Every question that uses a picture says what a circle stands for ("Each circle is a bird/laddoo"). The X marks and the dashed box are clear without colour.
+
+## Findings
+
+1. **sections[2] body, example 2, p-5 hints, q-3 prompt: "count up".** SUGGESTION.
+   Problem: s0-addition-meaning teaches this same move as "count on". A 6-year-old may think "count up" is a new skill.
+   Fix: say it once in section 3: "Count up. This is counting on, like in adding." Or use "count on" throughout.
+
+2. **Prompts p-1, q-1 ("Each circle is a ...").** SUGGESTION.
+   Problem: s0-addition-meaning says "Each dot is a bird" for the same kind of drawing.
+   Fix: agree on one word with the addition topic.
+
+3. **sm-hops landing mark.** SUGGESTION.
+   Problem: here the landing point is an empty ring. In s0-addition-meaning it is a filled orange dot. This is not wrong, but it is a small change for a young child.
+   Fix: use the same landing mark in both topics.
+
+4. **p-8 prompt.** SUGGESTION.
+   Problem: "Anu has 4 laddoos. She can take away 6 laddoos from them." is a statement, with no question. A 6-year-old may not know what to do.
+   Fix: end with "True or false?" or ask "Can she take away 6 laddoos?"
+
+5. **Alt texts of sm-compare, sm-p3, sm-q2.** SUGGESTION.
+   Problem: these alt sentences are 16 or 17 words long. The word "dashed" may also be unknown to a 6-year-old. It is used in the p-3 and q-2 hints too ("Count the marbles in the dashed box").
+   Fix: split the sentences. In the hints, say "the box made of little lines" or "the box", because there is only one box.
+
+6. **q-4 prompt "Which adding sum should give 15?"** SUGGESTION.
+   Problem: "adding sum" is awkward.
+   Fix: "Which sum should equal 15?" or "Which adding checks it?"

@@ -1,7 +1,7 @@
 {
   "id": "s0-subtraction-meaning",
   "title": "What subtraction means",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Meera has 8 mangoes. She gives 3 mangoes to her friend Kabir.\n\nHow many mangoes does Meera have now? Let us find out.",
@@ -572,6 +572,14 @@
     {
       "q": "Can I take 5 away from 3?",
       "a": "Not yet. If you have 3 laddoos, you cannot give away 5. So always start with the number you have."
+    }
+  ],
+  "review": [
+    {
+      "date": "2026-10-22",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "verify_content.py 45 pass. All 17 answers re-solved with own SymPy; all 12 visuals counted (objects, crosses, pairs, hops) and match. Uses only addition ideas taught in s0-addition-meaning. Order-matters treatment avoids negatives correctly. 0 blocking; 6 suggestions in content/reviews/s0-subtraction-meaning.md ('count up' vs 'count on', p-8 phrasing)."
     }
   ]
 }
