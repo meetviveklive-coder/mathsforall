@@ -51,3 +51,13 @@ Scope and context: no exam marks, test scores or ranks. Cricket runs in example 
 5. Section 3: "So 25% of ₹360 means $\frac{25}{100} \times 360$."
 
 No drawing changed, so make.py was not re-run. `verify_content`: PASS, 42 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 1 suggestion).
+
+Checks run: `git diff 90946ab HEAD` on the topic (no visual changed), `tools/verify_content.py` (42 pass, 0 fail, 0 warnings). I re-solved every changed item with my own exact SymPy (`Rational`) code: section 3 (25/100 × 360 = 90), section 4 (0.35 × 80 = 28, 35 × 80 = 2800), example 2 (78; 60 + 12 + 6), p-1 150, p-2 27, p-4 56, p-5 54, p-7 9, p-8 24.50, q-1 108, q-2 13, q-4 90, q-5 9.75, q-8 25. All agree with the stated answers.
+
+Findings 1 to 5 are fixed as described. Whole-rupee answers (p-1, p-4, q-2) say "Type the amount in rupees."; paise answers (p-8, q-5) say "like 45.50". The "like 15" and "like 4" examples are gone, and `site/src/lib/answers.ts` strips "kilometres", "kilograms" and "people", so "27 kilometres" or "90 people" is read correctly. No typing example equals or resembles its answer. "Digits after the point" and "without the points" now match s0-multiply-divide-decimals. No exam marks or test scores. No new error.
+
+1. **q-8 hint 1: "Both lengths are now in metres."** SUGGESTION. "Now" reads oddly, as the child has not changed anything. Fix: "Both lengths are in metres: 250 m and 1000 m."

@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-of-quantity",
   "title": "Finding a percentage of an amount",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Wangmo and her Ama are on a 240 km train journey. Ama looks out of the window and says, \"We have done 35% of the journey.\"\n\nHow many kilometres is that? You know that 35% means 35 out of 100. But the journey is 240 km, not 100 km. In this topic you will learn three ways to find a percentage of any amount. You will also find what percent one amount is of another.",
@@ -524,7 +524,7 @@
       "prompt": "Ritwik's walk to school is 1 km, which is 1000 m. He has walked 250 m so far. What percent of the walk has he done? Type the number only, like 40.",
       "answer": "25",
       "hints": [
-        "Both lengths are now in metres.",
+        "Both lengths are in metres: 250 m and 1000 m.",
         "Write the part over the whole: $\\frac{250}{1000}$."
       ],
       "explanation": "1 km is 1000 m. So the fraction is $\\frac{250}{1000} = \\frac{25}{100}$, dividing the top and the bottom by 10. He has done 25% of the walk.",
@@ -562,6 +562,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content 42 pass. All values re-solved with own Rational code. Rupee answers use decimal with 'like 45.50' (parser accepts 150, 150.00, ₹150, '150 rupees'); percent answers use 'Type the number only, like 40.'. MCQ distractors checked. 5 visuals rendered and match meta and alt. No marks or scores. 0 blocking, 5 suggestions. See content/reviews/s0-percent-of-quantity.md."
+    },
+    {
+      "date": "2026-10-24",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes. verify_content 42 pass. All 5 findings fixed; changed items (sections 3-4, example 2, p-1, p-2, p-4, p-5, p-7, p-8, q-1, q-2, q-4, q-5, q-8) re-solved with own Rational code; answers unchanged and correct. Rupee phrases follow the agreed rule; no typing example resembles its answer. No new errors."
     }
   ]
 }

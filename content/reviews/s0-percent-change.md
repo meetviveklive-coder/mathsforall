@@ -55,3 +55,13 @@ Scope and context: no exam marks, test scores or ranks. Festivals (Diwali, Eid, 
 Also: whole-rupee answers (p-1, p-2, p-5, p-6, q-1, q-3) now end "Type the amount in rupees." Answers with paise (p-4 ₹88.20, p-10 ₹39.60) keep "like 45.50."
 
 `verify_content`: PASS, 48 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 0 suggestions).
+
+Checks run: `git diff 90946ab HEAD` on the topic and visuals, `tools/verify_content.py` (48 pass, 0 fail, 0 warnings). I re-solved every changed item with my own exact SymPy code: section 2 (5% of 3000 = 150, 3000 × 1.05 = 3150), section 3 (10/40 = 25%, 10/50 = 20%), section 4 (500 → 600 → 480), example 2 (2160 GST, 14160), p-1 540, p-2 1050, p-4 88.20, p-5 29500, p-6 32, q-1 200, q-3 5040, q-4 (GST 3600, total 23600). All agree.
+
+Visual pc-up-down: I re-ran make.py (output byte-identical to the committed SVG and meta) and rendered it in light and dark mode. With 280 px for ₹600, the guide is at x = 253.33, exactly ₹500. It runs from the teal "₹500" label at the top through all three bars: it meets the end of the first bar, the join of ₹500 and +₹100 in the second, and lies inside the dashed ₹120 box, just right of the ₹480 end, in the third. The halo keeps it visible on the teal piece in both modes. +₹100 and −₹120 labels sit 6 px right of it; 0 overlaps. Alt text, spec, section 4 and checks (`guide_text` "₹500", `guide_crosses_rows` 3) all match the drawing. pc-gst's top label now reads "Before GST: ₹3000", matching alt, spec and checks.
+
+Findings 1 to 5 are fixed. GST appears only at 0%, 5% and 18%, and every GST question gives "the price before GST" (example 2, p-4, p-5, p-6, q-3, q-4). Whole-rupee answers say "Type the amount in rupees."; p-4 (₹88.20) and p-10 (₹39.60) keep "like 45.50". Percent answers keep "like 40" and none is 40. No exam marks. No new error.

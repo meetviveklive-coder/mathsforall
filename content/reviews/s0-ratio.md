@@ -49,3 +49,11 @@ Scope and context: no exam marks, test scores or ranks. "Scored" appears only fo
 5. Section 3 now uses "Farida's family grows 24 kg of potatoes and 16 kg of onions" ($24 : 16 = 3 : 2$, "For every 3 kg of potatoes, they grow 2 kg of onions"). q-4 now uses a shop in Ludhiana that sells 45 kg of rice and 30 kg of wheat. The answer (3) and the verify expression are unchanged. Cricket remains in p-1 (one player's sixes and fours) and example 3 (two batters' shared total), which do not rank one child against another.
 
 No drawing changed, so make.py was not re-run. `verify_content`: PASS, 47 checks passed, 0 failed, 0 warnings. Status set to draft.
+
+## Re-check
+
+Reviewer: math-verifier, 2026-10-24. Result: **verified** (0 blocking, 0 suggestions).
+
+Checks run: `git diff 90946ab HEAD` on the topic (no visual changed), `tools/verify_content.py` (47 pass, 0 fail, 0 warnings). I re-solved every changed item with my own SymPy code: section 3 (gcd(24, 16) = 8, 24 : 16 = 3 : 2, gcd(3, 2) = 1), p-8 (240 × 3/8 = 90), q-2 (1/5), q-4 (gcd(45, 30) = 15, 45 : 30 = 3 : 2, box 3), q-6 (720 × 5/8 = 450), q-8 (150 × 4/5 = 120; bus 30). All agree.
+
+Findings 1 to 5 are fixed. p-8 and q-6 now say "Type the amount in rupees."; "like 45" is gone, so nothing resembles 90 or 450. q-8 says which quantities are in the ratio and ends "Type the number of kilometres.", as in s0-percent-of-quantity; the site accepts "120 km" and "120 kilometres". q-2 is tagged objective 2. Section 3 (potatoes and onions) and q-4 (rice and wheat in a Ludhiana shop) no longer compare two children. No question asks the child to type a ratio. No exam marks. No new error.

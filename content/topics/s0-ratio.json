@@ -1,7 +1,7 @@
 {
   "id": "s0-ratio",
   "title": "Ratio",
-  "status": "draft",
+  "status": "verified",
   "version": 1,
   "lesson": {
     "hook": "Sneha's Baba makes khichdi on a rainy evening. For the 4 people at home, he uses 2 cups of rice and 1 cup of moong dal.\n\nThis Sunday, 8 people are coming. Sneha says, \"Just add 2 more cups of each!\" That makes 4 cups of rice and 3 cups of dal.\n\nWill the khichdi taste the same? A **ratio** helps you answer.",
@@ -673,6 +673,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "verify_content 47 pass. All values re-solved with own Rational code. No typed ratio; box questions for simplifying. MCQ ratio options have no equal pairs and order is tested by unequal a/b values. 6 visuals rendered and match. No marks or test scores. 0 blocking, 5 suggestions. See content/reviews/s0-ratio.md."
+    },
+    {
+      "date": "2026-10-24",
+      "by": "math-verifier",
+      "result": "verified",
+      "notes": "re-check after fixes. verify_content 47 pass. All 5 findings fixed; section 3, p-8, q-2, q-4, q-6, q-8 re-solved with own code (3:2, 90, 1/5, 3, 450, 120). No typed ratios; rupee and km phrases match sibling topics. No new errors."
     }
   ]
 }
