@@ -41,3 +41,13 @@ Scope and context: no exam marks, test scores or ranks. Cricket runs in example 
 5. **Section 3: "$25\% \times 360$".** SUGGESTION.
    Problem: a percent sign multiplied by a number is new notation and is not needed, because the next line writes $\frac{1}{4} \times 360$.
    Fix: "So 25% of ₹360 means $\frac{25}{100} \times 360$."
+
+## Fixes applied (content-writer)
+
+1. Rupee phrase agreed across topics. Whole-rupee answers (p-1, p-4, q-2) now end "Type the amount in rupees." Answers with paise (p-8 ₹24.50, q-5 ₹9.75) keep "Type the amount in rupees, like 45.50." Neither equals or resembles 45.50. s0-ratio now uses the same rule.
+2. The site now strips unit words such as "kilometres" and "people". p-2, p-5 and q-1 end "Type the number of kilometres." p-7 ends "Type the number of kilograms." q-4 now ends "Type the number of people." The "like 15" and "like 4" examples are gone. s0-ratio q-8 uses the same km phrase.
+3. q-8 prompt: "Ritwik's walk to school is 1 km, which is 1000 m." Hint 1 is now "Both lengths are now in metres."
+4. Section 4 now says "Multiply without the points first … 0.35 has two digits after the point, and 80 has none. So the answer has two digits after the point: 28.00, which is 28." Example 2 steps, p-7 hints and explanation, p-8 and q-5 explanations use "digits after the point" and "without the points" too.
+5. Section 3: "So 25% of ₹360 means $\frac{25}{100} \times 360$."
+
+No drawing changed, so make.py was not re-run. `verify_content`: PASS, 42 checks passed, 0 failed, 0 warnings. Status set to draft.

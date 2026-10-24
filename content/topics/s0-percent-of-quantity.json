@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-of-quantity",
   "title": "Finding a percentage of an amount",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Wangmo and her Ama are on a 240 km train journey. Ama looks out of the window and says, \"We have done 35% of the journey.\"\n\nHow many kilometres is that? You know that 35% means 35 out of 100. But the journey is 240 km, not 100 km. In this topic you will learn three ways to find a percentage of any amount. You will also find what percent one amount is of another.",
@@ -17,12 +17,12 @@
       },
       {
         "heading": "Multiply by the fraction",
-        "body": "You know that **of** means multiply. So 25% of ₹360 means $25\\% \\times 360$.\n\n25% is $\\frac{1}{4}$. So:\n\n$25\\% \\text{ of } 360 = \\frac{1}{4} \\times 360 = 360 \\div 4 = 90$\n\nNow look at the bar. Each 10% part is ₹36. 25% is 2 and a half parts: $36 + 36 + 18 = 90$. Both ways give ₹90.\n\nThe benchmarks make this quick.\n\n- 50% is $\\frac{1}{2}$: halve the amount.\n- 25% is $\\frac{1}{4}$: divide by 4.\n- 75% is $\\frac{3}{4}$: divide by 4, then multiply by 3.\n- 20% is $\\frac{1}{5}$: divide by 5.\n\nFor any other percent, write it over 100. For example, $35\\% \\text{ of } 80 = \\frac{35}{100} \\times 80 = \\frac{2800}{100} = 28$.",
+        "body": "You know that **of** means multiply. So 25% of ₹360 means $\\frac{25}{100} \\times 360$.\n\n25% is $\\frac{1}{4}$. So:\n\n$25\\% \\text{ of } 360 = \\frac{1}{4} \\times 360 = 360 \\div 4 = 90$\n\nNow look at the bar. Each 10% part is ₹36. 25% is 2 and a half parts: $36 + 36 + 18 = 90$. Both ways give ₹90.\n\nThe benchmarks make this quick.\n\n- 50% is $\\frac{1}{2}$: halve the amount.\n- 25% is $\\frac{1}{4}$: divide by 4.\n- 75% is $\\frac{3}{4}$: divide by 4, then multiply by 3.\n- 20% is $\\frac{1}{5}$: divide by 5.\n\nFor any other percent, write it over 100. For example, $35\\% \\text{ of } 80 = \\frac{35}{100} \\times 80 = \\frac{2800}{100} = 28$.",
         "visual": "poq-bar-25"
       },
       {
         "heading": "Multiply by the decimal",
-        "body": "A percent is also a decimal. 35% is 35 hundredths, which is 0.35. So 35% of 80 is $0.35 \\times 80$.\n\nMultiply without the point first: $35 \\times 80 = 2800$. 0.35 has two places after the point. So the answer has two places too: 28.00, which is 28.\n\nCheck with 10% steps. 10% of 80 is 8. So 30% is 24, and 5% is 4. $24 + 4 = 28$. Same answer.\n\nSo you have three ways, and they all agree.\n\n- **10% and 1% steps** are easy to do in your head.\n- **A fraction** is quick for 50%, 25%, 75% and 20%.\n- **A decimal** works for any percent, like 37% or 8%."
+        "body": "A percent is also a decimal. 35% is 35 hundredths, which is 0.35. So 35% of 80 is $0.35 \\times 80$.\n\nMultiply without the points first: $35 \\times 80 = 2800$. 0.35 has two digits after the point, and 80 has none. So the answer has two digits after the point: 28.00, which is 28.\n\nCheck with 10% steps. 10% of 80 is 8. So 30% is 24, and 5% is 4. $24 + 4 = 28$. Same answer.\n\nSo you have three ways, and they all agree.\n\n- **10% and 1% steps** are easy to do in your head.\n- **A fraction** is quick for 50%, 25%, 75% and 20%.\n- **A decimal** works for any percent, like 37% or 8%."
       },
       {
         "heading": "What percent is it?",
@@ -49,8 +49,8 @@
         "problem": "Pallavi's Bua is driving 120 km to Nashik. She has driven 65% of the way. How many kilometres has she driven?",
         "steps": [
           "65% is 0.65. So 65% of 120 km is $0.65 \\times 120$.",
-          "Multiply without the point: $65 \\times 120 = 7800$.",
-          "0.65 has two places after the point. So the answer is 78.00, which is 78.",
+          "Multiply without the points: $65 \\times 120 = 7800$.",
+          "0.65 has two digits after the point, and 120 has none. So the answer has two digits after the point: 78.00, which is 78.",
           "Check with steps: 50% is 60 km, 10% is 12 km and 5% is 6 km. $60 + 12 + 6 = 78$.",
           "She has driven 78 km."
         ],
@@ -194,7 +194,7 @@
       "type": "numeric",
       "visual": "poq-p1",
       "objective": 0,
-      "prompt": "The bar is ₹500, which is 100%. Each part is 10%. How many rupees is the shaded 30%? Type the amount in rupees, like 45.50.",
+      "prompt": "The bar is ₹500, which is 100%. Each part is 10%. How many rupees is the shaded 30%? Type the amount in rupees.",
       "answer": "150",
       "hints": [
         "Each part is ₹50. How many parts are shaded?"
@@ -210,7 +210,7 @@
       "id": "s0-percent-of-quantity/p-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "A train journey is 270 km long. What is 10% of the journey? Type the number of kilometres, like 15.",
+      "prompt": "A train journey is 270 km long. What is 10% of the journey? Type the number of kilometres.",
       "answer": "27",
       "hints": [
         "10% is $\\frac{1}{10}$.",
@@ -267,7 +267,7 @@
       "id": "s0-percent-of-quantity/p-4",
       "type": "numeric",
       "objective": 0,
-      "prompt": "1% of ₹800 is ₹8. What is 7% of ₹800? Type the amount in rupees, like 45.50.",
+      "prompt": "1% of ₹800 is ₹8. What is 7% of ₹800? Type the amount in rupees.",
       "answer": "56",
       "hints": [
         "7% is 7 lots of 1%."
@@ -283,7 +283,7 @@
       "id": "s0-percent-of-quantity/p-5",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Find 12% of 450 km. Use 10% and 1% steps. Type the number of kilometres, like 15.",
+      "prompt": "Find 12% of 450 km. Use 10% and 1% steps. Type the number of kilometres.",
       "answer": "54",
       "hints": [
         "10% of 450 is $450 \\div 10$. 1% of 450 is $450 \\div 100$.",
@@ -315,13 +315,13 @@
       "id": "s0-percent-of-quantity/p-7",
       "type": "numeric",
       "objective": 1,
-      "prompt": "15% of 60 kg is $0.15 \\times 60$. Work it out. Type the number of kilograms, like 4.",
+      "prompt": "15% of 60 kg is $0.15 \\times 60$. Work it out. Type the number of kilograms.",
       "answer": "9",
       "hints": [
-        "Multiply without the point first: $15 \\times 60$.",
-        "0.15 has two places after the point."
+        "Multiply without the points first: $15 \\times 60$.",
+        "0.15 has two digits after the point, and 60 has none."
       ],
-      "explanation": "$15 \\times 60 = 900$. 0.15 has two places after the point, so the answer is 9.00, which is 9. Check: 10% of 60 is 6 and 5% is 3. $6 + 3 = 9$.",
+      "explanation": "$15 \\times 60 = 900$. 0.15 has two digits after the point, so the answer is 9.00, which is 9. Check: 10% of 60 is 6 and 5% is 3. $6 + 3 = 9$.",
       "verify": {
         "kind": "sympy",
         "expr": "Rational(15, 100) * 60"
@@ -337,7 +337,7 @@
         "35% is 0.35. Work out $0.35 \\times 70$.",
         "Or use steps: 10% of 70 is 7. Find 30% and 5%."
       ],
-      "explanation": "$0.35 \\times 70$: first $35 \\times 70 = 2450$. Two places after the point give 24.50. Check: 30% is 21 and 5% is 3.50. $21 + 3.50 = 24.50$. He gives ₹24.50.",
+      "explanation": "$0.35 \\times 70$: first $35 \\times 70 = 2450$. Two digits after the point give 24.50. Check: 30% is 21 and 5% is 3.50. $21 + 3.50 = 24.50$. He gives ₹24.50.",
       "verify": {
         "kind": "sympy",
         "expr": "Rational(35, 100) * 70"
@@ -383,7 +383,7 @@
       "type": "numeric",
       "visual": "poq-q1",
       "objective": 0,
-      "prompt": "The bar is a 180 km journey, which is 100%. Each part is 10%. How many kilometres is the shaded 60%? Type the number of kilometres, like 15.",
+      "prompt": "The bar is a 180 km journey, which is 100%. Each part is 10%. How many kilometres is the shaded 60%? Type the number of kilometres.",
       "answer": "108",
       "hints": [
         "Each part is 18 km. How many parts are shaded?"
@@ -398,7 +398,7 @@
       "id": "s0-percent-of-quantity/q-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "Find 5% of ₹260. Type the amount in rupees, like 45.50.",
+      "prompt": "Find 5% of ₹260. Type the amount in rupees.",
       "answer": "13",
       "hints": [
         "First find 10% of ₹260.",
@@ -431,7 +431,7 @@
       "id": "s0-percent-of-quantity/q-4",
       "type": "numeric",
       "objective": 1,
-      "prompt": "120 people come to a village mela. 75% of them stay for the puppet show. How many people stay? Type a whole number.",
+      "prompt": "120 people come to a village mela. 75% of them stay for the puppet show. How many people stay? Type the number of people.",
       "answer": "90",
       "hints": [
         "75% is $\\frac{3}{4}$.",
@@ -453,7 +453,7 @@
         "15% is 0.15. Work out $0.15 \\times 65$.",
         "Or use steps: 10% of 65 is 6.50. Then find 5%."
       ],
-      "explanation": "$15 \\times 65 = 975$. 0.15 has two places after the point, so $0.15 \\times 65 = 9.75$. Check: 10% is 6.50 and 5% is 3.25. $6.50 + 3.25 = 9.75$. The onions cost ₹9.75.",
+      "explanation": "$15 \\times 65 = 975$. 0.15 has two digits after the point, so $0.15 \\times 65 = 9.75$. Check: 10% is 6.50 and 5% is 3.25. $6.50 + 3.25 = 9.75$. The onions cost ₹9.75.",
       "verify": {
         "kind": "sympy",
         "expr": "Rational(15, 100) * 65"
@@ -521,10 +521,10 @@
       "id": "s0-percent-of-quantity/q-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Ritwik's walk to school is 1 km. He has walked 250 m so far. What percent of the walk has he done? Type the number only, like 40.",
+      "prompt": "Ritwik's walk to school is 1 km, which is 1000 m. He has walked 250 m so far. What percent of the walk has he done? Type the number only, like 40.",
       "answer": "25",
       "hints": [
-        "Write both lengths in metres. 1 km is 1000 m.",
+        "Both lengths are now in metres.",
         "Write the part over the whole: $\\frac{250}{1000}$."
       ],
       "explanation": "1 km is 1000 m. So the fraction is $\\frac{250}{1000} = \\frac{25}{100}$, dividing the top and the bottom by 10. He has done 25% of the walk.",

@@ -58,5 +58,7 @@
  "original": "500",
  "label_overlaps": 0,
  "labels_inside": true,
- "guide": "500"
+ "guide": "500",
+ "guide_text": "\u20b9500",
+ "guide_crosses_rows": 3
 }

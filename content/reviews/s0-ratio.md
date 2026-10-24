@@ -39,3 +39,13 @@ Scope and context: no exam marks, test scores or ranks. "Scored" appears only fo
 5. **Cricket appears four times** (p-1, section 3, example 3, q-4). SUGGESTION.
    Problem: comparing two named children's runs in section 3 and q-4 is close to ranking one child against another, which the site avoids. s0-percent-of-quantity also uses cricket in example 3.
    Fix: change section 3 or q-4 to a non-competitive context, for example "Farida's family grows 24 kg of potatoes and 16 kg of onions."
+
+## Fixes applied (content-writer)
+
+1. p-8 (₹90) and q-6 (₹450) now end "Type the amount in rupees." Both answers are whole rupees. Under the rule agreed across the three topics, "like 45.50" is only for answers that may have paise. "like 45" is gone.
+2. q-8 prompt: "Rehana's family travels 150 km to Kochi. They go part of the way by bus and the rest by train. The bus distance and the train distance are in the ratio $1 : 4$."
+3. q-8 now ends "Type the number of kilometres.", the same as s0-percent-of-quantity. The site accepts "120" or "120 km".
+4. q-2 is now tagged objective 2 (sharing uses "add the parts"). p-6 stays on objective 0.
+5. Section 3 now uses "Farida's family grows 24 kg of potatoes and 16 kg of onions" ($24 : 16 = 3 : 2$, "For every 3 kg of potatoes, they grow 2 kg of onions"). q-4 now uses a shop in Ludhiana that sells 45 kg of rice and 30 kg of wheat. The answer (3) and the verify expression are unchanged. Cricket remains in p-1 (one player's sixes and fours) and example 3 (two batters' shared total), which do not rank one child against another.
+
+No drawing changed, so make.py was not re-run. `verify_content`: PASS, 47 checks passed, 0 failed, 0 warnings. Status set to draft.

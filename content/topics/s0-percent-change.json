@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-change",
   "title": "Discounts, GST and percentage change",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Kabir and his Nani walk into a Diwali sale. A big sign says **25% off**. The wall clock Nani likes was ₹800. What does it cost now?\n\nAt the counter, the bill has a line called **GST**. It adds a little to some prices.\n\nOn the way home, Nani grumbles. Tomatoes were ₹40 a kg last month. Now they are ₹50. By what percent did the price go up?\n\nYou already know how to find a percentage of an amount. In this topic you will use it to answer all three questions.",
@@ -13,17 +13,17 @@
       },
       {
         "heading": "The price after adding GST",
-        "body": "**GST** is a tax. A tax is money paid to the government. It helps pay for things like roads and hospitals. GST is added on top of the price of many things you buy.\n\nGST is a percent of the price. Different things have different GST:\n\n- **0%**: roti, paneer and exercise books.\n- **5%**: bicycles, toothpaste and ghee.\n- **18%**: televisions and air conditioners.\n\nBhavna's Papa buys a bicycle. The price is ₹3000, and GST is 5%.\n\n1. Find the GST. 10% of ₹3000 is ₹300. 5% is half of that, so it is ₹150.\n2. Add it on. $3000 + 150 = 3150$.\n\nHe pays ₹3150. This time the bar grows. A small 5% piece is added to the end.\n\n**A shortcut.** With 5% added, you pay $100\\% + 5\\% = 105\\%$ of the price. 105% is 1.05. So the total is $3000 \\times 1.05 = 3150$.\n\nA discount takes a percent **off**. GST puts a percent **on**.",
+        "body": "**GST** is a tax. A tax is money paid to the government. It helps pay for things like roads and hospitals. Many price tags in shops already include GST. On a bill, the price before GST is shown first. Then GST is added.\n\nGST is a percent of the price before GST. Different things have different GST:\n\n- **0%**: roti, paneer and exercise books.\n- **5%**: bicycles, toothpaste and ghee.\n- **18%**: televisions and air conditioners.\n\nBhavna's Papa buys a bicycle. The price before GST is ₹3000, and GST is 5%.\n\n1. Find the GST. 10% of ₹3000 is ₹300. 5% is half of that, so it is ₹150.\n2. Add it on. $3000 + 150 = 3150$.\n\nHe pays ₹3150. This time the bar grows. A small 5% piece is added to the end.\n\n**A shortcut.** With 5% added, you pay $100\\% + 5\\% = 105\\%$ of the price. 105% is 1.05. So the total is $3000 \\times 1.05 = 3150$.\n\nA discount takes a percent **off**. GST puts a percent **on**.",
         "visual": "pc-gst"
       },
       {
         "heading": "Percentage increase and decrease",
-        "body": "Nani's tomatoes went from ₹40 to ₹50 a kg. The price rose by ₹10.\n\nIs ₹10 a big rise? It depends on where you started. ₹10 more on ₹40 tomatoes is a lot. ₹10 more on a ₹3000 bicycle is tiny. So we compare the change with the **original** value. That is the value before the change.\n\n$\\text{percentage change} = \\dfrac{\\text{change}}{\\text{original value}} \\times 100$\n\nFor the tomatoes: $\\frac{10}{40} \\times 100 = 25$. The price rose by **25%**.\n\nThe bars show why. ₹40 is 4 parts of ₹10. The rise is 1 more part. 1 part out of 4 is $\\frac{1}{4}$, which is 25%.\n\n**Watch out.** Do not divide by the new price. $\\frac{10}{50} \\times 100 = 20$, and 20% is wrong here. Always divide by the value before the change.\n\nA fall works the same way. Onions drop from ₹50 to ₹40 a kg. The change is ₹10, and the original is ₹50. $\\frac{10}{50} \\times 100 = 20$, so it is a **20% decrease**.",
+        "body": "Nani's tomatoes went from ₹40 to ₹50 a kg. The price rose by ₹10.\n\nIs ₹10 a big rise? It depends on where you started. ₹10 more on ₹40 tomatoes is a lot. ₹10 more on a ₹3000 bicycle is tiny. So we compare the change with the **original** value. That is the value before the change.\n\n$\\text{percentage change} = \\dfrac{\\text{change}}{\\text{original value}} \\times 100$\n\nThis is the \"percent of what?\" question again. The answer is the original value.\n\nFor the tomatoes: $\\frac{10}{40} \\times 100 = 25$. The price rose by **25%**.\n\nThe bars show why. ₹40 is 4 parts of ₹10. The rise is 1 more part. 1 part out of 4 is $\\frac{1}{4}$, which is 25%.\n\n**Watch out.** Do not divide by the new price. $\\frac{10}{50} \\times 100 = 20$, and 20% is wrong here. Always divide by the value before the change.\n\nA fall works the same way. Onions drop from ₹50 to ₹40 a kg. The change is ₹10, and the original is ₹50. $\\frac{10}{50} \\times 100 = 20$, so it is a **20% decrease**.",
         "visual": "pc-tomato"
       },
       {
         "heading": "Up 20%, then down 20%",
-        "body": "Here is a puzzle. A school bag costs ₹500. Its price goes up by 20%. Later, the new price comes down by 20%. Is it back to ₹500?\n\n- **Up 20%.** 20% of ₹500 is ₹100. The price becomes ₹600.\n- **Down 20%.** Now the 20% is of ₹600, not ₹500. 20% of ₹600 is ₹120. The price becomes $600 - 120 = 480$.\n\nSo the bag ends at **₹480**, not ₹500.\n\nBoth changes are 20%. But they are 20% of different amounts. The fall is taken from the bigger price, ₹600. So the fall, ₹120, is bigger than the rise, ₹100.\n\nIn the diagram, the dashed mark shows ₹500. The last bar stops short of it.",
+        "body": "Here is a puzzle. A school bag costs ₹500. Its price goes up by 20%. Later, the new price comes down by 20%. Is it back to ₹500?\n\n- **Up 20%.** 20% of ₹500 is ₹100. The price becomes ₹600.\n- **Down 20%.** Now the 20% is of ₹600, not ₹500. 20% of ₹600 is ₹120. The price becomes $600 - 120 = 480$.\n\nSo the bag ends at **₹480**, not ₹500.\n\nBoth changes are 20%. But they are 20% of different amounts. The fall is taken from the bigger price, ₹600. So the fall, ₹120, is bigger than the rise, ₹100.\n\nIn the diagram, the dashed line labelled ₹500 runs through all three bars. The shaded part of the last bar stops short of it.",
         "visual": "pc-up-down"
       }
     ],
@@ -44,7 +44,7 @@
         }
       },
       {
-        "problem": "Thomas's Ammachi buys a television for ₹12000. GST on televisions is 18%. What is the total price?",
+        "problem": "Thomas's Ammachi buys a television. The price before GST is ₹12000. GST on televisions is 18%. What is the total price?",
         "steps": [
           "Find 18% of ₹12000. Split 18% into 10% and 8%.",
           "10% of ₹12000 is ₹1200. 1% is ₹120, so 8% is $8 \\times 120 = 960$.",
@@ -77,7 +77,7 @@
     "summary": [
       "A discount is a percent taken off the original price. Find the discount, then subtract it.",
       "Shortcut: 25% off means you pay 75%. Multiply the price by 0.75.",
-      "GST is a tax added on top of a price. Different items have different GST, such as 0%, 5% or 18%.",
+      "GST is a tax added to the price before GST. Different items have different GST, such as 0%, 5% or 18%.",
       "Shortcut: with 5% GST you pay 105%. Multiply the price by 1.05.",
       "Percentage change = change ÷ original value × 100.",
       "Always divide by the value before the change, not the new value.",
@@ -88,7 +88,7 @@
     {
       "id": "pc-discount",
       "purpose": "A 25% discount on ₹800: ₹200 is cut off and you pay ₹600",
-      "spec": "Two bars drawn to the same scale (₹800 fills the width). Top bar: one piece, ₹800, labelled 'Before: ₹800' and '100% = ₹800'. Bottom bar labelled 'Sale: 25% off': a shaded ₹600 piece labelled 'You pay ₹600' and a dashed empty ₹200 piece labelled '25% = ₹200'.",
+      "spec": "Two bars drawn to the same scale. ₹800 fills the width. Top bar: one piece, ₹800, labelled 'Before: ₹800' and '100% = ₹800'. Bottom bar labelled 'Sale: 25% off'. It has a shaded ₹600 piece labelled 'You pay ₹600'. It also has a dashed empty ₹200 piece labelled '25% = ₹200'.",
       "alt": "Two bars of the same full length. The top bar is labelled Before: ₹800, and under it, 100% = ₹800. The bottom bar is labelled Sale: 25% off. Its first three quarters are shaded and labelled You pay ₹600. The last quarter is an empty dashed box labelled 25% = ₹200.",
       "file": "content/visuals/s0-percent-change/pc-discount.svg",
       "checks": {
@@ -133,15 +133,15 @@
     },
     {
       "id": "pc-gst",
-      "purpose": "5% GST on ₹3000: ₹150 is added, ₹3150 in all",
-      "spec": "Two bars drawn to the same scale (₹3150 fills the width). Top bar: one piece, ₹3000, labelled 'Price: ₹3000' and '100% = ₹3000'. Bottom bar labelled 'With 5% GST: ₹3150': a ₹3000 piece labelled '₹3000' and a small ₹150 piece in a second colour labelled 'GST ₹150'.",
-      "alt": "Two bars drawn to the same scale. The top bar is labelled Price: ₹3000, and under it, 100% = ₹3000. The bottom bar is labelled With 5% GST: ₹3150. It has the same ₹3000 piece, plus a thin extra piece at the end in a different colour, labelled GST ₹150. So the bottom bar is a little longer.",
+      "purpose": "5% GST on a price of ₹3000 before GST: ₹150 is added, ₹3150 in all",
+      "spec": "Two bars drawn to the same scale. ₹3150 fills the width. Top bar: one piece, ₹3000, labelled 'Before GST: ₹3000' and '100% = ₹3000'. Bottom bar labelled 'With 5% GST: ₹3150'. It has a ₹3000 piece labelled '₹3000'. It also has a small ₹150 piece in a second colour, labelled 'GST ₹150'.",
+      "alt": "Two bars drawn to the same scale. The top bar is labelled Before GST: ₹3000, and under it, 100% = ₹3000. The bottom bar is labelled With 5% GST: ₹3150. It has the same ₹3000 piece. A thin extra piece in a different colour, labelled GST ₹150, is added at the end. So the bottom bar is a little longer.",
       "file": "content/visuals/s0-percent-change/pc-gst.svg",
       "checks": {
         "original": "3000",
         "rows": [
           {
-            "label": "Price: ₹3000",
+            "label": "Before GST: ₹3000",
             "amount": "3000",
             "segments": [
               {
@@ -177,7 +177,7 @@
     {
       "id": "pc-tomato",
       "purpose": "Tomatoes rise from ₹40 to ₹50: the rise is 1 part on 4, so 25%",
-      "spec": "Two bars drawn to the same scale (₹50 fills the width). Top bar labelled 'Before: ₹40 a kg': 4 equal ₹10 pieces, each labelled '₹10'. Bottom bar labelled 'Now: ₹50 a kg': the same 4 pieces plus a fifth ₹10 piece in a second colour labelled '+₹10'.",
+      "spec": "Two bars drawn to the same scale. ₹50 fills the width. Top bar labelled 'Before: ₹40 a kg': 4 equal ₹10 pieces, each labelled '₹10'. Bottom bar labelled 'Now: ₹50 a kg'. It has the same 4 pieces, plus a fifth ₹10 piece in a second colour labelled '+₹10'.",
       "alt": "Two bars drawn to the same scale. The top bar is labelled Before: ₹40 a kg. It has 4 equal pieces, each labelled ₹10. The bottom bar is labelled Now: ₹50 a kg. It has the same 4 pieces of ₹10, plus one more equal piece in a different colour, labelled +₹10.",
       "file": "content/visuals/s0-percent-change/pc-tomato.svg",
       "checks": {
@@ -250,8 +250,8 @@
     {
       "id": "pc-up-down",
       "purpose": "₹500 up 20% is ₹600; then down 20% is ₹480, not ₹500",
-      "spec": "Three bars drawn to the same scale (₹600 fills the width). 'Start: ₹500': one ₹500 piece. 'Up 20%: ₹600': a ₹500 piece and a ₹100 piece in a second colour labelled '+₹100'. 'Then down 20%: ₹480': a ₹480 piece and a dashed empty ₹120 piece labelled '−₹120'. A short dashed mark at ₹500 on each bar.",
-      "alt": "Three bars drawn to the same scale. The first is labelled Start: ₹500. The second is labelled Up 20%: ₹600. It is the ₹500 piece plus an extra ₹100 piece in a different colour. The third is labelled Then down 20%: ₹480. It has a shaded ₹480 piece and an empty dashed ₹120 piece at the end. A dashed mark at ₹500 shows that the shaded part of the third bar stops short of ₹500.",
+      "spec": "Three bars drawn to the same scale. ₹600 fills the width. 'Start: ₹500': one ₹500 piece. 'Up 20%: ₹600': a ₹500 piece and a ₹100 piece in a second colour labelled '+₹100'. 'Then down 20%: ₹480': a ₹480 piece and a dashed empty ₹120 piece labelled '−₹120'. One dashed line at ₹500, in the second colour on a light halo, runs down through all three bars. It is labelled '₹500' at the top.",
+      "alt": "Three bars drawn to the same scale. The first is labelled Start: ₹500. The second is labelled Up 20%: ₹600. It is the ₹500 piece plus an extra ₹100 piece in a different colour. The third is labelled Then down 20%: ₹480. It has a shaded ₹480 piece and an empty dashed ₹120 piece at the end. A dashed line labelled ₹500 runs down through all three bars. The first bar ends at this line, and the extra ₹100 starts there. The shaded part of the third bar stops short of ₹500.",
       "file": "content/visuals/s0-percent-change/pc-up-down.svg",
       "checks": {
         "original": "500",
@@ -306,7 +306,9 @@
           }
         ],
         "label_overlaps": 0,
-        "labels_inside": true
+        "labels_inside": true,
+        "guide_text": "₹500",
+        "guide_crosses_rows": 3
       }
     }
   ],
@@ -315,7 +317,7 @@
       "id": "s0-percent-change/p-1",
       "type": "numeric",
       "objective": 0,
-      "prompt": "In an Eid sale, Fathima buys a kurta. Its original price is ₹600. The sale gives 10% off. How much does she pay? Type the amount in rupees, like 45.50.",
+      "prompt": "In an Eid sale, Fathima buys a kurta. Its original price is ₹600. The sale gives 10% off. How much does she pay? Type the amount in rupees.",
       "answer": "540",
       "hints": [
         "10% of an amount is the amount ÷ 10.",
@@ -332,7 +334,7 @@
       "id": "s0-percent-change/p-2",
       "type": "numeric",
       "objective": 0,
-      "prompt": "At a Diwali sale, Gurpreet's Dadaji buys a pressure cooker. It was ₹1400, and the sale gives 25% off. What is the sale price? Type the amount in rupees, like 45.50.",
+      "prompt": "At a Diwali sale, Gurpreet's Dadaji buys a pressure cooker. It was ₹1400, and the sale gives 25% off. What is the sale price? Type the amount in rupees.",
       "answer": "1050",
       "hints": [
         "25% is a quarter. What is a quarter of ₹1400?",
@@ -384,7 +386,7 @@
       "id": "s0-percent-change/p-4",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Nikhil buys a tube of toothpaste. The price is ₹84, and GST is 5%. How much does he pay in all? Type the amount in rupees, like 45.50.",
+      "prompt": "Nikhil buys a tube of toothpaste. The price before GST is ₹84, and GST is 5%. How much does he pay in all? Type the amount in rupees, like 45.50.",
       "answer": "88.20",
       "hints": [
         "10% of ₹84 is ₹8.40. 5% is half of that.",
@@ -401,7 +403,7 @@
       "id": "s0-percent-change/p-5",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Debashish's Pishi buys an air conditioner. The price is ₹25000, and GST is 18%. What is the total price? Type the amount in rupees, like 45.50.",
+      "prompt": "Debashish's Pishi buys an air conditioner. The price before GST is ₹25000, and GST is 18%. What is the total price? Type the amount in rupees.",
       "answer": "29500",
       "hints": [
         "Split 18% into 10% and 8%. 10% of ₹25000 is ₹2500.",
@@ -418,7 +420,7 @@
       "id": "s0-percent-change/p-6",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Ayesha's Abbu buys a jar of ghee for ₹640. GST on ghee is 5%. How much is the GST alone? Type the amount in rupees, like 45.50.",
+      "prompt": "Ayesha's Abbu buys a jar of ghee. The price before GST is ₹640. GST on ghee is 5%. How much is the GST alone? Type the amount in rupees.",
       "answer": "32",
       "hints": [
         "The question asks only for the GST, not the total.",
@@ -502,7 +504,7 @@
       "id": "s0-percent-change/q-1",
       "type": "numeric",
       "objective": 0,
-      "prompt": "At a Diwali sale, Sneha's Mama buys a set of clay lamps. The original price is ₹250. The sale gives 20% off. What is the sale price? Type the amount in rupees, like 45.50.",
+      "prompt": "At a Diwali sale, Sneha's Mama buys a set of clay lamps. The original price is ₹250. The sale gives 20% off. What is the sale price? Type the amount in rupees.",
       "answer": "200",
       "hints": [
         "10% of ₹250 is ₹25. What is 20%?",
@@ -560,7 +562,7 @@
       "id": "s0-percent-change/q-3",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Tashi's Didi buys a bicycle for ₹4800. GST on bicycles is 5%. What is the total price? Type the amount in rupees, like 45.50.",
+      "prompt": "Tashi's Didi buys a bicycle. The price before GST is ₹4800. GST on bicycles is 5%. What is the total price? Type the amount in rupees.",
       "answer": "5040",
       "hints": [
         "10% of ₹4800 is ₹480. 5% is half of that.",
@@ -577,7 +579,7 @@
       "id": "s0-percent-change/q-4",
       "type": "mcq",
       "objective": 1,
-      "prompt": "A television costs ₹20000. GST on televisions is 18%. Which calculation gives the total price?",
+      "prompt": "A television's price before GST is ₹20000. GST on televisions is 18%. Which calculation gives the total price?",
       "options": [
         {
           "text": "$20000 \\times 0.18$",
@@ -715,7 +717,7 @@
     },
     {
       "q": "Why is there no GST on roti?",
-      "a": "Some everyday things have 0% GST. Roti, paneer and exercise books are like this. 0% of any price is ₹0, so nothing is added to the bill."
+      "a": "The government keeps GST at 0% on some everyday things, so that they cost less. Roti, paneer and exercise books are like this. 0% of any price is ₹0, so nothing is added."
     },
     {
       "q": "Can a price go up by more than 100%?",

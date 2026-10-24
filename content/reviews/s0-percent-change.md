@@ -43,3 +43,15 @@ Scope and context: no exam marks, test scores or ranks. Festivals (Diwali, Eid, 
 5. **Cross-topic: "original value" and "whole".** SUGGESTION.
    Problem: s0-percent-of-quantity teaches "Ask yourself, percent of what? That amount goes on the bottom." This topic introduces "original value" for the same idea, but does not link the two.
    Fix: in section 3, after the formula, add "This is the 'percent of what?' question again. The answer is the original value."
+
+## Fixes applied (content-writer)
+
+1. pc-up-down: make.py now draws one dashed line at ₹500 in the POINT colour, on a light halo, from a "₹500" label at the top down through all three bars. Segment labels near the line are moved clear of it (+₹100 and −₹120 now start 6 px right of it). The meta reads back `guide_text: "₹500"` and `guide_crosses_rows: 3`, and the topic's checks now include both. Re-ran make.py and rendered it. The spec and alt now describe the labelled line. Section 4 now says "the dashed line labelled ₹500 runs through all three bars. The shaded part of the last bar stops short of it."
+2. GST is now described as added to "the price before GST". Section 2 adds "Many price tags in shops already include GST. On a bill, the price before GST is shown first. Then GST is added." and "GST is a percent of the price before GST." Bhavna's bicycle, example 2, p-4, p-5, p-6, q-3 and q-4 now give "the price before GST". The summary line now reads "GST is a tax added to the price before GST." In pc-gst the top bar label is now "Before GST: ₹3000" (make.py, purpose, spec, alt and checks updated). Slabs 0%, 5% and 18% are unchanged.
+3. doubts[2] now says the government keeps GST at 0% on some everyday things so that they cost less.
+4. pc-gst alt split as suggested. The pc-discount, pc-gst, pc-tomato and pc-up-down specs are split into sentences of 20 words or fewer.
+5. Section 3, after the formula: "This is the \"percent of what?\" question again. The answer is the original value."
+
+Also: whole-rupee answers (p-1, p-2, p-5, p-6, q-1, q-3) now end "Type the amount in rupees." Answers with paise (p-4 ₹88.20, p-10 ₹39.60) keep "like 45.50."
+
+`verify_content`: PASS, 48 checks passed, 0 failed, 0 warnings. Status set to draft.

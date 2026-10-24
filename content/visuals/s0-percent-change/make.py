@@ -4,7 +4,8 @@ Adds one helper (kept here, not in tools/draw.py):
 - amount_bars: horizontal bars whose lengths are drawn to scale from rupee amounts.
   Each bar is a row of segments. A segment is "fill" (money that stays), "cut"
   (money taken off, drawn as a dashed empty box) or "extra" (money added on).
-  An optional dashed guide line marks one amount across all bars.
+  An optional guide marks one amount: a labelled dashed line, in the POINT colour
+  on a light halo, that runs from its label at the top down through every bar.
 
 It follows draw.py's rule: every segment and label is first placed as a record with
 its position, the SVG is written from those records, and the meta is read back from
@@ -27,7 +28,8 @@ SEG_LABEL_H = 24   # space below a bar for its segment labels
 ROW_GAP = 14
 CHAR_W = 8.2       # rough width of one 14px character, used to keep labels apart
 SIZE = 14
-GUIDE_OUT = 3     # how far the guide mark sticks out above and below a bar
+GUIDE_OUT = 3     # how far the guide line runs past the bottom of the last bar
+GUIDE_GAP = 6     # space kept between the guide line and any segment label
 
 
 def _text_w(s: str) -> float:
@@ -40,7 +42,7 @@ def _rupees(v: F) -> str:
     return f"{float(v):.2f}"
 
 
-def amount_bars(rows: list[dict], scale_max, title: str, guide=None) -> tuple[str, dict]:
+def amount_bars(rows: list[dict], scale_max, title: str, guide=None, guide_text=None) -> tuple[str, dict]:
     """rows: [{"label": str, "segments": [{"value": num, "style": "fill"|"cut"|"extra", "text": str}]}].
 
     Bar length is proportional to amount; scale_max fills the width W - 2*PAD.
@@ -48,6 +50,7 @@ def amount_bars(rows: list[dict], scale_max, title: str, guide=None) -> tuple[st
     """
     x0, x1 = F(PAD), F(W - PAD)
     unit = (x1 - x0) / F(scale_max)
+    guide_x = x0 + F(guide) * unit if guide is not None else None
     body: list[str] = []
     seg_recs = []   # {"row", "x", "w", "style", "text"}
     lab_recs = []   # {"row", "x0", "x1", "y", "text", "kind"}
@@ -77,6 +80,8 @@ def amount_bars(rows: list[dict], scale_max, title: str, guide=None) -> tuple[st
                 a, b = F(4), 4 + tw
             if prev_end is not None and a < prev_end + 6:  # push right of the previous label
                 a, b = prev_end + 6, prev_end + 6 + tw
+            if guide_x is not None and a - GUIDE_GAP < guide_x < b + GUIDE_GAP:  # keep clear of the guide
+                a, b = guide_x + GUIDE_GAP, guide_x + GUIDE_GAP + tw
             prev_end = b
             lab_recs.append({"row": i, "x0": a, "x1": b, "y": by + BAR_H + 18, "text": s["text"], "kind": "seg"})
         y = by + BAR_H + SEG_LABEL_H + ROW_GAP
@@ -91,18 +96,23 @@ def amount_bars(rows: list[dict], scale_max, title: str, guide=None) -> tuple[st
         else:  # cut
             st = f"fill:{EMPTY};stroke:{MUTED};stroke-width:1.8;stroke-dasharray:5 4"
         body.append(f'<rect x="{_f(s["x"])}" y="{_f(s["y"])}" width="{_f(s["w"])}" height="{BAR_H}" style="{st}"/>')
-    # guide line
-    guide_x = None
-    if guide is not None:
-        guide_x = x0 + F(guide) * unit
-        for top in row_tops:  # one dashed mark per bar, so it never crosses a label
-            body.append(f'<line x1="{_f(guide_x)}" y1="{_f(top - GUIDE_OUT)}" x2="{_f(guide_x)}" '
-                        f'y2="{_f(top + BAR_H + GUIDE_OUT)}" '
-                        f'style="stroke:{TEXT};stroke-width:1.6;stroke-dasharray:4 4"/>')
+    # guide line: one line from under its label (top) down through every bar
+    guide_top = guide_bot = None
+    if guide_x is not None:
+        text = guide_text or ""
+        if text:
+            tw = F(_text_w(text))
+            lab_recs.append({"row": -1, "x0": guide_x - tw / 2, "x1": guide_x + tw / 2, "y": F(PAD) + 15,
+                             "text": text, "kind": "guide"})
+        guide_top = F(PAD) + 15 + 4
+        guide_bot = row_tops[-1] + BAR_H + GUIDE_OUT
+        line = f'x1="{_f(guide_x)}" y1="{_f(guide_top)}" x2="{_f(guide_x)}" y2="{_f(guide_bot)}"'
+        body.append(f'<line {line} style="stroke:{EMPTY};stroke-width:5"/>')  # halo, so it shows on any fill
+        body.append(f'<line {line} style="stroke:{POINT};stroke-width:2.4;stroke-dasharray:6 4"/>')
     # draw labels
     for lab in lab_recs:
-        weight = "700" if lab["kind"] == "row" else "600"
-        color = TEXT
+        weight = "700" if lab["kind"] in ("row", "guide") else "600"
+        color = POINT if lab["kind"] == "guide" else TEXT
         body.append(_text(lab["x0"], lab["y"], lab["text"], SIZE, anchor="start", weight=weight, color=color))
 
     # ---- meta, read back from the drawn records
@@ -129,17 +139,21 @@ def amount_bars(rows: list[dict], scale_max, title: str, guide=None) -> tuple[st
             la, lb = lab_recs[a], lab_recs[b]
             if la["y"] == lb["y"] and la["x0"] < lb["x1"] and lb["x0"] < la["x1"]:
                 overlaps += 1
-    if guide_x is not None:  # the dashed guide must not run through any label
+    if guide_x is not None:  # the guide line must not run through any label but its own
         for lab in lab_recs:
+            if lab["kind"] == "guide":
+                continue
             ly0, ly1 = lab["y"] - SIZE + 2, lab["y"] + 4  # text box: cap height to descender
-            for t in row_tops:
-                if lab["x0"] - 2 <= guide_x <= lab["x1"] + 2 and ly0 < t + BAR_H + GUIDE_OUT and t - GUIDE_OUT < ly1:
-                    overlaps += 1
+            if lab["x0"] - 2 <= guide_x <= lab["x1"] + 2 and ly0 < guide_bot and guide_top < ly1:
+                overlaps += 1
     inside = all(0 <= lab["x0"] and lab["x1"] <= W for lab in lab_recs)
     meta = {"rows": rows_meta, "original": _rupees(original), "label_overlaps": overlaps,
             "labels_inside": inside}
     if guide_x is not None:
         meta["guide"] = _rupees((guide_x - x0) / unit)
+        meta["guide_text"] = next((lab["text"] for lab in lab_recs if lab["kind"] == "guide"), "")
+        # rows whose bar the line runs through, from top to bottom
+        meta["guide_crosses_rows"] = sum(1 for t in row_tops if guide_top <= t and t + BAR_H <= guide_bot)
     return _svg(height, body, title), meta
 
 
@@ -152,11 +166,11 @@ draw.save(OUT, "pc-discount", *amount_bars([
 ], 800, "A ₹800 price with 25% off: ₹200 is cut off and you pay ₹600"))
 
 draw.save(OUT, "pc-gst", *amount_bars([
-    {"label": "Price: ₹3000", "segments": [{"value": 3000, "style": "fill", "text": "100% = ₹3000"}]},
+    {"label": "Before GST: ₹3000", "segments": [{"value": 3000, "style": "fill", "text": "100% = ₹3000"}]},
     {"label": "With 5% GST: ₹3150", "segments": [
         {"value": 3000, "style": "fill", "text": "₹3000"},
         {"value": 150, "style": "extra", "text": "GST ₹150"}]},
-], 3150, "A ₹3000 price with 5% GST added: ₹150 more, ₹3150 in all"))
+], 3150, "A ₹3000 price before GST, with 5% GST added: ₹150 more, ₹3150 in all"))
 
 draw.save(OUT, "pc-tomato", *amount_bars([
     {"label": "Before: ₹40 a kg", "segments": [{"value": 10, "style": "fill", "text": "₹10"} for _ in range(4)]},
@@ -172,6 +186,6 @@ draw.save(OUT, "pc-up-down", *amount_bars([
     {"label": "Then down 20%: ₹480", "segments": [
         {"value": 480, "style": "fill", "text": "₹480"},
         {"value": 120, "style": "cut", "text": "−₹120"}]},
-], 600, "₹500 up 20% is ₹600, then down 20% is ₹480, short of ₹500", guide=500))
+], 600, "₹500 up 20% is ₹600, then down 20% is ₹480, short of ₹500", guide=500, guide_text="₹500"))
 
 print("drew", len(list(OUT.glob("*.svg"))), "visuals for s0-percent-change")

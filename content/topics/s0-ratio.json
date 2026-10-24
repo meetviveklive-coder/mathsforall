@@ -1,7 +1,7 @@
 {
   "id": "s0-ratio",
   "title": "Ratio",
-  "status": "verified",
+  "status": "draft",
   "version": 1,
   "lesson": {
     "hook": "Sneha's Baba makes khichdi on a rainy evening. For the 4 people at home, he uses 2 cups of rice and 1 cup of moong dal.\n\nThis Sunday, 8 people are coming. Sneha says, \"Just add 2 more cups of each!\" That makes 4 cups of rice and 3 cups of dal.\n\nWill the khichdi taste the same? A **ratio** helps you answer.",
@@ -18,7 +18,7 @@
       },
       {
         "heading": "Simplifying a ratio",
-        "body": "A ratio stays the same when you **multiply or divide both numbers by the same number**. This is just like equivalent fractions.\n\nIn a cricket match, Farida scored 24 runs and Joseph scored 16 runs. The ratio of Farida's runs to Joseph's runs is $24 : 16$.\n\nThe biggest number that divides both 24 and 16 is 8:\n\n$24 : 16 = (24 \\div 8) : (16 \\div 8) = 3 : 2$\n\n3 and 2 have no common factor except 1. So $3 : 2$ is the **simplest form**. For every 3 runs Farida scored, Joseph scored 2.\n\nNow back to the khichdi. To feed 8 people instead of 4, double both amounts: $2 : 1 = 4 : 2$. Sneha's idea of adding 2 cups to each gives $4 : 3$. Adding does not keep the ratio, so the taste changes."
+        "body": "A ratio stays the same when you **multiply or divide both numbers by the same number**. This is just like equivalent fractions.\n\nFarida's family grows 24 kg of potatoes and 16 kg of onions. The ratio of potatoes to onions is $24 : 16$.\n\nThe biggest number that divides both 24 and 16 is 8:\n\n$24 : 16 = (24 \\div 8) : (16 \\div 8) = 3 : 2$\n\n3 and 2 have no common factor except 1. So $3 : 2$ is the **simplest form**. For every 3 kg of potatoes, they grow 2 kg of onions.\n\nNow back to the khichdi. To feed 8 people instead of 4, double both amounts: $2 : 1 = 4 : 2$. Sneha's idea of adding 2 cups to each gives $4 : 3$. Adding does not keep the ratio, so the taste changes."
       },
       {
         "heading": "Sharing in a ratio",
@@ -417,7 +417,7 @@
       "id": "s0-ratio/p-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Anil and Lata buy a ₹240 box of rangoli colours together. They pay in the ratio $5 : 3$. How much does Lata pay? Type the amount in rupees, like 45.",
+      "prompt": "Anil and Lata buy a ₹240 box of rangoli colours together. They pay in the ratio $5 : 3$. How much does Lata pay? Type the amount in rupees.",
       "answer": "90",
       "hints": [
         "Add the parts: $5 + 3$.",
@@ -500,7 +500,7 @@
     {
       "id": "s0-ratio/q-2",
       "type": "mcq",
-      "objective": 0,
+      "objective": 2,
       "prompt": "Manpreet mixes green and white paint in the ratio $1 : 4$. What fraction of all the paint is green?",
       "options": [
         {
@@ -550,13 +550,13 @@
       "id": "s0-ratio/q-4",
       "type": "numeric",
       "objective": 1,
-      "prompt": "Sunita scored 45 runs and Lalit scored 30 runs. Write the ratio of Sunita's runs to Lalit's runs in simplest form. Fill in the box: $\\square : 2$. Type the number that goes in the box.",
+      "prompt": "A shop in Ludhiana sells 45 kg of rice and 30 kg of wheat in a day. Write the ratio of rice to wheat in simplest form. Fill in the box: $\\square : 2$. Type the number that goes in the box.",
       "answer": "3",
       "hints": [
         "Start with $45 : 30$.",
         "The biggest number that divides both 45 and 30 is 15."
       ],
-      "explanation": "The ratio is $45 : 30$. Divide both by 15: $45 \\div 15 = 3$ and $30 \\div 15 = 2$. So it is $3 : 2$.",
+      "explanation": "The ratio of rice to wheat is $45 : 30$. Divide both by 15: $45 \\div 15 = 3$ and $30 \\div 15 = 2$. So it is $3 : 2$.",
       "verify": {
         "kind": "sympy",
         "expr": "45 / gcd(45, 30)"
@@ -582,7 +582,7 @@
       "id": "s0-ratio/q-6",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Priya and Sameer win ₹720 at a science fair. They share it in the ratio $5 : 3$. How much does Priya get? Type the amount in rupees, like 45.",
+      "prompt": "Priya and Sameer win ₹720 at a science fair. They share it in the ratio $5 : 3$. How much does Priya get? Type the amount in rupees.",
       "answer": "450",
       "hints": [
         "Add the parts: $5 + 3$.",
@@ -632,7 +632,7 @@
       "id": "s0-ratio/q-8",
       "type": "numeric",
       "objective": 2,
-      "prompt": "Rehana's family travels 150 km to Kochi. They go by bus and then by train, in the ratio $1 : 4$. How many kilometres do they go by train? Type a whole number.",
+      "prompt": "Rehana's family travels 150 km to Kochi. They go part of the way by bus and the rest by train. The bus distance and the train distance are in the ratio $1 : 4$. How many kilometres do they go by train? Type the number of kilometres.",
       "answer": "120",
       "hints": [
         "How many parts are there in all?",
