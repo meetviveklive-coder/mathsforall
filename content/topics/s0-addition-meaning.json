@@ -1,0 +1,620 @@
+{
+  "id": "s0-addition-meaning",
+  "title": "What addition means",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Ravi has 3 mangoes. His Nani gives him 4 more mangoes.\n\nHow many mangoes does Ravi have now? Let us find out together.",
+    "sections": [
+      {
+        "heading": "Putting groups together",
+        "body": "Look at the two groups. The first group has 3 orange dots. The second group has 4 green dots.\n\nPut them together. Now count them all: 1, 2, 3, 4, 5, 6, 7.\n\nThere are 7 dots in all. So Ravi has 7 mangoes.\n\nPutting groups together and finding how many in all is called **adding**.",
+        "visual": "am-groups-3-4"
+      },
+      {
+        "heading": "Count on from the bigger number",
+        "body": "You do not have to count from 1 every time.\n\nSay you have 5 marbles and get 3 more. Start at 5. Make 3 hops on the number line.\n\nHop 1 lands on 6. Hop 2 lands on 7. Hop 3 lands on 8. So you have 8 marbles.\n\nBe careful! Do not say 5 again on the first hop. Your first hop lands on 6.",
+        "visual": "am-hops-5-3"
+      },
+      {
+        "heading": "The + and = signs",
+        "body": "We have signs to write adding quickly.\n\nThe sign **+** means *add*. We say it as \"plus\".\n\nThe sign **=** means *is the same as*. We say it as \"equals\".\n\nSo 3 mangoes and 4 more mangoes is $3 + 4 = 7$. We say, \"Three plus four equals seven.\" The number we get is called the **sum**."
+      },
+      {
+        "heading": "Order does not matter",
+        "body": "Look at this row of 8 dots. There are 3 orange dots and 5 green dots.\n\nCount from the left: 3 orange, then 5 green. That is $3 + 5 = 8$.\n\nNow count from the right: 5 green, then 3 orange. That is $5 + 3 = 8$.\n\nThe dots did not change, so the sum did not change. $3 + 5 = 5 + 3$. So you can always start with the bigger number.",
+        "visual": "am-order-3-5"
+      },
+      {
+        "heading": "Facts to remember: doubles and make 10",
+        "body": "**Doubles** add a number to itself. $4 + 4 = 8$, $5 + 5 = 10$ and $6 + 6 = 12$. They are easy to remember.\n\nA **ten-frame** has 10 boxes. Fill it first, then count the rest.\n\nFind $7 + 5$. 7 orange counters need 3 more to fill the frame. Take 3 of the 5 green counters. That makes 10. 2 green counters are left.\n\nSo $7 + 5 = 7 + 3 + 2 = 10 + 2 = 12$.",
+        "visual": "am-frame-7-5"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Priya has 6 marbles. Her friend Arjun gives her 3 more. How many marbles does Priya have now?",
+        "steps": [
+          "We put the groups together, so we add: $6 + 3$.",
+          "Start at 6. Do not say 6 again.",
+          "Count on 3 more: 7, 8, 9.",
+          "So $6 + 3 = 9$. Priya has 9 marbles."
+        ],
+        "answer": "9",
+        "verify": {
+          "kind": "sympy",
+          "expr": "6 + 3"
+        }
+      },
+      {
+        "problem": "Find $2 + 9$.",
+        "steps": [
+          "Order does not matter. $2 + 9$ is the same as $9 + 2$.",
+          "So start at the bigger number, 9.",
+          "Count on 2 more: 10, 11.",
+          "So $2 + 9 = 11$. That is only 2 hops, not 9!"
+        ],
+        "answer": "11",
+        "verify": {
+          "kind": "sympy",
+          "expr": "2 + 9"
+        }
+      },
+      {
+        "problem": "Find $8 + 5$. Use \"make 10\".",
+        "steps": [
+          "8 needs 2 more to make 10.",
+          "Split 5 into 2 and 3.",
+          "$8 + 2 = 10$.",
+          "Then $10 + 3 = 13$.",
+          "So $8 + 5 = 13$."
+        ],
+        "answer": "13",
+        "verify": {
+          "kind": "sympy",
+          "expr": "8 + 5"
+        }
+      }
+    ],
+    "summary": [
+      "Adding means putting groups together and finding how many in all.",
+      "To count on, start at the bigger number. Your first hop lands on the next number.",
+      "+ means add. = means is the same as.",
+      "Order does not matter: 3 + 5 = 5 + 3.",
+      "Doubles and \"make 10\" help you find sums up to 20."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "am-groups-3-4",
+      "purpose": "Section 1: putting a group of 3 and a group of 4 together",
+      "spec": "Two loops side by side. Left loop: 3 orange dots, number 3 under it. Right loop: 4 green dots, each with a small centre spot in the background colour, number 4 under it.",
+      "alt": "Two groups side by side. The first group has 3 orange dots, with the number 3 under it. The second group has 4 green dots, with the number 4 under it. There are 7 dots in all.",
+      "file": "content/visuals/s0-addition-meaning/am-groups-3-4.svg",
+      "checks": {
+        "groups": [
+          3,
+          4
+        ],
+        "total": 7,
+        "labels": [
+          "3",
+          "4"
+        ]
+      }
+    },
+    {
+      "id": "am-hops-5-3",
+      "purpose": "Section 2: counting on from 5 with 3 hops",
+      "spec": "Number line 0 to 10, every number labelled. Dot at 5. Three hops of 1, numbered 1, 2, 3 above the arcs. Second dot at 8.",
+      "alt": "A number line from 0 to 10 with every number labelled. A dot sits on 5. Three hops go to the right, numbered 1, 2 and 3. Hop 1 lands on 6, hop 2 on 7 and hop 3 on 8. A second dot sits on 8.",
+      "file": "content/visuals/s0-addition-meaning/am-hops-5-3.svg",
+      "checks": {
+        "start_point": "5",
+        "hops": 3,
+        "hop_size": "1",
+        "first_hop_lands": "6",
+        "lands_at": "8",
+        "land_dot": "8",
+        "labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      }
+    },
+    {
+      "id": "am-order-3-5",
+      "purpose": "Section 4: the same 8 dots counted from each end",
+      "spec": "A row of 3 orange then 5 green dots. Counting numbers 1 to 8 above from the left, arrow right labelled 3 + 5 = 8. Counting numbers 1 to 8 below from the right, arrow left labelled 5 + 3 = 8.",
+      "alt": "A row of 8 dots: 3 orange dots, then 5 green dots. Above the row, the dots are counted 1 to 8 from the left. An arrow points right, labelled 3 + 5 = 8. Below the row, the same dots are counted 1 to 8 from the right. An arrow points left, labelled 5 + 3 = 8.",
+      "file": "content/visuals/s0-addition-meaning/am-order-3-5.svg",
+      "checks": {
+        "dots": 8,
+        "first": 3,
+        "second": 5,
+        "left_count_ends_at": "8",
+        "right_count_ends_at": "8",
+        "top_label": "3 + 5 = 8",
+        "bottom_label": "5 + 3 = 8"
+      }
+    },
+    {
+      "id": "am-frame-7-5",
+      "purpose": "Section 5: 7 + 5 by making 10",
+      "spec": "Two ten-frames. Top frame: 7 orange and 3 green counters, full. Bottom frame: 2 green counters, 8 empty boxes.",
+      "alt": "Two ten-frames, one above the other. Each has 2 rows of 5 boxes. The top frame is full: 7 orange counters and 3 green counters. The bottom frame has 2 green counters and 8 empty boxes. There are 5 green counters in all.",
+      "file": "content/visuals/s0-addition-meaning/am-frame-7-5.svg",
+      "checks": {
+        "frames": [
+          {
+            "boxes": 10,
+            "filled": 10,
+            "empty": 0,
+            "first": 7,
+            "second": 3
+          },
+          {
+            "boxes": 10,
+            "filled": 2,
+            "empty": 8,
+            "first": 0,
+            "second": 2
+          }
+        ],
+        "total": 12
+      }
+    },
+    {
+      "id": "am-p1",
+      "purpose": "Practice: 4 birds and 2 more birds",
+      "spec": "Two loops. Left: 4 orange dots. Right: 2 green dots. No numbers.",
+      "alt": "Two groups side by side. The first group has 4 orange dots. The second group has 2 green dots. No numbers are written.",
+      "file": "content/visuals/s0-addition-meaning/am-p1.svg",
+      "checks": {
+        "groups": [
+          4,
+          2
+        ],
+        "total": 6,
+        "labels": []
+      }
+    },
+    {
+      "id": "am-p2",
+      "purpose": "Practice: start at 6 and make 3 hops",
+      "spec": "Number line 0 to 10, every number labelled. Dot at 6. Three hops of 1, numbered 1, 2, 3. No landing dot.",
+      "alt": "A number line from 0 to 10 with every number labelled. A dot sits on 6. Three hops go to the right, one number at a time, numbered 1, 2 and 3. There is no dot where the last hop lands.",
+      "file": "content/visuals/s0-addition-meaning/am-p2.svg",
+      "checks": {
+        "start_point": "6",
+        "hops": 3,
+        "hop_size": "1",
+        "first_hop_lands": "7",
+        "lands_at": "9",
+        "labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      }
+    },
+    {
+      "id": "am-p5",
+      "purpose": "Practice: 2 + 6 and 6 + 2 with the same dots",
+      "spec": "A row of 2 orange then 6 green dots, counted 1 to 8 from the left (arrow labelled 2 + 6) and 1 to 8 from the right (arrow labelled 6 + 2). No totals written.",
+      "alt": "A row of 8 dots: 2 orange dots, then 6 green dots. Above the row, the dots are counted 1 to 8 from the left, with an arrow pointing right labelled 2 + 6. Below the row, the same dots are counted 1 to 8 from the right, with an arrow pointing left labelled 6 + 2.",
+      "file": "content/visuals/s0-addition-meaning/am-p5.svg",
+      "checks": {
+        "dots": 8,
+        "first": 2,
+        "second": 6,
+        "left_count_ends_at": "8",
+        "right_count_ends_at": "8",
+        "top_label": "2 + 6",
+        "bottom_label": "6 + 2"
+      }
+    },
+    {
+      "id": "am-p6",
+      "purpose": "Practice: double 4",
+      "spec": "Two loops. Left: 4 orange dots. Right: 4 green dots. No numbers.",
+      "alt": "Two groups side by side. The first group has 4 orange dots. The second group has 4 green dots. No numbers are written.",
+      "file": "content/visuals/s0-addition-meaning/am-p6.svg",
+      "checks": {
+        "groups": [
+          4,
+          4
+        ],
+        "total": 8,
+        "labels": []
+      }
+    },
+    {
+      "id": "am-p7",
+      "purpose": "Practice: 8 + 4 by making 10",
+      "spec": "Two ten-frames. Top: 8 orange and 2 green, full. Bottom: 2 green, 8 empty.",
+      "alt": "Two ten-frames, one above the other. The top frame is full: 8 orange counters and 2 green counters. The bottom frame has 2 green counters and 8 empty boxes.",
+      "file": "content/visuals/s0-addition-meaning/am-p7.svg",
+      "checks": {
+        "frames": [
+          {
+            "boxes": 10,
+            "filled": 10,
+            "empty": 0,
+            "first": 8,
+            "second": 2
+          },
+          {
+            "boxes": 10,
+            "filled": 2,
+            "empty": 8,
+            "first": 0,
+            "second": 2
+          }
+        ],
+        "total": 12
+      }
+    },
+    {
+      "id": "am-q1",
+      "purpose": "Quiz: 5 laddoos and 3 laddoos",
+      "spec": "Two loops. Left: 5 orange dots. Right: 3 green dots. No numbers.",
+      "alt": "Two groups side by side. The first group has 5 orange dots in a row. The second group has 3 green dots. No numbers are written.",
+      "file": "content/visuals/s0-addition-meaning/am-q1.svg",
+      "checks": {
+        "groups": [
+          5,
+          3
+        ],
+        "total": 8,
+        "labels": []
+      }
+    },
+    {
+      "id": "am-q4",
+      "purpose": "Quiz: 9 + 5 by making 10",
+      "spec": "Two ten-frames. Top: 9 orange and 1 green, full. Bottom: 4 green, 6 empty.",
+      "alt": "Two ten-frames, one above the other. The top frame is full: 9 orange counters and 1 green counter. The bottom frame has 4 green counters and 6 empty boxes.",
+      "file": "content/visuals/s0-addition-meaning/am-q4.svg",
+      "checks": {
+        "frames": [
+          {
+            "boxes": 10,
+            "filled": 10,
+            "empty": 0,
+            "first": 9,
+            "second": 1
+          },
+          {
+            "boxes": 10,
+            "filled": 4,
+            "empty": 6,
+            "first": 0,
+            "second": 4
+          }
+        ],
+        "total": 14
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-addition-meaning/p-1",
+      "type": "numeric",
+      "visual": "am-p1",
+      "objective": 0,
+      "prompt": "4 birds sit on a wire. 2 more birds join them. Each dot is a bird. How many birds are on the wire now? Type a number.",
+      "answer": "6",
+      "hints": [
+        "Count all the dots in both groups.",
+        "Start at 4. Count on 2 more: 5, 6."
+      ],
+      "explanation": "Put the two groups together: $4 + 2 = 6$. There are 6 birds on the wire.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "4 + 2"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-2",
+      "type": "numeric",
+      "visual": "am-p2",
+      "objective": 1,
+      "prompt": "Start at 6. Follow the 3 hops. Where does the last hop land? Type a number.",
+      "answer": "9",
+      "hints": [
+        "Hop 1 lands on 7. Do not count 6 again.",
+        "Say one number for each hop: 7, 8, 9."
+      ],
+      "explanation": "Hop 1 lands on 7, hop 2 on 8 and hop 3 on 9. So $6 + 3 = 9$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 + 3"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "$5 + 4 = \\square$ Type the number that goes in the box.",
+      "answer": "9",
+      "hints": [
+        "Start at 5. Count on 4 more.",
+        "Say 6, 7, 8, 9."
+      ],
+      "explanation": "Start at 5 and count on 4: 6, 7, 8, 9. So $5 + 4 = 9$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "5 + 4"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-4",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Joseph has 8 pencils. He gets 3 more. What is $8 + 3$?",
+      "options": [
+        {
+          "text": "11",
+          "value": "11",
+          "correct": true
+        },
+        {
+          "text": "10",
+          "value": "10",
+          "correct": false,
+          "why_wrong": "You said 8 again. Start at 8, then count 9, 10, 11."
+        },
+        {
+          "text": "5",
+          "value": "5",
+          "correct": false,
+          "why_wrong": "5 is less than 8. Adding makes the group bigger, so the sum is more than 8."
+        }
+      ],
+      "answer": "11",
+      "hints": [
+        "Start at 8. Your first hop lands on 9.",
+        "Count on 3: 9, 10, 11."
+      ],
+      "explanation": "Start at 8 and count on 3: 9, 10, 11. So $8 + 3 = 11$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "8 + 3"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-5",
+      "type": "true_false",
+      "visual": "am-p5",
+      "objective": 2,
+      "prompt": "Look at the row of dots. Is $2 + 6$ the same as $6 + 2$?",
+      "answer": "true",
+      "hints": [
+        "Count the dots from the left. Then count from the right."
+      ],
+      "explanation": "Yes. Both ways you count the same 8 dots. So $2 + 6 = 6 + 2 = 8$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(2 + 6, 6 + 2)"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-6",
+      "type": "numeric",
+      "visual": "am-p6",
+      "objective": 1,
+      "prompt": "Lata draws 4 rangoli dots. Then she draws 4 more. Each dot in the picture is a rangoli dot. What is $4 + 4$? Type a number.",
+      "answer": "8",
+      "hints": [
+        "This is a double: the same number twice.",
+        "Start at 4. Count on 4 more: 5, 6, 7, 8."
+      ],
+      "explanation": "$4 + 4 = 8$. This double is a good one to remember.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "4 + 4"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-7",
+      "type": "numeric",
+      "visual": "am-p7",
+      "objective": 1,
+      "prompt": "Use the ten-frames to find $8 + 4$. Type a number.",
+      "answer": "12",
+      "hints": [
+        "How many counters fill the top frame?",
+        "A full frame is 10. Count on the 2 below: 11, 12."
+      ],
+      "explanation": "8 and 2 more make 10. 2 counters are left over. So $8 + 4 = 10 + 2 = 12$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "8 + 4"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/p-8",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "$3 + 9 = 9 + \\square$ Type the number that goes in the box.",
+      "answer": "3",
+      "hints": [
+        "Order does not matter.",
+        "The same two numbers are added on each side."
+      ],
+      "explanation": "Swapping the order does not change the sum. So $3 + 9 = 9 + 3$. Both equal 12.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "3 + 9 - 9"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-addition-meaning/q-1",
+      "type": "numeric",
+      "visual": "am-q1",
+      "objective": 0,
+      "prompt": "Amma puts 5 laddoos on one plate. She puts 3 laddoos on another plate. Then she puts them all on one plate. Each dot is a laddoo. How many laddoos are on it? Type a number.",
+      "answer": "8",
+      "hints": [
+        "Put the groups together and count them all.",
+        "Start at 5. Count on 3: 6, 7, 8."
+      ],
+      "explanation": "Putting the groups together is adding: $5 + 3 = 8$ laddoos.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "5 + 3"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-2",
+      "type": "true_false",
+      "objective": 1,
+      "prompt": "Tenzin counts on to find $9 + 4$. He says, \"9, 10, 11, 12.\" So he says $9 + 4 = 12$. Is he right?",
+      "answer": "false",
+      "hints": [
+        "Where does the first hop from 9 land?"
+      ],
+      "explanation": "No. Tenzin said 9 again. Start at 9, then count 4 more: 10, 11, 12, 13. So $9 + 4 = 13$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(9 + 4, 12)"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Gurpreet has 6 pencils. Her brother has 6 pencils. They put all the pencils in one box. How many pencils are in the box? Type a number.",
+      "answer": "12",
+      "hints": [
+        "Put the two groups together: $6 + 6$.",
+        "This is a double."
+      ],
+      "explanation": "$6 + 6 = 12$. There are 12 pencils in the box.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 + 6"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-4",
+      "type": "numeric",
+      "visual": "am-q4",
+      "objective": 1,
+      "prompt": "Use the ten-frames to find $9 + 5$. Type a number.",
+      "answer": "14",
+      "hints": [
+        "9 needs 1 more to make 10.",
+        "Then count the counters in the bottom frame."
+      ],
+      "explanation": "9 and 1 make 10. 4 green counters are left. So $9 + 5 = 10 + 4 = 14$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "9 + 5"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-5",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "Fatima says $4 + 6$ and $6 + 4$ give different sums. Is she right?",
+      "answer": "false",
+      "hints": [
+        "Picture a row of 4 dots and 6 dots. Count it from each end."
+      ],
+      "explanation": "No. Both use the same 10 dots. So $4 + 6 = 6 + 4 = 10$.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Ne(4 + 6, 6 + 4)"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-6",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Which of these makes 10?",
+      "options": [
+        {
+          "text": "$7 + 3$",
+          "value": "7 + 3",
+          "correct": true
+        },
+        {
+          "text": "$6 + 3$",
+          "value": "6 + 3",
+          "correct": false,
+          "why_wrong": "$6 + 3 = 9$. 6 needs 4 more to make 10."
+        },
+        {
+          "text": "$5 + 4$",
+          "value": "5 + 4",
+          "correct": false,
+          "why_wrong": "$5 + 4 = 9$. 5 needs another 5 to make 10."
+        }
+      ],
+      "answer": "$7 + 3$",
+      "hints": [
+        "Start at the bigger number and count on.",
+        "Which one ends on 10?"
+      ],
+      "explanation": "Start at 7 and count on 3: 8, 9, 10. So $7 + 3 = 10$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "10"
+      }
+    },
+    {
+      "id": "s0-addition-meaning/q-7",
+      "type": "numeric",
+      "objective": 2,
+      "prompt": "$8 + 5 = 13$. So what is $5 + 8$? Type a number.",
+      "answer": "13",
+      "hints": [
+        "Does the order change the sum?"
+      ],
+      "explanation": "Order does not matter. $5 + 8$ uses the same numbers as $8 + 5$. So $5 + 8 = 13$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "5 + 8"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Can I use my fingers?",
+      "a": "Yes! Say the bigger number first. Then put up one finger for each number you count on. For $5 + 3$, say 5, then 6, 7, 8. Three fingers are up, so you stop at 8."
+    },
+    {
+      "q": "Why is $0 + 5$ still 5?",
+      "a": "Adding 0 means nothing joins the group. You have 5 mangoes and get 0 more. You still have 5 mangoes."
+    },
+    {
+      "q": "Why start with the bigger number?",
+      "a": "It means fewer hops. For $2 + 9$, start at 9 and make just 2 hops. The order does not change the sum."
+    },
+    {
+      "q": "Do I have to count every time?",
+      "a": "No. Soon you will just know facts like $5 + 5 = 10$. Doubles and \"make 10\" help you remember them."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "frames": [
+  {
+   "boxes": 10,
+   "filled": 10,
+   "empty": 0,
+   "first": 7,
+   "second": 3
+  },
+  {
+   "boxes": 10,
+   "filled": 2,
+   "empty": 8,
+   "first": 0,
+   "second": 2
+  }
+ ],
+ "total": 12
+}

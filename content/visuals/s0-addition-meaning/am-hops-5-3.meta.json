@@ -1,0 +1,24 @@
+{
+ "start": "0",
+ "end": "10",
+ "spaces_per_unit": 1,
+ "labels": [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10"
+ ],
+ "start_point": "5",
+ "hops": 3,
+ "hop_size": "1",
+ "first_hop_lands": "6",
+ "lands_at": "8",
+ "land_dot": "8"
+}

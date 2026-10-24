@@ -1,0 +1,9 @@
+{
+ "dots": 8,
+ "first": 3,
+ "second": 5,
+ "left_count_ends_at": "8",
+ "right_count_ends_at": "8",
+ "top_label": "3 + 5 = 8",
+ "bottom_label": "5 + 3 = 8"
+}
