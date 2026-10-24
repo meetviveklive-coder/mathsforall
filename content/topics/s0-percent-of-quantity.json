@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-of-quantity",
   "title": "Finding a percentage of an amount",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Wangmo and her Ama are on a 240 km train journey. Ama looks out of the window and says, \"We have done 35% of the journey.\"\n\nHow many kilometres is that? You know that 35% means 35 out of 100. But the journey is 240 km, not 100 km. In this topic you will learn three ways to find a percentage of any amount. You will also find what percent one amount is of another.",
@@ -568,6 +568,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content 42 pass. All 5 findings fixed; changed items (sections 3-4, example 2, p-1, p-2, p-4, p-5, p-7, p-8, q-1, q-2, q-4, q-5, q-8) re-solved with own Rational code; answers unchanged and correct. Rupee phrases follow the agreed rule; no typing example resembles its answer. No new errors."
+    },
+    {
+      "date": "2026-10-24",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

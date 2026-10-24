@@ -1,7 +1,7 @@
 {
   "id": "s0-percent-change",
   "title": "Discounts, GST and percentage change",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Kabir and his Nani walk into a Diwali sale. A big sign says **25% off**. The wall clock Nani likes was ₹800. What does it cost now?\n\nAt the counter, the bill has a line called **GST**. It adds a little to some prices.\n\nOn the way home, Nani grumbles. Tomatoes were ₹40 a kg last month. Now they are ₹50. By what percent did the price go up?\n\nYou already know how to find a percentage of an amount. In this topic you will use it to answer all three questions.",
@@ -740,6 +740,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes. verify_content 48 pass. All 5 findings fixed; changed items re-solved with own Rational code. pc-up-down and pc-gst re-drawn identically by make.py, rendered light and dark: labelled ₹500 line crosses all 3 bars, 0 overlaps, matches alt, spec and checks. GST only 0/5/18% and given as the price before GST. Rupee phrases follow the agreed rule."
+    },
+    {
+      "date": "2026-10-24",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

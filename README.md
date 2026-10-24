@@ -59,6 +59,6 @@ python3 tools/verify_content.py      # verify all topic files
 - [x] Phase 1: Stage 0–1 topic map (58 topics) — approved
 - [x] Phase 2: pilot — 3 fraction topics approved; site deploys to Cloudflare from `main`
 - [ ] Pilot week with the first learner; log confusion points per topic
-- [ ] Phase 3: rest of Stage 0–1 (fractions and decimals units done; percent 1 of 3; 15 topics live)
+- [ ] Phase 3: rest of Stage 0–1 (fractions, decimals and percent units done; ratio started; 18 topics live)
 - [ ] Phase 4: placement, knowledge map, spaced review, export/import
 - [ ] Phase 5: launch
