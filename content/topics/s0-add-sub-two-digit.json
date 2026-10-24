@@ -1,0 +1,768 @@
+{
+  "id": "s0-add-sub-two-digit",
+  "title": "Adding and subtracting with regrouping",
+  "status": "draft",
+  "version": 1,
+  "lesson": {
+    "hook": "Ishaan's team is playing cricket in the lane. They score 38 runs in the first 5 overs. Then they score 45 more runs. How many runs is that in all?\n\nAdd the ones first: $8 + 5 = 13$. But the ones place can hold only one digit! So what happens to 13 ones? In this topic you will find out. You will also learn to subtract when there are not enough ones.",
+    "sections": [
+      {
+        "heading": "Tens and ones",
+        "body": "A two-digit number is made of tens and ones. 47 is 4 tens and 7 ones.\n\nIn these pictures, a tall stick is 1 ten. It has 10 small parts. A small square is 1 one.\n\nRemember this fact: **10 ones make 1 ten.** It is the key to this whole topic.",
+        "visual": "rg-47"
+      },
+      {
+        "heading": "Adding: trade 10 ones for 1 ten",
+        "body": "Let's add $38 + 45$ with sticks and squares. 38 is 3 tens and 8 ones. 45 is 4 tens and 5 ones.\n\nPut them together. You get 7 tens and 13 ones. That is too many ones for one place.\n\nSo make a trade. Ring 10 ones and swap them for 1 ten stick. Now you have 8 tens and 3 ones. That is 83. The new ten is in a different colour.\n\nSo $38 + 45 = 83$. This trade is called **carrying**.",
+        "visual": "rg-add-blocks"
+      },
+      {
+        "heading": "Adding in columns",
+        "body": "You don't need to draw sticks every time. The column method does the same trade with digits.\n\nWrite 38 above 45. Put tens under tens and ones under ones. Always start with the ones.\n\n- Ones: $8 + 5 = 13$. Write 3 in the ones column. Write a small 1 above the tens. That small 1 is the traded ten.\n- Tens: $3 + 4 + 1 = 8$. Write 8.\n\nSo $38 + 45 = 83$. Watch out! If you forget the small 1, you get 73. That is 10 too few.",
+        "visual": "rg-add-columns"
+      },
+      {
+        "heading": "Subtracting: break 1 ten into 10 ones",
+        "body": "Now try $52 - 27$. 52 is 5 tens and 2 ones. You must take away 7 ones. But there are only 2 ones!\n\nSo break 1 ten into 10 ones. Now you have 4 tens and 12 ones. It is still 52.\n\nTake away 7 ones and 2 tens. You have 2 tens and 5 ones left. So $52 - 27 = 25$. Breaking a ten like this is called **borrowing**.",
+        "visual": "rg-sub-blocks"
+      },
+      {
+        "heading": "Subtracting in columns",
+        "body": "Write 52 above 27. Start with the ones again.\n\n- Ones: 2 take away 7? There are not enough ones. Borrow 1 ten. Cross out the 5 and write 4 above it. Write a small 1 before the 2. Now it is 12.\n- Ones: $12 - 7 = 5$.\n- Tens: $4 - 2 = 2$.\n\nSo $52 - 27 = 25$.\n\nWatch out! Some children take 2 from 7 instead, and get 35. But 7 ones are being taken away from 2 ones. You cannot swap them round.\n\nCheck by adding back: $25 + 27 = 52$. It matches, so 25 is right.",
+        "visual": "rg-sub-columns"
+      }
+    ],
+    "examples": [
+      {
+        "problem": "Tenzin has 27 marbles. His friend Bhavna gives him 36 more. How many marbles does Tenzin have now?",
+        "steps": [
+          "Find $27 + 36$. Write 27 above 36, tens under tens.",
+          "Ones: $7 + 6 = 13$. Write 3 and carry 1 to the tens.",
+          "Tens: $2 + 3 + 1 = 6$. Write 6.",
+          "So Tenzin has 63 marbles."
+        ],
+        "answer": "63",
+        "verify": {
+          "kind": "sympy",
+          "expr": "27 + 36"
+        }
+      },
+      {
+        "problem": "Nandini's storybook has 70 pages. She has read 43 pages. How many pages are left?",
+        "steps": [
+          "Find $70 - 43$. Write 70 above 43.",
+          "Ones: 0 take away 3? There are no ones. Borrow 1 ten. The 7 becomes 6, and the 0 becomes 10.",
+          "Ones: $10 - 3 = 7$.",
+          "Tens: $6 - 4 = 2$.",
+          "Check: $27 + 43 = 70$. So 27 pages are left."
+        ],
+        "answer": "27",
+        "verify": {
+          "kind": "sympy",
+          "expr": "70 - 43"
+        }
+      },
+      {
+        "problem": "Sameer has ₹85. He buys a ball for ₹49. How much money does he have left?",
+        "steps": [
+          "Find $85 - 49$.",
+          "Ones: 5 take away 9? Not enough. Borrow 1 ten. The 8 becomes 7, and the 5 becomes 15.",
+          "Ones: $15 - 9 = 6$.",
+          "Tens: $7 - 4 = 3$.",
+          "Check: $36 + 49 = 85$. So Sameer has ₹36 left."
+        ],
+        "answer": "36",
+        "verify": {
+          "kind": "sympy",
+          "expr": "85 - 49"
+        }
+      }
+    ],
+    "summary": [
+      "10 ones make 1 ten.",
+      "Always start with the ones column.",
+      "Adding: if the ones make 10 or more, trade 10 ones for 1 ten. Write a small 1 above the tens.",
+      "Don't forget to add the carried 1 in the tens.",
+      "Subtracting: if there are not enough ones on top, break 1 ten into 10 ones.",
+      "Never swap the digits round in a column. Check by adding back."
+    ]
+  },
+  "visuals": [
+    {
+      "id": "rg-47",
+      "purpose": "Recall: 47 as 4 tens and 7 ones",
+      "spec": "One row, label 47: 4 ten-sticks of 10 cells each, 7 one-squares in rows of 5.",
+      "alt": "Base-ten picture labelled 47. There are 4 tall ten-sticks, each split into 10 small parts. Next to them are 7 small one-squares, in a row of 5 and a row of 2.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-47.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "47",
+            "tens": 4,
+            "ones": 7,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 47,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 47,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "rg-add-blocks",
+      "purpose": "38 + 45 with sticks and squares, trading 10 ones for 1 ten",
+      "spec": "Rows labelled 38, 45, Both, Trade. Both: 7 tens, 13 ones, 10 ones ringed. Trade: 8 tens (1 new), 3 ones.",
+      "alt": "Four rows of ten-sticks and one-squares. Row 38: 3 sticks and 8 squares. Row 45: 4 sticks and 5 squares. Row Both: 7 sticks and 13 squares, with a ring round 10 of the squares. Row Trade: 8 sticks and 3 squares. The eighth stick is the new ten, in a different colour.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-add-blocks.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "38",
+            "tens": 3,
+            "ones": 8,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 38,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 38,
+            "ringed_ones": 0
+          },
+          {
+            "label": "45",
+            "tens": 4,
+            "ones": 5,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 45,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 45,
+            "ringed_ones": 0
+          },
+          {
+            "label": "Both",
+            "tens": 7,
+            "ones": 13,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 83,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 83,
+            "ringed_ones": 10
+          },
+          {
+            "label": "Trade",
+            "tens": 8,
+            "ones": 3,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 83,
+            "new_tens": 1,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 83,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "rg-add-columns",
+      "purpose": "38 + 45 = 83 in tens and ones columns, with the carried 1",
+      "spec": "Tens and Ones columns. 38 above +45, small 1 above the tens, line, answer 83.",
+      "alt": "Columns headed Tens and Ones. 38 is written above 45, with a plus sign. A small carried 1 sits above the tens column. Below the line, the answer is 83.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-add-columns.svg",
+      "checks": {
+        "op": "+",
+        "top": "38",
+        "bottom": "45",
+        "result": "83",
+        "headers": [
+          "Tens",
+          "Ones"
+        ],
+        "columns": [
+          [
+            "3",
+            "4",
+            "8"
+          ],
+          [
+            "8",
+            "5",
+            "3"
+          ]
+        ],
+        "small_above": [
+          {
+            "place": "Tens",
+            "digit": "1"
+          }
+        ],
+        "small_before": [],
+        "crossed": [],
+        "answer_correct": true
+      }
+    },
+    {
+      "id": "rg-sub-blocks",
+      "purpose": "52 − 27 with sticks and squares, breaking 1 ten into 10 ones",
+      "spec": "Rows labelled 52, Break, Take. Break: 4 tens, 12 ones (10 new, ringed). Take: 2 tens and 7 ones crossed, 25 left.",
+      "alt": "Three rows of ten-sticks and one-squares. Row 52: 5 sticks and 2 squares. Row Break: 4 sticks and 12 squares. The 10 squares from the broken ten are in a different colour, with a ring round them. Row Take: the same 4 sticks and 12 squares, with 2 sticks and 7 squares crossed out. 2 sticks and 5 squares are left.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-sub-blocks.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "52",
+            "tens": 5,
+            "ones": 2,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 52,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 52,
+            "ringed_ones": 0
+          },
+          {
+            "label": "Break",
+            "tens": 4,
+            "ones": 12,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 52,
+            "new_tens": 0,
+            "new_ones": 10,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 52,
+            "ringed_ones": 10
+          },
+          {
+            "label": "Take",
+            "tens": 4,
+            "ones": 12,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 52,
+            "new_tens": 0,
+            "new_ones": 10,
+            "crossed_tens": 2,
+            "crossed_ones": 7,
+            "left": 25,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "rg-sub-columns",
+      "purpose": "52 − 27 = 25 in tens and ones columns, with borrowing marks",
+      "spec": "Tens and Ones columns. 52 above −27; 5 crossed out with small 4 above; small 1 before the 2; answer 25.",
+      "alt": "Columns headed Tens and Ones. 52 is written above 27, with a minus sign. The 5 in the tens column is crossed out, with a small 4 above it. A small 1 is written just before the 2, making 12. Below the line, the answer is 25.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-sub-columns.svg",
+      "checks": {
+        "op": "-",
+        "top": "52",
+        "bottom": "27",
+        "result": "25",
+        "headers": [
+          "Tens",
+          "Ones"
+        ],
+        "columns": [
+          [
+            "5",
+            "2",
+            "2"
+          ],
+          [
+            "2",
+            "7",
+            "5"
+          ]
+        ],
+        "small_above": [
+          {
+            "place": "Tens",
+            "digit": "4"
+          }
+        ],
+        "small_before": [
+          {
+            "place": "Ones",
+            "digit": "1"
+          }
+        ],
+        "crossed": [
+          {
+            "place": "Tens",
+            "digit": "5"
+          }
+        ],
+        "answer_correct": true
+      }
+    },
+    {
+      "id": "rg-p1",
+      "purpose": "Practice: 6 tens and 14 ones, ready for a trade",
+      "spec": "One row, no label: 6 ten-sticks, 14 one-squares.",
+      "alt": "6 tall ten-sticks and 14 small one-squares. The squares are in rows of 5, 5 and 4. There is no label.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-p1.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "",
+            "tens": 6,
+            "ones": 14,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 74,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 74,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "rg-p4",
+      "purpose": "Practice: 43 before a ten is broken",
+      "spec": "One row, label 43: 4 ten-sticks, 3 one-squares.",
+      "alt": "Base-ten picture labelled 43. There are 4 ten-sticks and 3 one-squares.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-p4.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "43",
+            "tens": 4,
+            "ones": 3,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 43,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 43,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "rg-q5",
+      "purpose": "Quiz: 3 tens and 15 ones",
+      "spec": "One row, no label: 3 ten-sticks, 15 one-squares.",
+      "alt": "3 tall ten-sticks and 15 small one-squares. The squares are in three rows of 5. There is no label.",
+      "file": "content/visuals/s0-add-sub-two-digit/rg-q5.svg",
+      "checks": {
+        "rows": [
+          {
+            "label": "",
+            "tens": 3,
+            "ones": 15,
+            "cells_per_ten": [
+              10
+            ],
+            "value": 45,
+            "new_tens": 0,
+            "new_ones": 0,
+            "crossed_tens": 0,
+            "crossed_ones": 0,
+            "left": 45,
+            "ringed_ones": 0
+          }
+        ]
+      }
+    }
+  ],
+  "practice": [
+    {
+      "id": "s0-add-sub-two-digit/p-1",
+      "type": "numeric",
+      "visual": "rg-p1",
+      "objective": 2,
+      "prompt": "The picture shows 6 tens and 14 ones. Trade 10 ones for 1 ten. How many tens are there now? Type a number.",
+      "answer": "7",
+      "hints": [
+        "Ring 10 of the small squares. They make 1 new ten.",
+        "Count the sticks. Then add 1 for the new ten."
+      ],
+      "explanation": "10 of the 14 ones become 1 new ten. So there are $6 + 1 = 7$ tens, and 4 ones are left.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6 + 1"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-2",
+      "type": "numeric",
+      "visual": "rg-p1",
+      "objective": 2,
+      "prompt": "What number does this picture show? Type a number.",
+      "answer": "74",
+      "hints": [
+        "14 ones is 1 ten and 4 ones.",
+        "6 tens and 1 more ten make 7 tens."
+      ],
+      "explanation": "Trade 10 ones for 1 ten. That gives 7 tens and 4 ones, which is 74.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "6*10 + 14"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-3",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Lakshmi scored 25 runs in one match. She scored 18 runs in the next match. How many runs did she score in all? Type a number.",
+      "answer": "43",
+      "hints": [
+        "Find $25 + 18$. Start with the ones: $5 + 8$.",
+        "$5 + 8 = 13$. Write 3 and carry 1 to the tens."
+      ],
+      "explanation": "Ones: $5 + 8 = 13$. Write 3, carry 1. Tens: $2 + 1 + 1 = 4$. So she scored 43 runs.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "25 + 18"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-4",
+      "type": "numeric",
+      "visual": "rg-p4",
+      "objective": 1,
+      "prompt": "The picture shows 43. You want to take away 8 ones, but there are only 3. Break 1 ten into 10 ones. How many ones are there now? Type a number.",
+      "answer": "13",
+      "hints": [
+        "Breaking 1 ten gives you 10 new ones.",
+        "Start at 3. Add the 10 new ones."
+      ],
+      "explanation": "The 10 new ones join the 3 ones. $10 + 3 = 13$ ones. There are 3 tens left.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "10 + 3"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-5",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Rohan's book has 61 pages. He has read 35 pages. How many pages are left to read? Type a number.",
+      "answer": "26",
+      "hints": [
+        "Find $61 - 35$. Ones: 1 take away 5? Not enough.",
+        "Borrow 1 ten. Now do $11 - 5$ in the ones and $5 - 3$ in the tens."
+      ],
+      "explanation": "Borrow 1 ten: 6 becomes 5, and 1 becomes 11. Ones: $11 - 5 = 6$. Tens: $5 - 3 = 2$. So 26 pages are left. Check: $26 + 35 = 61$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "61 - 35"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-6",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Which is the right answer to $29 + 44$?",
+      "options": [
+        {
+          "text": "$73$",
+          "value": "73",
+          "correct": true
+        },
+        {
+          "text": "$63$",
+          "value": "63",
+          "correct": false,
+          "why_wrong": "This forgets the carried ten. $9 + 4 = 13$, so 1 ten goes to the tens. Tens: $2 + 4 + 1 = 7$, not 6."
+        },
+        {
+          "text": "$613$",
+          "value": "613",
+          "correct": false,
+          "why_wrong": "This writes all of 13 in the ones place. Only one digit fits there. Write 3 and carry the 1 ten."
+        }
+      ],
+      "answer": "$73$",
+      "hints": [
+        "Ones: $9 + 4 = 13$. What happens to the 1 ten?"
+      ],
+      "explanation": "Ones: $9 + 4 = 13$. Write 3 and carry 1. Tens: $2 + 4 + 1 = 7$. So $29 + 44 = 73$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "29 + 44"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-7",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Kiran's Amma drives an auto-rickshaw. She made 63 trips in March and 27 trips in April. How many more trips did she make in March?",
+      "options": [
+        {
+          "text": "$36$",
+          "value": "36",
+          "correct": true
+        },
+        {
+          "text": "$44$",
+          "value": "44",
+          "correct": false,
+          "why_wrong": "This takes 3 away from 7. But the 7 ones are taken from the 3 ones. Borrow 1 ten instead: $13 - 7 = 6$."
+        },
+        {
+          "text": "$46$",
+          "value": "46",
+          "correct": false,
+          "why_wrong": "The ones are right, but the tens are not. After borrowing, 6 tens become 5 tens. So the tens are $5 - 2 = 3$."
+        }
+      ],
+      "answer": "$36$",
+      "hints": [
+        "Find $63 - 27$. In the ones, you need 3 take away 7.",
+        "Borrow 1 ten. Then the tens digit goes down by 1."
+      ],
+      "explanation": "Borrow 1 ten: 6 becomes 5, and 3 becomes 13. Ones: $13 - 7 = 6$. Tens: $5 - 2 = 3$. So she made 36 more trips in March. Check: $36 + 27 = 63$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "63 - 27"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/p-8",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "Gurpreet has ₹90. He buys a kite for ₹46. How much money does he have left? Type the amount in rupees.",
+      "answer": "44",
+      "hints": [
+        "Find $90 - 46$. There are 0 ones, so borrow 1 ten.",
+        "Ones: $10 - 6$. Tens: $8 - 4$."
+      ],
+      "explanation": "Borrow 1 ten: 9 becomes 8, and 0 becomes 10. Ones: $10 - 6 = 4$. Tens: $8 - 4 = 4$. So Gurpreet has ₹44 left. Check: $44 + 46 = 90$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "90 - 46"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "s0-add-sub-two-digit/q-1",
+      "type": "numeric",
+      "objective": 0,
+      "prompt": "Anjali read 47 pages on Monday. She read 35 pages on Tuesday. How many pages did she read in all? Type a number.",
+      "answer": "82",
+      "hints": [
+        "Find $47 + 35$. Start with the ones: $7 + 5$."
+      ],
+      "explanation": "Ones: $7 + 5 = 12$. Write 2, carry 1. Tens: $4 + 3 + 1 = 8$. So she read 82 pages.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "47 + 35"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-2",
+      "type": "mcq",
+      "objective": 0,
+      "prompt": "Farhan has 56 marbles. Meera gives him 28 more. How many marbles does Farhan have now?",
+      "options": [
+        {
+          "text": "$74$",
+          "value": "74",
+          "correct": false,
+          "why_wrong": "This forgets the carried ten. $6 + 8 = 14$, so 1 ten goes to the tens. Tens: $5 + 2 + 1 = 8$, not 7."
+        },
+        {
+          "text": "$84$",
+          "value": "84",
+          "correct": true
+        },
+        {
+          "text": "$714$",
+          "value": "714",
+          "correct": false,
+          "why_wrong": "This writes all of 14 in the ones place. Only one digit fits there. Write 4 and carry the 1 ten."
+        }
+      ],
+      "answer": "$84$",
+      "hints": [
+        "Ones: $6 + 8 = 14$. Where does the 1 ten go?"
+      ],
+      "explanation": "Ones: $6 + 8 = 14$. Write 4, carry 1. Tens: $5 + 2 + 1 = 8$. So Farhan has 84 marbles.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "56 + 28"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-3",
+      "type": "numeric",
+      "objective": 1,
+      "prompt": "A cricket team needs 81 runs to win. They have scored 46 runs so far. How many more runs do they need? Type a number.",
+      "answer": "35",
+      "hints": [
+        "Find $81 - 46$. Ones: 1 take away 6? Not enough, so borrow 1 ten."
+      ],
+      "explanation": "Borrow 1 ten: 8 becomes 7, and 1 becomes 11. Ones: $11 - 6 = 5$. Tens: $7 - 4 = 3$. They need 35 more runs. Check: $35 + 46 = 81$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "81 - 46"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-4",
+      "type": "mcq",
+      "objective": 1,
+      "prompt": "Which is the right answer to $72 - 38$?",
+      "options": [
+        {
+          "text": "$46$",
+          "value": "46",
+          "correct": false,
+          "why_wrong": "This takes 2 away from 8. But the 8 ones are taken from the 2 ones. Borrow 1 ten instead: $12 - 8 = 4$."
+        },
+        {
+          "text": "$44$",
+          "value": "44",
+          "correct": false,
+          "why_wrong": "The ones are right, but the tens are not. After borrowing, 7 tens become 6 tens. So the tens are $6 - 3 = 3$."
+        },
+        {
+          "text": "$34$",
+          "value": "34",
+          "correct": true
+        }
+      ],
+      "answer": "$34$",
+      "hints": [
+        "Ones: 2 take away 8? Not enough. Borrow 1 ten.",
+        "After borrowing, the tens digit goes down by 1."
+      ],
+      "explanation": "Borrow 1 ten: 7 becomes 6, and 2 becomes 12. Ones: $12 - 8 = 4$. Tens: $6 - 3 = 3$. So $72 - 38 = 34$. Check: $34 + 38 = 72$.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "72 - 38"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-5",
+      "type": "numeric",
+      "visual": "rg-q5",
+      "objective": 2,
+      "prompt": "The picture shows 3 tens and 15 ones. What number is it? Type a number.",
+      "answer": "45",
+      "hints": [
+        "Ring 10 of the ones. Trade them for 1 ten.",
+        "How many tens and ones do you have after the trade?"
+      ],
+      "explanation": "Trade 10 ones for 1 ten. That gives 4 tens and 5 ones, which is 45.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "3*10 + 15"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-6",
+      "type": "true_false",
+      "objective": 2,
+      "prompt": "Thomas says 3 tens and 12 ones is the same number as 4 tens and 2 ones. Is he right?",
+      "answer": "true",
+      "hints": [
+        "12 ones is 1 ten and 2 ones."
+      ],
+      "explanation": "Yes. Trade 10 of the 12 ones for 1 ten. 3 tens and 1 more ten make 4 tens, and 2 ones are left. Both are 42.",
+      "verify": {
+        "kind": "relation",
+        "expr": "Eq(3*10 + 12, 4*10 + 2)"
+      }
+    },
+    {
+      "id": "s0-add-sub-two-digit/q-7",
+      "type": "mcq",
+      "objective": 2,
+      "prompt": "In $38 + 45$, a small 1 is written above the tens column. How many ones is that small 1 worth?",
+      "options": [
+        {
+          "text": "10 ones, because it is 1 ten",
+          "value": "10",
+          "correct": true
+        },
+        {
+          "text": "1 one",
+          "value": "1",
+          "correct": false,
+          "why_wrong": "It sits in the tens column, so it is 1 ten. It came from trading 10 ones."
+        },
+        {
+          "text": "13 ones",
+          "value": "13",
+          "correct": false,
+          "why_wrong": "13 is all the ones together. 3 of them stay in the ones column. Only 10 of them were traded."
+        }
+      ],
+      "answer": "10 ones, because it is 1 ten",
+      "hints": [
+        "$8 + 5 = 13$. How many of the 13 ones were traded?"
+      ],
+      "explanation": "The ones make 13. 3 ones stay in the ones column. The other 10 ones are traded for 1 ten. That ten is the small 1, so it is worth 10 ones.",
+      "verify": {
+        "kind": "sympy",
+        "expr": "8 + 5 - 3"
+      }
+    }
+  ],
+  "doubts": [
+    {
+      "q": "Why do I start with the ones, not the tens?",
+      "a": "The ones may make a new ten. Start with the ones, and you know about that ten in time. Start with the tens, and you may have to go back and fix them."
+    },
+    {
+      "q": "Can I draw sticks and squares to help?",
+      "a": "Yes! Drawing tens and ones is a good way to check. The column method is a quicker way to do the same thing."
+    },
+    {
+      "q": "What if the ones add up to exactly 10?",
+      "a": "Trade all 10 for 1 ten. Then 0 ones are left. For $26 + 14$: $6 + 4 = 10$. Write 0 and carry 1. Tens: $2 + 1 + 1 = 4$. So the answer is 40."
+    },
+    {
+      "q": "In $52 - 27$, why can't I just do $7 - 2$ in the ones?",
+      "a": "The 2 is from 52, and the 7 is from 27. You are taking 7 away from 2, so you cannot swap them. 2 is not enough, so you borrow a ten."
+    },
+    {
+      "q": "How can I check my subtraction?",
+      "a": "Add your answer to the number you took away. You should get the top number. $25 + 27 = 52$, so $52 - 27 = 25$ is right."
+    }
+  ]
+}

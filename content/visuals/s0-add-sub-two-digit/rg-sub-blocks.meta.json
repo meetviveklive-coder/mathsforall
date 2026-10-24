@@ -1,0 +1,49 @@
+{
+ "rows": [
+  {
+   "label": "52",
+   "tens": 5,
+   "ones": 2,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 52,
+   "new_tens": 0,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 52,
+   "ringed_ones": 0
+  },
+  {
+   "label": "Break",
+   "tens": 4,
+   "ones": 12,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 52,
+   "new_tens": 0,
+   "new_ones": 10,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 52,
+   "ringed_ones": 10
+  },
+  {
+   "label": "Take",
+   "tens": 4,
+   "ones": 12,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 52,
+   "new_tens": 0,
+   "new_ones": 10,
+   "crossed_tens": 2,
+   "crossed_ones": 7,
+   "left": 25,
+   "ringed_ones": 0
+  }
+ ]
+}

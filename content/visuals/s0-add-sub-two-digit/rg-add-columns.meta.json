@@ -1,0 +1,31 @@
+{
+ "op": "+",
+ "top": "38",
+ "bottom": "45",
+ "result": "83",
+ "headers": [
+  "Tens",
+  "Ones"
+ ],
+ "columns": [
+  [
+   "3",
+   "4",
+   "8"
+  ],
+  [
+   "8",
+   "5",
+   "3"
+  ]
+ ],
+ "small_above": [
+  {
+   "place": "Tens",
+   "digit": "1"
+  }
+ ],
+ "small_before": [],
+ "crossed": [],
+ "answer_correct": true
+}

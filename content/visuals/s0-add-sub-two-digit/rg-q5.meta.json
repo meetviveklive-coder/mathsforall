@@ -1,0 +1,19 @@
+{
+ "rows": [
+  {
+   "label": "",
+   "tens": 3,
+   "ones": 15,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 45,
+   "new_tens": 0,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 45,
+   "ringed_ones": 0
+  }
+ ]
+}

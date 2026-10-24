@@ -1,0 +1,41 @@
+{
+ "op": "-",
+ "top": "52",
+ "bottom": "27",
+ "result": "25",
+ "headers": [
+  "Tens",
+  "Ones"
+ ],
+ "columns": [
+  [
+   "5",
+   "2",
+   "2"
+  ],
+  [
+   "2",
+   "7",
+   "5"
+  ]
+ ],
+ "small_above": [
+  {
+   "place": "Tens",
+   "digit": "4"
+  }
+ ],
+ "small_before": [
+  {
+   "place": "Ones",
+   "digit": "1"
+  }
+ ],
+ "crossed": [
+  {
+   "place": "Tens",
+   "digit": "5"
+  }
+ ],
+ "answer_correct": true
+}

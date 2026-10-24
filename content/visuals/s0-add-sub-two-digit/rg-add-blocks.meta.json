@@ -1,0 +1,64 @@
+{
+ "rows": [
+  {
+   "label": "38",
+   "tens": 3,
+   "ones": 8,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 38,
+   "new_tens": 0,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 38,
+   "ringed_ones": 0
+  },
+  {
+   "label": "45",
+   "tens": 4,
+   "ones": 5,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 45,
+   "new_tens": 0,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 45,
+   "ringed_ones": 0
+  },
+  {
+   "label": "Both",
+   "tens": 7,
+   "ones": 13,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 83,
+   "new_tens": 0,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 83,
+   "ringed_ones": 10
+  },
+  {
+   "label": "Trade",
+   "tens": 8,
+   "ones": 3,
+   "cells_per_ten": [
+    10
+   ],
+   "value": 83,
+   "new_tens": 1,
+   "new_ones": 0,
+   "crossed_tens": 0,
+   "crossed_ones": 0,
+   "left": 83,
+   "ringed_ones": 0
+  }
+ ]
+}
