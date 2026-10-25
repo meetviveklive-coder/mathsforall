@@ -1,7 +1,7 @@
 {
   "id": "s0-add-sub-two-digit",
   "title": "Adding and subtracting with regrouping",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Ishaan's team is playing cricket in the lane. They score 38 runs. Then they score 45 more runs. How many runs is that in all?\n\nAdd the ones first: $8 + 5 = 13$. But the ones place can hold only one digit! So what happens to 13 ones? In this topic you will find out. You will also learn to subtract when there are not enough ones.",
@@ -777,6 +777,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes: all 6 findings fixed; new distractors 64 and 75 re-derived (carry added to ones), no three-digit options remain; q-6 re-solved; drawings unchanged; 0 blocking, 0 new suggestions."
+    },
+    {
+      "date": "2026-10-25",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }

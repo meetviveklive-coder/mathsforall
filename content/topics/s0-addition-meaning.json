@@ -1,7 +1,7 @@
 {
   "id": "s0-addition-meaning",
   "title": "What addition means",
-  "status": "verified",
+  "status": "approved",
   "version": 1,
   "lesson": {
     "hook": "Ravi has 3 mangoes. His Nani gives him 4 more mangoes.\n\nHow many mangoes does Ravi have now? Let us find out together.",
@@ -614,6 +614,12 @@
       "by": "math-verifier",
       "result": "verified",
       "notes": "re-check after fixes: all 7 findings fixed; 6 changed items re-solved; am-hops-5-3 and am-p2 re-counted (3 arcs; dots at 5 and 8 / at 6 only) and rendered light and dark; 0 blocking, 1 suggestion (hop-number contrast)."
+    },
+    {
+      "date": "2026-10-25",
+      "by": "founder",
+      "result": "approved",
+      "notes": "Approved after reviewing the private preview."
     }
   ]
 }
